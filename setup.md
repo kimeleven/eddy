@@ -31,14 +31,8 @@ Eddy는 Sanghun Kim의 개인 AI 에이전트입니다.
 - 로드: `launchctl load ~/Library/LaunchAgents/com.eddy.agent.plist`
 - 언로드: `launchctl unload ~/Library/LaunchAgents/com.eddy.agent.plist`
 
-### Crontab 제거 (수동 필요)
-Claude Code 샌드박스에서 crontab 쓰기 불가. 터미널에서 직접 실행:
-```
-crontab -l | grep -v 'eddy/run.sh' | crontab -
-```
-
-### Claude Code Trigger (구 방식)
+### Claude Code Trigger (구 방식, 비활성)
 - Trigger ID: trig_01TXCMQCVdDgW7ncr3vuREBA
 - 스케줄: 매시간 정각 (0 * * * *)
-- 모델: claude-sonnet-4-6
+- 현재 crontab에서 제거됨 — LaunchAgent로 대체
 
