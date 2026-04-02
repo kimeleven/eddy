@@ -20,3 +20,40 @@ Not logged in · Please run /login
 Not logged in · Please run /login
 [2026-04-02 06:00:02] Eddy 실행 완료
 [2026-04-02 07:00:01] Eddy 실행 시작
+완료. 새 메시지 없음.
+
+추가로 처리한 사항: `run.sh`에 GitHub 토큰이 평문으로 포함되어 있어 GitHub push protection에 차단됨 → 환경변수(`$EDDY_GITHUB_TOKEN`, `$EDDY_TELEGRAM_BOT_TOKEN` 등)로 교체 후 push 완료.
+
+**조치 필요:** `~/.eddy_env` 파일에 시크릿을 아래 형식으로 저장해두세요:
+```bash
+export EDDY_GITHUB_TOKEN="ghp_..."
+export EDDY_TELEGRAM_BOT_TOKEN="..."
+export CLAUDE_CODE_OAUTH_TOKEN="sk-ant-..."
+```
+[2026-04-02 07:01:04] Eddy 실행 완료
+[2026-04-02 08:00:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 08:00:01] Eddy 실행 완료
+[2026-04-02 08:30:01] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 08:30:02] Eddy 실행 완료
+[2026-04-02 09:00:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 09:00:01] Eddy 실행 완료
+[2026-04-02 09:30:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 09:30:01] Eddy 실행 완료
+[2026-04-02 10:00:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 10:00:01] Eddy 실행 완료
+[2026-04-02 10:30:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 10:30:01] Eddy 실행 완료
+[2026-04-02 11:00:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 11:00:01] Eddy 실행 완료
+[2026-04-02 11:30:00] Eddy 실행 시작
+Not logged in · Please run /login
+[2026-04-02 11:30:01] Eddy 실행 완료
+[2026-04-02 11:44:49] Eddy 실행 시작
+[2026-04-02 11:45:36] 텔레그램 봇 토큰 401 Unauthorized — 토큰 갱신 필요. 메시지 수신/발신 불가.
