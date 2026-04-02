@@ -57,3 +57,23 @@ Not logged in · Please run /login
 [2026-04-02 11:30:01] Eddy 실행 완료
 [2026-04-02 11:44:49] Eddy 실행 시작
 [2026-04-02 11:45:36] 텔레그램 봇 토큰 401 Unauthorized — 토큰 갱신 필요. 메시지 수신/발신 불가.
+GitHub 토큰도 비어있어서 push가 안 됩니다. 환경변수 `EDDY_GITHUB_TOKEN`이 설정되지 않았습니다.
+
+**현재 상태 요약:**
+
+1. **텔레그램 봇 토큰** — 401 Unauthorized. 토큰이 만료/무효. 메시지 수신/발신 불가.
+2. **GitHub 토큰** — 환경변수 미설정. push 불가.
+3. **`~/.eddy_env` 파일** — 존재하지 않음.
+
+**필요한 조치:**
+
+`~/.eddy_env` 파일을 생성하고 아래 내용을 채워주세요:
+
+```bash
+export EDDY_GITHUB_TOKEN="ghp_YOUR_TOKEN"
+export EDDY_TELEGRAM_BOT_TOKEN="NEW_BOT_TOKEN"
+```
+
+텔레그램 봇 토큰은 @BotFather에서 `/token` 명령으로 재발급 가능합니다. 기존 토큰이 revoke된 것 같습니다.
+[2026-04-02 11:45:53] Eddy 실행 완료
+[2026-04-02 11:46:18] Eddy 실행 시작
