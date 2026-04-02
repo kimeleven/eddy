@@ -44,6 +44,14 @@ _Last updated: 2026-04-02_
 - Eddy가 study.md를 참고해 서브에이전트들에게 Sanghun의 성향 전달
 - 서브에이전트는 자율적으로 실행하고 결과만 보고
 
+## LiveOrder 프로젝트
+- e-커머스 플랫폼 (셀러/구매자/관리자 3자 구조)
+- GitHub: kimeleven/liveorder
+- 스택: Next.js 16, Prisma, Neon PostgreSQL, Vercel, PortOne 결제
+- 현재 단계: Phase 1 MVP QA → Vercel 배포 직전
+- 개발팀: Dev1 (서브에이전트) 운영 중
+- 관리자 이메일: kimeleven@gmail.com
+
 ## 텔레그램 채팅 현황
 - 개인 채팅: Sanghun ↔ Eddy (주요 지시 채널, "@에디" 없어도 처리)
 - 그룹 채팅: 봇 추가 시 자동 감지 및 맥락 파악 예정
