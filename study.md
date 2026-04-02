@@ -64,7 +64,8 @@ _Last updated: 2026-04-03_
 
 ## ELDO 프로젝트
 - 투자 데이터 플랫폼 (한미일 상장사 재무/산업정보)
-- **소스코드**: ELDO.zip으로 직접 전달받음 (GitLab 아님, 로컬에서 개발)
+- **소스코드**: ELDO.zip으로 직접 전달받음
+- **실제 레포**: https://git.mintech.kr/greta/eldo-web (GitLab 프라이빗)
 - 알파버전 배포 중: https://eldo.mintdev.uk/
 - **기술 스택**: Next.js 16, Prisma, Neon PostgreSQL, Recharts, Tailwind v4, Radix UI, Jotai, TanStack
 - **베타버전 개발 방향** (2026-04-03 지시):
