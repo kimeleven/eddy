@@ -121,3 +121,11 @@ export EDDY_TELEGRAM_BOT_TOKEN="NEW_BOT_TOKEN"
 완료. 새 메시지 없음, 변동 없음 보고 전송.
 [2026-04-02 17:00:23] Eddy 실행 완료
 [2026-04-02 17:30:00] Eddy 실행 시작
+보고 완료. 두 가지 문제로 처리 불가 상태:
+
+1. **Remote trigger API 인증 오류** — 스캐쥴 관리 API에 접근 권한 없음
+2. **최소 간격 제한** — Claude Code scheduled trigger는 최소 1시간 간격만 지원 (30분 불가)
+
+Sanghun에게 `https://claude.ai/code/scheduled` 에서 직접 설정하도록 안내했으며, tasks.md에 대기 작업으로 기록해둠.
+[2026-04-02 17:31:44] Eddy 실행 완료
+[2026-04-02 18:00:00] Eddy 실행 시작
