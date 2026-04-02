@@ -3,7 +3,7 @@ _재현 가능한 환경 구성 가이드_
 
 ## 개요
 Eddy는 Sanghun Kim의 개인 AI 에이전트입니다.
-매시간 자동 실행되며 텔레그램(개인 + 그룹)으로 소통합니다.
+10분마다 자동 실행되며 텔레그램(개인 + 그룹)으로 소통합니다.
 
 ## 구성 요소
 - Claude Code Remote Agent (CCR) - Anthropic 클라우드
@@ -23,9 +23,22 @@ Eddy는 Sanghun Kim의 개인 AI 에이전트입니다.
 - state.json: Telegram 메시지 추적용
 - tasks.md: 미완료 작업 목록
 
-## Claude Code Trigger
+## 실행 방식
+
+### LaunchAgent (기본, 10분 간격)
+- 파일: `~/Library/LaunchAgents/com.eddy.agent.plist`
+- 간격: 600초 (10분)
+- 로드: `launchctl load ~/Library/LaunchAgents/com.eddy.agent.plist`
+- 언로드: `launchctl unload ~/Library/LaunchAgents/com.eddy.agent.plist`
+
+### Crontab 제거 (수동 필요)
+Claude Code 샌드박스에서 crontab 쓰기 불가. 터미널에서 직접 실행:
+```
+crontab -l | grep -v 'eddy/run.sh' | crontab -
+```
+
+### Claude Code Trigger (구 방식)
 - Trigger ID: trig_01TXCMQCVdDgW7ncr3vuREBA
 - 스케줄: 매시간 정각 (0 * * * *)
 - 모델: claude-sonnet-4-6
-- 관리: https://claude.ai/code/scheduled
 
