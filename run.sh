@@ -107,3 +107,6 @@ If nothing new: [Eddy] 이번 시간 변동 없음.
 " >> "$LOG_FILE" 2>&1
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Eddy 실행 완료" >> "$LOG_FILE"
+
+# Dashboard update
+bash "$HOME/eddy-agent/eddy-dashboard/scripts/update-status.sh" 2>/dev/null &
