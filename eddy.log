@@ -706,3 +706,26 @@ Sanghun의 새 메시지 처리 완료.
 변동사항 없어 태스크 수정 없이 텔레그램 보고 완료.
 [2026-04-04 01:30:55] Eddy 실행 완료
 [2026-04-04 02:00:00] Eddy 실행 시작
+보고 완료.
+
+---
+
+**[Eddy PM 보고]**
+
+**새 텔레그램:** 없음
+
+**ELDO:**
+- 배포 완료 상태(eldo-one.vercel.app) 유지 중
+- TASK-306(전체 검증)이 베타 오픈 블로커
+- QA 발견 WARN-05 → BUG-WARN05 P1 태스크 추가 (`/copyright`, `/privacy-policy` Coming Soon 페이지)
+
+**ReviewBot:**
+- Phase 12 완성 (RSS 자동화 + 조회수 기반 키워드 피드백 완료)
+- URGENT 완료 처리 → Phase 13 운영 안정화 태스크 4개 정의
+
+**Sanghun 액션 필요:**
+- ReviewBot 네이버 서치어드바이저 수동 등록 (네이버 로그인 필요)
+- ELDO `eldo-one.vercel.app` 직접 검증 후 베타 오픈 판단
+[2026-04-04 02:02:37] Eddy 실행 완료
+[2026-04-04 02:30:01] Eddy 실행 시작
+[2026-04-04 02:30:46] Eddy 정기 체크 — 새 텔레그램 메시지 없음. ELDO: TASK-306 대기, ReviewBot: Phase 13 진행 중
