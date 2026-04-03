@@ -797,3 +797,14 @@ Sanghun의 새 메시지 처리 완료.
 [2026-04-04 04:00:53] Eddy 실행 완료
 [2026-04-04 04:30:01] Eddy 실행 시작
 [2026-04-04 19:30:29] Eddy 정기 체크 — 새 텔레그램 메시지 없음. ELDO: Lighthouse 대기, ReviewBot: Phase 14-A 완료
+팀 정상 가동 중. 새 텔레그램 메시지 없음.
+
+**현황 요약:**
+- **ELDO**: 모든 코드 완료 (Phase 6, A11Y 포함). `eldo-one.vercel.app` Lighthouse 실측만 남음 → Sanghun 직접 필요
+- **ReviewBot**: Phase 14-A 시리즈 글 자동화까지 완료. 실 포스팅 실행은 네이버 브라우저 세션 필요 → Sanghun 직접 실행
+
+**Sanghun 액션 필요:**
+1. Chrome DevTools로 Lighthouse 측정 (`eldo-one.vercel.app`)
+2. `node pipeline.mjs --auto` 실행 (ReviewBot 첫 실제 포스팅)
+[2026-04-04 04:30:46] Eddy 실행 완료
+[2026-04-04 05:00:01] Eddy 실행 시작
