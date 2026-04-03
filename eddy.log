@@ -590,3 +590,13 @@ Sanghun의 새 메시지 처리 완료.
 - state.json 업데이트 및 커밋 완료
 [2026-04-03 15:00:57] Eddy 실행 완료
 [2026-04-03 15:30:00] Eddy 실행 시작
+완료.
+
+리뷰봇 Phase 12 처리:
+- **BUG-001**: `rank-tracker.mjs`에서 `디지털/가전` 같은 카테고리명에 슬래시가 포함될 때 파일 경로 오류 수정 → `safeCategory` 패턴 적용
+- **BUG-002**: `blog-publisher.mjs` + `pipeline.mjs` 포스팅 한도 주석/로그 `2개→1개` 통일
+- **12-A**: `keywords.json` 전체 63개 키워드 카테고리 정리 (`"기타"` 제거, 7개 정확한 카테고리로 분류) + 봄 시즌 키워드 8개 `status: "priority"` 표시
+
+`kimeleven/reviewbot` main 푸시 완료.
+[2026-04-03 15:33:33] Eddy 실행 완료
+[2026-04-03 16:00:01] Eddy 실행 시작
