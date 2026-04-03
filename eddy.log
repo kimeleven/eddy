@@ -818,3 +818,21 @@ Sanghun의 새 메시지 처리 완료.
 - DevGate/LiveOrder: 보류 상태 유지.
 [2026-04-04 05:00:44] Eddy 실행 완료
 [2026-04-04 05:30:00] Eddy 실행 시작
+완료.
+
+---
+
+**[Eddy PM 정기 체크]**
+
+📋 팀 현황:
+- **ELDO**: Phase 6 코드 100% 완료. `eldo-one.vercel.app` 배포 완료. Lighthouse 실측만 남음 (Sanghun 직접 필요)
+- **ReviewBot**: Phase 16-A 완료 (일일 브리핑 알림 구현). 실 포스팅 실행은 Sanghun 직접 필요
+
+📝 변동 없음
+
+⏳ Sanghun 액션 필요:
+- **ELDO**: Chrome DevTools → Lighthouse 실측 → QA_REPORT.md 기록 → 베타 오픈 완료
+- **ReviewBot**: `node pipeline.mjs --auto` 실행 (네이버 브라우저 세션 필요)
+[2026-04-04 05:31:02] Eddy 실행 완료
+[2026-04-04 06:00:00] Eddy 실행 시작
+[2026-04-03 21:00:39] Eddy 실행 완료 (변동 없음)
