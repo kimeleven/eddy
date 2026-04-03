@@ -3,7 +3,7 @@ _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
 - [ ] **ELDO 베타 개발 — Phase 2: 더미DB 적재** — seed.ts 완성 (2026-04-03). 스키마에 EMTEC/VcrReport/NewsletterSubscriber 모델 추가, StockExchangeTypes에 `tse`(도쿄증권거래소) 추가. 다음 단계: Neon DATABASE_URL 설정 후 `prisma db push && npm run db:seed` 실행. 한/미/일 각 10개사 + EMSEC 3섹터 + EMTEC 8태그 + VCR(C/S/T) + 주가(12개월) 적재 예정.
-- [ ] **ELDO 베타 개발 — Phase 3~5: 프론트 개발** — 더미DB 완료 후: 디자인 → 개발 → 추가사항(주가히트맵, VCR페이지, EMTEC, 뉴스레터, 다국어, GA, SEO). 30분 단위 진행. 각 Phase 완료 시 Sanghun에게 보고.
+- [ ] **ELDO 베타 개발 — Phase 3~5: 프론트 개발 (진행중)** — Sprint 2~5 완료 (2026-04-03): /vcr 신규 페이지(VCR-C/S/T 탭, 프롬프트 복사), 뉴스레터 구독 폼, EMTEC 태그+필터링, Yahoo Finance 외부링크 교체. 남은 작업: /sectors EMTEC 필터, VCR DB 연동, 다국어/GA/SEO. GitLab push는 자격증명 필요.
 - [ ] **ELDO 베타 30분 스케줄** — "이 팀도 30분에 한번씩 할일을 처리하자" (2026-04-03). 현재 기술적 제약(최소 1시간, remote trigger 인증 오류) 동일. 해결 방안 논의 필요.
 - [ ] **리뷰봇 가격대별 깊이 적용** — `reviewbot_prompt.md` 작성 완료 (2026-04-03). 실제 리뷰봇 코드/레포 확인 후 해당 프롬프트 연동 필요. 리뷰봇 레포 위치 확인 요망.
 - [ ] **앤트로픽 API 키 설정** — Sanghun이 "팀들에 설정한 앤트로픽 키 사용하라"고 지시 (2026-04-02). 현재 Eddy 환경에 해당 키가 없음. 키 값을 직접 공유하거나 환경변수로 설정 필요.
