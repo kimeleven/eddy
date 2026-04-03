@@ -808,3 +808,13 @@ Sanghun의 새 메시지 처리 완료.
 2. `node pipeline.mjs --auto` 실행 (ReviewBot 첫 실제 포스팅)
 [2026-04-04 04:30:46] Eddy 실행 완료
 [2026-04-04 05:00:01] Eddy 실행 시작
+보고 완료.
+
+**[Eddy 정기 체크]**
+
+- 새 텔레그램 메시지: 없음
+- **ELDO**: Phase 6 코드 100% 완료. `eldo-one.vercel.app` 배포 중. Lighthouse 브라우저 실측만 남음 (Sanghun 직접 필요).
+- **ReviewBot**: Phase 15-A (weekly-report.mjs) 구현 완료. 안정화 모드 진행 중.
+- DevGate/LiveOrder: 보류 상태 유지.
+[2026-04-04 05:00:44] Eddy 실행 완료
+[2026-04-04 05:30:00] Eddy 실행 시작
