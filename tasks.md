@@ -2,6 +2,7 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
+- [ ] **크론탭 수정 (수동 실행 필요)** — macOS FDA 권한 문제로 자동 수정 불가. 터미널에서 실행: `crontab /tmp/new_crontab.txt` (파일 준비됨: Liveorder 제거 + Reviewbot dev1 매 30분). (2026-04-03)
 - [ ] **ELDO 베타 GitLab MR 승인** — `beta` 브랜치를 `main`으로 병합 필요. MR URL: https://git.mintech.kr/greta/eldo-web/-/merge_requests/new?merge_request%5Bsource_branch%5D=beta (2026-04-03). Sanghun이 직접 GitLab에서 검토 후 병합하면 됨.
 - [ ] **ELDO Vercel 배포 (토큰 필요)** — next build 성공, vercel.json 생성, kimeleven/eldo GitHub 푸시 완료. Vercel 토큰만 있으면 즉시 배포 가능. vercel.com/account/tokens 에서 발급 후 알려주면 처리. DATABASE_URL은 Neon PostgreSQL 설정 필요.
 - [ ] **ELDO Google Analytics** — `NEXT_PUBLIC_GA_ID` 발급 필요. GA4 콘솔에서 새 속성 생성 후 `.env`에 설정하면 자동 활성화.

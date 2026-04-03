@@ -1,7 +1,7 @@
 # Sanghun Kim - Study
 _Eddy의 Sanghun 관찰 기록 | 대화할 때마다 업데이트됨_
 
-_Last updated: 2026-04-03_
+_Last updated: 2026-04-03 (2차)_
 
 ## 의사결정 방식
 - 빠르게 결정하고 실행하는 스타일
@@ -55,6 +55,7 @@ _Last updated: 2026-04-03_
 - 레포 위치 미확인 — 별도 확인 필요
 
 ## LiveOrder 프로젝트
+- **중지 결정 (2026-04-03)** — Sanghun이 직접 "Liveorder 중지" 지시. 팀 스케줄 제거 예정.
 - e-커머스 플랫폼 (셀러/구매자/관리자 3자 구조)
 - GitHub: kimeleven/liveorder
 - 스택: Next.js 16, Prisma, Neon PostgreSQL, Vercel, PortOne 결제
@@ -80,6 +81,14 @@ _Last updated: 2026-04-03_
   - 다국어 (한/영/일), Google Analytics, SEO
   - 주가정보는 Yahoo Finance 외부링크로 대체 (저작권)
 - **개발 계획 문서**: eldo/ELDO_DEV_PLAN.md
+
+## Devgate 프로젝트
+- ODDSystem (On-Demand Development System) — AI 에이전틱 코딩 시대 투명한 외주 개발 플랫폼
+- GitHub: 별도 GitLab (git.mintech.kr), 배포: Coolify (devgate.mintdev.uk)
+- 현재: Phase 15/16 진행 중 (개발팀 자동 실행 중, 밤 시간대)
+- **Phase 6-C "실환경 검증"이 14회 연속 지연** — PortOne 결제, Kakao 로그인 등 실제 운영 서버에서 인간이 직접 테스트 필요
+- "실환경접근가능한 인원" = Sanghun 본인 (Coolify 서버 직접 접근 가능한 유일한 사람)
+- Sanghun이 직접 devgate.mintdev.uk 접속 및 기능 테스트 해야 Phase 6-C 완료 가능
 
 ## 로컬 개발 환경
 - PostgreSQL@16 로컬 설치됨 (/usr/local/Cellar/postgresql@16/16.13/)
