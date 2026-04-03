@@ -783,3 +783,17 @@ Sanghun의 새 메시지 처리 완료.
 3. ReviewBot 네이버 서치어드바이저 등록
 [2026-04-04 03:31:49] Eddy 실행 완료
 [2026-04-04 04:00:00] Eddy 실행 시작
+정기 체크 완료.
+
+**상황 요약:**
+- 텔레그램 새 메시지 없음
+- ELDO: Phase 6 코드 100% 완료. Lighthouse 실측만 남음 (Sanghun 직접 Chrome에서)
+- ReviewBot: Phase 13 안정화 모드. dry-run 완료, 실 포스팅은 Sanghun 직접 실행 필요
+
+**Sanghun 액션 대기 중:**
+1. ELDO Lighthouse → eldo-one.vercel.app (Chrome DevTools)
+2. ReviewBot 실 포스팅 → `node pipeline.mjs --auto`
+3. ReviewBot 서치어드바이저 등록
+[2026-04-04 04:00:53] Eddy 실행 완료
+[2026-04-04 04:30:01] Eddy 실행 시작
+[2026-04-04 19:30:29] Eddy 정기 체크 — 새 텔레그램 메시지 없음. ELDO: Lighthouse 대기, ReviewBot: Phase 14-A 완료
