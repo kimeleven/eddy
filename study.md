@@ -55,12 +55,11 @@ _Last updated: 2026-04-03 (2차)_
 - 레포 위치 미확인 — 별도 확인 필요
 
 ## LiveOrder 프로젝트
-- **중지 결정 (2026-04-03)** — Sanghun이 직접 "Liveorder 중지" 지시. 팀 스케줄 제거 예정.
+- **개발 완전 종료 (2026-04-03)** — "Liveorder 개발은 여기까지하고 정리" (Sanghun 지시). 더 이상 개발 진행 없음.
 - e-커머스 플랫폼 (셀러/구매자/관리자 3자 구조)
 - GitHub: kimeleven/liveorder
 - 스택: Next.js 16, Prisma, Neon PostgreSQL, Vercel, PortOne 결제
-- 현재 단계: Phase 1 MVP QA → Vercel 배포 직전
-- 개발팀: Dev1 (서브에이전트) 운영 중
+- 최종 단계: Phase 1 MVP QA 완료, Admin 로그인 버그 수정 완료 상태로 종료
 - 관리자 이메일: kimeleven@gmail.com
 
 ## ELDO 프로젝트
