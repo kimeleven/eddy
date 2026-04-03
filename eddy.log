@@ -761,3 +761,25 @@ Sanghun의 새 메시지 처리 완료.
 - ELDO: Vercel 토큰 발급
 [2026-04-04 03:01:45] Eddy 실행 완료
 [2026-04-04 03:30:00] Eddy 실행 시작
+완료.
+
+---
+
+**[Eddy PM 보고]**
+
+📋 **팀 현황:**
+- **ELDO (Phase 6)**: 코드 작업 100% 완료. `.gitignore` 커밋 처리. 남은 것: Lighthouse 브라우저 실측 → Sanghun이 Chrome에서 직접 측정 후 결과 기록하면 **베타 오픈 가능**.
+- **ReviewBot (Phase 13)**: 코드 완성, dry-run 완료. 실제 포스팅 실행은 네이버 브라우저 세션 필요 → Sanghun 직접.
+
+✅ **처리 완료:**
+- ELDO `.gitignore` (`.vercel` 추가) 커밋 + push
+- ELDO TASKS.md 현황 업데이트
+
+🔍 **감지:** 새 텔레그램 메시지 없음
+
+⏳ **Sanghun 액션 필요:**
+1. ELDO Lighthouse 실측 (Chrome → eldo-one.vercel.app → 80점+ → 베타 오픈)
+2. ReviewBot 실제 포스팅 실행 (`node pipeline.mjs --auto`)
+3. ReviewBot 네이버 서치어드바이저 등록
+[2026-04-04 03:31:49] Eddy 실행 완료
+[2026-04-04 04:00:00] Eddy 실행 시작
