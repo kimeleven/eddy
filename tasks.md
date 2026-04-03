@@ -2,7 +2,7 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
-- [ ] **ELDO 베타 개발 — Phase 2: 더미DB 제작** — 요구사항 분석 + 계획수립 완료 (2026-04-03). 다음 단계: EMSEC 시드, 더미 기업/재무/주가/VCR/뉴스 데이터 seed 스크립트 작성 후 Neon 적재. `eldo/ELDO_DEV_PLAN.md` 참고.
+- [ ] **ELDO 베타 개발 — Phase 2: 더미DB 적재** — seed.ts 완성 (2026-04-03). 스키마에 EMTEC/VcrReport/NewsletterSubscriber 모델 추가, StockExchangeTypes에 `tse`(도쿄증권거래소) 추가. 다음 단계: Neon DATABASE_URL 설정 후 `prisma db push && npm run db:seed` 실행. 한/미/일 각 10개사 + EMSEC 3섹터 + EMTEC 8태그 + VCR(C/S/T) + 주가(12개월) 적재 예정.
 - [ ] **ELDO 베타 개발 — Phase 3~5: 프론트 개발** — 더미DB 완료 후: 디자인 → 개발 → 추가사항(주가히트맵, VCR페이지, EMTEC, 뉴스레터, 다국어, GA, SEO). 30분 단위 진행. 각 Phase 완료 시 Sanghun에게 보고.
 - [ ] **ELDO 베타 30분 스케줄** — "이 팀도 30분에 한번씩 할일을 처리하자" (2026-04-03). 현재 기술적 제약(최소 1시간, remote trigger 인증 오류) 동일. 해결 방안 논의 필요.
 - [ ] **리뷰봇 가격대별 깊이 적용** — `reviewbot_prompt.md` 작성 완료 (2026-04-03). 실제 리뷰봇 코드/레포 확인 후 해당 프롬프트 연동 필요. 리뷰봇 레포 위치 확인 요망.
