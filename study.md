@@ -87,6 +87,7 @@ _Last updated: 2026-04-03_
 - Node.js v25.8.2 (/usr/local/bin/node)
 - GitHub CLI (/usr/local/bin/gh, kimeleven 계정)
 - CLAUDE_CODE_OAUTH_TOKEN: reviewbot/.env 및 팀 에이전트 스크립트에 저장됨
+- **GitLab SSH**: `~/.ssh/id_ed25519_mintech` 키로 `git.mintech.kr` 인증 성공 (Eddy 계정). `git@git.mintech.kr:greta/eldo-web.git` push 가능 (2026-04-03 확인)
 - Eddy의 철학: "그것도 니가 할 수 있잖아" → 외부 크리덴셜 요청 전 로컬 환경 활용 먼저
 
 ## 텔레그램 채팅 현황
