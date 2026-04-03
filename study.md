@@ -81,6 +81,14 @@ _Last updated: 2026-04-03_
   - 주가정보는 Yahoo Finance 외부링크로 대체 (저작권)
 - **개발 계획 문서**: eldo/ELDO_DEV_PLAN.md
 
+## 로컬 개발 환경
+- PostgreSQL@16 로컬 설치됨 (/usr/local/Cellar/postgresql@16/16.13/)
+- 로컬 DB: `eldo`, `liveorder`, `devgate_test` (localhost:5432, 사용자: a1111, 패스워드 없음)
+- Node.js v25.8.2 (/usr/local/bin/node)
+- GitHub CLI (/usr/local/bin/gh, kimeleven 계정)
+- CLAUDE_CODE_OAUTH_TOKEN: reviewbot/.env 및 팀 에이전트 스크립트에 저장됨
+- Eddy의 철학: "그것도 니가 할 수 있잖아" → 외부 크리덴셜 요청 전 로컬 환경 활용 먼저
+
 ## 텔레그램 채팅 현황
 - 개인 채팅: Sanghun ↔ Eddy (주요 지시 채널, "@에디" 없어도 처리)
 - 그룹 채팅: 봇 추가 시 자동 감지 및 맥락 파악 예정
