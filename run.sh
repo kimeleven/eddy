@@ -96,21 +96,46 @@ Read: state.json, study.md, setup.md, tasks.md
 curl -s \"https://api.telegram.org/bot\${TELEGRAM_BOT_TOKEN}/getUpdates?offset=LAST_UPDATE_ID_PLUS_1&limit=100\"
 \`\`\`
 
-### STEP 3: Analyze messages
+### STEP 3: Analyze messages & Classify
 **Private chat (chat.id == ${TELEGRAM_CHAT_ID}):** Direct instructions from Sanghun — treat as commands.
 **Group chats (chat.type == group/supergroup):** Extract Sanghun's instructions and context.
+
+For each Sanghun message, classify:
+- **Eddy 직접 처리**: Eddy가 스스로 할 수 있는 작업 (파일 수정, 조사, 설정 등)
+- **팀 전달 지시**: 특정 팀에 전달해야 하는 개발/기획/수정 지시
+
+### STEP 3.5: Sanghun 지시 → 팀 최우선 전달 (CRITICAL)
+Sanghun의 텔레그램 지시 중 팀에 해당하는 것은 **즉시** 해당 팀 TASKS.md 최상단에 🚨 URGENT로 추가.
+기존 태스크보다 무조건 우선순위 1위. 팀의 다음 실행 때 가장 먼저 처리됨.
+
+Format in TASKS.md:
+\`\`\`
+## 🚨 URGENT (Sanghun 직접 지시 - 최우선)
+- [ ] [지시 내용] (지시 시각: YYYY-MM-DD HH:MM)
+
+## Dev1
+(기존 태스크...)
+\`\`\`
+
+Rules:
+- Sanghun 지시는 기존 모든 태스크보다 우선
+- 어느 팀에 해당하는지 Eddy가 판단 (복수 팀 가능)
+- 팀 판단이 애매하면 가장 관련 높은 팀에 할당
+- Eddy가 직접 할 수 있는 건 Eddy가 직접 처리 (팀 전달 X)
+- 처리 완료 후 TASKS.md에서 체크 표시
 
 ### STEP 4: Team Management (PM 역할)
 For each ACTIVE team:
 1. Read their TASKS.md, QA_REPORT.md, PLAN.md
 2. Check recent git log: \`cd ~/eddy-agent/{project} && git log --oneline -5\`
 3. Evaluate:
+   - 🚨 URGENT 태스크가 있는데 처리 안 됐는가? → 다음 실행 때 반드시 처리되도록 유지
    - 태스크 진행이 멈춰있는가? → 태스크 재할당 또는 수정
    - QA에서 새 버그가 보고되었는가? → Dev 태스크에 버그 수정 추가
-   - Sanghun의 새 지시가 있는가? → 해당 팀 TASKS.md에 반영
    - PLAN.md 방향이 맞는가? → 필요시 수정
 4. Write updated TASKS.md for each team (assign specific tasks to Dev1, Planner, QA, PM)
 5. If a team is stuck or going wrong direction, course-correct via TASKS.md
+6. Completed URGENT tasks → move to completed section
 
 ### STEP 5: Execute personal tasks
 - Do everything that can be done now
