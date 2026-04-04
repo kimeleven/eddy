@@ -1366,3 +1366,35 @@ Sanghun의 새 메시지 처리 완료.
 [2026-04-05 00:18:26] Eddy 실행 완료
 [2026-04-05 00:28:26] Eddy 실행 시작
 [2026-04-05 00:30:01] Eddy 스킵 — 이전 실행 중 (PID 13998)
+**19차 순회 완료.**
+
+**팀 현황 요약:**
+
+| 팀 | 상태 | 주요 내용 |
+|---|---|---|
+| **ELDO** | 🟢 정상 | Dev1 28차(섹터 i18n) / Dev2 26차 완료. QA 11차 대기. |
+| **ReviewBot** | 🟡 처리 중 | URGENT — 쿠팡 직접검색 전환 + 자동 포스팅 중단. Dev1 실행 중. |
+| **DevGate** | 🟢 정상 | Phase 19-A 완료, E2E 39/39 전체 통과. 테스트+버그수정 모드 전환. |
+| **XBot** | 🔴 보류 | 봇 감지 차단. 변동 없음. |
+| **IRI-Safety** | 🟢 정상 | 1차 실행 완료. 비밀번호 인증+감사 로그+사용자 관리 구현. QA 버그 2건 발견 → QA_REPORT 반영. |
+
+**Sanghun 액션 필요:**
+- ReviewBot: 쿠팡 파트너스 API 키 (`COUPANG_ACCESS_KEY`, `COUPANG_SECRET_KEY`)
+- ELDO: Vercel 토큰, Google Analytics ID
+[2026-04-05 00:30:57] Eddy 실행 완료
+[2026-04-05 00:40:57] Eddy 실행 시작
+**20차 순회 완료.**
+
+**처리 내용:**
+- **ELDO**: QA 11차 완료 확인 → BETA-26 배정 (Dev1: SECTORS-JA-LABEL Medium 수정, Dev2: TOC-JA-MISSING/SIDEBAR-ANY-TYPE Low 수정)
+- **IRI-Safety**: QA 1차 BUG-002 포트 3003 확정, TASKS.md 업데이트 후 push
+- 텔레그램 신규 메시지 없음
+
+**팀 상태:**
+- ELDO: 정상 가동 (Dev1 29차 / E2E 19/19)
+- ReviewBot: 정상 (BUG-003 수정, 파트너스 링크 대기)
+- DevGate: Phase 19-A 완료, E2E 39/39 통과, 버그수정 모드
+- IRI-Safety: 개발 진행 중 (비밀번호인증/감사로그 완료)
+- XBot: 보류 유지
+[2026-04-05 00:46:03] Eddy 실행 완료
+[2026-04-05 00:56:03] Eddy 실행 시작
