@@ -1432,3 +1432,17 @@ Sanghun의 새 메시지 처리 완료.
 **대기**: ReviewBot 파트너스 링크 5건 Sanghun 제공 필요.
 [2026-04-05 01:01:49] Eddy 실행 완료
 [2026-04-05 01:07:57] Eddy 실행 시작
+텔레그램 보고 완료. 22차 순회 결과:
+
+**신규 텔레그램**: 없음
+
+**팀 현황**:
+- **ELDO**: BETA-26 완료 (SECTORS-JA-LABEL / TOC-JA-MISSING / SIDEBAR-ANY-TYPE 수정). E2E 17/19 통과. BETA-27 Planner 배정 예정.
+- **ReviewBot**: BUG-004 완료 (파트너스 링크 대기 중 리뷰 작성 방지). 자동 포스팅 중단 상태. URGENT 쿠팡 직접 검색 미완 (API 키 대기).
+- **DevGate**: Phase 19-A 완료, E2E 39/39, Dev1 버그수정 모드 정상.
+- **IRI-Safety**: bcrypt 비밀번호 인증 + AuditLog 구현 완료. BUG-002 포트 충돌(3002→3003) Open.
+- **XBot**: 보류.
+
+**대기 (Sanghun 액션 필요)**: ReviewBot 쿠팡 파트너스 API 키 (`COUPANG_ACCESS_KEY` / `COUPANG_SECRET_KEY`)
+[2026-04-05 01:10:23] Eddy 실행 완료
+[2026-04-05 01:20:24] Eddy 실행 시작
