@@ -921,3 +921,12 @@ Sanghun의 새 메시지 처리 완료.
 - ELDO: URGENT 3개 진행 중 (정적데이터 DB 전환, UI 다크모드, Playwright E2E) — /api/analysis DB 전환 ✅ 완료
 - ReviewBot: Phase 23-A 완료, 실 포스팅 실행 대기 (Sanghun 직접)
 [2026-04-04 10:30:37] Eddy 실행 완료
+텔레그램 보고 완료.
+
+**현황:**
+- 신규 메시지 없음
+- **ELDO**: URGENT 3개 (정적데이터→DB 전환, UI/다크모드 재구성, Playwright E2E) Dev1 진행 중. `/api/analysis` DB 전환 완료.
+- **ReviewBot**: Phase 23-A 완료. 실 파이프라인 실행은 Sanghun 직접 필요.
+- Devgate/LiveOrder: 보류 유지.
+[2026-04-04 10:01:07] Eddy 실행 완료
+[2026-04-04 10:30:00] Eddy 실행 시작
