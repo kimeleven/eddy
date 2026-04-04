@@ -1446,3 +1446,18 @@ Sanghun의 새 메시지 처리 완료.
 **대기 (Sanghun 액션 필요)**: ReviewBot 쿠팡 파트너스 API 키 (`COUPANG_ACCESS_KEY` / `COUPANG_SECRET_KEY`)
 [2026-04-05 01:10:23] Eddy 실행 완료
 [2026-04-05 01:20:24] Eddy 실행 시작
+23차 순회 완료. 전체 팀 정상 가동 중.
+
+**팀 현황 요약:**
+- **ELDO**: BETA-26 일본어 레이블 완료. E2E 17/19 (2건 기존 DB 이슈)
+- **ReviewBot**: BUG-004 완료. 파트너스 링크 6건 대기 중
+- **DevGate**: E2E 49/49 전체 통과. 테스트+버그수정 모드
+- **XBot**: 최초 로그인 테스트 대기 (Sanghun 직접 필요)
+- **IRI-Safety**: QA 35/35 PASS. BUG-001/002 완료 → TASKS.md 업데이트
+
+**대기 중 (Sanghun 액션 필요):**
+1. ReviewBot 파트너스 링크 6건 회신
+2. XBot 최초 실행: `cd ~/eddy-agent/xbot && node pipeline.mjs --once`
+3. ELDO Vercel 토큰 + Neon DB URL
+[2026-04-05 01:22:49] Eddy 실행 완료
+[2026-04-05 01:30:00] Eddy 실행 시작
