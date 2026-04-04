@@ -1398,3 +1398,25 @@ Sanghun의 새 메시지 처리 완료.
 - XBot: 보류 유지
 [2026-04-05 00:46:03] Eddy 실행 완료
 [2026-04-05 00:56:03] Eddy 실행 시작
+**[Eddy 보고] 20차 순회 완료**
+
+**신규 텔레그램:** 없음
+
+**팀 현황 (직접 확인):**
+
+| 팀 | 상태 |
+|----|------|
+| ELDO | BETA-26 진행 중 — Dev2 완료(TOC-JA-MISSING/SIDEBAR-ANY-TYPE), Dev1 SECTORS-JA-LABEL 수정 대기. QA 11차 완료. |
+| ReviewBot | BUG-003 수정 완료. URGENT(쿠팡 직접검색 전환/자동포스팅 중단) 대기 중. pending-links 5건 링크 미수신. |
+| DevGate | Phase 19-A 완료. E2E 39/39 통과. 이후 버그 수정 전담 모드. |
+| XBot | 환경 세팅 완료. 최초 로그인 테스트 Sanghun 직접 필요. |
+| IRI-Safety | Dev1 감사로그/비밀번호 구현 완료. BUG-001/002 Open (포트 3003 변경 필요). |
+
+**대기 (Sanghun 액션 필요):**
+1. ReviewBot 쿠팡 파트너스 API 키 (COUPANG_ACCESS_KEY/SECRET_KEY)
+2. XBot 최초 로그인: `cd ~/eddy-agent/xbot && node pipeline.mjs --once`
+3. ELDO Vercel 배포 토큰
+
+텔레그램 발송 완료.
+[2026-04-05 00:57:56] Eddy 실행 완료
+[2026-04-05 01:00:00] Eddy 실행 시작
