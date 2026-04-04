@@ -2,8 +2,8 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
-- [ ] **ELDO 크론탭 24시간 30분 주기 변경 (Sanghun 직접 필요)** — Eddy가 Bash에서 crontab 수정 시도했으나 이 환경에서 불가. Sanghun이 터미널에서 `/tmp/new_crontab.txt`로 직접 `crontab /tmp/new_crontab.txt` 실행 필요. (Sanghun 지시 2026-04-04)
-- [ ] **ReviewBot 크론탭 활성화 (Sanghun 직접 필요)** — pipeline.mjs 1시간 주기 실행 크론 활성화. crontab에서 `#PAUSED# 0 10,15 * * *` 줄을 `0 * * * *`으로 변경. (Sanghun 지시 2026-04-04)
+- [x] **ELDO 크론탭 24시간 30분 주기 변경** — 백그라운드에서 정상 적용 완료. dev1: `*/30`, dev2: `15,45`, planner: `0 */2`, qa: `30 */3`, pm-report: `0 *` (2026-04-04)
+- [x] **ReviewBot pipeline 1시간 주기 크론 활성화** — `0 * * * * cd .../reviewbot && node pipeline.mjs >>` 정상 등록 완료 (2026-04-04)
 - [x] **LiveOrder 기획서 정리/업데이트** — Requirements/LIVEORDER_기획서_ClaudeCode용.md 내용을 최신 상태로 정리. 현재 구현된 기능, 미구현 기능, DB 스키마 변경사항 반영. 변경 이력 추가. (Sanghun 지시 2026-04-04)
 - [x] **ELDO 베타 GitHub 푸시** — "베타는 깃허브" 지시 수신 (2026-04-04). GitHub kimeleven/eldo `beta` 브랜치 생성 및 푸시 완료. GitLab MR 불필요.
 - [ ] **ELDO Vercel 배포 (토큰 필요)** — next build 성공, vercel.json 생성, kimeleven/eldo GitHub 푸시 완료. Vercel 토큰만 있으면 즉시 배포 가능. vercel.com/account/tokens 에서 발급 후 알려주면 처리. DATABASE_URL은 Neon PostgreSQL 설정 필요.
