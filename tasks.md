@@ -2,6 +2,7 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
+- [ ] **LiveOrder 기획서 정리/업데이트** — Requirements/LIVEORDER_기획서_ClaudeCode용.md 내용을 최신 상태로 정리. 현재 구현된 기능, 미구현 기능, DB 스키마 변경사항 반영. 변경 이력 추가. (Sanghun 지시 2026-04-04)
 - [x] **ELDO 베타 GitHub 푸시** — "베타는 깃허브" 지시 수신 (2026-04-04). GitHub kimeleven/eldo `beta` 브랜치 생성 및 푸시 완료. GitLab MR 불필요.
 - [ ] **ELDO Vercel 배포 (토큰 필요)** — next build 성공, vercel.json 생성, kimeleven/eldo GitHub 푸시 완료. Vercel 토큰만 있으면 즉시 배포 가능. vercel.com/account/tokens 에서 발급 후 알려주면 처리. DATABASE_URL은 Neon PostgreSQL 설정 필요.
 - [ ] **ELDO Google Analytics** — `NEXT_PUBLIC_GA_ID` 발급 필요. GA4 콘솔에서 새 속성 생성 후 `.env`에 설정하면 자동 활성화.
