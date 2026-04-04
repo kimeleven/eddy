@@ -2,6 +2,9 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
+- [ ] **ReviewBot: 쿠팡 파트너스 API 키 필요** — URGENT 쿠팡 직접 검색 전환 위해 `COUPANG_ACCESS_KEY`, `COUPANG_SECRET_KEY` 발급 필요. coupang partners.coupang.com에서 발급 후 ReviewBot `.env`에 추가. (2026-04-04 URGENT 지시 후 미해소)
+- [ ] **ReviewBot: pending-links.json 5건 링크 제공** — 봄 캠핑용품/원피스 추천/원피스 순위/신발 추천/가방 추천 리뷰 발행 대기 중. Sanghun이 쿠팡 파트너스 링크 직접 제공 또는 API 키 등록 후 자동화.
+- [ ] **XBot: 최초 로그인 테스트 (Sanghun 직접)** — `cd ~/eddy-agent/xbot && node pipeline.mjs --once` 터미널 직접 실행. X.com 로그인 성공 확인 후 크론 등록.
 - [x] **ELDO 크론탭 24시간 30분 주기 변경** — 백그라운드에서 정상 적용 완료. dev1: `*/30`, dev2: `15,45`, planner: `0 */2`, qa: `30 */3`, pm-report: `0 *` (2026-04-04)
 - [x] **ReviewBot pipeline 1시간 주기 크론 활성화** — `0 * * * * cd .../reviewbot && node pipeline.mjs >>` 정상 등록 완료 (2026-04-04)
 - [x] **LiveOrder 기획서 정리/업데이트** — Requirements/LIVEORDER_기획서_ClaudeCode용.md 내용을 최신 상태로 정리. 현재 구현된 기능, 미구현 기능, DB 스키마 변경사항 반영. 변경 이력 추가. (Sanghun 지시 2026-04-04)
