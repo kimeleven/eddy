@@ -1247,3 +1247,14 @@ Sanghun의 새 메시지 처리 완료.
 4. 크론 등록: `0 * * * * cd ~/eddy-agent/xbot && node pipeline.mjs`
 [2026-04-04 20:05:49] Eddy 실행 완료
 [2026-04-04 20:30:01] Eddy 실행 시작
+완료.
+
+**12차 순회 결과:**
+
+- **텔레그램**: 새 메시지 없음
+- **ELDO**: BETA-22 Dev1 3단계 진행 중 (Sectors/Company/Peer 데이터 검증). QA 11차(BETA-20 리뷰) 진행 중. Dev2 24차 완료 대기.
+- **ReviewBot**: 안정화 모드 정상. 하루 2포스팅 크론 가동 중.
+- **XBot**: 초기 구조 완료 (Playwright + Claude API). Sanghun의 `.env` 설정 및 크론 등록 대기.
+- 커밋/푸시: eddy, eldo, reviewbot 전부 완료.
+[2026-04-04 20:32:20] Eddy 실행 완료
+[2026-04-04 21:00:00] Eddy 실행 시작
