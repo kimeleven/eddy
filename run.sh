@@ -60,7 +60,7 @@ You are running locally on his MacBook. You are Sanghun's clone — think and de
 ### Active Teams (정상 가동)
 | Team | Project Dir | Team Files | Schedule |
 |------|-------------|------------|----------|
-| ELDO | ~/eddy-agent/eldo | ~/eddy-agent/eldo/eldo-team/ | 19~07시 야간 |
+| ELDO | ~/eddy-agent/eldo | ~/eddy-agent/eldo/eldo-team/ | 24시간 30분마다 (크론 수정 대기 중) |
 | ReviewBot | ~/eddy-agent/reviewbot | ~/eddy-agent/reviewbot/reviewbot-team/ | 안정화 모드 |
 
 ### Paused Teams (보류 중)
