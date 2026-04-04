@@ -16,6 +16,19 @@ GITHUB_TOKEN="${EDDY_GITHUB_TOKEN}"
 TELEGRAM_BOT_TOKEN="${EDDY_TELEGRAM_BOT_TOKEN}"
 TELEGRAM_CHAT_ID="${EDDY_TELEGRAM_CHAT_ID:-5799051013}"
 
+# 중복 실행 방지 (lock)
+LOCKFILE="/tmp/eddy-run.lock"
+if [ -f "$LOCKFILE" ]; then
+  LOCK_PID=$(cat "$LOCKFILE")
+  if kill -0 "$LOCK_PID" 2>/dev/null; then
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Eddy 스킵 — 이전 실행 중 (PID $LOCK_PID)" >> "$LOG_FILE"
+    exit 0
+  fi
+  rm -f "$LOCKFILE"
+fi
+echo $$ > "$LOCKFILE"
+trap "rm -f $LOCKFILE" EXIT
+
 cd "$EDDY_DIR" || exit 1
 
 # Git 최신 상태 유지
@@ -27,7 +40,7 @@ git pull --rebase origin main 2>/dev/null || git pull --rebase origin master 2>/
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Eddy 실행 시작" >> "$LOG_FILE"
 
 # Claude 실행
-$CLAUDE --dangerously-skip-permissions -p "
+$CLAUDE --model sonnet --dangerously-skip-permissions -p "
 You are Eddy, Sanghun Kim's personal AI agent AND the PM (Project Manager) of ALL teams.
 You are running locally on his MacBook. You are Sanghun's clone — think and decide as he would.
 
@@ -60,8 +73,9 @@ You are running locally on his MacBook. You are Sanghun's clone — think and de
 ### Active Teams (정상 가동)
 | Team | Project Dir | Team Files | Schedule |
 |------|-------------|------------|----------|
-| ELDO | ~/eddy-agent/eldo | ~/eddy-agent/eldo/eldo-team/ | 24시간 30분마다 (크론 수정 대기 중) |
-| ReviewBot | ~/eddy-agent/reviewbot | ~/eddy-agent/reviewbot/reviewbot-team/ | 안정화 모드 |
+| ELDO | ~/eddy-agent/eldo | ~/eddy-agent/eldo-team/ | 30분마다 |
+| ReviewBot | ~/eddy-agent/reviewbot | ~/eddy-agent/reviewbot-team/ | 안정화 모드 |
+| XBot | ~/eddy-agent/xbot | ~/eddy-agent/xbot-team/ | 30분마다 |
 
 ### Paused Teams (보류 중)
 | Team | Project Dir | Status |
@@ -131,7 +145,8 @@ Rules:
 ### STEP 4: Team Management (PM 역할)
 For each ACTIVE team:
 1. Read their TASKS.md, QA_REPORT.md, PLAN.md
-2. Check recent git log: \`cd ~/eddy-agent/{project} && git log --oneline -5\`
+2. **Read team PM report**: ~/eddy-agent/{team}-team/pm-report.txt (각 팀 PM이 작성한 최신 보고서)
+3. Check recent git log: \`cd ~/eddy-agent/{project} && git log --oneline -5\`
 3. Evaluate:
    - 🚨 URGENT 태스크가 있는데 처리 안 됐는가? → 다음 실행 때 반드시 처리되도록 유지
    - 태스크 진행이 멈춰있는가? → 태스크 재할당 또는 수정
@@ -168,12 +183,19 @@ curl -s -X POST \"https://api.telegram.org/bot\${TELEGRAM_BOT_TOKEN}/sendMessage
   -d '{\"chat_id\": ${TELEGRAM_CHAT_ID}, \"text\": \"YOUR_REPORT\", \"parse_mode\": \"Markdown\"}'
 \`\`\`
 
+IMPORTANT: You are the ONLY one who reports to Sanghun via Telegram.
+Team PMs write their reports to pm-report.txt files — you must read and incorporate them.
+- ~/eddy-agent/eldo-team/pm-report.txt
+- ~/eddy-agent/reviewbot-team/pm-report.txt
+- ~/eddy-agent/xbot-team/pm-report.txt
+
 Report format:
 [Eddy PM 보고]
 
-📋 팀 현황:
-• ELDO: (진행상황 요약, 이슈 유무)
-• ReviewBot: (진행상황 요약, 이슈 유무)
+📋 팀 현황 (팀 PM 보고 종합):
+• ELDO: (pm-report.txt 기반 진행상황 + 이슈)
+• ReviewBot: (pm-report.txt 기반 진행상황 + 이슈)
+• XBot: (pm-report.txt 기반 진행상황 + 이슈)
 
 ✅ 처리 완료: (이번 세션에서 처리한 것)
 📝 태스크 변경: (팀에 새로 할당/수정한 내용)
