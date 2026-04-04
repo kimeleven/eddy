@@ -1195,3 +1195,55 @@ Sanghun의 새 메시지 처리 완료.
 **⏳ Sanghun 액션 대기:** Vercel 토큰, GA4 ID, ReviewBot 서치어드바이저 등록, Lighthouse 측정
 [2026-04-04 19:04:36] Eddy 실행 완료
 [2026-04-04 19:30:00] Eddy 실행 시작
+[2026-04-04 19:34:00] Eddy 실행 완료
+10차 순회 완료 — 텔레그램 신규 지시 없음, ELDO BETA-20 i18n/A11Y 22차 확인(QA 11차 확장/Planner BETA-21 착수 지시), ReviewBot 파이프라인 실행 중(pending-links 감지)
+10차 순회 완료.
+
+**[Eddy PM 10차 순회]**
+
+**텔레그램:** 신규 지시 없음
+
+**ELDO 현황:**
+- BETA-20 Dev2 22차 완료 — i18n/A11Y 전수 5개 커밋 (`b2be26e`~`628bcd6`). peer/compare/valuation/sectors/news/VCR 전 페이지 하드코딩 한국어 0건 달성
+- QA 11차: 검토 대상 7개 커밋으로 확장 (i18n 전수 + /news + SEO + QA 버그 수정)
+- Planner 14차: BETA-21 계획 수립으로 태스크 전환
+
+**ReviewBot 현황:**
+- 파이프라인 실행 중 확인 — "봄 캠핑 용품 vs" 리뷰 이미지/JSON 생성됨
+- `pending-links.json` 생성 — 쿠팡 파트너스 링크 대기 상태 (Sanghun 직접 제공 필요)
+
+**⏳ Sanghun 액션 대기:**
+- ELDO Vercel 토큰 / GA4 ID
+- ReviewBot 파트너스 링크 (봄 캠핑 용품 vs)
+- ReviewBot `--headed` E2E 테스트
+[2026-04-04 19:33:02] Eddy 실행 완료
+[2026-04-04 20:00:00] Eddy 실행 시작
+텔레그램 보고 완료. 요약:
+
+---
+
+**처리 완료:**
+
+**XBot 신규 프로젝트 `~/eddy-agent/xbot` 구현 완료**
+
+| 파일 | 내용 |
+|------|------|
+| `src/browser.mjs` | Playwright 스텔스 설정 — navigator.webdriver 숨김, plugins 모킹, 자동화 플래그 제거, 퍼시스턴트 세션(재로그인 불필요) |
+| `src/human.mjs` | 인간 행동 시뮬레이션 — 랜덤 딜레이, 오타+수정, 가변 타이핑 속도, 마우스 이동, 랜덤 스크롤 |
+| `src/x-actions.mjs` | X.com 액션 — 타임라인 좋아요, 알림탭 좋아요, 댓글, 인용 포스팅 |
+| `src/content.mjs` | Claude API 콘텐츠 생성 — Sanghun 페르소나로 인간스러운 댓글/인용 텍스트 |
+| `pipeline.mjs` | 1시간 ±15분 랜덤 주기 메인 루프 |
+
+**다음 단계 (Sanghun 직접 필요):**
+1. `~/eddy-agent/xbot/.env` 생성:
+   ```
+   X_USERNAME=...
+   X_PASSWORD=...
+   X_EMAIL=...
+   ANTHROPIC_API_KEY=...
+   ```
+2. `cd ~/eddy-agent/xbot && npm install && npm run install-browsers`
+3. 첫 실행 테스트: `node pipeline.mjs --once`
+4. 크론 등록: `0 * * * * cd ~/eddy-agent/xbot && node pipeline.mjs`
+[2026-04-04 20:05:49] Eddy 실행 완료
+[2026-04-04 20:30:01] Eddy 실행 시작
