@@ -930,3 +930,18 @@ Sanghun의 새 메시지 처리 완료.
 - Devgate/LiveOrder: 보류 유지.
 [2026-04-04 10:01:07] Eddy 실행 완료
 [2026-04-04 10:30:00] Eddy 실행 시작
+보고 완료.
+
+**처리 요약:**
+
+- **수신:** Sanghun "승인..." → ReviewBot pipeline 실행 승인으로 처리, TASKS.md 체크
+- **ReviewBot:** 파이프라인 실제 실행 중 — 트렌치코트/점퍼 리뷰 자동 생성 확인 (ranks/reviews 파일 생성됨)
+- **ELDO:** URGENT 2건 (정적데이터 DB전환, UI 재구성/다크모드) 팀 진행 중
+- **state.json** last_update_id → 360082440 저장 및 push 완료
+- **텔레그램 보고** 전송 완료
+
+**Sanghun 액션 필요:**
+- ELDO Lighthouse 실측 (TASK-307)
+- ReviewBot 서치어드바이저 등록 (네이버 로그인)
+[2026-04-04 10:31:37] Eddy 실행 완료
+[2026-04-04 11:00:01] Eddy 실행 시작
