@@ -1047,3 +1047,21 @@ Sanghun의 새 메시지 처리 완료.
 - Lighthouse 측정 (Chrome DevTools)
 [2026-04-04 14:32:38] Eddy 실행 완료
 [2026-04-04 15:00:00] Eddy 실행 시작
+보고 완료.
+
+---
+
+**[Eddy PM 순회 완료]**
+
+**새 텔레그램 지시**: 없음
+
+**팀 현황:**
+- **ELDO**: BETA-12 Dev2 완료 ✅, Dev1 (커스텀 에러 페이지 + Loading skeleton) 착수 중
+- **ReviewBot**: 1시간 자동 포스팅 정상 운영 중
+  - 오늘 14:00 포스팅 1회 성공: https://blog.naver.com/kimeleve/224240587030
+  - 15:00 파이프라인: 하루 1개 한도로 건너뜀 (정상 동작)
+  - ⚠️ Playwright 검증 이슈 경고 발생 — 수동 확인 권장
+
+**처리 완료**: ReviewBot BUG-002 코드 직접 확인 — `blog-publisher.mjs`와 `pipeline.mjs` 모두 이미 올바르게 수정되어 있음. TASKS.md 완료 처리.
+[2026-04-04 15:03:14] Eddy 실행 완료
+[2026-04-04 15:30:00] Eddy 실행 시작
