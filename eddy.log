@@ -1130,3 +1130,26 @@ Sanghun의 새 메시지 처리 완료.
 - **대기**: ReviewBot OG링크 발행 버그 해결 미완, Lighthouse 재측정(Sanghun 직접 필요)
 [2026-04-04 17:32:23] Eddy 실행 완료
 [2026-04-04 18:00:00] Eddy 실행 시작
+텔레그램 보고 전송 완료. 요약:
+
+---
+
+**처리 완료:**
+
+1. **"팀 보고 상세하게"** → 반영. 이번 보고부터 각 팀별 커밋 해시, URGENT 상태, 다음 배정 내용까지 상세 기재.
+
+2. **"reviewbot에 lighthouse 측정해야해?"** → 불필요.
+   - ReviewBot = Node.js 자동화 파이프라인 (웹 프론트엔드 없음)
+   - Naver 블로그에 올라가는 건 네이버 플랫폼 성능 → 측정 의미 없음
+   - Lighthouse는 **ELDO** (Next.js 웹앱)에만 해당 → TASK-307 실측은 Sanghun이 Chrome DevTools로 직접 필요
+
+3. **ELDO TASKS.md 업데이트:**
+   - Planner 13차: BETA-19 계획 수립 배정 (뉴스레터 발송/Lighthouse 최적화 우선)
+   - QA 9차: BETA-18 코드 리뷰 배정
+
+4. **Sanghun 직접 필요:**
+   - `eldo-one.vercel.app` Chrome DevTools Lighthouse 실측 (Performance 80+ 목표)
+   - Vercel 토큰, GA4 ID
+[2026-04-04 18:04:25] Eddy 실행 완료
+[2026-04-04 18:30:00] Eddy 실행 시작
+[2026-04-04 18:30:00] Eddy 8차 순회 완료 — 텔레그램 신규 지시 없음, ELDO BETA-20 Planner/QA 10차 배정, ReviewBot 안정화 모드 유지
