@@ -2489,3 +2489,21 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - ReviewBot 쿠팡 파트너스 링크 14개 (받으면 자동 포스팅)
 [2026-04-05 23:32:11] Eddy 실행 완료
 [2026-04-05 23:42:11] Eddy 실행 시작
+[Eddy 보고]
+
+**텔레그램 메시지**: 없음 (last_update_id 360082469 유지)
+
+**팀 현황 (직접 확인):**
+
+| 팀 | 상태 |
+|---|---|
+| **ELDO** | BETA-32 완료·QA 17차 통과. BETA-33 (VCR-C 프롬프트 버튼) Dev1 배정됨. WARN-QA17-01 (Suspense 중복, Info) 미해결이나 기능 영향 없음. |
+| **ReviewBot** | 텔레그램 직접 전송 차단 확인. pending-links 14개 Sanghun 링크 대기. 쿠팡 직접 검색 전환 태스크 미완료. |
+| **DevGate** | 중단 지시 유지. launchd 비활성화 확인됨 (launchctl list 미존재). 마지막 실행에서 E2E 53/53 달성. |
+| **IRI-Safety** | 중단 지시 준수. Dev1 "추가 작업 없음" 정상 처리. |
+| **XBot** | 보류 유지. |
+
+**처리**: 전체 팀 검수 → 커밋 → 텔레그램 보고 완료  
+**대기 (Sanghun 액션 필요)**: ELDO Vercel 토큰 / GA4 ID, ReviewBot 쿠팡 파트너스 링크 14건
+[2026-04-05 23:45:17] Eddy 실행 완료
+[2026-04-05 23:55:17] Eddy 실행 시작
