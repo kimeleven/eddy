@@ -29,11 +29,11 @@
 
 <div class='summary'>
 <table>
-<tr><td><b>프로젝트</b></td><td>Bloomberg 스타일 한국 주식/ETF/VCR 금융 분석 플랫폼 (Next.js 15)</td></tr>
+<tr><td><b>프로젝트</b></td><td>Bloomberg 스타일 한국 주식/ETF/VCR 금융 분석 플랫폼 (Next.js 15 + Prisma + PostgreSQL)</td></tr>
 <tr><td><b>시작일</b></td><td>2026-04-03</td></tr>
-<tr><td><b>전체 커밋</b></td><td>220건</td></tr>
-<tr><td><b>이번 주 커밋</b></td><td>220건</td></tr>
-<tr><td><b>현재 상태</b></td><td>BETA-32 Lighthouse 최적화 완료 — QA 17차 진행 중. Vercel 배포 토큰 대기.</td></tr>
+<tr><td><b>전체 커밋</b></td><td>222건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>222건</td></tr>
+<tr><td><b>현재 상태</b></td><td>BETA-32 Lighthouse 최적화 완료 — QA 17차 WARN-QA17-01 발견. BETA-33 계획 수립 대기. Vercel 배포 토큰 대기 중.</td></tr>
 </table>
 </div>
 
@@ -41,69 +41,84 @@
 <p>프로젝트 시작(2026-04-03) 이후 BETA Phase별 주요 마일스톤:</p>
 <table>
 <tr><th>시기</th><th>Phase / 주요 변경</th><th>커밋 수</th></tr>
-<tr><td>2026-04-03</td><td>BETA 초기 — 프로젝트 스캐폴딩, Next.js 15 + Prisma + PostgreSQL 기반 구조, 초기 DB 스키마 (기업·재무·주가·VCR), 기본 라우팅</td><td>약 30</td></tr>
-<tr><td>2026-04-03</td><td>BETA-01~10 — Bloomberg 다크 테마 기본 구조, 섹터/기업 목록 페이지, 기업 상세 재무정보 테이블, 주가 차트 기초 구현</td><td>약 40</td></tr>
-<tr><td>2026-04-03~04</td><td>BETA-11~20 — VCR(밸류에이션 체인 리포트) 페이지 구현, 섹터 히트맵, EMTEC 산업분류 트리, 뉴스 카드, 사이드바 i18n 기초</td><td>약 60</td></tr>
-<tr><td>2026-04-04</td><td>BETA-21~28 — Bloomberg 스타일 전면 강화 (헤더·뉴스·VCR·sectors 색상/레이아웃), 홈 히어로 glassmorphism, sub_industry 3단계 사이드바, VCR 딥링크</td><td>약 50</td></tr>
-<tr><td>2026-04-05</td><td>BETA-29~32 + QA 13~16차 — 홈 랜딩 최적화(CTA+피처카드), QA 버그 수정 5건, Lighthouse VcrClient dynamic import + 데드 라우트 정리</td><td>40</td></tr>
+<tr><td>04-03<br>초기 Phase 1~6</td><td><b>프로젝트 기반 구축 + Phase 6 품질 개선</b><br>Next.js 15 + Prisma + PostgreSQL 스캐폴딩, 더미 DB 스키마(기업·재무·주가·VCR), 시드 데이터 작성, Google Analytics 연동, SEO 메타태그, JSON-LD, VCR 보고서 API, 뉴스레터 구독 API, A11Y 전수 개선, any 타입 제거, stock-heatmap N+1 쿼리 최적화, Vercel 배포 설정 추가, Prisma Decimal 타입 오류 수정</td><td>약 45</td></tr>
+<tr><td>04-03~04<br>BETA-01~09</td><td><b>베타 핵심 기능 + 보안</b><br>DATABASE_URL 로그 노출 제거, 히트맵 0값 버그(adj 가격 누락) 수정, 정적 데이터 DB(Prisma) 전환, UI 전면 재구성(Bloomberg 다크 테마), A11Y main 랜드마크·Select aria-label 전수, peer/compare/valuation 실기능 구현, 기업 글로벌 검색창(헤더), 모바일 반응형, Playwright E2E 세팅(19개 테스트)</td><td>약 40</td></tr>
+<tr><td>04-04<br>BETA-10~17</td><td><b>콘텐츠 확장 + Performance + 다국어 기초</b><br>/api/news 엔드포인트 + 기업 상세 관련 뉴스 섹션, 홈 SSR 전환 + next/dynamic 성능, Geist 폰트 활성화, 뉴스레터·홈페이지 다국어(한/영/일), 기업 상세·섹터·peer/compare/valuation 다국어 완성, fin-metric-cards 다국어, 홈 Stats 섹션 + /api/stats</td><td>약 40</td></tr>
+<tr><td>04-04<br>BETA-18~28</td><td><b>Bloomberg 스타일 전면 강화 + Seed DB 완성</b><br>Bloomberg 다크 팔레트 전면 교체, 헤더(로고 primary·nav uppercase), 뉴스 카드 소스 뱃지, VCR 탭·카드 스타일, sectors 히트맵 그린/레드 alpha 그래디언트, 홈 히어로 glassmorphism, stock-heatmap exchange 필터, Seed DB 1~3단계 전체 메뉴 검증, E2E 19/19 통과, EMTEC 태그 접기/펼치기(초기 8개), VCR-C 섹션 미리보기 카드, Performance 최적화(API revalidate·차트 dynamic ssr:false), Resend 뉴스레터 이메일 발송 인프라, SEO sitemap/robots 완성</td><td>약 60</td></tr>
+<tr><td>04-05<br>BETA-29~32 + QA</td><td><b>QA 스프린트 + 마무리 최적화</b><br>섹터 사이드바 sub_industry 3단계, VCR 딥링크 corp 파라미터 수정, QA 13차 버그(emsec labelJa 누락·sector-tree 라우트 통합), 사이드바 si: 분기 return 누락 수정, analysis route labelJa 추가, use-emsec-tree 타입 수정, globals.css Turbopack CSS 파싱 오류 수정, 홈 랜딩 CTA+피처카드 6개+i18n 개선, Lighthouse VcrClient dynamic import + 데드 라우트 삭제</td><td>약 37</td></tr>
 </table>
 
 <h2>2. 이번 주 변경 이력 (상세)</h2>
 <table>
 <tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
-<tr class='date-group'><td colspan='3'>2026-04-03 (프로젝트 시작)</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>초기</td><td>프로젝트 기반 구조 구축 — Next.js 15, Prisma ORM, PostgreSQL DB 스키마 초기화 (기업·재무제표·주가·VCR 보고서 테이블)</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>초기</td><td>Bloomberg 다크 테마 기반 UI 구조 설정 — globals.css, 레이아웃 컴포넌트, 섹터/기업 목록 페이지 기초</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>초기</td><td>EMTEC 산업분류 트리(섹터→그룹→산업) DB 시드 적재 — 기업 20개, 재무제표 100건, 주가 10,460건, VCR 보고서 23건</td></tr>
-<tr class='date-group'><td colspan='3'>2026-04-04 (BETA-11~28 구현)</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>Bloomberg 스타일 전면 적용 — 헤더 primary 색상 로고 + nav uppercase 소형, 홈 히어로 그래디언트 + 카드 glassmorphism, 섹터 히트맵 그린/레드 alpha 그래디언트</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>VCR 페이지 탭·카드 Bloomberg 스타일 개선, 기업 재무정보 테이블 Bloomberg 스타일 적용, 뉴스 카드 소스 뱃지 + primary glow 추가</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>9c0319c</td><td>PM 33차 — 토큰 절약 모드 전파 (크레딧 부족, Apr 8 리셋 전까지 작업 범위 최소화 지시)</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>eb5601f</td><td>PLAN.md 18차 업데이트 — BETA-28 완료 기록, BETA-29 배정</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>6b83616</td><td>QA 13차 — BETA-28 코드 리뷰: 기업목록 i18n, EMTEC 접기, VCR Skeleton 검증</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>e3309a9</td><td>헤더 Bloomberg 스타일 — 로고 primary 색상 적용, nav 메뉴 uppercase 소형 표시</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>67acabf</td><td>VCR 페이지 탭·카드 Bloomberg 스타일 개선</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>c7c29d3</td><td>섹터 히트맵 Bloomberg 색상 강화 — 그린/레드 alpha 그래디언트 적용</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>07a19e7</td><td>BETA-29 섹터 사이드바 sub_industry 3단계 지원 구현 (섹터→그룹→산업 3단 트리)</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>9996174</td><td>기업 상세 재무정보 테이블 Bloomberg 스타일 개선</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>931ea77</td><td>뉴스 페이지 카드 Bloomberg 스타일 — 소스 뱃지 + primary glow 적용</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>92dc0e1</td><td>Turbopack CSS 파싱 오류 수정 — globals.css @layer utilities 심플화</td></tr>
-<tr class='date-group'><td colspan='3'>2026-04-05 (BETA-29~32 완료 + QA)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>931e...→ac0</td><td>Planner 18~21차 — BETA-28 완료 기록, BETA-29/32 Dev1 배정, 태스크 계획 업데이트</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>3a3442b</td><td>QA 14차 — BETA-29 코드 리뷰 (sub_industry 3단계 구현, 스타일 변경 검증)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>2539a80</td><td>BUG-QA13-01/02 수정 — emsec tree labelJa(일본어 라벨) 누락 추가, sector-tree 라우트 통합</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>65d05c9</td><td>WARN-QA14-01 수정 — sidebar si: 분기 처리 return 누락 수정 (렌더링 경고 해결)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>9a46d94</td><td>PM — QA_REPORT BUG-QA13-01/02 + WARN-QA14-01 해결 상태 반영</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>8049ab2</td><td>WARN-QA15-01 수정 — use-emsec-tree hook의 id/parentId 타입을 number로 수정 (타입 안전성)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>46d34b7</td><td>BUG-QA14-01 수정 — analysis route SectorGroup + BaseRow labelJa 필드 추가</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>899d513</td><td>Planner 21차 — BETA-32 Lighthouse 최적화 Dev1 배정</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>cbe0d42</td><td>QA 16차 — BETA-30 최종 검증 (BUG-QA14-01 + WARN-QA15-01 확인, WARN-QA16-01 발견)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>1f36ad5</td><td>BETA-29 홈 페이지 랜딩 최적화 — CTA 버튼 추가, 6개 피처 카드, i18n 문구 개선</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>6643ea9</td><td>PM — BETA-29 Dev2 34차 완료 기록</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>4f23cce</td><td>BETA-32 Lighthouse 최적화 — VcrClient dynamic import(ssr:false), sector-tree 데드 라우트 삭제 (WARN-QA16-01 해결)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>856db66</td><td>BETA-32 Dev1 38차 완료 기록 — TASKS.md 업데이트</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-03</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>2b57e64</td><td>ELDO 초기 코드 + 개발 계획서 — 프로젝트 기반 구조 수립</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>f3b111e</td><td>더미 DB 스키마 마이그레이션 및 시드 데이터 작성</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>7059225</td><td>VCR 보고서 및 뉴스레터 구독 API 엔드포인트 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>8b424b1</td><td>프론트 개발 — API 확장 및 신규 페이지 구현 (Phase 4)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>ab889b3</td><td>Google Analytics 4, SEO 메타태그, 기업간 하이퍼링크, 다국어 기초 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>32b1623</td><td>QA 버그 수정 — 뉴스레터 중복(409), VCR 상세 로딩, Suspense 타이틀, JSON-LD 추가</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>b3265a2</td><td>코드 품질 — any 타입 제거 + stock-heatmap N+1 쿼리 최적화 (Phase 6)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>f92b10f</td><td>빌드 검증 + GA4 SPA 추적 + html lang 동적 설정 (TASK-301/303/308)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>7cb7ec0</td><td>stock-heatmap Prisma Decimal 타입 오류 수정 및 Vercel 배포 설정 추가</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>96d3650</td><td>Vercel 빌드 오류 수정 — Prisma 클라이언트 import 경로 및 빌드 스크립트 개선</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>34efd62</td><td>보안 강화 — DATABASE_URL 로그 노출 제거</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>1f40ace</td><td>시드 데이터 adj 가격 필드 추가 — 히트맵 0값 버그 수정</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>3f3926e</td><td>/api/analysis 정적 JSON → Prisma DB 쿼리로 전환</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>39b7400</td><td>UI 전면 재구성 — Bloomberg 스타일 다크 테마 적용</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>3d1b152</td><td>A11Y 전수 개선 + peer/compare/valuation 실기능 구현 (BETA-06)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>77100d3</td><td>모바일 반응형 개선 + Playwright E2E 세팅 + dead code 정리 (BETA-09)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>1bd579f</td><td>기업 글로벌 검색창 헤더 추가 + ANALYSIS-METRIC-VALID 400 가드 (BETA-08)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>b844229</td><td>뉴스 섹션 — /api/news 엔드포인트 + 기업 상세 관련 뉴스 추가 (BETA-10)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>3dd24ca</td><td>홈 SSR 전환 + next/dynamic + Geist 폰트 활성화 (BETA-11 Performance)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>f19e2c2</td><td>fin-metric-cards 다국어(한/영/일) + 홈 VCR 퀵링크 개선 (BETA-17)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>6194bdc</td><td>stock-heatmap/sectors/peer/vcr 다국어 완성 (BETA-18)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>2bc11ec</td><td>Bloomberg 스타일 다크 팔레트 전면 교체 + 다크 모드 기본값 설정</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>e3309a9</td><td>헤더 Bloomberg 스타일 — 로고 primary 색상 + nav uppercase 적용</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>628bcd6</td><td>peer/compare/valuation/섹터 사이드바 aria-label 전수 다국어 처리 (BETA-20 i18n)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>280ba3c</td><td>홈 Stats 섹션 신설 + /api/stats 엔드포인트 구현 (BETA-21)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>12b8b22</td><td>Seed DB 1~2단계 + stock-heatmap 비금융지주 수정 + E2E 19/19 통과 (BETA-22)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>68d4a2c</td><td>SEO 완성 + Resend 뉴스레터 이메일 발송 인프라 구축 (BETA-19)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>66023a1</td><td>번들 분석 + recharts named import + API 캐싱 헤더 (BETA-19 Dev2)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>54aad96</td><td>EMTEC 태그 필터 접기/펼치기 — 초기 8개, 선택된 태그 항상 표시 (BETA-28)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>d620eca</td><td>company/[id] VCR-C 섹션 미리보기 카드 형식 개선 (BETA-27 Dev2)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>07b521f</td><td>Performance 최적화 — API revalidate + 차트 dynamic ssr:false (BETA-27)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>da86b15</td><td>홈 페이지 히어로 그래디언트 + 카드 glassmorphism 개선</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>d971d5b</td><td>VCR 링크 corp 파라미터 수정 + emsec 트리 sub_industry 지원 (BETA-27)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>07a19e7</td><td>섹터 사이드바 sub_industry 3단계 지원 추가 (BETA-29)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>c7c29d3</td><td>sectors 히트맵 Bloomberg 색상 강화 — 그린/레드 alpha 그래디언트</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>67acabf</td><td>VCR 페이지 탭 + 카드 Bloomberg 스타일 개선</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>92dc0e1</td><td>뉴스 페이지 카드 Bloomberg 스타일 — 소스 뱃지 + primary glow</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>9996174</td><td>company/[id] 재무정보 테이블 Bloomberg 스타일 개선</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>2539a80</td><td>QA 13차 버그 수정 — emsec tree labelJa 누락 추가 + sector-tree 라우트 통합 (BUG-QA13-01/02)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>65d05c9</td><td>사이드바 si: 분기 return 누락 수정 (WARN-QA14-01)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>46d34b7</td><td>analysis route SectorGroup + BaseRow labelJa 추가 (BUG-QA14-01)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>8049ab2</td><td>use-emsec-tree id/parentId 타입 number로 수정 (WARN-QA15-01)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>e1884b8</td><td>globals.css @layer utilities 심플화 — Turbopack CSS 파싱 오류 수정</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>1f36ad5</td><td>홈 페이지 랜딩 최적화 — CTA 버튼 + 피처 카드 6개 + i18n 문구 개선 (BETA-29)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>4f23cce</td><td>Lighthouse 최적화 — VcrClient dynamic import + sector-tree 데드 라우트 삭제 (BETA-32)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>be9f9ec</td><td>QA 17차 — BETA-32 Lighthouse 최적화 검증 완료 (WARN-QA17-01 발견)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>64d4f6c</td><td>BETA-32 완료 확인 — PLAN.md/QA_REPORT.md/TASKS.md 상태 동기화 (Dev1 39차)</td></tr>
 </table>
 
 <h2>3. 현재 상태</h2>
 <ul>
-<li class='done'>✅ BETA-29: 홈 페이지 랜딩 최적화 (CTA + 피처카드 + i18n) 완료</li>
-<li class='done'>✅ BETA-30: QA 버그 수정 5건 완료 (BUG-QA13-01/02, WARN-QA14-01, BUG-QA14-01, WARN-QA15-01)</li>
-<li class='done'>✅ BETA-32: Lighthouse 성능 최적화 완료 (VcrClient dynamic import, 데드 라우트 삭제)</li>
-<li class='progress'>🔄 QA 17차: BETA-32 Lighthouse 최적화 검증 진행 중</li>
-<li class='todo'>⏳ GitHub kimeleven/eldo beta 브랜치 푸시 완료 — Vercel 토큰 발급 시 즉시 배포 가능</li>
-<li class='todo'>⏳ Google Analytics GA4 속성 ID 발급 대기 (Sanghun 필요)</li>
-<li class='todo'>⏳ TASK-307 Lighthouse 실측 — 외부 URL 접근 필요 (Sanghun 직접)</li>
+<li class='done'>✅ <b>완료</b>: BETA-01~32 전체 Phase — 기반 구축, Bloomberg UI, 다국어(한/영/일), SEO/A11Y, Performance, E2E 19/19 통과, Lighthouse 최적화</li>
+<li class='done'>✅ <b>완료</b>: QA 1~16차 — BUG-QA13-01/02, WARN-QA14-01, BUG-QA14-01, WARN-QA15-01 전부 해결</li>
+<li class='progress'>🔄 <b>진행 중</b>: QA 17차 WARN-QA17-01 검토 중 / BETA-33 계획 수립 대기</li>
+<li class='todo'>⏳ <b>대기</b>: Vercel 배포 토큰 제공 필요 (Sanghun) — Lighthouse Performance 실측 + 뉴스 수집 스크립트 실데이터 연동</li>
 </ul>
 
 <h2>4. 남은 작업</h2>
 <table>
 <tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
-<tr><td>QA 17차 — BETA-32 Lighthouse 최적화 검증 (tsc 0건, Playwright 19/19, VcrClient 정상 렌더링)</td><td>QA</td><td>🔴 HIGH</td></tr>
-<tr><td>Vercel 배포 — vercel.com에서 토큰 발급 + DATABASE_URL(Neon PostgreSQL) 설정</td><td>Sanghun</td><td>🔴 HIGH</td></tr>
-<tr><td>BETA-31 — 홈 페이지 추가 개선 범위 확정 (Sanghun 지시 후)</td><td>Planner</td><td>🟡 MED</td></tr>
-<tr><td>VCR-T 구조 방향 결정</td><td>Sanghun 지시 대기</td><td>🟡 MED</td></tr>
-<tr><td>Google Analytics GA4 속성 ID 발급 및 적용</td><td>Sanghun</td><td>🟢 LOW</td></tr>
-<tr><td>ELDO 다국어(P2) — next-intl 도입, 한/영 UI 텍스트 번역</td><td>Dev1/Dev2</td><td>🟢 LOW</td></tr>
+<tr><td>WARN-QA17-01 내용 확인 및 버그 수정</td><td>Dev1</td><td>HIGH</td></tr>
+<tr><td>BETA-33 스프린트 계획 수립</td><td>Planner</td><td>HIGH</td></tr>
+<tr><td>Vercel 배포 토큰 제공 → Lighthouse Performance 실측</td><td>Sanghun</td><td>HIGH</td></tr>
+<tr><td>뉴스 수집 스크립트 실데이터 연동</td><td>Dev1</td><td>MEDIUM</td></tr>
+<tr><td>Resend 뉴스레터 실발송 검증</td><td>Dev1</td><td>MEDIUM</td></tr>
 </table>
 
 </body>

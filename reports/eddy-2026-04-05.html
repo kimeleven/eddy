@@ -29,75 +29,81 @@
 
 <div class='summary'>
 <table>
-<tr><td><b>프로젝트</b></td><td>Eddy 에이전트 PM 시스템 — 전체 팀 조율·상태 관리·텔레그램 인터페이스·주간 보고서 자동화</td></tr>
+<tr><td><b>역할</b></td><td>Sanghun Kim의 개인 AI 에이전트 + 전체 팀 PM (텔레그램 지시 처리, 팀 관리, 순회 점검)</td></tr>
 <tr><td><b>시작일</b></td><td>2026-04-02</td></tr>
-<tr><td><b>전체 커밋</b></td><td>286건</td></tr>
-<tr><td><b>이번 주 커밋</b></td><td>286건</td></tr>
-<tr><td><b>현재 상태</b></td><td>PM 40차 순회 완료 — 전체 팀 검수, 토큰 절약 모드 전파, 쿠팡 로그인 수신 + TeslaAI 채널 기획 태스크 추가</td></tr>
+<tr><td><b>전체 커밋</b></td><td>297건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>297건</td></tr>
+<tr><td><b>현재 상태</b></td><td>40차 PM 순회 완료. 전체 팀 관리 정상. DevGate/IRI-Safety launchd 에이전트 언로드 완료. ReviewBot 2포스팅/일 안정화. ELDO BETA-32 완료/BETA-33 대기.</td></tr>
 </table>
 </div>
 
 <h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
-<p>Eddy PM 에이전트는 전체 팀의 관리·조율 시스템으로, 텔레그램 메시지 처리와 PM 순회 기록이 주요 커밋 유형입니다.</p>
 <table>
 <tr><th>시기</th><th>주요 활동</th><th>커밋 수</th></tr>
-<tr><td>04-02</td><td>Eddy PM 에이전트 초기화 — TASKS.md, 텔레그램 봇 설정, 전체 팀 초기 조율 시작. ELDO/ReviewBot/DevGate 팀 에이전트 동시 초기화 지원</td><td>약 20</td></tr>
-<tr><td>04-02~03</td><td>PM 1~15차 순회 — 각 팀 태스크 배정, 크론탭 설정, DB 환경 구성(eldo/liveorder PostgreSQL), GitHub/GitLab 푸시 지원, ELDO QA 버그 수정 조율</td><td>약 50</td></tr>
-<tr><td>04-03</td><td>PM 16~25차 순회 — LiveOrder 개발 종료 처리, ReviewBot 가격대별 깊이 적용, ELDO Bloomberg 스타일 강화 조율, 전체 크론탭 관리</td><td>약 60</td></tr>
-<tr><td>04-04</td><td>PM 26~33차 순회 — ReviewBot 승인 과정 제거(Sanghun 직접 지시), OG링크 디버깅, 쿠팡 스크린샷→HTML 대체, Phase 25 운영 전환, 토큰 절약 모드 전파. 텔레그램 메시지 처리(update_id 순차 확인)</td><td>약 80</td></tr>
-<tr><td>04-05</td><td>PM 34~40차 순회 — 전체 팀 검수(ELDO QA 14-01 수정 진행 중, ReviewBot 안정화, DevGate 49/49, IRI-Safety 중단 처리), 쿠팡 로그인 수신, TeslaAI 채널 기획 태스크 추가. 텔레그램 state 커밋 다수(update_id 360082463~360082467)</td><td>76</td></tr>
+<tr><td>04-02<br>초기 설정</td><td><b>Eddy 초기화 + LaunchAgent 설정</b><br>state.json, tasks.md, study.md, README 초기화, 10분 간격 LaunchAgent 설정, 텔레그램 토큰 처리, Anthropic 키 작업 기록, ELDO 프로젝트 신규 등록 + 베타 개발 계획 수립</td><td>약 40</td></tr>
+<tr><td>04-03<br>전팀 풀가동</td><td><b>팀 전면 가동 + Sanghun 지시 처리</b><br>Sanghun 지시 수신 → ELDO 프론트 개발 착수 지시, LiveOrder 중지+Liveorder 개발 종료 처리, ReviewBot 30분 설정, DevGate 분석, ELDO Sprint 1~5 더미DB 구축, 블로그 포스팅 파이프라인 수정·자동화 등록, 트위드자켓 추천 블로그 포스팅 발행, ReviewBot Phase 12 처리, GitLab SSH 발견 처리, PM 역할 복원(전체 팀 관리 기능 추가), 팀 Sanghun 직접 소통 금지 원칙 추가</td><td>약 80</td></tr>
+<tr><td>04-04<br>집중 개발 지원</td><td><b>팀별 URGENT 지시 전달 + XBot 착수</b><br>VCR 메뉴 재편 URGENT(Sanghun 지시) → ELDO 즉시 전달, ReviewBot 승인 제거 URGENT, ReviewBot 링크버그+1시간 포스팅 URGENT, ELDO 24시간 스케줄 지시, LiveOrder 기획서 정리, XBot 프로젝트 착수(X.com Playwright), BUG-002 완료 확인, 크론탭 정상 적용 확인, 팀별 개별 상세 보고 전송(Sanghun 지시 반영, 보고 포맷 변경), BETA-12~22 순차 배정, QA 8~11차 배정</td><td>약 100</td></tr>
+<tr><td>04-05<br>안정화 + 마무리</td><td><b>토큰 절약 모드 전파 + 팀 언로드 처리</b><br>PM 33차 토큰 절약 모드 전파(전체 팀), DevGate S-1 HIGH RBAC 버그 Dev1 배정→해결 확인, IRI-Safety BUG-003 배정, DevGate 개발 중단 처리(launchd 언로드), IRI-Safety 개발 중단 처리, ELDO BETA-26~32 순차 완료 확인, ReviewBot 쿠팡 링크 수정, 전체 팀 검수 40차 완료, 보고 포맷 피드백 저장</td><td>약 77</td></tr>
 </table>
 
-<h2>2. 이번 주 변경 이력 (상세 — 날짜별 주요 PM 활동)</h2>
+<h2>2. 이번 주 변경 이력 (상세 — 주요 PM 의사결정 커밋)</h2>
 <table>
 <tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
-<tr class='date-group'><td colspan='3'>2026-04-02 (PM 에이전트 초기화 + 팀 시작)</td></tr>
-<tr><td>04-02</td><td class='commit-hash'>초기</td><td>Eddy PM 에이전트 초기화 — TASKS.md, 텔레그램 봇 토큰 갱신(8745206278:AAEm...) 정상 확인</td></tr>
-<tr><td>04-02</td><td class='commit-hash'>초기</td><td>로컬 PostgreSQL DB 설정 — eldo, liveorder DB 생성, Prisma db:push + seed 완료 (기업 20개·재무 100건·주가 10,460건·VCR 23건)</td></tr>
-<tr><td>04-02</td><td class='commit-hash'>초기</td><td>LiveOrder Admin DB 계정 생성 (kimeleven@gmail.com / qwer1234) + Admin 로그인 HKDF salt 버그 수정 지원</td></tr>
-<tr><td>04-02</td><td class='commit-hash'>초기</td><td>ELDO GitLab SSH 키 발견(id_ed25519_mintech) + git.mintech.kr beta 브랜치 push 완료</td></tr>
-<tr class='date-group'><td colspan='3'>2026-04-03 (PM 중기 — 주요 결정사항)</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>multi</td><td>LiveOrder 개발 종료 처리 — "여기까지하고 정리" 지시 수신, 크론탭 LiveOrder 팀 제거 완료</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>multi</td><td>ReviewBot 가격대별 깊이 정책 조율 — 10만/10~50만/50~100만/100만+ 기준 글자수·사진수 자동 조정 반영</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>multi</td><td>ELDO GitHub kimeleven/eldo + GitLab beta 브랜치 QA 버그 수정 버전 push (뉴스레터 중복→409, VCR 상세 로딩 수정 등)</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>multi</td><td>크론탭 ELDO 24시간 30분 주기 변경 완료 — dev1: */30, dev2: 15,45, planner: 0 */2, qa: 30 */3</td></tr>
-<tr><td>04-03</td><td class='commit-hash'>multi</td><td>ReviewBot pipeline 1시간 주기 크론 활성화 완료</td></tr>
-<tr class='date-group'><td colspan='3'>2026-04-04 (PM 33차 — 대규모 조율 + Sanghun 직접 지시 처리)</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>ReviewBot 승인 과정 완전 제거 — Sanghun 직접 지시 "승인 과정 제거해" 반영, blog-publisher.mjs approval 체크 제거</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>ReviewBot OG링크 발행 흐름 수정 지원 — 네이버 에디터 iframe 구조 대응, oglink 버튼 방식 전환</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>ReviewBot 쿠팡 스크린샷→HTML 상품카드 대체 (쿠팡 Access Denied 우회), 상품 이미지 네이버 쇼핑에서 직접 다운로드</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>ReviewBot Phase 25 운영 전환 — 하루 2포스팅, 포스팅 테스트 성공(파트너링크 3개·이미지 8장·공시문구 PASS)</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>PM 33차: 토큰 절약 모드 전 팀 전파 — 크레딧 부족(Apr 8 리셋), 작업 범위 최소화·파일 읽기 제한·커밋 메시지 간결화 지시</td></tr>
-<tr><td>04-04</td><td class='commit-hash'>multi</td><td>텔레그램 메시지 처리 — 다수 update_id 수신 처리, state 파일 업데이트 (팀별 상태 추적)</td></tr>
-<tr class='date-group'><td colspan='3'>2026-04-05 (PM 34~40차 — 전체 검수 + 긴급 조율)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>f549fa3</td><td>Eddy PM 40차: ReviewBot 쿠팡 링크 수정 지원</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>ee8e088</td><td>Eddy PM 39차: 전체 팀 검수 — ELDO BUG-QA14-01 진행 중, ReviewBot 안정화 대기</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>329e8c7</td><td>state: 쿠팡 로그인 수신 + TeslaAI 채널 기획 태스크 추가 (Tesla/Musk/AI 뉴스 YouTube 채널, 중국 AI 솔루션 활용)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>multi</td><td>IRI-Safety 개발 중단 처리 — "Iri도 중단" 지시 수신, launchd 에이전트(dev1/dev2/planner/qa) 비활성화</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>multi</td><td>텔레그램 state 커밋 다수 — update_id 360082463~360082467 처리 (전체 팀 검수 완료 상태 추적)</td></tr>
-<tr><td>04-05</td><td class='commit-hash'>multi</td><td>ReviewBot link-request 비활성화 반영, ReviewBot BUG-004/005 수정 확인, ELDO QA 16차 결과 반영</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-02 (초기화)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>c36087a</td><td>Eddy 초기화 — README, state.json, tasks.md, study.md, setup.md</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>a6abb2d</td><td>10분 간격 LaunchAgent 설정 완료</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>26f2324</td><td>텔레그램 메시지 처리, Anthropic 키 작업 기록</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-03 (전팀 풀가동)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>e53a29b</td><td>Sanghun 지시 수신 — 팀들 풀가동 지시, ELDO 프론트 개발 착수</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>a6c80ce</td><td>ELDO 프론트 Sprint 2~5 완료 처리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>255f64d</td><td>LiveOrder 중지, ReviewBot 30분 설정, DevGate 분석 처리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>bf914b9</td><td>LiveOrder 개발 종료 처리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>3b20754</td><td>ReviewBot Phase 12 처리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>6d4886d</td><td>Eddy PM 역할 복원 — 전체 팀 관리 기능 추가</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>49ca9ec</td><td>Sanghun 텔레그램 지시 → 팀 URGENT 최우선 전달 로직 추가</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (집중 개발 지원)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>66d89be</td><td>팀 공통 원칙 추가 — 배포 후 Playwright E2E 테스트 필수</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>d6c2b6a</td><td>팀 공통 원칙 — 외부 배포는 Sanghun 지시 시에만</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>ffa8a82</td><td>ReviewBot 파이프라인 실행 승인 처리</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9ee54b4</td><td>ReviewBot 승인 과정 제거 URGENT 태스크 추가 (Sanghun 지시 즉시 반영)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>40bf446</td><td>LiveOrder 기획서 정리 태스크 추가 (Sanghun 지시)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>8f1082b</td><td>LiveOrder 기획서 업데이트 완료</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>e95b4ec</td><td>ReviewBot 링크버그/1시간 포스팅 URGENT, ELDO 24시간 스케줄 지시 반영</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>7737663</td><td>VCR 메뉴 재편 Sanghun 지시 → ELDO URGENT 즉시 반영</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>f9a661b</td><td>팀별 개별 보고 전송 포맷 전환 (Sanghun 지시 반영 — 보고 상세화)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>688679f</td><td>크론탭 정상 적용 확인 — ELDO 24시간 30분 + ReviewBot 1시간 pipeline</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>ac88478</td><td>PM 11차 순회 — XBot 프로젝트 착수 (X.com Playwright 에이전트)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>ebda168</td><td>PM 13차 순회 — XBot 세팅 완료/Following 탭 구현, ReviewBot 파트너스 링크 메시지 개선</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05 (안정화)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>b3de3f0</td><td>PM 33차 — 토큰 절약 모드 전파 + ReviewBot 직접 메시지 차단 처리</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>3d3929c</td><td>PM 35차 — DevGate 개발 중단 처리</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>134fbbf</td><td>PM 36차 — IRI-Safety 개발 중단 처리</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>276e28c</td><td>PM 28차 — DevGate S-1 HIGH 버그 Dev1 배정 (middleware RBAC)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>7f18aa4</td><td>PM 31차 — DevGate S-1 HIGH 해결 확인, 전체 팀 정상 가동</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>ee8e088</td><td>PM 38차 — ELDO BUG-QA13 해결 확인, QA_REPORT 업데이트</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>f549fa3</td><td>PM 40차 — ReviewBot 쿠팡 링크 수정</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>cba68d8</td><td>보고 포맷 피드백 저장 (state 업데이트)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>57c0167</td><td>IRI 에이전트 실제 언로드 완료 처리 (최종 상태 업데이트)</td></tr>
 </table>
 
 <h2>3. 현재 상태</h2>
 <ul>
-<li class='done'>✅ 전체 팀 PM 40차 순회 완료</li>
-<li class='done'>✅ 토큰 절약 모드 전 팀 전파 완료 (Apr 8 크레딧 리셋 대기)</li>
-<li class='done'>✅ IRI-Safety 개발 중단 처리 완료 (launchd 에이전트 비활성화)</li>
-<li class='done'>✅ ReviewBot 운영 안정화 확인 (Phase 25, 쿠팡 링크 자동 생성)</li>
-<li class='done'>✅ DevGate E2E 49/49 통과 확인</li>
-<li class='done'>✅ ELDO BETA-32 Lighthouse 최적화 완료 확인</li>
-<li class='progress'>🔄 TeslaAI 채널 기획 검토 중 (Sanghun 승인 대기)</li>
+<li class='done'>✅ <b>완료</b>: 전체 팀 PM 체계 구축 — 텔레그램 지시 처리, 30~40차 순회 점검, 팀별 URGENT 즉시 전달</li>
+<li class='done'>✅ <b>완료</b>: 팀 공통 원칙 확립 — E2E 테스트 필수, 외부 배포 Sanghun 지시 시만, Sanghun 직접 소통 금지</li>
+<li class='done'>✅ <b>완료</b>: DevGate/IRI-Safety launchd 에이전트 언로드 (개발 중단 처리)</li>
+<li class='done'>✅ <b>완료</b>: 토큰 절약 모드 전파 — 전체 팀 적용 완료</li>
+<li class='progress'>🔄 <b>진행 중</b>: ELDO BETA-33 배정 대기 / ReviewBot 2포스팅/일 안정화 운영 모니터링</li>
 </ul>
 
-<h2>4. 다음 주요 PM 할일</h2>
+<h2>4. 팀 현황 요약</h2>
 <table>
-<tr><th>작업</th><th>대상 팀</th><th>우선순위</th></tr>
-<tr><td>Apr 8 크레딧 리셋 후 정상 운영 모드 복구 — 전 팀 토큰 절약 모드 해제</td><td>전체</td><td>🔴 HIGH (Apr 8)</td></tr>
-<tr><td>ELDO QA 17차 결과 확인 + Vercel 배포 토큰 요청 (Sanghun)</td><td>ELDO</td><td>🔴 HIGH</td></tr>
-<tr><td>ReviewBot 쿠팡 파트너스 Open API 키 발급 요청 (Sanghun)</td><td>ReviewBot</td><td>🔴 HIGH</td></tr>
-<tr><td>TeslaAI 채널 기획 Sanghun 승인 후 개발 시작 여부 결정</td><td>신규</td><td>🟡 MED</td></tr>
-<tr><td>XBot 로그인 봇 감지 해결 방안 검토 (쿠키 주입 방식)</td><td>XBot</td><td>🟡 MED</td></tr>
-<tr><td>주간 보고서 자동화 — 매주 일요일 PDF 생성 + 텔레그램 전송 스케줄 등록</td><td>Eddy PM</td><td>🟡 MED</td></tr>
+<tr><th>팀</th><th>상태</th><th>이번 주 커밋</th><th>주요 이슈</th></tr>
+<tr><td>ELDO</td><td class='progress'>개발 중</td><td>222건</td><td>BETA-32 완료, QA 17차 WARN-QA17-01, Vercel 토큰 대기</td></tr>
+<tr><td>ReviewBot</td><td class='progress'>운영 중</td><td>147건</td><td>2포스팅/일 안정화, 쿠팡 링크 자동 생성 완료</td></tr>
+<tr><td>DevGate</td><td class='done'>마무리</td><td>133건</td><td>E2E 53/53 완료, 신규 개발 종료</td></tr>
+<tr><td>IRI-Safety</td><td class='todo'>중단</td><td>19건</td><td>Phase 1+2 완료, BUG-003 대기, 재개 지시 대기</td></tr>
+<tr><td>XBot</td><td class='todo'>보류</td><td>4건</td><td>봇 감지 차단, 전략 재수립 필요</td></tr>
+<tr><td>LiveOrder</td><td class='done'>종료</td><td>85건</td><td>Task 33 완료, 개발 종료(2026-04-03)</td></tr>
 </table>
 
 </body>

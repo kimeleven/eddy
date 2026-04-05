@@ -2507,3 +2507,34 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 **대기 (Sanghun 액션 필요)**: ELDO Vercel 토큰 / GA4 ID, ReviewBot 쿠팡 파트너스 링크 14건
 [2026-04-05 23:45:17] Eddy 실행 완료
 [2026-04-05 23:55:17] Eddy 실행 시작
+보고 완료. 요약:
+
+**전체 팀 현황 (직접 확인)**
+
+- **ELDO**: BETA-32 완료 + QA 17차 통과. BETA-33(VCR-C 프롬프트 버튼) Dev1 착수 예정. 30분 주기 정상 가동 중.
+- **ReviewBot**: 안정화 모드. pending-links 14개 대기. Sanghun 파트너스 링크 필요.
+- **DevGate**: 개발 중단 — launchctl에서 완전 unloaded 확인.
+- **IRI-Safety**: 개발 중단 — TASKS.md에는 "완료"로 기록됐으나 실제로 로드 상태였음. **이번에 실제 unload 완료** (dev1/dev2/planner/qa 4개).
+
+**처리**: IRI-Safety 에이전트 실제 비활성화 / 텔레그램 보고 / 커밋+푸시
+[2026-04-05 23:57:26] Eddy 실행 완료
+[2026-04-06 00:07:26] Eddy 실행 시작
+텔레그램 보고 완료.
+
+---
+
+**전체 팀 검수 결과:**
+
+| 팀 | 상태 | 마지막 활동 |
+|----|------|------------|
+| **ELDO** | ✅ 정상 | Dev1 40차 완료, BETA-34 진행 중, QA 18차 이슈 없음 |
+| **ReviewBot** | ✅ 안정화 | pending-links 14개 대기, 직접 메시지 차단 유지 |
+| **DevGate** | ⏸ 중단 | 에이전트 비활성화, E2E 53/53 PASS 상태로 대기 |
+| **IRI-Safety** | ⏸ 중단 | 에이전트 비활성화, QA 4차 61/61 PASS 상태로 대기 |
+| **XBot** | ⏸ 보류 | 봇 감지 차단 |
+
+**신규 텔레그램 메시지 없음.** 처리할 지시 없음.
+
+**대기 중:** ReviewBot pending-links 14개 — 쿠팡 파트너스 링크 직접 제공 시 즉시 포스팅 가능.
+[2026-04-06 00:08:33] Eddy 실행 완료
+[2026-04-06 00:18:33] Eddy 실행 시작
