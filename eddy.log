@@ -1820,3 +1820,20 @@ Credit balance is too low
 신규 텔레그램 없음. 텔레그램 보고 완료.
 [2026-04-05 13:34:44] Eddy 실행 완료
 [2026-04-05 14:09:46] Eddy 실행 시작
+전송 완료.
+
+---
+
+**[Eddy PM 34차 보고]**
+
+새 텔레그램 메시지 없음. 전체 팀 직접 확인 결과:
+
+- **ELDO**: Dev1 34차 완료 — BETA-29 (VCR 딥링크 + sectors sub_industry 3단계 + Turbopack CSS 수정). 크레딧 소진 중 (Apr 8 리셋 후 재개).
+- **ReviewBot**: 안정화 모드. `--manual` 전용 실행. pending-links 14건 파트너스 링크 대기 중.
+- **DevGate**: E2E 47/49 → **A-1 HIGH 신규** (useAuthHydration race condition — CLIENT 세션 있을 때 ADMIN 재로그인 실패). Dev1 TASKS.md에 즉시 배정 완료.
+- **IRI-Safety**: BUG-003 해결. Phase 2 도급/협력업체 + 반기평가 UI 진행 중. QA 52/53 PASS.
+
+**처리**: DevGate A-1 → Dev1 배정 / 커밋 & 푸시 완료
+**대기**: ReviewBot 파트너스 링크 14건 (Sanghun 직접 제공 필요)
+[2026-04-05 14:11:31] Eddy 실행 완료
+[2026-04-05 14:21:32] Eddy 실행 시작
