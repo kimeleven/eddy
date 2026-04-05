@@ -1932,3 +1932,24 @@ Credit balance is too low
 **현재 가동 중인 팀:** ELDO만 (30분 주기). ReviewBot은 manual 모드. DevGate/IRI-Safety/XBot 전부 중단.
 [2026-04-05 15:23:07] Eddy 실행 완료
 [2026-04-05 15:33:07] Eddy 실행 시작
+텔레그램 보고 완료.
+
+---
+
+**[Eddy PM 37차 검수 결과]**
+
+**신규 텔레그램:** 없음
+
+**팀 현황 직접 확인:**
+
+- **ELDO**: Dev1 BETA-29 완료(sub_industry 3단계, VCR 딥링크), Dev2 UI/UX 전 페이지 Bloomberg 스타일 적용 완료. QA 13차 신규 버그 2건(일본어 섹터 레이블, 중복 API 라우트) → Dev1 태스크 배정됨. 크레딧 부족으로 에이전트 현재 대기 상태.
+- **ReviewBot**: 안정화 모드. --manual 플래그 적용, 직접 텔레그램 전송 차단 완료. pending-links 14건 링크 대기.
+- **DevGate**: 개발 중단 지시 완료. E2E 49/49 통과 상태. launchd 에이전트 비활성화 확인.
+- **IRI-Safety**: 개발 중단 지시 완료. BUG-003(비밀번호 인증) DB 수정 완료. launchd 비활성화 확인.
+
+**대기 (Sanghun 액션 필요):**
+- Vercel 토큰 → ELDO 배포
+- GA4 속성 ID → ELDO Analytics
+- 쿠팡 파트너스 API 키 또는 상품 링크 → ReviewBot 포스팅 재개
+[2026-04-05 15:34:44] Eddy 실행 완료
+[2026-04-05 15:44:44] Eddy 실행 시작
