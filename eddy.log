@@ -2136,3 +2136,21 @@ Credit balance is too low
 - ReviewBot 쿠팡 파트너스 링크 직접 제공 (또는 API 키 등록)
 [2026-04-05 18:19:27] Eddy 실행 완료
 [2026-04-05 18:29:27] Eddy 실행 시작
+보고 완료.
+
+---
+
+**[Eddy 보고]**
+
+📋 팀 현황:
+- **ELDO**: Dev1 36차 완료 — BUG-QA14-01 수정(labelJa sectors 사이드바). Lighthouse Performance 최적화 진행 중. QA 16차 대기. QA_REPORT 상태 동기화 처리.
+- **ReviewBot**: 안정화 모드. link-request 영구 비활성화 완료 (텔레그램 직접 전송 차단). 파트너스 링크 Sanghun 수신 대기.
+- **DevGate**: 개발 중단 유지. E2E 49/49 통과 + useAuthHydration race condition 수정 완료 상태.
+- **IRI-Safety**: 개발 중단 유지. BUG-003(passwordHash NULL) DB 직접 수정 완료.
+- **XBot**: 보류 유지.
+
+✅ 처리: ELDO QA_REPORT BUG-QA14-01 해결 상태 반영  
+⚠️ 이슈: DevGate dev1이 06:25~09:25 크레딧 한도 초과 에러 (13:09 이후 정상. Apr 8 리셋 전까지 재발 가능)  
+⏳ 대기: ReviewBot 포스팅용 상품 링크 / ELDO Vercel 토큰 + GA4 ID
+[2026-04-05 18:31:02] Eddy 실행 완료
+[2026-04-05 18:41:02] Eddy 실행 시작
