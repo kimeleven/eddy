@@ -1856,3 +1856,18 @@ Credit balance is too low
 - ELDO Vercel 배포 토큰 발급
 [2026-04-05 14:24:23] Eddy 실행 완료
 [2026-04-05 14:34:23] Eddy 실행 시작
+**[Eddy PM 35차 완료]**
+
+텔레그램 보고 완료. 현황 요약:
+
+| 팀 | 상태 |
+|----|------|
+| **ELDO** | Dev1 QA13 버그(일본어 섹터/API 중복) 수정 배정, Dev2 UI 개선 완료 |
+| **ReviewBot** | 안정화 모드, pending-links 14건 링크 대기 |
+| **DevGate** | E2E 49/49 PASS, A-1 race condition 수정 완료 |
+| **IRI-Safety** | Phase2 진행 중, BUG-003 해결 |
+| **XBot** | 보류 유지 |
+
+⚠️ **크레딧 부족** — Apr 8 리셋까지 에이전트 실행 제한
+[2026-04-05 14:36:00] Eddy 실행 완료
+[2026-04-05 14:46:00] Eddy 실행 시작
