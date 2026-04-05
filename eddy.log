@@ -2412,3 +2412,16 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - **XBot**: 보류 유지
 [2026-04-05 22:21:39] Eddy 실행 완료
 [2026-04-05 22:31:39] Eddy 실행 시작
+4개 팀 보고 전송 완료.
+
+**처리 요약:**
+- Sanghun 메시지 "팀별 분리 + 상세 보고" 반영
+- 피드백 memory 저장 (feedback_detailed_reports.md)
+- state.json update_id 360082468 저장, 커밋/푸시 완료
+- 팀별 분리 보고 4건 전송:
+  - **ELDO**: BETA-32 완료, QA 17차 PASS, WARN-QA17-01 Info, 다음 BETA-33
+  - **ReviewBot**: 텔레그램 직접 전송 차단 완료, 자동포스팅 중단, 사진/링크 버그 미완
+  - **DevGate**: 개발 중단 (지시 이행), E2E 48/49 상태로 대기
+  - **IRI-Safety**: 개발 중단 (지시 이행), QA 4차 61/61 PASS 상태로 대기
+[2026-04-05 22:34:16] Eddy 실행 완료
+[2026-04-05 22:44:16] Eddy 실행 시작
