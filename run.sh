@@ -1,7 +1,5 @@
 #!/bin/bash
-# 운영 시간 체크 (월~금 19:00~07:00, 토일 24시간)
-LOG_FILE="${LOG_FILE:-/dev/null}"
-source "$HOME/eddy-agent/eddy/time-check.sh"
+# Eddy는 24시간 운영 — time-check 적용 안 함
 # Eddy - Local Runner Script
 # 유일한 PM. 모든 팀을 관리하고, Sanghun에게 유일하게 보고하는 에이전트.
 
