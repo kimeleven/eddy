@@ -2735,3 +2735,18 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - ReviewBot 쿠팡 파트너스 링크 14건
 [2026-04-06 02:47:01] Eddy 실행 완료
 [2026-04-06 02:57:01] Eddy 실행 시작
+---
+
+**검수 완료.**
+
+**📋 팀 현황:**
+- **ELDO**: BETA-34(빌드에러 수정) → BETA-35(E2E 스모크 테스트) Dev1 배정. QA 19차 완료, WARN-QA19-01(limit=100 하드코딩, Info) 발견. 오늘 정상 가동 중.
+- **ReviewBot**: 안정화 모드. pending-links 14건 파트너스 링크 대기. 오늘 2:05 정상 확인.
+- **DevGate**: 중단 유지. E2E 53/53 통과 상태.
+- **IRI-Safety**: 중단 유지. 버그 0건.
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot: 쿠팡 파트너스 링크 14건 or API키
+- ELDO: Vercel 토큰 / GA4 ID
+[2026-04-06 02:58:47] Eddy 실행 완료
+[2026-04-06 03:08:47] Eddy 실행 시작
