@@ -1953,3 +1953,16 @@ Credit balance is too low
 - 쿠팡 파트너스 API 키 또는 상품 링크 → ReviewBot 포스팅 재개
 [2026-04-05 15:34:44] Eddy 실행 완료
 [2026-04-05 15:44:44] Eddy 실행 시작
+**[Eddy PM 37차 완료]**
+
+**팀 현황 (직접 검수):**
+- **ELDO**: Dev1 34차 완료 (BETA-29 VCR딥링크 + sub_industry 3단계). QA 13차 버그 2건 Dev1 배정됨. 크레딧 부족으로 에이전트 실행 제한 중 (Apr 8 리셋).
+- **ReviewBot**: Dev1 실행 중 (PID 9227). --manual 플래그 적용 완료. pending-links 14건 파트너스 링크 대기 중.
+- **DevGate**: 중단 완료. E2E 49/49 통과 상태.
+- **IRI-Safety**: 중단 완료. BUG-003 수정 완료 상태.
+
+**이슈**: 크레딧 부족 — ELDO/ReviewBot 에이전트 Apr 8 1pm KST 리셋 전까지 제한됨.
+
+**대기**: ReviewBot pending-links 14건 쿠팡 파트너스 링크 Sanghun 직접 제공 필요.
+[2026-04-05 15:46:18] Eddy 실행 완료
+[2026-04-05 15:56:19] Eddy 실행 시작
