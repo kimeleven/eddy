@@ -2000,3 +2000,18 @@ Credit balance is too low
 - 네이버 쇼핑에서 mallName이 '쿠팡'인 상품은 naverLink → coupangId 추출 → 파트너스 링크 자동 생성됨
 [2026-04-05 16:23:11] Eddy 실행 완료
 [2026-04-05 16:33:11] Eddy 실행 시작
+보고 완료. 처리 내용:
+
+**수신 메시지 2건:**
+1. **쿠팡 로그인 정보** (kimeleven@gmail.com / eleven11##) — reviewbot/.env 저장 완료. 다음 단계 2가지 옵션을 Sanghun에게 확인 요청 중.
+2. **Tesla/AI 유튜브 채널 기획 요청** — 최저 비용 구성안 분석 후 보고:
+   - D-ID $5.9/월 + Edge TTS 무료 + CapCut 무료 = **월 $6**이 최저
+   - 완전 무료는 Kling/즉묘AI 무료 크레딧 활용 가능 (생성량 제한)
+   - 진행 여부 Sanghun 확인 대기 중
+
+**팀 현황:**
+- ELDO: 정상 가동, BUG-QA14-01 수정 중
+- ReviewBot: 정상 가동, 포스팅 대기 모드
+- DevGate/IRI-Safety: 중단 유지
+[2026-04-05 16:36:52] Eddy 실행 완료
+[2026-04-05 16:46:52] Eddy 실행 시작
