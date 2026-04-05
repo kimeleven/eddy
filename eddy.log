@@ -1923,3 +1923,12 @@ Credit balance is too low
 - **IRI-Safety**: 정상. BUG-003 해결, open 버그 없음
 [2026-04-05 15:11:06] Eddy 실행 완료
 [2026-04-05 15:21:06] Eddy 실행 시작
+처리 완료:
+
+1. **IRI-Safety 중단** — launchd 에이전트 4개 비활성화, TASKS.md에 중단 기록
+2. **browser-use 분석** — Playwright 위에 돌아가므로 봇 감지 회피 효과 없음. XBot 차단 원인은 IP/핑거프린트 문제.
+3. **대시보드** — Eddy가 직접 처리, 확인 완료
+
+**현재 가동 중인 팀:** ELDO만 (30분 주기). ReviewBot은 manual 모드. DevGate/IRI-Safety/XBot 전부 중단.
+[2026-04-05 15:23:07] Eddy 실행 완료
+[2026-04-05 15:33:07] Eddy 실행 시작
