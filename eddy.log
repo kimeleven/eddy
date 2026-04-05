@@ -2209,3 +2209,21 @@ Credit balance is too low
 ⚠️ DevGate/IRI-Safety 크레딧 부족 — Apr 8 리셋 전까지 실행 불가 상태.
 [2026-04-05 19:16:16] Eddy 실행 완료
 [2026-04-05 19:26:16] Eddy 실행 시작
+완료.
+
+---
+
+**검수 결과 요약:**
+
+- **ELDO**: BUG-QA14-01 + WARN-QA15-01 수정 완료. 다음 Dev1은 Lighthouse 최적화 (BETA-30)
+- **ReviewBot**: link-request 완전 비활성화 확인. 포스팅 중단 유지. 쿠팡 직접 검색 구현 대기 상태
+- **DevGate**: 개발 중단 유지. E2E 49/49 PASS 상태로 대기
+- **IRI-Safety**: 개발 중단 유지. BUG-003 수정 완료 상태로 대기
+- **새 텔레그램 메시지**: 없음
+
+**Sanghun 액션 필요:**
+1. ELDO Vercel 토큰 + GA4 ID
+2. ReviewBot 쿠팡 파트너스 API 키 or 링크 직접 제공
+3. XBot 테스트 (`node pipeline.mjs --once` 터미널 직접 실행)
+[2026-04-05 19:27:20] Eddy 실행 완료
+[2026-04-05 19:37:20] Eddy 실행 시작
