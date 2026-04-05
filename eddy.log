@@ -2015,3 +2015,15 @@ Credit balance is too low
 - DevGate/IRI-Safety: 중단 유지
 [2026-04-05 16:36:52] Eddy 실행 완료
 [2026-04-05 16:46:52] Eddy 실행 시작
+**Eddy PM 40차 완료.**
+
+**팀 현황:**
+- **ELDO**: 정상 가동. Dev1이 BUG-QA14-01(sub_industry labelJa) 수정 진행 중. QA 14차 완료.
+- **ReviewBot**: 안정화 모드. BUG-001~005 전체 해결. pending-links 14개 파트너스 링크 대기 중.
+- **DevGate**: 개발 중단 유지. 마지막 상태 E2E 49/49 PASS.
+- **IRI-Safety**: 개발 중단 유지. BUG-003 수정 완료 상태.
+- **XBot**: 보류 중.
+
+**새 텔레그램 메시지 없음.** 텔레그램 보고 완료.
+[2026-04-05 16:48:02] Eddy 실행 완료
+[2026-04-05 16:58:02] Eddy 실행 시작
