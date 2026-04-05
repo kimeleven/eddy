@@ -2374,3 +2374,13 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - **XBot**: 보류 유지
 [2026-04-05 21:56:38] Eddy 실행 완료
 [2026-04-05 21:57:54] Eddy 실행 시작
+텔레그램 보고 완료.
+
+**팀 현황 요약:**
+- **ELDO**: BETA-32 Lighthouse 최적화 완료, QA 17차 진행 중. 미해결 이슈 없음.
+- **ReviewBot**: 안정화 모드. 자동 포스팅 중단 유지. pending 링크 14개 Sanghun 제공 대기.
+- **DevGate**: 개발 중단 유지. E2E 49/49 PASS. Apr 8 크레딧 리셋 대기.
+- **IRI-Safety**: 개발 중단 유지. 버그 3건 모두 해결됨.
+- **신규 텔레그램 메시지**: 없음
+[2026-04-05 21:59:19] Eddy 실행 완료
+[2026-04-05 22:09:19] Eddy 실행 시작

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>LiveOrder 주간 보고서 — 2026-04-05</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  .ended-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .ended { color: #6b7280; font-weight: 600; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 LiveOrder 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-05 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>셀러-구매자-관리자 이커머스 플랫폼 — PortOne 결제, 전자상거래법 대응, 청약철회, 이메일 인증 (Next.js 15 + Vercel)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-03-29</td></tr>
+<tr><td><b>전체 커밋</b></td><td>88건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>85건</td></tr>
+<tr><td><b>현재 상태</b></td><td>✅ 개발 종료 — "여기까지하고 정리" 지시 수신 (2026-04-03). Task 33 청약철회 기능까지 완료. Task 34 상세 스펙 수립 후 중단.</td></tr>
+</table>
+</div>
+
+<div class='ended-box'>
+<b>✅ 개발 종료 선언:</b> Sanghun 직접 지시 "여기까지하고 정리" (2026-04-03). 크론탭 LiveOrder 팀 제거 완료. Task 34 스펙 수립 상태로 종료.
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<table>
+<tr><th>시기</th><th>Phase / 주요 변경</th><th>커밋 수</th></tr>
+<tr><td>03-29~31</td><td>초기 구현: initial scaffold, shadcn/ui 설정, 전체 MVP (셀러 대시보드·구매자 채팅·관리자 패널), PortOne 결제 SDK 실연동, NextAuth v5 미들웨어, Coolify CI/CD, E2E 테스트 39개 통과</td><td>약 18</td></tr>
+<tr><td>04-01</td><td>배포 안정화: Neon HTTP 어댑터 Vercel serverless timeout 수정, 미들웨어 HKDF salt 버그 수정, bcrypt cost 10→8 (Vercel 타임아웃 해결), prisma generate 자동화</td><td>약 8</td></tr>
+<tr><td>04-02~03</td><td>Phase 1~2: P0 크리티컬 이슈 수정 (운송장 등록 UI, 코드 API 보안), QA 진입, 보안 버그 수정(B-15~17, B-28~29), 관리자 주문·환불 UI, 셀러 대시보드 매출 차트, 배송 추적, 이메일 알림(Resend 연동)</td><td>약 40</td></tr>
+<tr><td>04-03</td><td>Phase 3: API 페이지네이션, 셀러 이메일 인증, 구매자 개인정보 삭제 요청 API, 청약확인 UI + 청약철회 신청 (전자상거래법 대응), QR 코드 자동 생성</td><td>약 17</td></tr>
+<tr><td>04-03~04</td><td>Task 31~34: data-deletion rate limiting, seller/orders 상태 필터, QuantitySelector UX + CSV export 10000건 상한, Task 33 청약철회 완료. Task 34 스펙 수립 후 개발 종료</td><td>약 7</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-01 (배포 안정화)</td></tr>
+<tr><td>04-01</td><td class='commit-hash'>3732637</td><td>Prisma Neon HTTP 어댑터 적용 — Vercel serverless 환경 timeout 해결</td></tr>
+<tr><td>04-01</td><td class='commit-hash'>4205542</td><td>bcrypt cost 10/12 → 8로 감소 — Vercel serverless 실행 시간 초과 해결</td></tr>
+<tr><td>04-01</td><td class='commit-hash'>2c30a67</td><td>NextAuth v5 JWE 토큰 미들웨어 복호화 수정 — HKDF key derivation 방식 적용</td></tr>
+<tr><td>04-01</td><td class='commit-hash'>01bf05b</td><td>레이아웃에서 auth() 체크 제거 — 로그인 페이지 redirect loop 해결</td></tr>
+<tr><td>04-01</td><td class='commit-hash'>54b66f4</td><td>PortOne 결제 SDK 실발송 검증 연동</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-02 (Phase 1: QA 진입 + 보안 수정)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>afc5b54</td><td>P0 크리티컬 이슈 4건 수정 — 운송장 등록 UI, 코드 API 보안, PENDING 상태 결제 차단, 개인정보 수집 동의 추가</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>cad9243</td><td>P1 기능 3건 구현 — DELIVERED 배송 완료 상태, 상품 수정/삭제, 정산 필터</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>ac653d0</td><td>B-15/B-16/B-17 보안 버그 수정 — 배포 전 필수 항목 처리</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>876bb02</td><td>미들웨어 HKDF salt 버그 수정 — 쿠키명을 salt로 잘못 사용하던 문제 수정</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>cc08f64</td><td>관리자 계정 DB 초기화 누락 수정 (seed + create-admin 스크립트)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-03 (Phase 2~3: 기능 완성)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>83fdb78</td><td>P3-0 기술 부채 클린업 + P3-1 API 페이지네이션 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>c16cd41</td><td>P3-2 이메일 알림 구현 — Resend 연동, 회원가입/승인/주문/정산 4개 알림 템플릿</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>80478e4</td><td>P2-3 정산 상세 드릴다운 + 상품 등록 시 코드 자동 발급 (UX-1)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>048ac72</td><td>P2-1 관리자 주문 목록 + 환불 UI 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>49a984b</td><td>셀러 대시보드 최근 주문 실데이터 표시 + 승인 세션 갱신 UX 개선 (B-22, B-18)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>c0bb241</td><td>UX-2: 코드 발급 시 QR코드 자동 생성 — QR 스캔으로 코드 입력 자동화</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>fbadce1</td><td>P3-3/P3-4: 셀러 대시보드 7일 매출 차트 + 우체국택배 배송 추적 링크 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>17fc5ce</td><td>P3-5: 셀러 이메일 인증 구현 (미인증 셀러 로그인 차단)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>3b39223</td><td>P3-6: 구매자 개인정보 삭제 요청 API + 페이지 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>1ddddfc</td><td>Task 28 HIGH QA 버그 수정 — pgTid 중복 주문 방지, 부분환불 상태 처리, 정산 DELIVERED 상태 포함</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>1ee50ab</td><td>B-32 수정: 이메일 인증 토큰 만료 검증 추가 (24시간 만료, expired 결과 페이지)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>9ffc548</td><td>Task 30: seller/orders 로딩 Skeleton + seller/dashboard 에러 처리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>b57439d</td><td>Task 31: data-deletion rate limiting 추가 + seller/orders 상태 필터 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>87052f1</td><td>Task 32: QuantitySelector 무제한 코드 UX 개선 + CSV export 10,000건 상한 설정</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>012ec5a</td><td>Task 33: 청약확인 UI + 청약철회 신청 기능 구현 (전자상거래법 제17조 대응)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (Task 34 스펙 수립 + 개발 종료)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>7ce4ce2</td><td>PM: Task 33 완료 검증 + Task 34 상세 구현 스펙 수립 (개발 종료 직전 마지막 계획 기록)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>f1774a6</td><td>미들웨어 쿠키 존재 여부만 확인하도록 단순화</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>78e762f</td><td>기획서 업데이트: 현재 구현 상태 반영 + 변경 이력 추가 (최종 상태 기록)</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ Phase 1~3 완료: P0 크리티컬 이슈 전체 수정, 보안 버그 B-15~33 수정</li>
+<li class='done'>✅ 셀러 이메일 인증, 구매자 개인정보 삭제 요청, 청약철회 기능 완료</li>
+<li class='done'>✅ 관리자 주문·환불 UI, 정산 CSV 내보내기, 7일 매출 차트 완료</li>
+<li class='done'>✅ Resend 이메일 알림 4개 템플릿 연동 완료</li>
+<li class='ended'>🏁 개발 종료 — Task 34 스펙 수립 상태로 종료 (2026-04-03 Sanghun 지시)</li>
+</ul>
+
+<h2>4. 미완성 항목 (개발 종료로 인한 잔여)</h2>
+<table>
+<tr><th>작업</th><th>상태</th><th>비고</th></tr>
+<tr><td>Task 34 (상세 스펙 수립됨, 미구현)</td><td class='ended'>개발 종료로 스킵</td><td>재개 지시 시 즉시 착수 가능</td></tr>
+<tr><td>E2E 테스트 Full 커버리지 (현재 일부)</td><td class='ended'>개발 종료로 스킵</td><td>—</td></tr>
+<tr><td>Vercel 프로덕션 배포 (현재 Coolify)</td><td class='ended'>개발 종료로 스킵</td><td>—</td></tr>
+</table>
+
+</body>
+</html>

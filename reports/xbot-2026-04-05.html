@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>XBot 주간 보고서 — 2026-04-05</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  .paused { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .stopped { color: #dc2626; font-weight: 600; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 XBot 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-05 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>X.com(Twitter) 인간 행동 시뮬레이션 자동화 에이전트 — Playwright + Claude API, @kimeleven2 계정</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-04</td></tr>
+<tr><td><b>전체 커밋</b></td><td>4건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>4건</td></tr>
+<tr><td><b>현재 상태</b></td><td>🛑 보류 — X.com Playwright 봇 감지로 로그인 차단. 재개 조건: 쿠키 주입 방식 전환 후 Sanghun 지시.</td></tr>
+</table>
+</div>
+
+<div class='paused'>
+<b>⚠️ 보류 사유:</b> X.com에서 Playwright 봇 감지로 "Could not log you in now" 에러 발생. Playwright headless 브라우저를 자동화 봇으로 인식.
+<br><b>재개 조건:</b> 수동 로그인 세션 쿠키 저장 방식 또는 쿠키 주입(cookie injection) 방식으로 전환 후 Sanghun 직접 테스트 지시 시 재개.
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<p>2026-04-04~05 단기간 초기 구현 (전체 4건 커밋):</p>
+<table>
+<tr><th>시기</th><th>주요 변경</th><th>커밋 수</th></tr>
+<tr><td>2026-04-04</td><td>초기 구현 + 세팅 완료 — Playwright 기반 인간 행동 시뮬레이션 에이전트 기초, Following 탭 전환, npm install, Playwright Chromium 설치</td><td>3</td></tr>
+<tr><td>2026-04-05</td><td>로그인 플로우 개선 시도 — 디버그 스크린샷, 버튼 가시성 체크, 딜레이 강화 (봇 감지 우회 시도)</td><td>1</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (초기 구현)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>0183edf</td><td>XBot 초기 구현 — Playwright 기반 X.com 인간 행동 시뮬레이션 에이전트 (browser.mjs, human.mjs, x-actions.mjs, content.mjs, pipeline.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9fdfebb</td><td>XBot 세팅 완료 — Following 탭 전환 구현 (구독 피드 기반), npm install(40 packages), Playwright Chromium 설치, 크리덴셜 .env 적용, TASKS 업데이트</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>6748f25</td><td>logs/ 디렉토리 생성 + .gitignore에 logs/*.log 추가 (크론탭 로그 파일 경로 누락 수정)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05 (로그인 개선 시도)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>8d68d6e</td><td>로그인 플로우 개선 — 디버그 스크린샷 추가, 버튼 가시성 체크 강화, 딜레이 증가 (봇 감지 우회 시도, 미해결)</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ Playwright 기반 인간 행동 시뮬레이션 에이전트 코드 완성</li>
+<li class='done'>✅ Following 탭 전환 구현 (구독 기반 피드, 알고리즘 피드 제외)</li>
+<li class='done'>✅ Claude API 기반 댓글/인용 포스팅 생성 로직 구현</li>
+<li class='done'>✅ 1시간 ±15분 랜덤 주기 실행 설정</li>
+<li class='stopped'>🛑 X.com 로그인 봇 감지 차단 — 프로젝트 보류 중</li>
+</ul>
+
+<h2>4. 남은 작업 (재개 시)</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>수동 로그인 세션 쿠키 저장 방식 구현 — Sanghun이 직접 로그인 후 쿠키 파일 저장, 이후 headless 실행 시 재사용</td><td>Dev1 (재개 시)</td><td>🔴 HIGH (재개 조건)</td></tr>
+<tr><td>최초 로그인 테스트 — Sanghun 직접: cd ~/eddy-agent/xbot && node pipeline.mjs --once</td><td>Sanghun 직접</td><td>🔴 HIGH (재개 시)</td></tr>
+<tr><td>크론탭 등록 (테스트 성공 후): 0 * * * * cd ~/eddy-agent/xbot && node pipeline.mjs</td><td>Eddy PM</td><td>🟡 MED (재개 시)</td></tr>
+<tr><td>뉴스 스크래핑 추가, YouTube 링크 인용 포스팅, 팔로우 관리 자동화</td><td>Dev1 (추후)</td><td>🟢 LOW</td></tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>DevGate 주간 보고서 — 2026-04-05</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 DevGate 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-05 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>AI 기반 개발 외주 플랫폼 — 의뢰인·개발자·승인자 3자 관계, 마일스톤 결제 + 카카오 알림톡 (Next.js 15 + Coolify)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-03-23</td></tr>
+<tr><td><b>전체 커밋</b></td><td>211건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>129건</td></tr>
+<tr><td><b>현재 상태</b></td><td>Phase 19 완료 — E2E 49/49 전체 통과. 신규 개발 종료, 이후 테스트+버그 수정만 진행.</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<table>
+<tr><th>시기</th><th>Phase / 주요 변경</th><th>커밋 수</th></tr>
+<tr><td>03-23~29</td><td>초기 구조 ~ Phase 3.5: initial scaffold, Next.js 14→15 전환, 착수금 결제, 관리자 대시보드, 다중 개발자 배정, 이메일 알림 7개 템플릿, 텔레그램 승인</td><td>약 40</td></tr>
+<tr><td>03-29~31</td><td>Phase 3.5~E2E: Coolify 배포 환경 구성, Prisma Migrate, 관리자 수동 결제/환불, 파일 업로드(로컬), E2E 테스트 15시나리오 39개 통과, GitLab CI</td><td>약 30</td></tr>
+<tr><td>04-01~02</td><td>Phase 4~6: 카카오 로그인, 알림톡 실발송(submit/approve/assign), Phase 5 에이전트 모드 AI 어시스턴트 UI, Dev2 MED/LOW 버그 수정, HIGH 버그 TypeScript 타입 개선</td><td>약 30</td></tr>
+<tr><td>04-02~03</td><td>Phase 7~10: 이메일 인증, 개발자 공개 프로필, Phase 9 Sentry 에러 트래킹 + DB 인덱스 최적화 + 클라이언트 대시보드 UX 개선, Phase 10 PWA 모바일 대응 + 정산 자동화</td><td>약 40</td></tr>
+<tr><td>04-03~05</td><td>Phase 11~19: 관리자 감사 로그, 프로젝트 검색/CSV 내보내기, 개발자 평점/리뷰, 관리자 대시보드 차트, 프로젝트 자동 완료, 다중 개발자 수익 분배, 이메일/알림톡 추가, 개발자 대시보드, 영수증 API, 개발자 검색 API, RBAC 미들웨어 추가</td><td>71</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-02 (Phase 4~6: 카카오 로그인 + 알림톡 + 에이전트)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>0310ac0</td><td>DevGate 팀 에이전트 초기화 — PLAN, TASKS, QA_REPORT 파일 생성</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>709b464</td><td>Phase 4-A: 카카오 소셜 로그인 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>e6a71fd</td><td>Webhook 후처리 완성 + DeveloperEarning 정산 DB 저장 + 추가 비용 청구 API 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>5dc616e</td><td>Phase 4-C: 프로필 완성 페이지 + PATCH /api/auth/profile 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>4e83fd9</td><td>카카오 로그인 후 토큰 hydration 버그 수정 (로그인 성공 후 즉시 로그아웃되는 문제)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>c0bf0e2</td><td>카카오 알림톡 Phase 4-B 기반 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>6c63991</td><td>인증/프로젝트 핵심 플로우 버그 수정 (결과물 제출, 자동 배정, 프로젝트 접근 권한)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>28fff60</td><td>Phase 6: 카카오 알림톡 실발송 연결 — submit/approve/assign 3개 라우트 연동</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>d796d1f</td><td>Phase 5-A: 에이전트 컨텍스트 + AI 어시스턴트 실행 API 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>7137387</td><td>SSE 토큰 URL 노출 보안 수정 + Phase 5-C AI 어시스턴트 UI 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>95921e3</td><td>Phase 7-B: 파일 업로드 영속성 개선 + MED 알림톡 환경변수화</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-03 (Phase 7~11: 이메일 인증 + Sentry + 감사 로그)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>6881dc5</td><td>Phase 7-A: 이메일 인증 구현 + 타입 버그 2건 수정</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>b902c06</td><td>Phase 8-B: 개발자 공개 프로필 페이지 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>72a72b9</td><td>Phase 9-A: Sentry 에러 트래킹 통합 + Phase 9-C: DB 인덱스 성능 최적화</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>3a1316c</td><td>Phase 9-B: 클라이언트 대시보드 UX 개선</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>4061556</td><td>[HIGH] notifications BigInt 직렬화 수정 + 미들웨어 쿠키 인증 추가 + Sentry API 통합</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>8a33064</td><td>Phase 10-A: Sentry captureApiError 8개 API 라우트 전체 통합</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>9a13320</td><td>Phase 10-D: 정산 자동화 구현 (마일스톤 완료 시 자동 DeveloperEarning 정산)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>3e34adc</td><td>Phase 10-C: PWA 모바일 대응 구현 (manifest.json, service worker)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>b9a8a63</td><td>API 인가 취약점 수정 + Sentry captureApiError 5개 라우트 추가</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>55ff13a</td><td>Phase 11-A: 관리자 감사 로그(AuditLog) 구현 — 모든 주요 액션 추적</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>378c2c7</td><td>Phase 11-B: 프로젝트 검색/필터 + 정산 CSV 내보내기 구현</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>78f2306</td><td>Phase 12-A: 개발자 평점/리뷰 시스템 구현 + QA 버그 수정</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>66466da</td><td>B-0 버그 수정 + Phase 12-B: 관리자 대시보드 차트 구현 (매출·프로젝트 현황)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>b72d7bb</td><td>Phase 13-A: 감사 로그 NaN 버그 수정 + 액션 필터 + 날짜 필터 UX 통일 + 수동 결제 타입 추가</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>553432d</td><td>Phase 13-B: 프로젝트 자동 완료 처리 + 클라이언트 대시보드 요약 카드 + 리뷰 다중 개발자 지원</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>7c7d804</td><td>Phase 14-A: topDevelopers 마일스톤 집계 수정 + 다중 개발자 수익 분배 + fee-proposal senderId 수정</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>6735cb4</td><td>Phase 15-B: 레거시 assign 라우트 deprecated 처리 + 리뷰 API 페이지네이션/캐시 강화</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>7983928</td><td>Phase 15-A: admin/projects Sentry 누락 수정 + DeveloperActivityChart 한글 dataKey 교체 + nextSeq DB 검증</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>cf7847a</td><td>Phase 16-B: 마일스톤 타임라인 뷰 구현 (프로젝트 진행 단계 시각화)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>60e679a</td><td>Phase 16-A: 보조개발자 이메일/알림톡 + 알림센터 UI + M-7/L-6/L-7/L-8 버그 수정</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (Phase 17~19: 대시보드 + 영수증 + RBAC)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>80f35c3</td><td>Phase 17-B: 개발자 대시보드 4카드 + CTA 버튼 구현 (DeveloperEarning 기반 수익 집계)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>ec7d295</td><td>Phase 17-A + 18-A: DeveloperEarning 유니크 제약 추가 + 스킬 API 검증 + 빌드 에러 수정</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>dd9a453</td><td>Phase 18-B: 결제 영수증 API + 클라이언트 프로젝트 상세 영수증 다운로드 버튼 추가</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>eb77022</td><td>E2E 테스트 시나리오 확장 (15스텝/39체크포인트) + RBAC 보안버그 S-1 QA_REPORT 등록</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>102e04f</td><td>Phase 19-A: 개발자 검색 API + 페이지 구현, 미들웨어 RBAC 추가, test-admin role ADMIN으로 수정</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05 (E2E 49/49 전체 통과 + RBAC 보안 수정)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>825bf25</td><td>PM 33차: 토큰 절약 모드 전파</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>67e5114</td><td>S-1 HIGH 버그 해결 확인 — middleware RBAC 이미 구현됨 (Phase 19-A에서 처리)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>996444a</td><td>E2E 테스트 시나리오 확장 (19스텝/49체크포인트) — 49/49 전체 통과</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>a9c0e89</td><td>Dev1: E2E 테스트 49/49 전체 통과 확인 (2026-04-05)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>adcc903</td><td>UI 불필요 메뉴 제거 + E2E 49/49 통과 최종 확인</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>34e1ea6</td><td>E2E 테스트 플레이키(flaky) 수정 — 49/49 전체 통과 재확인</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>c47e589</td><td>useAuthHydration race condition 수정 + QA 보고서 업데이트</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>c580eda</td><td>QA: A-1/A-2 완료 처리 — useAuthHydration race condition 수정 확인</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ Phase 19 완료 — 개발자 검색 API + RBAC 미들웨어 추가</li>
+<li class='done'>✅ E2E 테스트 49/49 전체 통과 (19스텝 49체크포인트)</li>
+<li class='done'>✅ S-1 HIGH RBAC 보안 버그 해결 확인</li>
+<li class='done'>✅ useAuthHydration race condition 수정 완료</li>
+<li class='done'>✅ Coolify 배포 환경 구성 완료 (Neon PostgreSQL + GitLab CI/CD)</li>
+<li class='progress'>🔄 신규 개발 종료 → 이후 테스트 + 버그 수정만 진행 (Sanghun 지시)</li>
+</ul>
+
+<h2>4. 남은 작업</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>1시간마다 E2E 테스트 실행 + 결과 확인 — 49/49 유지 여부 모니터링</td><td>Dev2</td><td>🔴 HIGH</td></tr>
+<tr><td>E2E Full Test 체크리스트 잔여 시나리오 커버리지 확대 (관리자 플로우, 승인자 플로우 등)</td><td>Dev2</td><td>🟡 MED</td></tr>
+<tr><td>버그 발견 시 즉시 수정 (Dev1 전담)</td><td>Dev1</td><td>🔴 HIGH (발생 시)</td></tr>
+<tr><td>Phase 20 이후 신규 개발은 Sanghun 지시 후 착수</td><td>—</td><td>⏸ 대기</td></tr>
+</table>
+
+</body>
+</html>

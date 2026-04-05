@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>ELDO 주간 보고서 — 2026-04-05</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 ELDO 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-05 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>Bloomberg 스타일 한국 주식/ETF/VCR 금융 분석 플랫폼 (Next.js 15)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-03</td></tr>
+<tr><td><b>전체 커밋</b></td><td>220건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>220건</td></tr>
+<tr><td><b>현재 상태</b></td><td>BETA-32 Lighthouse 최적화 완료 — QA 17차 진행 중. Vercel 배포 토큰 대기.</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<p>프로젝트 시작(2026-04-03) 이후 BETA Phase별 주요 마일스톤:</p>
+<table>
+<tr><th>시기</th><th>Phase / 주요 변경</th><th>커밋 수</th></tr>
+<tr><td>2026-04-03</td><td>BETA 초기 — 프로젝트 스캐폴딩, Next.js 15 + Prisma + PostgreSQL 기반 구조, 초기 DB 스키마 (기업·재무·주가·VCR), 기본 라우팅</td><td>약 30</td></tr>
+<tr><td>2026-04-03</td><td>BETA-01~10 — Bloomberg 다크 테마 기본 구조, 섹터/기업 목록 페이지, 기업 상세 재무정보 테이블, 주가 차트 기초 구현</td><td>약 40</td></tr>
+<tr><td>2026-04-03~04</td><td>BETA-11~20 — VCR(밸류에이션 체인 리포트) 페이지 구현, 섹터 히트맵, EMTEC 산업분류 트리, 뉴스 카드, 사이드바 i18n 기초</td><td>약 60</td></tr>
+<tr><td>2026-04-04</td><td>BETA-21~28 — Bloomberg 스타일 전면 강화 (헤더·뉴스·VCR·sectors 색상/레이아웃), 홈 히어로 glassmorphism, sub_industry 3단계 사이드바, VCR 딥링크</td><td>약 50</td></tr>
+<tr><td>2026-04-05</td><td>BETA-29~32 + QA 13~16차 — 홈 랜딩 최적화(CTA+피처카드), QA 버그 수정 5건, Lighthouse VcrClient dynamic import + 데드 라우트 정리</td><td>40</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-03 (프로젝트 시작)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>초기</td><td>프로젝트 기반 구조 구축 — Next.js 15, Prisma ORM, PostgreSQL DB 스키마 초기화 (기업·재무제표·주가·VCR 보고서 테이블)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>초기</td><td>Bloomberg 다크 테마 기반 UI 구조 설정 — globals.css, 레이아웃 컴포넌트, 섹터/기업 목록 페이지 기초</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>초기</td><td>EMTEC 산업분류 트리(섹터→그룹→산업) DB 시드 적재 — 기업 20개, 재무제표 100건, 주가 10,460건, VCR 보고서 23건</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (BETA-11~28 구현)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>multi</td><td>Bloomberg 스타일 전면 적용 — 헤더 primary 색상 로고 + nav uppercase 소형, 홈 히어로 그래디언트 + 카드 glassmorphism, 섹터 히트맵 그린/레드 alpha 그래디언트</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>multi</td><td>VCR 페이지 탭·카드 Bloomberg 스타일 개선, 기업 재무정보 테이블 Bloomberg 스타일 적용, 뉴스 카드 소스 뱃지 + primary glow 추가</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9c0319c</td><td>PM 33차 — 토큰 절약 모드 전파 (크레딧 부족, Apr 8 리셋 전까지 작업 범위 최소화 지시)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>eb5601f</td><td>PLAN.md 18차 업데이트 — BETA-28 완료 기록, BETA-29 배정</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>6b83616</td><td>QA 13차 — BETA-28 코드 리뷰: 기업목록 i18n, EMTEC 접기, VCR Skeleton 검증</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>e3309a9</td><td>헤더 Bloomberg 스타일 — 로고 primary 색상 적용, nav 메뉴 uppercase 소형 표시</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>67acabf</td><td>VCR 페이지 탭·카드 Bloomberg 스타일 개선</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>c7c29d3</td><td>섹터 히트맵 Bloomberg 색상 강화 — 그린/레드 alpha 그래디언트 적용</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>07a19e7</td><td>BETA-29 섹터 사이드바 sub_industry 3단계 지원 구현 (섹터→그룹→산업 3단 트리)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9996174</td><td>기업 상세 재무정보 테이블 Bloomberg 스타일 개선</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>931ea77</td><td>뉴스 페이지 카드 Bloomberg 스타일 — 소스 뱃지 + primary glow 적용</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>92dc0e1</td><td>Turbopack CSS 파싱 오류 수정 — globals.css @layer utilities 심플화</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05 (BETA-29~32 완료 + QA)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>931e...→ac0</td><td>Planner 18~21차 — BETA-28 완료 기록, BETA-29/32 Dev1 배정, 태스크 계획 업데이트</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>3a3442b</td><td>QA 14차 — BETA-29 코드 리뷰 (sub_industry 3단계 구현, 스타일 변경 검증)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>2539a80</td><td>BUG-QA13-01/02 수정 — emsec tree labelJa(일본어 라벨) 누락 추가, sector-tree 라우트 통합</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>65d05c9</td><td>WARN-QA14-01 수정 — sidebar si: 분기 처리 return 누락 수정 (렌더링 경고 해결)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>9a46d94</td><td>PM — QA_REPORT BUG-QA13-01/02 + WARN-QA14-01 해결 상태 반영</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>8049ab2</td><td>WARN-QA15-01 수정 — use-emsec-tree hook의 id/parentId 타입을 number로 수정 (타입 안전성)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>46d34b7</td><td>BUG-QA14-01 수정 — analysis route SectorGroup + BaseRow labelJa 필드 추가</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>899d513</td><td>Planner 21차 — BETA-32 Lighthouse 최적화 Dev1 배정</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>cbe0d42</td><td>QA 16차 — BETA-30 최종 검증 (BUG-QA14-01 + WARN-QA15-01 확인, WARN-QA16-01 발견)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>1f36ad5</td><td>BETA-29 홈 페이지 랜딩 최적화 — CTA 버튼 추가, 6개 피처 카드, i18n 문구 개선</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>6643ea9</td><td>PM — BETA-29 Dev2 34차 완료 기록</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>4f23cce</td><td>BETA-32 Lighthouse 최적화 — VcrClient dynamic import(ssr:false), sector-tree 데드 라우트 삭제 (WARN-QA16-01 해결)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>856db66</td><td>BETA-32 Dev1 38차 완료 기록 — TASKS.md 업데이트</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ BETA-29: 홈 페이지 랜딩 최적화 (CTA + 피처카드 + i18n) 완료</li>
+<li class='done'>✅ BETA-30: QA 버그 수정 5건 완료 (BUG-QA13-01/02, WARN-QA14-01, BUG-QA14-01, WARN-QA15-01)</li>
+<li class='done'>✅ BETA-32: Lighthouse 성능 최적화 완료 (VcrClient dynamic import, 데드 라우트 삭제)</li>
+<li class='progress'>🔄 QA 17차: BETA-32 Lighthouse 최적화 검증 진행 중</li>
+<li class='todo'>⏳ GitHub kimeleven/eldo beta 브랜치 푸시 완료 — Vercel 토큰 발급 시 즉시 배포 가능</li>
+<li class='todo'>⏳ Google Analytics GA4 속성 ID 발급 대기 (Sanghun 필요)</li>
+<li class='todo'>⏳ TASK-307 Lighthouse 실측 — 외부 URL 접근 필요 (Sanghun 직접)</li>
+</ul>
+
+<h2>4. 남은 작업</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>QA 17차 — BETA-32 Lighthouse 최적화 검증 (tsc 0건, Playwright 19/19, VcrClient 정상 렌더링)</td><td>QA</td><td>🔴 HIGH</td></tr>
+<tr><td>Vercel 배포 — vercel.com에서 토큰 발급 + DATABASE_URL(Neon PostgreSQL) 설정</td><td>Sanghun</td><td>🔴 HIGH</td></tr>
+<tr><td>BETA-31 — 홈 페이지 추가 개선 범위 확정 (Sanghun 지시 후)</td><td>Planner</td><td>🟡 MED</td></tr>
+<tr><td>VCR-T 구조 방향 결정</td><td>Sanghun 지시 대기</td><td>🟡 MED</td></tr>
+<tr><td>Google Analytics GA4 속성 ID 발급 및 적용</td><td>Sanghun</td><td>🟢 LOW</td></tr>
+<tr><td>ELDO 다국어(P2) — next-intl 도입, 한/영 UI 텍스트 번역</td><td>Dev1/Dev2</td><td>🟢 LOW</td></tr>
+</table>
+
+</body>
+</html>

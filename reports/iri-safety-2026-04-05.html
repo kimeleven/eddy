@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>IRI-Safety 주간 보고서 — 2026-04-05</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  .stopped-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .stopped { color: #dc2626; font-weight: 600; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 IRI-Safety 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-05 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>산업안전보건법·중대재해처벌법 기반 안전관리 SaaS — 인력·교육·위험성평가·사고보고·SAPA 점검 (Next.js 15 + Prisma)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-04</td></tr>
+<tr><td><b>전체 커밋</b></td><td>17건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>17건</td></tr>
+<tr><td><b>현재 상태</b></td><td>🛑 개발 완전 중단 (Sanghun 직접 지시 2026-04-05). Phase 2 일부 구현 후 중단. 재개 지시 대기.</td></tr>
+</table>
+</div>
+
+<div class='stopped-box'>
+<b>🛑 개발 중단 사유:</b> Sanghun 직접 지시 — "Iri도 중단" (2026-04-05). launchd 에이전트(dev1, dev2, planner, qa) 비활성화 완료. 추가 커밋/배포 금지. 재개 지시 있을 때까지 대기.
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<p>2026-04-04~05 단기간 초기 구현 (전체 17건 커밋):</p>
+<table>
+<tr><th>시기</th><th>Phase / 주요 변경</th><th>커밋 수</th></tr>
+<tr><td>2026-04-04</td><td>초기 커밋: IRI 안전관리 SaaS 기획 + 프로젝트 기반 구조 (Next.js, Prisma, 멀티테넌트 구조)</td><td>1</td></tr>
+<tr><td>2026-04-05</td><td>Phase 1: 법안 검토 + 기획서 작성 (산업안전보건법·중대재해처벌법 갭 분석), 토스트 알림·사용자 관리·감사 로그 기초, 비밀번호 인증 강화, E2E 테스트, BUG-001/002 수정</td><td>10</td></tr>
+<tr><td>2026-04-05</td><td>Phase 2 일부: soft delete, IP/UserAgent 감사 로그, 도급/협력업체 백엔드 구현, 비밀번호 로그인 UI, 도급/협력업체 프론트엔드 및 반기평가 UI</td><td>5</td></tr>
+<tr><td>2026-04-05</td><td>개발 중단 지시 처리 + PM 33차 토큰 절약 모드 전파</td><td>1</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (초기 구현)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9ece85c</td><td>Initial commit: IRI 안전관리 SaaS 기획서 + 프로젝트 기반 구조 (Next.js 15, Prisma, PostgreSQL, 멀티테넌트)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05 (Phase 1~2 구현 후 중단)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>087bf9f</td><td>Planner: 법적 갭 분석 및 Phase별 기획 작성 (Phase 1~8 로드맵, 산업안전보건법·중대재해처벌법 의무조항 매핑)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>c98f286</td><td>토스트 알림 시스템 + 사용자 관리 페이지 + 감사 로그 기초 구현</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>124d186</td><td>보안 강화: 비밀번호 인증(bcrypt) 추가 + 감사 로그 DB 스키마 구현 (append-only, IP·UserAgent 기록)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>6e8f1e8</td><td>E2E 테스트 추가 (Playwright, TC-01~13) + 로그인 버그 수정</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>d2279cc</td><td>BUG-001/002 수정 — auth fallback 주석 추가 (레거시 계정 호환성), 포트 3003 확정</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>7e4e4b7</td><td>Phase 1: 감사 로그 조회 UI 추가 + 교육 삭제 버튼 UX 개선</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>f26227c</td><td>QA 2차: 감사 로그 UI 테스트 추가 — TC-14/15/16 (42 PASS)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>d05e0dd</td><td>Planner: PLAN.md 초안 작성 — Phase 2~8 기획 로드맵 (도급관리, PDF출력, 이메일알림, 전자서명, 위험성평가 등)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>8475171</td><td>Phase 1+2: soft delete 구현, IP/UserAgent 감사 로그 강화, 도급/협력업체 관리 백엔드 API 구현 (중대재해처벌법 §5 대응)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>a19541c</td><td>Phase 5: 비밀번호 로그인 UI 구현 (이메일 전용 → 비밀번호 인증 강화)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>de16935</td><td>QA 3차: Phase5 비밀번호 로그인 테스트 추가 — TC-17~20 (52 PASS, BUG-003 발견)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>32bfc0d</td><td>Phase 2: 도급/협력업체 프론트엔드 컴포넌트 부분 구현</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>3f18d23</td><td>PM 33차: 토큰 절약 모드 전파</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>6fbc50e</td><td>Phase 2: 도급/협력업체 페이지 완성 + 반기평가 UI 구현 (마지막 커밋 — 이후 개발 중단)</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ Phase 1 완료: 기본 인증, 감사 로그, 사용자 관리, E2E 테스트 52 PASS</li>
+<li class='done'>✅ Phase 2 일부: 도급/협력업체 관리 백엔드 + 프론트엔드 + 반기평가 UI 구현</li>
+<li class='done'>✅ BUG-001/002 수정 완료 (auth fallback, 포트 3003 확정)</li>
+<li class='stopped'>🛑 개발 완전 중단 — Sanghun 직접 지시 (2026-04-05)</li>
+<li class='todo'>⏳ BUG-003 (비밀번호 로그인 미작동) — 중단으로 인해 미수정 상태</li>
+</ul>
+
+<h2>4. 남은 작업 (재개 시)</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>BUG-003 수정 — DB 계정 passwordHash 업데이트 (bcrypt 해시), bcrypt.compare 검증</td><td>Dev1 (재개 시)</td><td>🔴 HIGH</td></tr>
+<tr><td>Phase 2 완성 — 도급/협력업체 관리 완성, 반기평가 마무리</td><td>Dev1/Dev2 (재개 시)</td><td>🟡 MED</td></tr>
+<tr><td>Phase 3~8 기획 실행 — PDF 출력, 이메일 알림, 위험성평가, SAPA 점검 등</td><td>재개 후 순차 진행</td><td>⏸ 대기</td></tr>
+</table>
+
+</body>
+</html>

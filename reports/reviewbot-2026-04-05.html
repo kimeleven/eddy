@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>ReviewBot 주간 보고서 — 2026-04-05</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .todo { color: #9ca3af; }
+  .stopped { color: #dc2626; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 ReviewBot 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-05 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>쿠팡 파트너스 연동 네이버 블로그 자동 리뷰 포스팅 에이전트 (Playwright + Gemini)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-02</td></tr>
+<tr><td><b>전체 커밋</b></td><td>146건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>146건</td></tr>
+<tr><td><b>현재 상태</b></td><td>Phase 25 운영 전환 — 하루 2포스팅 자동 실행 중. 쿠팡 파트너스 링크 자동 생성 방식으로 변경 완료. 텔레그램 직접 링크 요청 비활성화.</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<p>Phase별 주요 마일스톤 (2026-04-02 시작):</p>
+<table>
+<tr><th>시기</th><th>Phase / 주요 변경</th><th>커밋 수</th></tr>
+<tr><td>04-02</td><td>Phase 1~5: 초기 구조 — 키워드 수집기, 상품 리서치 모듈, 콘텐츠 생성(Gemini/Imagen4), 전체 파이프라인 통합, 네이버 쇼핑→쿠팡 API 전환</td><td>약 30</td></tr>
+<tr><td>04-02</td><td>Phase 6~9: 기능 확장 — 정보글 생성기(info-writer), SEO 내부 링크 시스템, 댓글 유도, 일상글 생성기, QA 이슈 수정, 운영 품질 강화</td><td>약 30</td></tr>
+<tr><td>04-02~03</td><td>Phase 10~13: 운영 안정화 — 이미지 경로 상대화, logNo URL 검증, rank-tracker 통합, 봄 시즌 키워드 10개 추가, 검색 순위 모니터링</td><td>약 25</td></tr>
+<tr><td>04-03~04</td><td>Phase 14~21: 자동화 완성 — 시리즈 글 자동화, 주간 성과 리포트, 일일 텔레그램 브리핑, 댓글 모니터링, 자동 댓글 답글, 이웃 자동 추가, 크론 통합</td><td>약 30</td></tr>
+<tr><td>04-04</td><td>Phase 22~25 + 긴급 수정: 시리즈 planner-pipeline 통합, 포스팅 테스트 성공, 쿠팡 스크린샷→HTML 상품카드 대체, 승인 과정 완전 제거(Sanghun 지시), OG링크 삽입 방식 개선</td><td>약 20</td></tr>
+<tr><td>04-05</td><td>Phase 25 운영 전환 + BUG-004/005 수정: 파트너스 링크 자동 생성 복구(coupangId→generatePartnerLink), 링크 요청 중복 전송 방지, 텔레그램 직접 전송 비활성화</td><td>11</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-02 (Phase 1~9: 초기 구현)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>b1ad4b3</td><td>프로젝트 초기 설정 — 기획서, README, 팀 구조 정의</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>07ca94e</td><td>Phase 1-A: 네이버 블로그 포스팅 모듈 구현 (naver-blog.mjs)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>29dbc38</td><td>Phase 1-B: 키워드 수집기(keyword-hunter.mjs) 구현 + QA 보고서 초기화</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>a2f5561</td><td>Phase 1-C: 쿠팡 상품 리서치 모듈 구현 (product-researcher.mjs)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>55f2f1d</td><td>Gemini/Imagen4 유틸 추가 — 텍스트 생성, 이미지 생성, 리뷰 문체 변형, 썸네일 생성</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>da62a7f</td><td>Phase 2: 콘텐츠 생성 모듈 구현 (review-writer.mjs)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>b69af8e</td><td>Phase 3: 전체 파이프라인 통합 구현 (pipeline.mjs)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>214e2ab</td><td>Phase 3.5: 텔레그램 포스팅 승인 요청 + Phase 4-B 이미지 생성 모듈 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>178d9b9</td><td>Anthropic SDK 제거 → Claude CLI 방식으로 전환 (Max 구독 기반, 추가 API 비용 없음)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>be36359</td><td>Phase 5: 보안 수정 + 네이버 쇼핑 API 전환 + dotenv 환경변수 설정</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>64f1c7b</td><td>Phase 6: 환경 진단 스크립트, 통계 뷰어, Gemini 모델명 수정 완료</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>bd280c4</td><td>Phase 6-B: 정보글 생성기 구현 (info-writer.mjs + pipeline --type info 플래그)</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>a4f0148</td><td>Phase 7: SEO 내부 링크 시스템 + 댓글 유도 + 일상글 생성기 구현</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>fc6b85a</td><td>Phase 9: postedAt 표준화, traceid 유니크화, 2-gram 토크나이저 적용</td></tr>
+<tr><td>04-02</td><td class='commit-hash'>4abc462</td><td>포스팅 이력 관리 + 상품/키워드 중복 방지 + 하루 1포스팅 제한 설정</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-03 (Phase 10~13: 운영 안정화)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>d129d38</td><td>Phase 12: BUG-001/002 수정 + keywords.json 카테고리 정리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>66d481f</td><td>사진 위주 블로그 포스팅 개선 — URL 제거, 이미지 균등 삽입</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>82acdee</td><td>JSON 파싱 오류 수정 — 긴 리뷰 본문의 raw newline 이스케이프 처리</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>f0c9b81</td><td>상품 선정 알고리즘 개선 — 신규진입 > 급상승 > TOP10 랜덤 (인기 1위 단순 선택 금지)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>1183887</td><td>Phase 11: 태그 입력 자동화, rank-tracker 통합, pubBtn null 체크, SEO 프롬프트 강화</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>fd2aa98</td><td>가격대별 리뷰 깊이 정책 적용 — basic/mid/deep/premium 4단계 (글자수 2000~8000자, 사진 3~10장+)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>5d0fd22</td><td>Phase 12: 네이버 서치어드바이저 RSS 자동화 구현 (키워드 성과 데이터 수집)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>e0fa771</td><td>Phase 12: 조회수 기반 키워드 피드백 자동화 구현 (성과 좋은 키워드 자동 우선화)</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>a81551c</td><td>Phase 13-A: 검색 순위 모니터링 + partnerLink null 버그 수정</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>f564426</td><td>Phase 13: 봄 시즌 키워드 10개 추가 + 파이프라인 dry-run 검증 완료</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>8a9e365</td><td>Phase 13-C: naver-blog-stats 조회수 수집 방식 API 캡처로 전환</td></tr>
+<tr><td>04-03</td><td class='commit-hash'>99be31d</td><td>Phase 13-E: 이웃 소통 자동화 스크립트 구현 (neighbor-engage.mjs)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-04 (Phase 14~25: 완전 자동화 + 긴급 수정)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>0a4bba8</td><td>Phase 14-A: 시리즈 글 자동화 구현 (series-writer.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>a87fb12</td><td>Phase 15-A: 주간 성과 리포트 + AI 콘텐츠 전략 추천 구현 (weekly-report.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9de727b</td><td>Phase 16-A: 일일 텔레그램 브리핑 알림 구현 (daily-notify.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>19022be</td><td>Phase 17-A: 네이버 블로그 댓글 모니터링 + 텔레그램 알림 구현 (monitor-comments.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>b872f3f</td><td>Phase 18-A: 검색 순위 변화 감지 + 텔레그램 알림 구현 (search-rank.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>8bd2cde</td><td>Phase 19-A: 자동 댓글 답글 구현 (auto-reply.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>ed03c06</td><td>Phase 20-A: 네이버 이웃 자동 추가 구현 (auto-follow.mjs)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>683ab31</td><td>Phase 21-A: 전체 자동화 크론 통합 (setup-cron.sh 업데이트)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>6e0d3c0</td><td>Phase 23-A: 시리즈 planner-pipeline 완전 통합</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>5d35484</td><td>승인 과정 완전 제거 — 평가 통과 시 바로 포스팅 (Sanghun 직접 지시)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>9bd6537</td><td>blog-publisher.mjs approval 체크 제거 + 포스팅 완료 시 텔레그램 알림 추가</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>bfe3905</td><td>쿠팡 파트너스 링크 정상화 + 포스팅 후 Playwright 검증 추가</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>16eec21</td><td>쿠팡 스크린샷 → HTML 상품카드로 대체 (쿠팡 Access Denied 우회)</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>3ecd142</td><td>상품 이미지를 네이버 쇼핑에서 직접 다운로드 — 실제 상품 사진 사용</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>1e80548</td><td>OG링크 버튼으로 링크 블록 삽입 — 네이버 에디터 공식 방식 적용</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>8efdb51</td><td>포스팅 테스트 성공 확인 — 파트너링크 3개 + 이미지 8장 + 공시문구 검증 PASS</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>b414527</td><td>Phase 25 운영 전환 — 하루 2포스팅 한도, OG카드 키보드 삭제, 이미지 자동 검색, 신규 리뷰 3건 등록</td></tr>
+<tr><td>04-04</td><td class='commit-hash'>0d9edf5</td><td>파트너스 링크 요청 메시지에 naverLink + naverMallName 추가 (Sanghun 피드백 반영)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-05 (BUG-004/005 수정 + 운영 안정화)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>e7cb77d</td><td>verifyPost raw URL 오탐 수정 + 파이프라인 데이터 동기화</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>1e491c8</td><td>파트너스 링크 대기 중 리뷰 작성 방지 + 데이터 정리 (링크 없는 상품에 리뷰 먼저 쓰는 문제 차단)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>f0b237e</td><td>봄 의류 추천 failed→pending 리셋 + auto-generated 파트너스 링크 초기화</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>65cf803</td><td>파트너스 링크 요청 중복 전송 방지 + 불량 키워드 정리 (BUG-005)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>418eb99</td><td>--manual 플래그 적용 + 파이프라인 데이터 동기화 (순회 #4)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>6771708</td><td>PM 33차: 직접 메시지 차단 + 토큰 절약 모드 전파</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>ddd2cbd</td><td>쿠팡 파트너스 링크 자동 생성 복구 — coupangId→generatePartnerLink 함수로 전환 (BUG-004 수정)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>5ad50ed</td><td>link-request 스텝 영구 비활성화 — 텔레그램으로 링크 직접 전송 차단 (Sanghun 지시)</td></tr>
+<tr><td>04-05</td><td class='commit-hash'>78b1228</td><td>TASKS.md — link-request 비활성화 완료 기록</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ Phase 25 운영 전환 완료 — 하루 2포스팅 자동 실행 중</li>
+<li class='done'>✅ 쿠팡 파트너스 링크 자동 생성 방식 구현 완료 (generatePartnerLink)</li>
+<li class='done'>✅ 승인 과정 제거 — 평가 통과 시 즉시 포스팅 (Sanghun 직접 지시)</li>
+<li class='done'>✅ 텔레그램 링크 요청 비활성화 — 자동 생성으로 전환</li>
+<li class='done'>✅ BUG-004/005 수정 완료 (파트너스 링크 자동 생성, 중복 요청 방지)</li>
+<li class='progress'>🔄 pending-links.json 5건 대기 중 (봄 캠핑용품/원피스/신발/가방 리뷰)</li>
+</ul>
+
+<h2>4. 남은 작업</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>쿠팡 파트너스 Open API 키 발급 (partners.coupang.com, ACCESS_KEY/SECRET_KEY) — 더 안정적인 링크 생성을 위해</td><td>Sanghun</td><td>🔴 HIGH</td></tr>
+<tr><td>product-researcher.mjs 전면 수정 — 네이버 쇼핑 API 완전 제거, 쿠팡 Playwright 스크래핑으로 상품 검색 전환</td><td>Dev1</td><td>🔴 HIGH</td></tr>
+<tr><td>사진 삽입 작동 확인 — page.waitForEvent('filechooser') → page.on('filechooser') 이벤트 방식으로 수정</td><td>Dev1</td><td>🟡 MED</td></tr>
+<tr><td>pending-links.json 5건 포스팅 완료</td><td>자동(쿠팡 API 키 등록 후)</td><td>🟡 MED</td></tr>
+<tr><td>신규 프로젝트 검토: Tesla/AI 뉴스 YouTube 채널 (TeslaAI) — 중국 AI 솔루션 활용, 월 $6~15 예상</td><td>Sanghun 승인 대기</td><td>🟢 LOW</td></tr>
+</table>
+
+</body>
+</html>
