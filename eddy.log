@@ -2227,3 +2227,19 @@ Credit balance is too low
 3. XBot 테스트 (`node pipeline.mjs --once` 터미널 직접 실행)
 [2026-04-05 19:27:20] Eddy 실행 완료
 [2026-04-05 19:37:20] Eddy 실행 시작
+완료. 요약:
+
+**수신 메시지:** "eldo는 어떤 계정으로 하는중이지?"
+
+**응답 전송:**
+- GitHub: `kimeleven/eldo` (kimeleven 계정)
+- GitLab: `git.mintech.kr/greta/eldo-web` (Eddy SSH)
+- DB: 로컬 `a1111@localhost/eldo` (Neon 미사용)
+
+**팀 현황:**
+- ELDO: Dev1 Lighthouse 최적화 진행 중 (최근 커밋 `46d34b7`, `8049ab2`)
+- ReviewBot: 자동 포스팅 중단 상태, 쿠팡 직접검색 구조 변경 대기
+- DevGate: 개발 중단 지시됨 (E2E 49/49 PASS 상태로 중단)
+- IRI-Safety: 개발 중단 지시됨 (BUG-003 수정 완료 상태로 중단)
+[2026-04-05 19:38:17] Eddy 실행 완료
+[2026-04-05 19:48:17] Eddy 실행 시작
