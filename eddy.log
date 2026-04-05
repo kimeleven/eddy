@@ -2601,3 +2601,14 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 새 텔레그램 지시 없음. 이슈 없음.
 [2026-04-06 01:04:56] Eddy 실행 완료
 [2026-04-06 01:14:56] Eddy 실행 시작
+**[Eddy 보고 완료]**
+
+📋 직접 확인한 팀 현황:
+- **ELDO**: 정상 가동. Dev1 40차 완료, QA 18차 누적 이슈 0건. BETA-34(빌드 검증) Planner 배정됨 — Dev1 다음 실행 시 처리 예정
+- **ReviewBot**: 안정화 모드. 버그 없음. pending-links 14개 Sanghun 링크 대기
+- **DevGate**: 중단 확인. 마지막 커밋 04-05 22:37, launchd 언로드됨
+- **IRI-Safety**: 중단 확인. 마지막 커밋 04-05 22:03, launchd 언로드됨
+
+새 텔레그램 메시지 없음. 텔레그램 보고 전송 완료.
+[2026-04-06 01:16:24] Eddy 실행 완료
+[2026-04-06 01:26:24] Eddy 실행 시작
