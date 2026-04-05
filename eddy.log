@@ -1884,3 +1884,28 @@ Credit balance is too low
 - ELDO: Vercel 토큰 + GA4 ID
 [2026-04-05 14:47:44] Eddy 실행 완료
 [2026-04-05 14:57:44] Eddy 실행 시작
+보고 완료.
+
+---
+
+**[Eddy PM 35차]** 전체 팀 검수 + 텔레그램 보고 완료.
+
+**신규 텔레그램**: 없음
+
+**팀 현황 요약:**
+
+| 팀 | 상태 | 최근 커밋 |
+|---|---|---|
+| ELDO | Dev1 QA13차 버그 수정 중, Dev2 Bloomberg 다크모드 완료 | `e1884b8` |
+| ReviewBot | 안정화 모드, 자동 실행 중단, pending-links 14건 대기 | `418eb99` |
+| DevGate | E2E 49/49, A-1 완료, Phase 6-C 실환경 대기 | `c47e589` |
+| IRI-Safety | Phase 2 도급 페이지 완료, Open 버그 0건 | `6fbc50e` |
+
+**전 팀 공통**: 크레딧 부족 → Apr 8 13:00(KST) 리셋 후 자동 재개
+
+**Sanghun 액션 필요:**
+1. ReviewBot — 쿠팡 파트너스 링크 14건
+2. DevGate — devgate.mintdev.uk 직접 테스트 (Phase 6-C)
+3. ELDO — Vercel 토큰 + GA4 ID (배포 준비 완료)
+[2026-04-05 14:59:11] Eddy 실행 완료
+[2026-04-05 15:09:11] Eddy 실행 시작
