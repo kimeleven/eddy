@@ -1966,3 +1966,15 @@ Credit balance is too low
 **대기**: ReviewBot pending-links 14건 쿠팡 파트너스 링크 Sanghun 직접 제공 필요.
 [2026-04-05 15:46:18] Eddy 실행 완료
 [2026-04-05 15:56:19] Eddy 실행 시작
+텔레그램 보고 완료.
+
+---
+
+**38차 처리 완료:**
+
+- **신규 텔레그램**: 없음
+- **ELDO**: BUG-QA13-01/02 + WARN-QA14-01 코드 수정 확인 → QA_REPORT 해결 상태 반영. Dev1 다음 태스크 BUG-QA14-01(sub_industry 일본어)로 전환.
+- **ReviewBot**: 안정화 모드 유지, 자동 포스팅 차단
+- **DevGate / IRI-Safety**: 개발 중단 유지
+[2026-04-05 15:58:31] Eddy 실행 완료
+[2026-04-05 16:08:31] Eddy 실행 시작
