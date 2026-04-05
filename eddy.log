@@ -2441,3 +2441,13 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 2. ELDO Vercel 토큰 + GA4 속성 ID (배포 원할 때)
 [2026-04-05 22:47:06] Eddy 실행 완료
 [2026-04-05 22:57:06] Eddy 실행 시작
+보고 완료.
+
+**[Eddy 보고]**
+- **ELDO**: QA 17차 완료 (BETA-32 통과), BETA-33 진행 중
+- **ReviewBot**: 안정화 모드, 파트너스 링크 14개 대기 중
+- **DevGate/IRI-Safety**: 개발 중단 중
+
+피드백 반영: 업데이트 없는 팀은 한 줄로 처리.
+[2026-04-05 22:58:23] Eddy 실행 완료
+[2026-04-05 23:08:23] Eddy 실행 시작
