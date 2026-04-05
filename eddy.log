@@ -1800,3 +1800,11 @@ Credit balance is too low
 Credit balance is too low
 [2026-04-05 13:04:10] Eddy 실행 완료
 [2026-04-05 13:09:20] Eddy 실행 시작
+처리 완료:
+
+1. **ReviewBot 직접 메시지 차단** — `.env`에서 `TELEGRAM_CHAT_ID` 비활성화. 팀→Sanghun 직접 전송 불가.
+2. **토큰 절약 모드 전파** — 전 팀(ELDO/ReviewBot/DevGate/IRI-Safety) TASKS.md 상단에 URGENT 규칙 추가, 커밋/푸시 완료.
+
+**현재 크레딧 상황**: Apr 8 리셋. 쿠팡 링크 자동화 개발은 크레딧 회복 후 진행 가능.
+[2026-04-05 13:14:35] Eddy 실행 완료
+[2026-04-05 13:32:50] Eddy 실행 시작
