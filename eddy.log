@@ -1562,3 +1562,241 @@ Sanghun의 새 메시지 처리 완료.
 - **IRI-Safety**: Phase 2 도급/용역 백엔드 완료. BUG-001/002 해결 확인.
 [2026-04-05 02:33:16] Eddy 실행 완료
 [2026-04-05 02:40:52] Eddy 실행 시작
+완료.
+
+**32차 순회 결과:**
+
+- **ELDO**: BETA-28 완료 (기업목록 i18n + VCR Skeleton), BETA-27 진행 중. 정상.
+- **ReviewBot**: BUG-005 완료. pending-links 7건 Sanghun 링크 대기 중.
+- **DevGate**: E2E 49/49 통과. S-1 HIGH 해결 확인.
+- **XBot**: 보류 (변동 없음).
+- **IRI-Safety**: BUG-003 (passwordHash 미설정 → 비밀번호 무력화) 발견 — Dev1 배정 완료.
+
+⏳ **Sanghun 액션 필요**: ReviewBot pending-links 7건 쿠팡 링크 제공.
+[2026-04-05 02:42:26] Eddy 실행 완료
+[2026-04-05 02:52:26] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 02:52:27] Eddy 실행 완료
+[2026-04-05 03:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:00:02] Eddy 실행 완료
+[2026-04-05 03:02:28] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:02:29] Eddy 실행 완료
+[2026-04-05 03:12:29] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:12:30] Eddy 실행 완료
+[2026-04-05 03:22:31] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:22:32] Eddy 실행 완료
+[2026-04-05 03:30:01] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:30:02] Eddy 실행 완료
+[2026-04-05 03:32:32] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:32:34] Eddy 실행 완료
+[2026-04-05 03:42:34] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:42:36] Eddy 실행 완료
+[2026-04-05 03:52:36] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 03:52:38] Eddy 실행 완료
+[2026-04-05 04:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:00:02] Eddy 실행 완료
+[2026-04-05 04:02:38] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:02:39] Eddy 실행 완료
+[2026-04-05 04:12:39] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:12:41] Eddy 실행 완료
+[2026-04-05 04:22:41] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:22:43] Eddy 실행 완료
+[2026-04-05 04:30:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:30:01] Eddy 실행 완료
+[2026-04-05 04:32:43] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:32:44] Eddy 실행 완료
+[2026-04-05 04:42:44] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:42:46] Eddy 실행 완료
+[2026-04-05 04:52:46] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 04:52:47] Eddy 실행 완료
+[2026-04-05 05:00:01] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:00:02] Eddy 실행 완료
+[2026-04-05 05:02:47] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:02:49] Eddy 실행 완료
+[2026-04-05 05:12:49] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:12:51] Eddy 실행 완료
+[2026-04-05 05:22:51] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:22:52] Eddy 실행 완료
+[2026-04-05 05:30:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:30:02] Eddy 실행 완료
+[2026-04-05 05:32:52] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:32:54] Eddy 실행 완료
+[2026-04-05 05:42:54] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:42:55] Eddy 실행 완료
+[2026-04-05 05:52:56] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 05:52:57] Eddy 실행 완료
+[2026-04-05 06:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:00:02] Eddy 실행 완료
+[2026-04-05 06:02:57] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:02:58] Eddy 실행 완료
+[2026-04-05 06:12:59] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:13:00] Eddy 실행 완료
+[2026-04-05 06:23:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:23:03] Eddy 실행 완료
+[2026-04-05 06:30:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:30:02] Eddy 실행 완료
+[2026-04-05 06:33:03] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:33:04] Eddy 실행 완료
+[2026-04-05 06:43:05] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:43:06] Eddy 실행 완료
+[2026-04-05 06:53:06] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 06:53:08] Eddy 실행 완료
+[2026-04-05 07:00:01] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:00:02] Eddy 실행 완료
+[2026-04-05 07:03:08] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:03:09] Eddy 실행 완료
+[2026-04-05 07:13:09] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:13:11] Eddy 실행 완료
+[2026-04-05 07:23:11] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:23:12] Eddy 실행 완료
+[2026-04-05 07:30:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:30:02] Eddy 실행 완료
+[2026-04-05 07:33:12] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:33:16] Eddy 실행 완료
+[2026-04-05 07:43:16] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:43:17] Eddy 실행 완료
+[2026-04-05 07:53:17] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 07:53:19] Eddy 실행 완료
+[2026-04-05 08:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:00:02] Eddy 실행 완료
+[2026-04-05 08:03:19] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:03:20] Eddy 실행 완료
+[2026-04-05 08:13:20] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:13:22] Eddy 실행 완료
+[2026-04-05 08:23:22] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:23:24] Eddy 실행 완료
+[2026-04-05 08:30:00] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:30:02] Eddy 실행 완료
+[2026-04-05 08:33:24] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:33:25] Eddy 실행 완료
+[2026-04-05 08:43:25] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:43:27] Eddy 실행 완료
+[2026-04-05 08:53:27] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 08:53:29] Eddy 실행 완료
+[2026-04-05 09:00:01] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:00:02] Eddy 실행 완료
+[2026-04-05 09:03:29] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:03:30] Eddy 실행 완료
+[2026-04-05 09:13:31] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:13:32] Eddy 실행 완료
+[2026-04-05 09:23:32] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:23:34] Eddy 실행 완료
+[2026-04-05 09:33:34] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:33:36] Eddy 실행 완료
+[2026-04-05 09:43:36] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:43:37] Eddy 실행 완료
+[2026-04-05 09:53:37] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 09:53:39] Eddy 실행 완료
+[2026-04-05 10:03:39] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 10:03:41] Eddy 실행 완료
+[2026-04-05 10:13:41] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 10:13:43] Eddy 실행 완료
+[2026-04-05 10:23:43] Eddy 실행 시작
+You've hit your limit · resets Apr 8 at 1pm (Asia/Seoul)
+[2026-04-05 10:23:45] Eddy 실행 완료
+[2026-04-05 10:33:45] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjmEyPEdakNBYPcadXWx"}
+[2026-04-05 10:33:47] Eddy 실행 완료
+[2026-04-05 10:43:47] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjn1JsEuWD6F2frL7VcY"}
+[2026-04-05 10:43:48] Eddy 실행 완료
+[2026-04-05 10:53:48] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjnmeGXHe3MSCwESiZ7M"}
+[2026-04-05 10:53:50] Eddy 실행 완료
+[2026-04-05 11:03:50] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjoXypjsJ2ETGj1Q2zEc"}
+[2026-04-05 11:03:51] Eddy 실행 완료
+[2026-04-05 11:13:51] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjpJKi3fAXoXnLrqKe1a"}
+[2026-04-05 11:13:53] Eddy 실행 완료
+[2026-04-05 11:23:53] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjq4fqF4h13LhNse2LDa"}
+[2026-04-05 11:23:54] Eddy 실행 완료
+[2026-04-05 11:33:54] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjqq1My7rZ4w6MfH5qgN"}
+[2026-04-05 11:33:56] Eddy 실행 완료
+[2026-04-05 11:43:56] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjrbLy9nCM9WBs5YAA8y"}
+[2026-04-05 11:43:57] Eddy 실행 완료
+[2026-04-05 11:53:57] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjsMgVPAP7VVHrVQ9FhJ"}
+[2026-04-05 11:53:58] Eddy 실행 완료
+[2026-04-05 12:03:59] Eddy 실행 시작
+Failed to authenticate. API Error: 401 {"type":"error","error":{"type":"authentication_error","message":"Invalid bearer token"},"request_id":"req_011CZjt81px4TwJdRTrddwbX"}
+[2026-04-05 12:04:00] Eddy 실행 완료
+[2026-04-05 12:14:00] Eddy 실행 시작
+Credit balance is too low
+[2026-04-05 12:14:02] Eddy 실행 완료
+[2026-04-05 12:24:02] Eddy 실행 시작
+Credit balance is too low
+[2026-04-05 12:24:04] Eddy 실행 완료
+[2026-04-05 12:34:04] Eddy 실행 시작
+Credit balance is too low
+[2026-04-05 12:34:06] Eddy 실행 완료
+[2026-04-05 12:44:04] Eddy 실행 시작
+Credit balance is too low
+[2026-04-05 12:44:06] Eddy 실행 완료
+[2026-04-05 12:54:06] Eddy 실행 시작
+Credit balance is too low
+[2026-04-05 12:54:08] Eddy 실행 완료
+[2026-04-05 13:04:08] Eddy 실행 시작
+Credit balance is too low
+[2026-04-05 13:04:10] Eddy 실행 완료
+[2026-04-05 13:09:20] Eddy 실행 시작

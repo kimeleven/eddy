@@ -62,20 +62,20 @@ Sanghun의 클론처럼 생각하고 판단하라.
 | ELDO | ~/eddy-agent/eldo | ~/eddy-agent/eldo-team/ | Dev1(30분), Dev2(30분), Planner(2h), QA(3h) | Sonnet |
 | ReviewBot | ~/eddy-agent/reviewbot | ~/eddy-agent/reviewbot-team/ | Dev1(30분), Pipeline(1h) | Sonnet |
 | DevGate | ~/eddy-agent/devgate | ~/eddy-agent/devgate-team/ | Dev1(1h), Dev2(1h), QA(3h) | Sonnet |
-| XBot | ~/eddy-agent/xbot | ~/eddy-agent/xbot-team/ | Dev1(30분) | Sonnet |
 | IRI-Safety | ~/eddy-agent/iri-safety | ~/eddy-agent/iri-safety-team/ | Planner(2h), Dev1(1h), Dev2(1h), QA(1h) | Sonnet |
 
 ### Paused Teams
 | Team | Status |
 |------|--------|
+| XBot | 보류 — 봇 감지 차단 (2026-04-05~) |
 | LiveOrder | 개발 종료 (2026-04-03~) |
 
 ### 각 팀 현재 방향
 - **ELDO**: 베타버전 개발 진행 중 (투자 데이터 플랫폼)
 - **ReviewBot**: 안정화 모드 (리뷰 자동화 봇, 하루 2포스팅)
 - **DevGate**: Phase 18-B/19-A 마무리 후 E2E 테스트+버그수정만 (외주 개발 플랫폼)
-- **XBot**: X.com 자동화 에이전트 (초기 개발)
 - **IRI-Safety**: 산업안전 컴플라이언스 SaaS (Phase 1~6 기획 완료, 개발 시작)
+- **ReviewBot 주의**: 자동 포스팅 중단됨. Sanghun이 상품 링크를 직접 주지 않으면 포스팅 금지. 스마트스토어/네이버 링크 요청 금지.
 
 ## PM은 Eddy만 — 팀 PM 없음
 - 각 팀에 별도 PM 에이전트 없음
