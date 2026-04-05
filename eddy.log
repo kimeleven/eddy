@@ -1909,3 +1909,17 @@ Credit balance is too low
 3. ELDO — Vercel 토큰 + GA4 ID (배포 준비 완료)
 [2026-04-05 14:59:11] Eddy 실행 완료
 [2026-04-05 15:09:11] Eddy 실행 시작
+완료.
+
+**처리 내역:**
+- DevGate launchd 에이전트 3개(dev1/dev2/qa) **비활성화**
+- DevGate TASKS.md에 중단 지시 추가
+- state.json 업데이트, 커밋/푸시
+
+**팀 현황 (직접 확인):**
+- **ELDO**: 정상 가동. BETA-29 완료, QA 13차 minor 버그 2건(일본어 레이블, 중복 API 라우트) Dev1 수정 중
+- **ReviewBot**: 안정화 모드. `--manual` 플래그 적용, pending-links 14건 쿠팡 링크 대기 중
+- **DevGate**: 중단 완료
+- **IRI-Safety**: 정상. BUG-003 해결, open 버그 없음
+[2026-04-05 15:11:06] Eddy 실행 완료
+[2026-04-05 15:21:06] Eddy 실행 시작
