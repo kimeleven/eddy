@@ -2837,3 +2837,13 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - **신규 텔레그램 메시지**: 없음.
 [2026-04-06 04:18:38] Eddy 실행 완료
 [2026-04-06 04:28:38] Eddy 실행 시작
+보고 완료.
+
+**검수 결과 요약:**
+- **ELDO**: 정상 가동. BETA-36 진행 중 (limit 100→500 수정)
+- **ReviewBot**: 정상 가동. --manual 모드, pending-links 14건 대기
+- **DevGate/IRI-Safety**: 중단 유지 (Apr 5 지시)
+- **신규 메시지**: 없음
+- **이슈**: 없음
+[2026-04-06 04:29:28] Eddy 실행 완료
+[2026-04-06 04:39:28] Eddy 실행 시작
