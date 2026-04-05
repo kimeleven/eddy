@@ -1871,3 +1871,16 @@ Credit balance is too low
 ⚠️ **크레딧 부족** — Apr 8 리셋까지 에이전트 실행 제한
 [2026-04-05 14:36:00] Eddy 실행 완료
 [2026-04-05 14:46:00] Eddy 실행 시작
+전송 완료. 검수 결과 요약:
+
+**ELDO**: BUG-QA13-01/02 Dev1 배정, BETA-27 Lighthouse 최적화 진행 중  
+**ReviewBot**: 안정화 모드, pending-links 14건 대기  
+**DevGate**: E2E 49/49 PASS, QA_REPORT A-1/A-2 완료 처리 (미해결 → 완료로 업데이트)  
+**IRI-Safety**: Phase2 도급/협력업체 UI 완료, QA 52/53 PASS  
+
+**Sanghun 액션 필요:**
+- ReviewBot: 쿠팡 파트너스 API 키 (`COUPANG_ACCESS_KEY`, `COUPANG_SECRET_KEY`)
+- ReviewBot: pending-links 14건 파트너스 링크
+- ELDO: Vercel 토큰 + GA4 ID
+[2026-04-05 14:47:44] Eddy 실행 완료
+[2026-04-05 14:57:44] Eddy 실행 시작
