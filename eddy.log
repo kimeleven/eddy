@@ -2402,3 +2402,13 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 ⏳ **대기**: ELDO Vercel 토큰/GA4 ID, ReviewBot 쿠팡 링크 (Sanghun 직접 제공 시 포스팅 재개)
 [2026-04-05 22:10:36] Eddy 실행 완료
 [2026-04-05 22:20:36] Eddy 실행 시작
+보고 완료.
+
+**요약:**
+- **신규 텔레그램 메시지**: 없음
+- **ELDO**: BETA-32/QA17차 통과, BETA-33(VCR-C 프롬프트 버튼) 진행 중
+- **ReviewBot**: 텔레그램 직접 전송 차단 정상, pending-links 14개 대기
+- **DevGate/IRI-Safety**: 중단 지시 반영, 에이전트 비활성화 완료
+- **XBot**: 보류 유지
+[2026-04-05 22:21:39] Eddy 실행 완료
+[2026-04-05 22:31:39] Eddy 실행 시작
