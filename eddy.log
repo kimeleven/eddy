@@ -2778,3 +2778,16 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - 대기 항목: Vercel 토큰, GA4 ID, ReviewBot 쿠팡 파트너스 링크
 [2026-04-06 03:21:38] Eddy 실행 완료
 [2026-04-06 03:31:38] Eddy 실행 시작
+텔레그램 보고 완료.
+
+---
+
+**검수 요약:**
+
+- **ELDO**: 정상 가동. BETA-35(E2E 스모크) Dev1 배정 완료, 다음 실행(~02:30)에 처리 예정. QA WARN-QA19-01은 Info 수준(기능 영향 없음).
+- **ReviewBot**: 안정화 모드 정상. pending-links 14건 파트너스 링크 대기 중.
+- **DevGate**: 중단 유지 확인. launchd 비활성화됨. E2E 53/53 상태.
+- **IRI-Safety**: 중단 유지 확인. launchd 비활성화됨. Phase2 도급/협력업체 UI 완료 상태.
+- **신규 텔레그램 메시지**: 없음.
+[2026-04-06 03:32:49] Eddy 실행 완료
+[2026-04-06 03:42:49] Eddy 실행 시작
