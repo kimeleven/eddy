@@ -2425,3 +2425,19 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
   - **IRI-Safety**: 개발 중단 (지시 이행), QA 4차 61/61 PASS 상태로 대기
 [2026-04-05 22:34:16] Eddy 실행 완료
 [2026-04-05 22:44:16] Eddy 실행 시작
+보고 완료.
+
+---
+
+**검수 결과:**
+
+- **ELDO**: 정상. BETA-32 완료, BETA-33 대기 중. WARN-QA17-01 (Suspense 중복) 미해결로 남아있지만 Info 수준.
+- **ReviewBot**: 정상. 포스팅 완전 차단, 텔레그램 직접 전송 차단 완료. pending-links 14개 파트너스 링크 대기 중.
+- **DevGate**: 개발 중단 지시 수신됐으나 launchd 에이전트(dev1/dev2/qa)가 실제로 언로드 안 돼 있었음 → **지금 언로드 처리 완료.** E2E 53/53 PASS 상태로 정지.
+- **IRI-Safety**: 개발 중단 + 에이전트 이미 언로드 확인.
+
+**Sanghun 액션 필요:**
+1. ReviewBot 쿠팡 파트너스 링크 14개
+2. ELDO Vercel 토큰 + GA4 속성 ID (배포 원할 때)
+[2026-04-05 22:47:06] Eddy 실행 완료
+[2026-04-05 22:57:06] Eddy 실행 시작
