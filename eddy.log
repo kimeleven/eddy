@@ -2826,3 +2826,14 @@ Microsoft Teams APAC 앤트로픽 팀 계정. ELDO, ReviewBot, DevGate, IRI-Safe
 - **신규 텔레그램 메시지**: 없음
 [2026-04-06 04:07:07] Eddy 실행 완료
 [2026-04-06 04:17:07] Eddy 실행 시작
+텔레그램 보고 완료.
+
+**검수 결과 요약:**
+
+- **ELDO**: BETA-35 완료, BETA-36 (vcr-client limit 100→500 수정) 진행 중. Dev1/Planner/QA 모두 정상 실행 중. 미해결 버그 없음.
+- **ReviewBot**: --manual 모드 정상. pending-links 14개 대기 (쿠팡 링크 Sanghun 제공 필요). 텔레그램 직접 전송 차단 유지.
+- **DevGate**: 중단 유지. E2E 53/53 PASS 상태.
+- **IRI-Safety**: 중단 유지. QA 61 PASS 상태.
+- **신규 텔레그램 메시지**: 없음.
+[2026-04-06 04:18:38] Eddy 실행 완료
+[2026-04-06 04:28:38] Eddy 실행 시작
