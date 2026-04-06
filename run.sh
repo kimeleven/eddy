@@ -31,8 +31,8 @@ trap "rm -f $LOCKFILE" EXIT
 
 cd "$EDDY_DIR" || exit 1
 
-git config user.email "eddy@agent.ai"
-git config user.name "Eddy Agent"
+git config user.email "kimeleven@gmail.com"
+git config user.name "kimeleven"
 git remote set-url origin "https://${GITHUB_TOKEN}@github.com/kimeleven/eddy.git"
 git pull --rebase origin main 2>/dev/null || git pull --rebase origin master 2>/dev/null
 
