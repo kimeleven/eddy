@@ -92,6 +92,11 @@ _Last updated: 2026-04-04 (3차)_
 - "실환경접근가능한 인원" = Sanghun 본인 (Coolify 서버 직접 접근 가능한 유일한 사람)
 - Sanghun이 직접 devgate.mintdev.uk 접속 및 기능 테스트 해야 Phase 6-C 완료 가능
 
+## 토큰/키 관리
+- **에이전트 OAuth 토큰 (영희토큰)**: `sk-ant-oat01-ZDWA...` — 모든 팀 에이전트가 사용 중
+- 이전 토큰: `sk-ant-oat01-q4Rs...` — 폐기
+- API 키: `sk-ant-api03-LAH...` — 크레딧 없음, 미사용
+
 ## 로컬 개발 환경
 - PostgreSQL@16 로컬 설치됨 (/usr/local/Cellar/postgresql@16/16.13/)
 - 로컬 DB: `eldo`, `liveorder`, `devgate_test` (localhost:5432, 사용자: a1111, 패스워드 없음)
