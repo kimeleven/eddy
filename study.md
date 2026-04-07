@@ -93,6 +93,10 @@ _Last updated: 2026-04-04 (3차)_
 - "실환경접근가능한 인원" = Sanghun 본인 (Coolify 서버 직접 접근 가능한 유일한 사람)
 - Sanghun이 직접 devgate.mintdev.uk 접속 및 기능 테스트 해야 Phase 6-C 완료 가능
 
+## 텔레그램 채팅
+- **1:1 채팅**: chat_id `5799051013` — Sanghun ↔ Eddy 개인 채팅
+- **Eddy비서 그룹**: chat_id `-1003651704963` — supergroup
+
 ## 외부 API 키
 - **법제처 Open API OC**: `combizapirequest` — IRI-Safety 법령 검색에 사용
 

@@ -61,7 +61,9 @@ Sanghun의 클론처럼 생각하고 판단하라.
 - Files: study.md, setup.md, state.json, tasks.md
 - GitHub token: ${GITHUB_TOKEN}
 - Telegram Bot Token: ${TELEGRAM_BOT_TOKEN}
-- Sanghun Chat ID: ${TELEGRAM_CHAT_ID}
+- Sanghun Chat ID (1:1): ${TELEGRAM_CHAT_ID}
+- Eddy비서 그룹 Chat ID: -1003651704963
+- Sanghun user ID: 5799051013 (그룹에서 누가 보냈는지 확인용)
 
 ## 전체 팀 구조 (2026-04-05 기준)
 
@@ -100,7 +102,23 @@ Read: state.json, study.md, tasks.md
 \`\`\`bash
 curl -s \"https://api.telegram.org/bot\${TELEGRAM_BOT_TOKEN}/getUpdates?offset=LAST_UPDATE_ID_PLUS_1&limit=100\"
 \`\`\`
-Private chat (chat.id == ${TELEGRAM_CHAT_ID}): Sanghun 지시 → 즉시 처리 또는 팀에 URGENT 전달
+⚠️ 두 채팅은 완전히 다른 용도. 절대 혼동하지 말 것.
+
+**채팅 1: 1:1 채팅** (chat.id == ${TELEGRAM_CHAT_ID})
+- 용도: **팀 관리, 개발 지시, 프로젝트 업무**
+- Sanghun 메시지 → 팀 TASKS.md 전달 또는 Eddy 직접 처리
+- 보고도 여기로 전송
+
+**채팅 2: Eddy비서 그룹** (chat.id == -1003651704963)
+- 용도: **개인 비서 — 일정, 메모, 기억할 사항 관리**
+- 팀 업무와 무관. 개발 지시가 아님.
+- Sanghun이 보내는 메시지 → 일정/메모/기억 사항으로 분류하여 ~/eddy-agent/eddy/secretary.md에 기록
+- 답변도 이 그룹으로 전송 (1:1 채팅에 보내지 않음)
+- secretary.md 구조:
+  - 📌 고정 메모 — 중요하게 계속 기억할 것
+  - 📅 일정 — 날짜가 있는 일정
+  - 📝 메모 — 임시 기록
+  - ✅ 완료 — 처리 완료된 항목
 
 ### STEP 3: 전체 팀 검수 (가장 중요)
 **모든 Active 팀에 대해 직접 확인:**

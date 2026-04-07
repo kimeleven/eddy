@@ -4614,3 +4614,26 @@ Sanghun에게 답변 전송 완료.
 - ReviewBot 쿠팡 링크 14건 제공
 [2026-04-08 04:14:02] Eddy 실행 완료
 [2026-04-08 06:14:02] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 전 팀 점검 완료**
+
+| 팀 | 현황 |
+|----|------|
+| ELDO | QA 28/29차 완료. BETA-46(Dev1) 배정 — company E2E locator flaky 수정. |
+| DevGate | BUG-NEW-03/04/05 + Dev1 4건 수정 완료. E2E 63/63 QA 확인 예정. |
+| IRI-Safety | Phase 14 MSDS 완료. QA 12차 168/173. **BUG-008 직접 처리** (prisma generate+push). |
+| ReviewBot | 안정화 모드. pending-links 14개 대기. |
+| BizTool | 오픈뱅킹/세금계산서 API 조사 완료. Sanghun 결정 대기. |
+
+**✅ 직접 처리:**
+- IRI-Safety BUG-008: `prisma generate + db push` 직접 실행 완료 (서버 재시작 시 MSDS 페이지 정상화)
+- ELDO TASKS.md: BETA-44/45 완료 처리, BETA-46 Dev1 배정
+- 대시보드 업데이트 + 푸시
+
+**⏳ Sanghun 액션 필요:**
+- BizTool: 오픈뱅킹 API 가입 방향 결정
+- ELDO: Vercel 토큰 / GA4 ID
+- IRI: open.law.go.kr OC 키 발급
+[2026-04-08 06:17:14] Eddy 실행 완료
+[2026-04-08 08:17:15] Eddy 실행 시작
