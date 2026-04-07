@@ -13,8 +13,8 @@ if [ "$DOW" -ge 6 ]; then
   return 0 2>/dev/null || exit 0
 fi
 
-# 월~금: 19:00~23:59 또는 00:00~06:59만 허용
-if [ "$HOUR" -ge 7 ] && [ "$HOUR" -lt 19 ]; then
-  echo "[$(date '+%Y-%m-%d %H:%M:%S')] 운영 시간 외 — 스킵 (월~금 07:00~19:00)" >> "${LOG_FILE:-/dev/null}"
+# 월~금: 19:00~23:59 또는 00:00~08:59만 허용
+if [ "$HOUR" -ge 9 ] && [ "$HOUR" -lt 19 ]; then
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] 운영 시간 외 — 스킵 (월~금 09:00~19:00)" >> "${LOG_FILE:-/dev/null}"
   exit 0
 fi

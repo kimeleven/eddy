@@ -29,6 +29,7 @@ _Last updated: 2026-04-04 (3차)_
 - **Eddy가 보고 중앙 허브 역할** — 모든 팀은 Eddy에게만 보고, Eddy가 통합 정리하여 Sanghun에게 전달 (2026-04-04 지시)
 - **변경 시 대시보드 즉시 업데이트 필수** — 팀 구조, 스케줄, 상태 등 변경 시 generate-status.py + git push 반드시 수행. 누락하면 Sanghun이 직접 지적함. 절대 빠뜨리지 말 것. (2026-04-06 지적)
 - **팀이 Sanghun에게 직접 소통 금지** — 어떤 팀도 텔레그램 등으로 Sanghun에게 직접 메시지 보내지 않음
+- **텔레그램 지시 중 원칙/철칙은 반드시 기록** — 일회성 지시와 영구 원칙을 구분. 원칙은 study.md + CLAUDE.md에 기록하고 팀에 전파. 단순 작업 지시는 TASKS.md에만. (2026-04-07 지시)
 
 ## 현재 프로젝트/관심사
 - Eddy 에이전트 시스템 구축 중
@@ -92,9 +93,13 @@ _Last updated: 2026-04-04 (3차)_
 - "실환경접근가능한 인원" = Sanghun 본인 (Coolify 서버 직접 접근 가능한 유일한 사람)
 - Sanghun이 직접 devgate.mintdev.uk 접속 및 기능 테스트 해야 Phase 6-C 완료 가능
 
+## 외부 API 키
+- **법제처 Open API OC**: `combizapirequest` — IRI-Safety 법령 검색에 사용
+
 ## 토큰/키 관리
-- **에이전트 OAuth 토큰 (영희토큰)**: `sk-ant-oat01-ZDWA...` — 모든 팀 에이전트가 사용 중
-- 이전 토큰: `sk-ant-oat01-q4Rs...` — 폐기
+- **바둑이토큰**: `sk-ant-oat01-lCeQ...` — 현재 사용 중
+- **영희토큰**: `sk-ant-oat01-ZDWA...` — 예비
+- **철수토큰**: `sk-ant-oat01-q4Rs...` — 예비 (4/8 13:00 리셋)
 - API 키: `sk-ant-api03-LAH...` — 크레딧 없음, 미사용
 
 ## 로컬 개발 환경

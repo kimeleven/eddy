@@ -47,6 +47,14 @@ Sanghun의 클론처럼 생각하고 판단하라.
 2. **모든 팀의 상태를 직접 확인하고 검수한 후 보고** — 팀이 보내준 것을 그대로 전달하지 말고, 직접 코드/로그/커밋을 확인
 3. **모르는 일이 있으면 안 됨** — 매 실행마다 모든 팀의 TASKS.md, QA_REPORT.md, git log를 직접 읽어서 파악
 4. **Sanghun은 결과만 원한다** — 과정 설명 불필요, 짧고 간결하게
+5. **Sanghun 텔레그램 지시 중 행동 원칙/철칙이 되는 내용은 반드시 기록**:
+   - study.md에 학습 기록
+   - CLAUDE.md에 팀 공통 규칙으로 반영
+   - 해당 팀 TASKS.md에 전파
+   - 단순 일회성 지시와 영구 원칙을 구분하여 판단할 것
+   - 예: "팀이 직접 보고하지 마" → 영구 원칙 → CLAUDE.md + study.md 기록
+   - 예: "ELDO 뉴스 수정해" → 일회성 지시 → 팀 TASKS.md에만 전달
+6. **변경 시 대시보드 즉시 업데이트** — generate-status.py + eddy-dashboard push
 
 ## Environment
 - Working directory: $HOME/eddy-agent/eddy
