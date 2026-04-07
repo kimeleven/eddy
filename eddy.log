@@ -4566,3 +4566,30 @@ Sanghun에게 답변 전송 완료.
 - ReviewBot: 안정화 모드
 - BizTool: 변동 없음
 새 텔레그램 메시지: 없음
+**[Eddy PM 보고]**
+
+**팀 현황:**
+- **ELDO**: BETA-44 완료(`c87f399`) → BETA-45(sectors E2E) 진행 중
+- **IRI-Safety**: QA 11차 163/164 PASS (TC-13 Flaky 반복). Phase 14 MSDS 배정 진행 중
+- **DevGate**: E2E 61/63. 신규 버그 2건 반영
+  - BUG-NEW-04 HIGH: `/admin/payments/manual` 404 (E2E Step 23)
+  - BUG-NEW-05 MED: `MILESTONE_FEE_COMPLETION_MAJOR` 발주자 알림 누락
+- **ReviewBot**: 안정화 모드. pending-links 14개 대기
+- **BizTool**: 변동 없음. Sanghun 결정 대기
+
+**처리:** DevGate TASKS.md 업데이트 + push 완료. 텔레그램 새 메시지 없음.
+
+**Sanghun 액션 필요:**
+- ELDO: Vercel 토큰 / GA4 ID
+- BizTool: 쿠콘 API / 팝빌 세금계산서 계약
+- XBot: 직접 로그인 테스트
+- ReviewBot: 쿠팡 링크 14건
+[2026-04-08 02:09:07] Eddy 실행 완료
+[2026-04-08 04:09:08] Eddy 실행 시작
+[Eddy PM 보고] 2026-04-08 03:10 — 텔레그램 새 메시지 없음. 팀 현황:
+- DevGate: BUG-NEW-03/04/05 완료(985c7bc), Dev1 추가 4건 수정(0b2c31e). E2E 63/63 확인 필요
+- IRI-Safety: Phase 14 MSDS 완료(9d36efa/ffcfce1), QA 12차 배정
+- ELDO: BETA-45 sectors E2E 완료, QA 28차 PASS(c8370b4), BETA-46 배정
+- ReviewBot: 안정화 모드 유지(#13)
+- BizTool: Sanghun 결정 대기
+[2026-04-08 04:15:00] Eddy 실행 완료
