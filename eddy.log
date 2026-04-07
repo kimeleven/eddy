@@ -4519,3 +4519,50 @@ Sanghun에게 답변 전송 완료.
 - XBot: 최초 로그인 테스트 (직접 실행)
 - ReviewBot: 쿠팡 링크 14건 제공
 [2026-04-07 21:58:00] Eddy 실행 완료
+완료. 요약:
+
+---
+
+**[Eddy PM 보고]**
+
+📋 **팀 현황:**
+- **ELDO** — 토큰 리셋 대기 (Apr 8 오후 1시). BETA-43/QA 25차 완료. BETA-44/QA 26차 준비됨
+- **IRI-Safety** — QA 10차 **145/146 PASS** ✅ (TC-13 Flaky). Phase 13 경영방침 Dev1/Dev2 배정 완료
+- **DevGate** — BUG-NEW-03 수정(`c4820a6`), 수동결제 발주자 알림 추가(`a589552`). E2E 확장 지속
+- **ReviewBot** — 안정화 모드. pending-links 14개 대기
+- **BizTool** — 금융API/세금계산서 조사 완료. Sanghun 결정 대기
+
+✅ **처리:**
+- IRI TASKS.md: QA 10차 완료 반영, Phase 13 배정 업데이트
+- 대시보드 업데이트 + 푸시
+
+⏳ **Sanghun 액션 필요:**
+- ELDO Vercel 토큰 / GA4 ID
+- BizTool: 쿠콘 API 계약 / 팝빌 세금계산서 계약 여부
+- XBot: 최초 로그인 테스트 (직접 실행)
+- ReviewBot: 쿠팡 파트너스 링크 14건 제공
+[2026-04-07 22:02:17] Eddy 실행 완료
+[2026-04-08 00:02:15] Eddy 실행 시작
+완료.
+
+**처리 내역:**
+
+- 텔레그램 새 메시지 4개 수신 처리 (`/setprivacy` + `이제 읽을수 있나보다 확인해봐`)
+- 텔레그램 보고 전송 완료
+
+**팀 상태 요약:**
+- **ELDO**: BETA-44 완료 → BETA-45(sectors E2E) 진행 중. BUG-QA27-01 수정 대기
+- **ReviewBot**: 안정화 모드, pending-links 14개
+- **IRI-Safety**: Phase 13 경영방침 이미 완료됨(커밋 확인) → TASKS.md 업데이트 + Phase 14(MSDS 관리) 배정
+- **DevGate**: MED 버그 2건(수동결제 알림, statusColor) 수정 완료
+- **BizTool**: 재무제표/급여 버그 수정 진행 중
+[2026-04-08 00:05:29] Eddy 실행 완료
+[2026-04-08 02:05:32] Eddy 실행 시작
+[2026-04-08 02:15:00] Eddy 실행 완료
+팀 현황:
+- ELDO: BETA-44 완료, BETA-45(sectors E2E) 진행 중
+- IRI-Safety: QA 11차 163/164 PASS (TC-13 Flaky). Phase 14 MSDS 배정 유지
+- DevGate: E2E 61/63. BUG-NEW-04(admin/payments/manual 404) + BUG-NEW-05(MAJOR 알림 누락) TASKS.md 반영
+- ReviewBot: 안정화 모드
+- BizTool: 변동 없음
+새 텔레그램 메시지: 없음
