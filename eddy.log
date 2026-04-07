@@ -4476,3 +4476,46 @@ Sanghun에게 답변 전송 완료.
 어떤 채널인지 알려주시면 chat_id 확인해서 바로 설정 반영하겠습니다.
 [2026-04-07 17:56:05] Eddy 실행 완료
 [2026-04-07 19:56:06] Eddy 실행 시작
+보고 완료.
+
+---
+
+**[Eddy PM 보고]**
+
+📋 팀 현황:
+- **ELDO** — 토큰 한도 초과 (Apr 8 오후 1시 리셋). BETA-43 완료(`82dba83`). BETA-44(company E2E)/QA 26차 대기
+- **IRI-Safety** — Phase 12 작업환경측정 완료(산안법 §125, `e75cf4a`/`d000027`). QA 9차 **135/135 PASS**. QA 10차 + Phase 13 진행 중
+- **DevGate** — 수동결제 알림 수정 완료(`a589552`). E2E 시나리오 확장 중
+- **ReviewBot** — 안정화 모드. pending-links 14개 대기
+- **BizTool** — 안정화. 세금계산서/금융 API 조사 완료. Sanghun 결정 대기
+
+✅ 처리:
+- IRI TASKS.md: Phase 12 완료 반영, QA 10차/Phase 13 배정
+- ELDO TASKS.md: BETA-43 완료 반영, BETA-44 배정
+
+⏳ Sanghun 액션 필요:
+- ELDO Vercel 토큰 / GA4 ID
+- BizTool: 쿠콘 API 계약 / 팝빌 세금계산서 계약 여부
+- XBot: 최초 로그인 테스트 (직접 실행)
+- ReviewBot: 쿠팡 링크 14건 제공
+[2026-04-07 19:58:29] Eddy 실행 완료
+[2026-04-07 21:58:29] Eddy 실행 시작
+
+**[Eddy PM 보고]**
+
+📋 팀 현황:
+- **ELDO** — 토큰 리셋 대기 (Apr 8 1pm). BETA-43/QA 25차 완료. BETA-44(company E2E)/QA 26차 준비됨
+- **IRI-Safety** — QA 10차 **145/146 PASS** (TC-13 Flaky). Phase 13 경영방침 Dev1/Dev2 배정 완료
+- **DevGate** — BUG-NEW-03 수정 완료(`c4820a6`). 수동결제 알림 추가(`a589552`). E2E 확장 지속 중
+- **ReviewBot** — 안정화 모드. pending-links 14개 대기
+- **BizTool** — 조사 완료. Sanghun 결정 대기 (금융API/세금계산서)
+
+✅ 처리:
+- IRI TASKS.md: QA 10차 완료 반영, Phase 13 배정 업데이트
+
+⏳ Sanghun 액션 필요:
+- ELDO Vercel 토큰 / GA4 ID
+- BizTool: 쿠콘 API / 팝빌 세금계산서 계약 여부
+- XBot: 최초 로그인 테스트 (직접 실행)
+- ReviewBot: 쿠팡 링크 14건 제공
+[2026-04-07 21:58:00] Eddy 실행 완료
