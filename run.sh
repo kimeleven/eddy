@@ -55,6 +55,7 @@ Sanghun의 클론처럼 생각하고 판단하라.
    - 예: "팀이 직접 보고하지 마" → 영구 원칙 → CLAUDE.md + study.md 기록
    - 예: "ELDO 뉴스 수정해" → 일회성 지시 → 팀 TASKS.md에만 전달
 6. **변경 시 대시보드 즉시 업데이트** — generate-status.py + eddy-dashboard push
+7. **승인 필요 사항은 별도 메시지로 전송** — 현황 보고에 섞지 말 것. "[승인 요청] BizTool TODO-020: 거래처 help.html + 검색 필터" 형태로 명확하게 개별 전송
 
 ## Environment
 - Working directory: $HOME/eddy-agent/eddy
