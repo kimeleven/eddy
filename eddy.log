@@ -4637,3 +4637,64 @@ Sanghun에게 답변 전송 완료.
 - IRI: open.law.go.kr OC 키 발급
 [2026-04-08 06:17:14] Eddy 실행 완료
 [2026-04-08 08:17:15] Eddy 실행 시작
+완료. 텔레그램으로 첫 리마인더 발송 및 크론 등록했습니다.
+
+**처리 내용:**
+- 과천사무실 지원 리마인더 스크립트 생성 (`gwacheon-reminder.sh`)
+- 크론탭에 `0 9-23 * * *` 등록 — 오늘 오후 11시까지 매시 정각 텔레그램 전송
+- 첫 리마인더 즉시 발송 완료 (현재 약 15시간 남음 메시지)
+
+**팀 현황 요약:**
+- ELDO: BETA-46 locator 안정화 진행 중 (Planner 34차)
+- IRI-Safety: Phase 15 진행, BUG-008 처리 중
+- ReviewBot: 안정화 모드, pending-links 14개 대기
+- BizTool: BUG-011 수정 완료
+- DevGate: QA 버그 4건 수정 완료, 신규 버그 1건 발견
+[2026-04-08 08:18:21] Eddy 실행 완료
+[2026-04-08 10:18:22] Eddy 실행 시작
+그룹 채팅에서 지시 → 그룹으로 답변. 기록 완료.
+[2026-04-08 10:19:00] Eddy 실행 완료
+[2026-04-08 12:19:00] Eddy 실행 시작
+처리 완료했습니다.
+
+**처리 내용:**
+- Sanghun 지시 "반말안됨" 수신
+- study.md에 **반말 금지** 원칙 기록
+- CLAUDE.md에 **존댓말 필수** 원칙 추가
+- 텔레그램 답변 완료
+- state.json 업데이트 + git push
+[2026-04-08 12:20:08] Eddy 실행 완료
+[2026-04-08 14:20:08] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+새 텔레그램 메시지 없음. 각 팀 정기 점검 완료.
+
+**📋 팀 현황:**
+- **ELDO**: QA 30차 29/30 PASS — WARN-QA29-01(flaky locator) BETA-46 Dev1 수정 진행 중
+- **ReviewBot**: 안정화 모드 — pending-links 14개 대기 (파트너스 링크 필요)
+- **IRI-Safety**: QA 14차 179/191 — BUG-008/010 prisma generate **Eddy 직접 재처리 완료**. Dev1 서버 재시작 후 191/191 목표.
+- **BizTool**: BUG-012 수정 완료 (재무제표 순이익 과대표시). push 승인 대기.
+- **DevGate**: E2E 63/63 PASS — Phase 18-B/19-A 완료, 버그 수정 모드 정상 가동.
+
+**✅ 이번 처리:**
+- IRI-Safety `prisma generate + db push` 직접 실행 (BUG-008: MSDS, BUG-010: 안전검사 동시 해소)
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot: 쿠팡 파트너스 링크 또는 API 키 (pending 14건 발행 대기)
+- ELDO: Vercel 토큰 + Neon DB URL
+- IRI-Safety: open.law.go.kr OC 키 발급
+- BizTool: BUG-012 push 승인 여부
+[2026-04-08 14:22:01] Eddy 실행 완료
+[2026-04-08 16:22:01] Eddy 실행 시작
+API Error: 529 {"type":"error","error":{"type":"overloaded_error","message":"Overloaded"},"request_id":"req_011CZquXTrQQzDzoMsY6CKYU"}
+[2026-04-08 16:26:02] Eddy 실행 완료
+[2026-04-08 18:26:03] Eddy 실행 시작
+처리 완료:
+
+**IRI-Safety 법령정보 MCP → 오픈API 전환**
+- `korean-law-mcp` 패키지 제거 (package.json에만 설치되어 있었고 실제 코드에서는 미사용 상태였음)
+- API 라우트는 이미 법제처 DRF 오픈API(`www.law.go.kr/DRF/`) 직접 호출 중이었음 — 코드 변경 불필요
+- TASKS.md / PLAN.md 방식 설명 업데이트
+- GitHub push 완료 (`93994ed`)
+[2026-04-08 18:29:32] Eddy 실행 완료
+[2026-04-08 20:29:32] Eddy 실행 시작
