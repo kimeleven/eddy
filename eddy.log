@@ -4873,3 +4873,27 @@ PM 순회 완료했습니다.
 [main 9ec728c] status: 2026-04-09 10:01
  1 file changed, 3 insertions(+), 3 deletions(-)
 [2026-04-09 10:42:25] Eddy 실행 시작
+처리 완료했습니다.
+
+**완료:**
+- IRI `plan.md` → Telegram 2메시지 전송 (Phase 1~20 구현현황 + 미구현 목록)
+- ELDO, DevGate, BizTool → 보류 처리 (`CLAUDE.md` + `run.sh` 업데이트)
+- 다음 Eddy 실행부터 ReviewBot + IRI-Safety만 모니터링
+
+**현재 Active:** ReviewBot, IRI-Safety
+[2026-04-09 10:45:26] Eddy 실행 완료
+[2026-04-09 11:00:02] Eddy 실행 시작
+**처리 완료:**
+
+**ReviewBot 보류** — TASKS.md 초기화, CLAUDE.md에서 Paused Teams로 이동 완료.
+
+**안전에이전트 기획건 현황:**
+- 2026-04-09 오전에 IRI-Safety Planner에게 URGENT 태스크로 배정됨
+- Agent 기능 기획 (공유 문서 참고 → PLAN.md에 반영 + Phase별 개발계획 수립)
+- **현재 미착수 상태** — Planner가 아직 pm-report.txt 보고 없음, PLAN.md에 Agent 섹션 없음
+- 다음 IRI-Safety 팀 순회(2시간마다 실행) 때 처리될 예정
+[2026-04-09 11:01:28] Eddy 실행 완료
+[2026-04-09 11:01:28] status.json 업데이트 완료
+[main 1d7e3e7] status: 2026-04-09 11:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-09 12:00:00] Eddy 실행 시작
