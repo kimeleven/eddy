@@ -4791,3 +4791,85 @@ API Error: 500 {"type":"error","error":{"type":"api_error","message":"Internal s
 2. **ReviewBot 쿠팡 링크** — pending 14건 발행 대기
 [2026-04-09 04:37:55] Eddy 실행 완료
 [2026-04-09 06:37:55] Eddy 실행 시작
+보고 완료했습니다.
+
+---
+
+**[Eddy PM 순회 요약]**
+
+**팀 현황:**
+- **ELDO**: 정상. BETA-49(news Bloomberg 스타일) Dev1 진행 중
+- **ReviewBot**: ⚠️ Dev1이 순회 #13~#17 동안 쿠팡 실제 테스트 0회 — TASKS.md에 재경고 추가함
+- **DevGate**: 정상. E2E 74/74 PASS. BUG-NEW-07 완료
+- **IRI-Safety**: 정상. Phase 18/19 완료, QA 212/212 PASS
+- **BizTool**: BUG-011~013 로컬 수정 완료, BUG-014 신규 발견
+
+**Sanghun 액션 필요:**
+1. **BizTool push 승인** — BUG-011~014 로컬 수정분 (push 금지 규칙 준수 중)
+2. **BizTool TODO-001** — 오픈뱅킹 API 방향 결정 (쿠콘 vs 금융결제원 오픈뱅킹)
+3. **ReviewBot** — 쿠팡 파트너스 링크 직접 제공 또는 API 키 등록
+[2026-04-09 06:40:21] Eddy 실행 완료
+[2026-04-09 08:40:21] Eddy 실행 시작
+처리 완료 내역:
+
+1. **1시간 알림 누락** — crontab에 `run.sh` 매시 :00 자동실행 등록 완료. 이전에 크론 등록이 빠져 있었습니다.
+
+2. **IRI팀 Agent 기획 보강** — Planner에게 URGENT 태스크로 전달:
+   - 공유 문서 기반 기획 보강 → PLAN.md 업데이트
+   - Agent 기능 개발계획 Phase 단위 수립
+   - (IRI-Safety-team 원격 push 인증 오류로 로컬 커밋만 완료됨)
+[2026-04-09 08:42:25] Eddy 실행 완료
+[2026-04-09 08:42:25] status.json 업데이트 완료
+[2026-04-09 09:00:01] Eddy 실행 시작
+PM 순회 완료했습니다.
+
+---
+
+**[Eddy PM 보고] 2026-04-09 12:30**
+
+📋 **팀 현황:**
+- **ELDO**: QA 33차 31/31 PASS ✅ Dev1 BETA-49 진행 중 (news Bloomberg 스타일 점검)
+- **ReviewBot**: 안정화 모드 — Dev1 쿠팡 검색 테스트 순회 #18까지 **미이행** 지속. CRITICAL 경고 계속 남아있음.
+- **IRI-Safety**: Phase 19+20 완료. Planner에게 Agent 기획 보강 URGENT 지시 전달됨.
+- **BizTool**: BUG-015 수정 완료 (재무제표 비영업수익 대출 입금 포함 버그)
+- **DevGate**: E2E 74/74 PASS ✅ (Dev2가 warm-up + loginAndSubmit 헬퍼 추가). BUG-NEW-08 [LOW] 미수정 유지.
+- **LiveOrder**: Task 43 운송장 일괄 CSV 업로드 완료, Task 44 스펙 수립 중.
+
+✅ **처리 완료:**
+- DevGate TASKS.md E2E 현황 74/74 PASS로 업데이트
+- state.json 업데이트 + git push
+
+⏳ **Sanghun 액션 필요:**
+- **ReviewBot**: Dev1이 계속 쿠팡 테스트를 안 하고 있음. 직접 `node pipeline.mjs --manual --step research` 실행 결과 확인이 필요하거나, 이 팀 에이전트를 한번 직접 점검하시는 게 좋을 것 같습니다.
+- **ELDO**: Vercel 토큰 + Neon DB 설정 시 즉시 배포 가능 (대기 중)
+[2026-04-09 09:01:39] Eddy 실행 완료
+[2026-04-09 09:01:40] status.json 업데이트 완료
+[main 9f8e606] status: 2026-04-09 09:01
+ 1 file changed, 25 insertions(+), 25 deletions(-)
+[2026-04-09 10:00:00] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-09 13:30**
+
+**새 메시지**: 없음
+
+**팀 현황:**
+
+| 팀 | 상태 |
+|---|---|
+| ELDO | BETA-49 진행 중 (news Bloomberg 확인), QA 34차 배정. E2E 31/31 PASS |
+| ReviewBot | 안정화 모드. pending-links 14건 대기 (쿠팡 링크 필요) |
+| IRI-Safety | 오늘 Phase 17~20 전부 완료 (안전인증/MSDS교육/건강진단/안전보건위). Agent 기획 보강 URGENT 전달됨 |
+| BizTool | BUG-013/015 수정 완료. BUG-014 + TODO 전항목 Sanghun 승인 대기 |
+| DevGate | E2E 74/74 PASS. Phase 19-A 완료 → 버그 수정 모드 |
+| XBot | 보류 (봇 감지) |
+| LiveOrder | 재가동 대기 |
+
+**Sanghun 액션 필요:**
+- BizTool BUG-014 수정 승인 (receivable.html 연체 배지)
+- BizTool TODO-003~017 승인 (금융API, 세금계산서 등)
+- ReviewBot 쿠팡 파트너스 링크 또는 API 키
+- ELDO Vercel 토큰 / GA4 ID
+[2026-04-09 10:01:32] Eddy 실행 완료
+[2026-04-09 10:01:32] status.json 업데이트 완료
+[main 9ec728c] status: 2026-04-09 10:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-09 10:42:25] Eddy 실행 시작

@@ -71,22 +71,21 @@ Sanghun의 클론처럼 생각하고 판단하라.
 ### Active Teams
 | Team | Project Dir | Team Files | 에이전트 | 모델 |
 |------|-------------|------------|----------|------|
-| ELDO | ~/eddy-agent/eldo | ~/eddy-agent/eldo-team/ | Dev1(30분), Dev2(30분), Planner(2h), QA(3h) | Sonnet |
 | ReviewBot | ~/eddy-agent/reviewbot | ~/eddy-agent/reviewbot-team/ | Dev1(30분), Pipeline(1h) | Sonnet |
-| DevGate | ~/eddy-agent/devgate | ~/eddy-agent/devgate-team/ | Dev1(1h), Dev2(1h), QA(3h) | Sonnet |
 | IRI-Safety | ~/eddy-agent/iri-safety | ~/eddy-agent/iri-safety-team/ | Planner(2h), Dev1(1h), Dev2(1h), QA(1h) | Sonnet |
 
 ### Paused Teams
 | Team | Status |
 |------|--------|
+| ELDO | 보류 — Sanghun 지시 (2026-04-09~) |
+| DevGate | 보류 — Sanghun 지시 (2026-04-09~) |
+| BizTool | 보류 — Sanghun 지시 (2026-04-09~) |
 | XBot | 보류 — 봇 감지 차단 (2026-04-05~) |
 | LiveOrder | 개발 종료 (2026-04-03~) |
 
 ### 각 팀 현재 방향
-- **ELDO**: 베타버전 개발 진행 중 (투자 데이터 플랫폼)
 - **ReviewBot**: 안정화 모드 (리뷰 자동화 봇, 하루 2포스팅)
-- **DevGate**: Phase 18-B/19-A 마무리 후 E2E 테스트+버그수정만 (외주 개발 플랫폼)
-- **IRI-Safety**: 산업안전 컴플라이언스 SaaS (Phase 1~6 기획 완료, 개발 시작)
+- **IRI-Safety**: 산업안전 컴플라이언스 SaaS (Phase 20 완료, Phase 21 보호구 지급 예정)
 - **ReviewBot 주의**: 자동 포스팅 중단됨. Sanghun이 상품 링크를 직접 주지 않으면 포스팅 금지. 스마트스토어/네이버 링크 요청 금지.
 
 ## PM은 Eddy만 — 팀 PM 없음
@@ -124,7 +123,7 @@ curl -s \"https://api.telegram.org/bot\${TELEGRAM_BOT_TOKEN}/getUpdates?offset=L
 ### STEP 3: 전체 팀 검수 (가장 중요)
 **모든 Active 팀에 대해 직접 확인:**
 
-For each team (ELDO, ReviewBot, DevGate, XBot, IRI-Safety):
+For each team (ReviewBot, IRI-Safety):
 1. \`cd ~/eddy-agent/{project} && git log --oneline -5\` — 최근 커밋 확인
 2. Read {team}-team/TASKS.md — 현재 태스크 상태
 3. Read {team}-team/QA_REPORT.md — 새 버그 있는지
@@ -176,11 +175,9 @@ Report format:
 [Eddy 보고]
 
 📋 팀 현황:
-• ELDO: (직접 확인한 진행상황)
 • ReviewBot: (직접 확인한 상태)
-• DevGate: (직접 확인한 진행상황)
-• XBot: (직접 확인한 상태)
 • IRI-Safety: (직접 확인한 진행상황)
+• ELDO/DevGate/BizTool: 보류 중
 
 ✅ 처리: (이번에 처리한 것)
 ⚠️ 이슈: (발견된 문제)
