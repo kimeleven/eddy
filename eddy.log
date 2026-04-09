@@ -4914,3 +4914,65 @@ PM 순회 완료했습니다.
 [main b8f875e] status: 2026-04-09 12:01
  1 file changed, 3 insertions(+), 3 deletions(-)
 [2026-04-09 12:45:26] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+**📋 팀 현황:**
+- **IRI-Safety**: Phase 21 (보호구 지급·관리, 산안법 §38·§173) 완료. Dev1 DB+Actions / Dev2 UI 모두 커밋. Planner 정상 가동.
+- **ReviewBot/ELDO/DevGate/BizTool/XBot**: 보류 유지
+
+**🐛 버그 수정:**
+- `qa.sh` 29번줄 `figit` → `fi\ngit` syntax error 발견·수정 — QA가 계속 크래시 나던 원인. 다음 실행부터 정상 작동.
+
+**📊 IRI 진행 현황:**
+- Phase 17~21 전부 완료 (안전인증 / MSDS교육이수 / 건강진단사후관리 / 안전보건위원회 / 보호구관리)
+- 마지막 QA: 2026-04-08 PASS 212/212
+- Phase 21 QA는 다음 주기에 자동 실행 예정
+
+**⏳ 대기:** 신규 텔레그램 메시지 없음
+[2026-04-09 12:46:36] Eddy 실행 완료
+[2026-04-09 13:00:00] Eddy 실행 시작
+보고 완료했습니다.
+
+**[Eddy PM 순회 — 2026-04-09 15:30]**
+
+**IRI-Safety:**
+- Phase 21 (보호구 지급·관리) 완료, QA 15차 198/198 PASS
+- 오픈 버그 0건
+
+**이번 처리:**
+- Phase 22 (근골격계 유해요인 조사, 산안법 §156~157) Dev1+Dev2 착수 지시
+- QA 16차 (Phase 17~21 통합 테스트) 배정
+
+**대기 중:**
+- Agent 기획 보강 — Planner 미반영 (URGENT 유지)
+- Phase 22~24 순차 착수 예정
+[2026-04-09 13:02:36] Eddy 실행 완료
+[2026-04-09 13:02:37] status.json 업데이트 완료
+[main d84507f] status: 2026-04-09 13:02
+ 1 file changed, 16 insertions(+), 16 deletions(-)
+[2026-04-09 14:00:00] Eddy 실행 시작
+신규 텔레그램 메시지 없음. 전체 상황 정리합니다.
+
+---
+
+**[Eddy PM 순회 — 2026-04-09 현재]**
+
+**IRI-Safety 현황:**
+- Phase 21 (보호구 지급·관리) 완료, QA 15차 212/212 PASS
+- Phase 22 (근골격계 유해요인 조사) Dev1+Dev2 착수 지시 완료 — 커밋 아직 없음 (착수 중)
+- QA 16차 (Phase 17~21 통합 테스트) 대기 배정
+- Agent 기획 보강 (Planner) — URGENT 유지, 미반영 상태
+
+**보류 팀:** ReviewBot / ELDO / DevGate / BizTool / XBot — 변동 없음
+
+**대기 중 (Sanghun 액션 필요):**
+- 법령 검색 OC 키: [open.law.go.kr](https://open.law.go.kr) 회원가입 후 `.env LAW_API_OC=키` 설정
+- ReviewBot 쿠팡 파트너스 API 키 또는 pending-links.json 5건 링크 제공
+- ELDO Vercel 토큰 + Neon PostgreSQL 설정
+
+변동 없음. Phase 22 커밋 오면 다음 순회에서 확인하겠습니다.
+[2026-04-09 14:00:44] Eddy 실행 완료
+[2026-04-09 14:00:44] status.json 업데이트 완료
+[main 88afef1] status: 2026-04-09 14:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-09 14:46:36] Eddy 실행 시작
