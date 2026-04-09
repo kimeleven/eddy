@@ -4897,3 +4897,20 @@ PM 순회 완료했습니다.
 [main 1d7e3e7] status: 2026-04-09 11:01
  1 file changed, 3 insertions(+), 3 deletions(-)
 [2026-04-09 12:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**IRI-Safety** — 오늘 Phase 18~20 모두 완료됨:
+- Phase 18: MSDS 근로자별 교육 이수 UI (`afbd07d`)
+- Phase 19: 건강진단 사후관리 DB+UI (`586abc7`, `b98df6c`)
+- Phase 20: 산업안전보건위원회 DB+UI (`1794e61`, `b98df6c`)
+- Phase 21 보호구 지급·관리 다음 착수 예정
+
+⚠️ **미완료**: Planner가 URGENT 지시(Agent 기능 기획 보강, Google Docs 기반)를 PLAN.md에 아직 반영 안 함. pm-report.txt 보고도 없음.
+
+**보류 팀들(ReviewBot/ELDO/DevGate/BizTool)**: 보류 유지  
+**새 텔레그램 메시지**: 없음
+[2026-04-09 12:01:06] Eddy 실행 완료
+[2026-04-09 12:01:06] status.json 업데이트 완료
+[main b8f875e] status: 2026-04-09 12:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-09 12:45:26] Eddy 실행 시작
