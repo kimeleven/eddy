@@ -5049,3 +5049,18 @@ PM 순회 완료했습니다.
 [main b1d4396] status: 2026-04-09 17:01
  1 file changed, 17 insertions(+), 17 deletions(-)
 [2026-04-09 18:00:00] Eddy 실행 시작
+[Eddy PM 순회 완료]
+
+- 새 텔레그램 메시지: 없음
+- **IRI-Safety**: Phase 22 완료 (근골격계 유해요인 조사 UI/DB), QA 17차 배정 중. BUG-011/012 수정 완료
+- 나머지 팀 (ReviewBot, ELDO, DevGate, BizTool): 보류 유지
+
+변동 없음. 정상 가동 중.
+[2026-04-09 18:00:53] Eddy 실행 완료
+[2026-04-09 18:00:53] status.json 업데이트 완료
+[main da091ca] status: 2026-04-09 18:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-09 18:51:08] Eddy 실행 시작
+You've hit your limit · resets 7pm (Asia/Seoul)
+[2026-04-09 18:51:09] Eddy 실행 완료
+[2026-04-09 19:00:01] Eddy 실행 시작
