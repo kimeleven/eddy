@@ -2,7 +2,7 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 대기 중
-- [x] **ReviewBot 하루 1회 크론 설정** — 오전 10시 `node pipeline.mjs` 자동 실행. Sanghun 지시 2026-04-10. 클립팬 링크(elCVBf) + 목걸이선풍기(elzE2M) pending-links.json 대기 중. ⚠️ 네이버 세션 만료 시 수동 재로그인 필요.
+- [x] **ReviewBot 하루 1회 크론 설정** — 오전 10시 `node pipeline.mjs --manual` 자동 실행. 정상 등록 완료. 클립팬 링크(elCVBf) pending-links.json 대기 중. 목걸이선풍기 Sanghun 지시로 대기 삭제 완료 (2026-04-10). ⚠️ 네이버 세션 만료 시 수동 재로그인 필요.
 - [ ] **신규 프로젝트 검토: Tesla/AI 뉴스 YouTube 채널 (TeslaAI 채널)** — Sanghun 기획 제안 (2026-04-05). 미녀 AI 앵커로 Tesla/Musk/AI 뉴스 전달. 중국 AI 솔루션 활용 최저 비용 구성. Sanghun 승인 후 개발 시작. 월 $6~15 예상.
 - [ ] **ReviewBot: 봄 아이템 쿠팡 링크 제공** — 봄 신발/가방/아우터/니트/운동화/스니커즈/코디/자켓/원피스 등 10+건 waiting 상태. 링크 직접 제공 방식으로 하루 1건씩 발행 예정.
 - [ ] **XBot: 최초 로그인 테스트 (Sanghun 직접)** — `cd ~/eddy-agent/xbot && node pipeline.mjs --once` 터미널 직접 실행. X.com 로그인 성공 확인 후 크론 등록.
