@@ -5064,3 +5064,25 @@ PM 순회 완료했습니다.
 You've hit your limit · resets 7pm (Asia/Seoul)
 [2026-04-09 18:51:09] Eddy 실행 완료
 [2026-04-09 19:00:01] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 IRI-Safety:**
+- QA 17차 **247/247 PASS** 완료 (TC-01~80, 신규 버그 없음)
+- BUG-011/012 수정 확인 완료
+- Phase 23 안전보건표지 관리 (산안법 §37) Dev1/Dev2/Planner 태스크 배정
+
+**⏳ 대기:**
+- Planner Agent 기획 보강 미완료 (Sanghun 지시 2026-04-09)
+- 기타 팀: 보류 유지
+
+텔레그램 보고 완료.
+[2026-04-09 19:01:40] Eddy 실행 완료
+[2026-04-09 19:01:40] status.json 업데이트 완료
+[main 92bba05] status: 2026-04-09 19:01
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-09 20:00:00] Eddy 실행 시작
+[2026-04-09 20:00:00] Eddy 실행 시작
+- 새 텔레그램 메시지: 없음
+- IRI-Safety: Phase 23 대기 중 (Dev1/Dev2/Planner 태스크 배정됨)
+- 나머지 팀: 보류 유지
+[2026-04-09 20:00:30] Eddy 실행 완료
