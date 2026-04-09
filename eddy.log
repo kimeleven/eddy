@@ -4976,3 +4976,76 @@ PM 순회 완료했습니다.
 [main 88afef1] status: 2026-04-09 14:00
  1 file changed, 3 insertions(+), 3 deletions(-)
 [2026-04-09 14:46:36] Eddy 실행 시작
+보고 완료했습니다.
+
+**[Eddy PM 보고]**
+
+새 텔레그램 메시지 없음. QA 16차 결과 확인 후 즉시 처리:
+
+**처리 완료:**
+- **BUG-011** (Phase 17~20 Prisma 미재생성): `prisma generate` + 서버 재시작 직접 처리
+- **BUG-012** (PPE `calcExpiryDate` 빌드 에러): `export` 제거로 수정, 커밋 `0ee609f`, GitHub 푸시 완료
+
+**태스크 변경:**
+- QA 16차 → ✅ 완료 (217/235 PASS)
+- QA 17차 배정: BUG-011/012 수정 확인 + 전체 235개 회귀 테스트
+
+**대기:**
+- Phase 22 (근골격계 유해요인 조사) — Dev1/Dev2 배정됨, QA 17차 PASS 후 진행
+[2026-04-09 14:49:58] Eddy 실행 완료
+[2026-04-09 15:00:00] Eddy 실행 시작
+팀 정상 가동 중. 텔레그램 신규 지시 없음. QA 17차 및 Phase 22 팀 에이전트 크론 대기 중입니다.
+[2026-04-09 15:01:40] Eddy 실행 완료
+[2026-04-09 15:01:40] status.json 업데이트 완료
+[main 00f5d06] status: 2026-04-09 15:01
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-09 16:00:00] Eddy 실행 시작
+**[Eddy PM 순회 완료]**
+
+📋 **팀 현황:**
+- **IRI-Safety**: Phase 22 착수 대기 중
+  - BUG-011/012 Eddy 직접 수정 완료 (prisma generate, PPE export 제거)
+  - QA 17차: BUG-011/012 재확인 + 235개 회귀 테스트 배정됨
+  - Dev1: `MusculoskeletalSurvey` DB+Actions 대기
+  - Dev2: Phase 22 UI 대기 (Dev1 완료 후)
+  - Planner: Agent 기능 기획 보강 작업 중
+- **기타 팀**: 전원 보류 중 (Sanghun 지시 2026-04-09)
+
+✅ **처리:** 텔레그램 새 메시지 0건, state.json 업데이트, 커밋 완료  
+⏳ **대기:** 없음
+[2026-04-09 16:01:31] Eddy 실행 완료
+[2026-04-09 16:01:32] status.json 업데이트 완료
+[main 9eda1de] status: 2026-04-09 16:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-09 16:49:59] Eddy 실행 시작
+보고 완료했습니다.
+
+---
+
+**[Eddy PM 보고]**
+
+📋 **IRI-Safety**:
+- Phase 22 근골격계 유해요인 조사 **완료** — Dev1(12d0a66) + Dev2(5ed430d) 오늘 4시간 내 커밋
+- QA 17차 대기 중 (BUG-011/012 확인 + Phase 22 신규 TC + 전체 회귀)
+- Planner Agent 기획 보강 미완
+
+✅ **처리**:
+- TASKS.md Phase 22 완료 반영, QA 17차 Phase 22 TC 항목 추가
+
+⏳ **대기**:
+- QA 17차 실행 결과
+- Planner Agent 기획 보강 완료 여부
+
+텔레그램 신규 지시 없음. 변동 없음.
+[2026-04-09 16:51:07] Eddy 실행 완료
+[2026-04-09 17:00:00] Eddy 실행 시작
+변동 없음. 현재 상태:
+
+- **IRI-Safety**: QA 17차 대기 중 (BUG-011/012 수정 완료, Phase 22 완료)
+- **새 텔레그램 지시**: 없음
+- **보류 팀**: ReviewBot, ELDO, DevGate, BizTool, XBot 모두 정상 보류 중
+[2026-04-09 17:01:34] Eddy 실행 완료
+[2026-04-09 17:01:34] status.json 업데이트 완료
+[main b1d4396] status: 2026-04-09 17:01
+ 1 file changed, 17 insertions(+), 17 deletions(-)
+[2026-04-09 18:00:00] Eddy 실행 시작
