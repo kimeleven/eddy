@@ -5766,3 +5766,34 @@ You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
 - **ReviewBot**: 헬리녹스 10am 포스팅 정상 예정
 [2026-04-11 01:24:59] Eddy 실행 완료
 [2026-04-11 02:00:00] Eddy 실행 시작
+이미 확인한 결과입니다 (`/usr/local/Cellar/node/25.8.2/bin/node`). 크론 수정도 완료됐습니다.
+[2026-04-11 02:05:00] Eddy 실행 완료
+[2026-04-11 02:05:00] status.json 업데이트 완료
+[main 777ab0d] status: 2026-04-11 02:05
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+[2026-04-11 03:00:01] Eddy 실행 시작
+[Eddy AM 순회 03:00]
+
+**텔레그램 신규 메시지:** 없음
+
+**팀 현황:**
+- **IRI-Safety:** Phase 26·27·28 Dev1+Dev2 모두 완료. Planner TC-90~101 시나리오 6개 Phase 누적 대기 중 — QA 진행 불가 상태.
+- **ReviewBot:** 크론 정상 (오전 10시). bot-state `link_received` — 헬리녹스 체어원 re (132,050원) 오전 10시 step3 포스팅 예정.
+
+**이상 없음.** 텔레그램 보고 완료.
+[2026-04-11 03:02:36] Eddy 실행 완료
+[2026-04-11 03:02:36] status.json 업데이트 완료
+[main 52138bd] status: 2026-04-11 03:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-11 03:24:59] Eddy 실행 시작
+**[Eddy AM 순회 — 04:00]**
+
+**텔레그램**: 신규 메시지 없음
+
+**팀 현황:**
+- **IRI-Safety**: Phase 27(작업중지권 행사기록) + Phase 28(특고종사자 안전보건교육) UI 모두 완료 (커밋 adafd2b). Planner가 TC-96~101 시나리오 작성 중.
+- **ReviewBot**: 헬리녹스 캠핑의자(emeFyh) `link_received` 상태 대기 중 → 오전 10시 크론에서 step3(본문작성+텔레그램전송) 자동 실행 예정. pending-links 13건.
+
+**특이사항**: ReviewBot pipeline.log 끝에 `node: command not found` 에러 있으나, 크론은 full path(`/usr/local/Cellar/node/25.8.2/bin/node`) 사용 + .env에 CLAUDE_CODE_OAUTH_TOKEN 포함 → 10am 실행 문제없을 것으로 판단.
+[2026-04-11 03:31:08] Eddy 실행 완료
+[2026-04-11 04:00:01] Eddy 실행 시작
