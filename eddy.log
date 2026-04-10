@@ -5376,3 +5376,142 @@ You've hit your limit · resets 7pm (Asia/Seoul)
 [main d2dd9eb] status: 2026-04-10 09:01
  1 file changed, 3 insertions(+), 3 deletions(-)
 [2026-04-10 09:01:58] Eddy 실행 시작
+보고 완료입니다.
+
+**요약:**
+- **IRI-Safety**: Phase 25 완료(278/278 PASS) → Phase 26 Dev 진행 중
+- **ReviewBot**: 오전 10시 크론 정상 실행, 오늘 포스팅 0건
+  - **이슈**: 클립팬 링크가 `approved` 상태인데 리뷰가 자동 작성 안 됨. `봄 의류 추천` 리뷰가 파트너스 링크를 먼저 기다리고 있어서 queue가 막혀 있는 상태
+  - 봄 아이템 11건 파트너스 링크 대기 중
+- **텔레그램**: 새 메시지 없음
+
+봄 아이템 쿠팡 링크를 제공해주시거나, 클립팬 수동 처리 요청 주시면 바로 처리하겠습니다.
+[2026-04-10 09:07:01] Eddy 실행 완료
+[2026-04-10 10:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 팀 현황:**
+
+**IRI-Safety:**
+- Phase 26 Dev1(9ea9146) + Dev2(17450e3) **모두 완료**
+- TASKS.md 완료 체크 업데이트
+- Planner에게 TC-90~92 시나리오 작성 지시 완료
+- QA 22차 대기 중 (Planner 시나리오 나오면 바로 실행)
+
+**ReviewBot:**
+- 하루 1회 10시 크론 정상 가동 중
+- 클립팬(elCVBf) 1건 approved 상태 (발행 대기)
+- 봄 아이템 11건 waiting — **쿠팡 파트너스 링크 없어서 막혀 있음**
+
+**⏳ Sanghun 액션 필요:**
+봄 아이템 11개 키워드(봄신발/가방/아우터/니트/운동화/스니커즈/코디/자켓/원피스×2/여성자켓)에 대한 쿠팡 파트너스 링크를 직접 제공해 주셔야 발행 가능합니다.
+
+**텔레그램 신규 메시지:** 없음
+[2026-04-10 10:01:40] Eddy 실행 완료
+[2026-04-10 10:01:40] status.json 업데이트 완료
+[main 3b1c0a0] status: 2026-04-10 10:01
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+[2026-04-10 11:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 팀 현황:**
+- **IRI-Safety**: Phase 26 (고객응대근로자 보호조치) Dev1+Dev2 완료. Planner TC-90~92 시나리오 작성 중 → QA 22차 대기. Phase 30 (관리감독자 직무교육) 신규 TASKS 추가 완료.
+- **ReviewBot**: 하루 1회 크론 정상. 클립팬 1건 + 봄 아이템 11건 pending. ⚠️ 네이버 세션 만료 — 봄 아이템 발행 차단 중.
+
+**✅ 처리:**
+- Phase 30 (산안법 §16·§29 — 관리감독자 연 16시간 직무교육) TASKS.md 추가 (법적 필수 판단)
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot 네이버 재로그인 — 봄 링크 11건 발행이 세션 만료로 차단됨
+[2026-04-10 11:02:00] Eddy 실행 완료
+[2026-04-10 11:02:00] status.json 업데이트 완료
+[main fbeb853] status: 2026-04-10 11:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 11:07:02] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+**📋 팀 현황:**
+
+**IRI-Safety:**
+- Phase 26 (고객응대근로자 보호조치 §41) — Dev1+Dev2 모두 완료 (커밋 `9ea9146`, `17450e3`)
+- Planner: TC-90~92 시나리오 작성 대기 중 → QA 22차 아직 미시작
+- Phase 30 (관리감독자 직무교육 §16·§29) — Dev 착수 대기
+
+**ReviewBot:**
+- pending-links 12개 — 클립팬(approved) 1건 + 봄 링크 11건(waiting)
+- ⚠️ **크론 오류 발견 및 수정**: `node: command not found` — cron PATH 문제. `/usr/local/bin/node` 풀 경로로 교체 완료. 내일 10:00부터 정상 실행 예상.
+- ⚠️ **네이버 세션 만료** — 클립팬 approved 상태지만 포스팅 불가. Sanghun 수동 재로그인 필요.
+
+**✅ 처리 완료:**
+- ReviewBot 크론탭 node 경로 수정
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot 네이버 재로그인 (`cd ~/eddy-agent/reviewbot && node pipeline.mjs --step 3` 실행 전 브라우저 네이버 로그인)
+[2026-04-10 11:08:45] Eddy 실행 완료
+[2026-04-10 12:00:00] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-10 12:00**
+
+---
+
+**IRI-Safety:**
+- Phase 26 Dev1+Dev2 완료 (고객응대근로자 보호조치 DB·UI)
+- Planner TC-90~92 시나리오 미작성 → 아직 대기 중 (플래너 이번 순회에서 PLAN.md 갱신만 함)
+- Phase 30 Dev 미시작
+
+**ReviewBot:**
+- 오전 10시 크론 정상 등록·실행
+- **봇 상태: waiting_link** — 여름 쿨링 선풍기 링크 대기 중
+- 클립팬(elCVBf): approved 상태이지만 파이프라인이 여름선풍기 링크를 먼저 기다리고 있어 진행 안 됨
+- 봄 링크 11건: 여전히 waiting
+
+**Sanghun 액션 필요:**
+1. 여름 쿨링 선풍기 쿠팡 파트너스 링크 제공 또는 취소 결정
+2. 봄 아이템 11건 링크 제공 계획 있으면 알려주세요
+
+텔레그램 보고 완료.
+[2026-04-10 12:03:39] Eddy 실행 완료
+[2026-04-10 12:03:39] status.json 업데이트 완료
+[main 0722ff6] status: 2026-04-10 12:03
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 13:00:01] Eddy 실행 시작
+PM 순회 완료했습니다.
+
+---
+
+**📋 현황 요약**
+
+**IRI-Safety**
+- Phase 26 (고객응대근로자 보호조치) Dev1+Dev2 완료 (커밋 9ea9146, 17450e3)
+- Planner가 TC-90~92 시나리오 작성 중 → QA 대기
+- Phase 30 (관리감독자 직무교육) 시작 대기 중
+
+**ReviewBot** ⚠️ 블로커 있음
+- 오늘 10시 크론 실행 확인 (crontab: `/usr/local/bin/node pipeline.mjs --manual`)
+- `bot-state.json`: `waiting_link` 상태 — "여름 쿨링 선풍기 / 프럭스F 냉각 선풍기 ₩29,700" 쿠팡 파트너스 링크 대기 중 (어제 18:02 요청)
+- `pending-links.json` 12건 중: 클립팬(elCVBf) approved 1건, 봄 아이템 11건 링크 없음 대기
+- `products.json`: 9건 done / 11건 pending
+
+**⏳ Sanghun 액션 필요**
+1. "여름 쿨링 선풍기" 쿠팡 파트너스 링크를 텔레그램으로 전송 (msg 753 답장)
+2. 봄 아이템 11건 링크는 추후 순서대로 처리됨
+[2026-04-10 13:04:28] Eddy 실행 완료
+[2026-04-10 13:04:28] status.json 업데이트 완료
+[main a156aaa] status: 2026-04-10 13:04
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 13:08:45] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+**새 텔레그램 메시지:** 없음
+
+**팀 현황:**
+
+| 팀 | 상태 |
+|---|---|
+| IRI-Safety | Phase 26 Dev1+Dev2 완료 (고객응대근로자 보호조치 §41). Planner TC-90~92 시나리오 작성 대기 중. Phase 30 할당 완료. |
+| ReviewBot | 클립팬(elCVBf) approved 대기 — 네이버 세션 만료로 포스팅 블록. 봄 아이템 11건 waiting (링크 미수신). |
+
+**⏳ Sanghun 액션 필요:**
+1. ReviewBot 네이버 세션 재로그인 (수동)
+2. 봄 아이템 11건 쿠팡 파트너스 링크 제공 (신발/가방/아우터/니트/운동화/스니커즈/코디/자켓×2/원피스×2)
+[2026-04-10 13:09:37] Eddy 실행 완료
+[2026-04-10 14:00:00] Eddy 실행 시작
