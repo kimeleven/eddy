@@ -5539,3 +5539,175 @@ PM 순회 완료했습니다.
 [main c9dcb4b] status: 2026-04-10 14:02
  1 file changed, 10 insertions(+), 10 deletions(-)
 [2026-04-10 15:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+📋 **팀 현황:**
+
+**IRI-Safety**
+- Phase 26 (고객응대근로자 보호조치): Dev1+Dev2 완료 ✅
+- Phase 30 (관리감독자 직무교육): Dev1+Dev2 완료 ✅
+- Planner: TC-90~95 시나리오 작성 대기 중 (🚨 URGENT)
+
+**ReviewBot**
+- 오전 10시 크론 정상 실행 ✅ (20.7초)
+- 오늘 포스팅 한도(2개) 이미 도달 → 포스팅 건너뜀
+- 클립팬(elCVBf) approved 상태 — 내일 10시 자동 처리 예정
+- 봄 아이템 11건 쿠팡 링크 미수신 → waiting 상태 지속
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot 봄 아이템 11건 쿠팡 파트너스 링크 제공
+  (봄신발/가방/아우터/니트/운동화/스니커즈/코디/자켓/원피스x2/여성자켓)
+[2026-04-10 15:04:56] Eddy 실행 완료
+[2026-04-10 15:04:57] status.json 업데이트 완료
+[main 522134e] status: 2026-04-10 15:04
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 15:09:37] Eddy 실행 시작
+---
+
+**[Eddy PM 보고]**
+
+📋 팀 현황:
+
+**IRI-Safety**
+- Phase 26 (고객응대근로자 §41): Dev1+Dev2 ✅ 완료
+- Phase 30 (관리감독자 교육 §16·§29): Dev1+Dev2 ✅ 완료
+- ⚠️ **블로커**: Planner가 TC-90~95 시나리오 미작성 → QA 22/23차 대기 중
+
+**ReviewBot**
+- 10:00 크론 정상 실행 완료 (20.7초)
+- 봄 아이템 11건 쿠팡 링크 `waiting` 상태 지속
+- 클립팬(elCVBf): `approved` → 오늘 daily-limit, 내일 10am 발행 예정
+
+⏳ **Sanghun 액션 필요**
+봄 아이템 11건 쿠팡 링크 제공:
+봄신발, 봄가방, 봄아우터, 봄니트, 봄운동화, 봄스니커즈, 봄코디, 봄자켓, 원피스(x2), 여성자켓
+[2026-04-10 15:11:46] Eddy 실행 완료
+[2026-04-10 16:00:00] Eddy 실행 시작
+텔레그램으로 링크 대기 중인 상품 11건을 항목별로 정리해서 전송했습니다:
+
+1. **봄 신발** - 여성 통굽 편한 슬리퍼
+2. **봄 가방** - 보부상가방 텀블러백 나일론 숄더백
+3. **봄 아우터** - 트렌치야상 케이프 자켓
+4. **봄 니트** - 헤이븐 봄가을 라운드 울 니트
+5. **봄 운동화** - 7CM 굽높은 가죽 어글리 운동화
+6. **봄 스니커즈** - 7CM 통굽 소가죽 어글리 플랫폼 스니커즈
+7. **봄 코디** - 크롭 트위드 투피스 셋업 하객룩
+8. **봄 자켓** - 싱글 오버핏 테일러드 블레이저
+9. **원피스1** - 빅사이즈 플레어 긴팔 정장 원피스
+10. **원피스2** - 레이어드 하객 원피스
+11. **여성자켓** - 머티리얼랩 FAUX 레더 코쿤 자켓
+
+각 항목의 쿠팡 파트너스 링크를 주시면 순서대로 발행하겠습니다.
+[2026-04-10 16:00:52] Eddy 실행 완료
+[2026-04-10 16:00:52] status.json 업데이트 완료
+[main b3680dd] status: 2026-04-10 16:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 17:00:00] Eddy 실행 시작
+---
+
+**[Eddy PM 보고] 2026-04-10 16:00**
+
+**📋 팀 현황:**
+
+**IRI-Safety**
+- Phase 26 (고객응대근로자 §41): Dev1 ✅ Dev2 ✅
+- Phase 30 (관리감독자 §16): Dev1 ✅ Dev2 ✅
+- ⚠️ Planner TC-90~95 미작성 — QA 22차·23차 블로킹 지속
+
+**ReviewBot**
+- 오전 10시 크론 정상 실행됨 (pipeline.log Apr 10 10:00 확인)
+- ⚠️ 포스팅 건너뜀: `오늘 포스팅 한도(2개) 도달` — 클립팬 포스팅 불발
+- 클립팬 링크(elCVBf): pending-links.json에 `approved` 상태로 대기 중
+- 봄 아이템 11건 링크 없이 `waiting` 상태
+
+**텔레그램**: 새 메시지 없음
+
+**⏳ 확인 필요:**
+- ReviewBot daily-limit이 왜 도달했는지 (posted.json에는 0건 — 카운터 불일치 가능성)
+- 내일 10am 크론에서 클립팬 자동 포스팅 예정
+[2026-04-10 17:02:33] Eddy 실행 완료
+[2026-04-10 17:02:33] status.json 업데이트 완료
+[main d0c8d41] status: 2026-04-10 17:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 17:11:47] Eddy 실행 시작
+참고만 — `pipeline.log`에 쓰는 스크립트는 크론 하나뿐. 이전 실행 에러 라인들(`timeout not found`, `node not found`)은 오래된 setup-cron.sh 흔적으로 보이며, 현재 크론은 직접 테스트에서 정상 동작 확인됨. 추가 조치 불필요합니다.
+[2026-04-10 17:19:35] Eddy 실행 완료
+[2026-04-10 18:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 18:00:02] Eddy 실행 완료
+[2026-04-10 18:00:02] status.json 업데이트 완료
+[main 77135ef] status: 2026-04-10 18:00
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+[2026-04-10 19:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 19:00:02] Eddy 실행 완료
+[2026-04-10 19:00:02] status.json 업데이트 완료
+[main 3c03412] status: 2026-04-10 19:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 19:19:35] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 19:19:37] Eddy 실행 완료
+[2026-04-10 20:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 20:00:02] Eddy 실행 완료
+[2026-04-10 20:00:02] status.json 업데이트 완료
+[main 16ed26f] status: 2026-04-10 20:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 21:00:01] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 21:00:02] Eddy 실행 완료
+[2026-04-10 21:00:03] status.json 업데이트 완료
+[main c73283a] status: 2026-04-10 21:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 21:19:37] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 21:19:38] Eddy 실행 완료
+[2026-04-10 22:00:00] Eddy 실행 시작
+You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
+[2026-04-10 22:00:03] Eddy 실행 완료
+[2026-04-10 22:00:03] status.json 업데이트 완료
+[main f99d7f6] status: 2026-04-10 22:00
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+[2026-04-10 23:00:01] Eddy 실행 시작
+처리 완료했습니다.
+
+**텔레그램 링크 3건 처리:**
+| 메시지 | 상품 | 링크 | 처리 |
+|--------|------|------|------|
+| 360082511 (18:13) | 뮬 운동화 슬리퍼 | el3R6W | pending-links 봄 신발 추천 → approved |
+| 360082512 (18:15) | 보부상 숄더백 | el3WSI | pending-links 봄 가방 추천 → approved |
+| 360082513 (22:52) | 헬리녹스 체어원 re | emeFyh | bot tgOffset 조정 → 내일 10am 파이프라인 정상 수신 예정 |
+
+**핵심 수정:** bot-state.json tgOffset을 360082512 → 360082513으로 변경. 이렇게 하지 않으면 내일 10am에 봄 가방 링크(el3WSI)가 캠핑 의자 리뷰에 잘못 적용될 뻔했습니다.
+
+**IRI-Safety:** Phase 26+30 Dev 완료, Planner TC-90~95 미작성 블로킹 지속 중.
+[2026-04-10 23:06:05] Eddy 실행 완료
+[2026-04-10 23:06:05] status.json 업데이트 완료
+[main 23e3121] status: 2026-04-10 23:06
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 23:19:38] Eddy 실행 시작
+보고 완료.
+
+---
+
+**[Eddy PM 보고]**
+
+**📋 팀 현황:**
+
+- **IRI-Safety**: ⚠️ 전 팀원 daily limit 도달 (Apr 12 오후 9시 리셋)
+  - Phase 26 (고객응대근로자): Dev1+Dev2 완료, Planner TC-90~92 시나리오 미작성
+  - Phase 27 (작업중지권): Dev1 완료, Dev2 UI 미구현 → 새로 할당
+  - Phase 28 (관리감독자 직무교육): Dev1+Dev2 완료, Planner TC-93~95 미작성
+  - Planner가 Phase 번호 재정리 완료 (구 Phase 30 → 28)
+
+- **ReviewBot**: pending-links에 클립팬·봄신발·봄가방 approved 대기 중. 오늘 10am 크론 정상 실행.
+
+**✅ 처리 완료:**
+- TASKS.md Phase 번호 재정리 (구 Phase 30 → 28)
+- Phase 27 Dev2 UI 태스크 신규 할당
+
+**⏳ 대기:**
+- IRI-Safety 팀 Apr 12 9pm 리셋 후 재가동
+- ReviewBot 내일 10am 크론 자동 실행
+[2026-04-10 23:22:00] Eddy 실행 완료
+[2026-04-11 00:00:00] Eddy 실행 시작
