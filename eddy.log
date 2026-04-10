@@ -5711,3 +5711,58 @@ You've hit your limit · resets Apr 12 at 9pm (Asia/Seoul)
 - ReviewBot 내일 10am 크론 자동 실행
 [2026-04-10 23:22:00] Eddy 실행 완료
 [2026-04-11 00:00:00] Eddy 실행 시작
+[Eddy PM 보고] 완료.
+
+**처리 내용:**
+- 헬리녹스 emeFyh 링크 — 이전 커밋에서 누락됨 확인 → `pending-links.json` 보정 및 푸시 완료
+- IRI-Safety: daily limit 도달, Apr 12 오후 9시 리셋 대기 중 (Phase 27 Dev2 + Planner TC-90~92 대기)
+- ReviewBot: 오전 10시 크론 정상 예정. approved 링크 4건 대기 중
+
+텔레그램 보고 전송 완료.
+[2026-04-11 00:03:37] Eddy 실행 완료
+[2026-04-11 00:03:37] status.json 업데이트 완료
+[main 5abf718] status: 2026-04-11 00:03
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-11 01:00:01] Eddy 실행 시작
+**[Eddy PM 보고 - 2026-04-11 01:01]**
+
+---
+
+**📋 팀 현황:**
+
+**IRI-Safety:**
+- daily limit 도달 → Apr 12 오후 9시 리셋. 전 에이전트 대기
+- Phase 27(작업중지권 UI): Dev2 미착수, Dev1 커밋 완료 (9b0b7cf)
+- Phase 26(고객응대 보호조치): Planner TC-90~92 미작성 상태 지속
+- Phase 28(관리감독자 교육): Dev1 완료, Dev2+Planner 대기
+
+**ReviewBot:**
+- 오늘 10am 크론 정상 예약됨
+- ⚠️ **버그 수정**: helinox emeFyh 링크가 pending-links.json에만 있고 pipeline.mjs step2는 인식 불가 상태였음 → `bot-state.json`을 `waiting_link → link_received`로 직접 수정, partnerLink 주입 완료
+- 오늘 10am 크론 실행 시 step3(블로그 본문+이미지 텔레그램 전송) 자동 처리됨
+
+**✅ 처리 완료:**
+- ReviewBot bot-state.json 수정 + 푸시 (c90c9e3)
+
+**⏳ 대기:**
+- IRI-Safety Apr 12 리셋 후 자동 재개
+- 10am 결과 확인 후 클립팬(elCVBf) 다음 처리 예정
+[2026-04-11 01:03:14] Eddy 실행 완료
+[2026-04-11 01:03:14] status.json 업데이트 완료
+[main 154e910] status: 2026-04-11 01:03
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-11 01:22:00] Eddy 실행 시작
+순회 완료. 요약:
+
+**텔레그램**: 새 메시지 없음
+
+**버그 수정** (중요):
+- ReviewBot `pipeline.mjs` — step1이 `link_received` 상태를 무시하고 새 상품 선정 후 덮어씌우는 버그 발견
+- 오늘 10am 크론 실행 시 헬리녹스 포스팅이 증발할 뻔했음
+- `step1`에 `link_received` 스킵 조건 추가 → push 완료 (68247f4)
+
+**팀 현황**:
+- **IRI-Safety**: daily limit, Apr 12 오후 9시 리셋 후 Phase 27 Dev2 + Phase 26 Planner 재개
+- **ReviewBot**: 헬리녹스 10am 포스팅 정상 예정
+[2026-04-11 01:24:59] Eddy 실행 완료
+[2026-04-11 02:00:00] Eddy 실행 시작

@@ -110,9 +110,9 @@ _Last updated: 2026-04-08 (4차)_
 - **법제처 Open API OC**: `combizapirequest` — IRI-Safety 법령 검색에 사용
 
 ## 토큰/키 관리
-- **바둑이토큰**: `sk-ant-oat01-lCeQ...` — 현재 사용 중
-- **영희토큰**: `sk-ant-oat01-ZDWA...` — 예비
-- **철수토큰**: `sk-ant-oat01-q4Rs...` — 예비 (4/8 13:00 리셋)
+- **바둑이토큰**: `sk-ant-oat01-lCeQ...` — 예비 (4/12 9pm 리셋)
+- **영희토큰**: `sk-ant-oat01-ZDWA...` — 현재 활성 (영희 계정으로 로그인 중, .claude.json)
+- **철수토큰**: `sk-ant-oat01-q4Rs...` — **현재 사용 중** (.eddy_env + 전체 에이전트, 2026-04-10 변경)
 - API 키: `sk-ant-api03-LAH...` — 크레딧 없음, 미사용
 
 ## 로컬 개발 환경
