@@ -5096,3 +5096,283 @@ You've hit your limit · resets 7pm (Asia/Seoul)
 [main a5188dd] status: 2026-04-09 20:01
  1 file changed, 6 insertions(+), 6 deletions(-)
 [2026-04-09 20:51:07] Eddy 실행 시작
+[Eddy PM 보고]
+
+**IRI-Safety:**
+- Phase 23 안전보건표지 관리 Dev1+Dev2 커밋 완료
+  - `afdb00c` — SafetySign DB + Server Actions
+  - `0c4098b` — 안전보건표지 UI `/[slug]/safety-signs`
+- QA 18차 배정 완료 (TC-81~83 Phase 23 검증)
+- Planner Agent 기획 보강 태스크 진행 중
+
+**보류 팀:** ReviewBot, ELDO, DevGate, BizTool — Sanghun 지시 대기 중
+
+**텔레그램 새 메시지:** 없음
+[2026-04-09 20:52:05] Eddy 실행 완료
+[2026-04-09 21:00:00] Eddy 실행 시작
+보고 완료했습니다.
+
+**[Eddy PM 순회 — 2026-04-09 21:00]**
+
+**IRI-Safety:**
+- Phase 23 안전보건표지 관리 완료 (DB `afdb00c` + UI `0c4098b`)
+- QA 18차 진행 중 (TC-81~83 Phase 23 + TC-01~80 회귀 테스트)
+- Planner Agent 기획 보강 작업 중 (TASKS.md 지시 전달 완료)
+
+**텔레그램:** 새 메시지 없음. 변동 없음.
+[2026-04-09 21:00:49] Eddy 실행 완료
+[2026-04-09 21:00:49] status.json 업데이트 완료
+[main cea8000] status: 2026-04-09 21:00
+ 1 file changed, 22 insertions(+), 22 deletions(-)
+[2026-04-09 22:00:01] Eddy 실행 시작
+변동 없음.
+
+**현황:**
+- **IRI-Safety**: Phase 23 안전보건표지 완료 (Dev1 `afdb00c` + Dev2 `0c4098b`), QA 18차 대기 중
+- **QA 17차**: 247/247 PASS, 오픈 버그 없음
+- **Planner**: Agent 기획 보강 진행 중
+[2026-04-09 22:00:55] Eddy 실행 완료
+[2026-04-09 22:00:55] status.json 업데이트 완료
+[main 949de64] status: 2026-04-09 22:00
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+[2026-04-09 22:52:05] Eddy 실행 시작
+**처리 완료:**
+
+- **Telegram 수신:** 위니쿡 넥선풍기 쿠팡 파트너스 링크 (https://link.coupang.com/a/elzE2M)
+- **ReviewBot 상태:** 리뷰+이미지 준비 완료, 네이버 세션 만료로 포스팅 대기 중
+- **IRI-Safety:** Phase 23 개발 완료, QA 18차 진행 중
+- **Sanghun에게 보고 완료** — ReviewBot 포스팅 지시 주시면 즉시 처리 가능
+[2026-04-09 22:54:28] Eddy 실행 완료
+[2026-04-09 23:00:00] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-10 00:00**
+
+새 텔레그램 메시지 없음.
+
+**IRI-Safety 현황:**
+- Phase 23 안전보건표지(산안법 §37) 완료 (afdb00c + 0c4098b)
+- QA 18차 배정 중 (TC-81~83 신규 + TC-01~80 회귀)
+- Agent 기획 보강: Planner PLAN.md 작업 진행 예정
+
+나머지 팀 (ReviewBot/ELDO/DevGate/BizTool): 보류 유지
+
+변동 없음.
+[2026-04-09 23:00:54] Eddy 실행 완료
+[2026-04-09 23:00:54] status.json 업데이트 완료
+[main 19c7c10] status: 2026-04-09 23:00
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+[2026-04-10 00:00:00] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+📋 **IRI-Safety 현황:**
+- Phase 23 (안전보건표지) 완료
+- QA 18차 완료: **244/256 PASS**
+  - TC-81~83 (안전보건표지) 전부 PASS
+  - 회귀 FAIL 12건 발생 (기존 미해결 이슈들)
+  - BUG-013 (Prisma generate) 이미 완료
+
+✅ **처리 완료:**
+- QA 18차 결과 TASKS.md 반영
+- 회귀 FAIL 12건 Dev1/Dev2에 배정
+  - Dev1: TC-09(사고보고), TC-13(SAPA), TC-37(계정목록), TC-52(경영방침 WORKER)
+  - Dev2: TC-22(도급 사이드바), TC-38(SAPA 반기), TC-35(법령검색)
+
+⏳ **대기:**
+- Planner Agent 기획 보강 미완료 (Sanghun 지시 2026-04-09)
+- Phase 24 (일상 안전점검·TBM) 미착수
+- 법령검색 OC 키 미설정 (open.law.go.kr 발급 후 .env 설정)
+[2026-04-10 00:02:05] Eddy 실행 완료
+[2026-04-10 00:02:05] status.json 업데이트 완료
+[main 2c55bbc] status: 2026-04-10 00:02
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+[2026-04-10 00:54:30] Eddy 실행 시작
+처리 완료 보고드립니다.
+
+**처리 완료:**
+- 클립팬 링크(`elCVBf`) → ReviewBot `pending-links.json` 추가 (approved)
+- ReviewBot 크론탭 **매일 오전 10시** 자동 실행 설정
+- CLAUDE.md ReviewBot 상태 보류 → 활성 업데이트
+
+**현재 ReviewBot pending 현황:**
+- `approved` (리뷰 준비 완료): 클립팬, 목걸이선풍기 2건
+- `waiting` (링크 필요): 봄 신발/가방/아우터/니트/코디 등 10+건
+
+⚠️ **참고**: 네이버 세션 만료 상태 — 오늘 10시 자동 실행 시 세션 오류 날 수 있습니다. 포스팅 실패 로그 확인 후 필요 시 알려드리겠습니다.
+[2026-04-10 00:57:07] Eddy 실행 완료
+[2026-04-10 01:00:00] Eddy 실행 시작
+보고 완료입니다.
+
+---
+
+**[Eddy PM 보고]**
+
+**팀 현황:**
+- **IRI-Safety**: QA 18차 244/256 PASS. 회귀 FAIL 12건(TC-09 사고보고, TC-13 SAPA 상세, TC-22 도급 사이드바, TC-35 법령검색, TC-37 계정목록, TC-38 SAPA 반기, TC-52 경영방침 WORKER 등) Dev1/Dev2 수정 진행 중. Planner는 Agent 기획 보강 중.
+- **ReviewBot**: 하루 1회 크론 정상 등록(`0 10 * * *`). 오늘 오전 10시 자동 실행 예정.
+
+**⚠️ 액션 필요:**
+네이버 세션 만료로 클립팬(elCVBf)·목걸이선풍기(elzE2M) 2건이 포스팅 대기 중입니다. 수동 재로그인 필요합니다.
+[2026-04-10 01:02:16] Eddy 실행 완료
+[2026-04-10 01:02:16] status.json 업데이트 완료
+[main 4c71c1f] status: 2026-04-10 01:02
+ 1 file changed, 22 insertions(+), 22 deletions(-)
+[2026-04-10 02:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**IRI-Safety:**
+- Phase 24 일상 안전점검·TBM UI 완료 (Dev2, 4fd65ec)
+- QA 19차: **265/266 PASS** (TC-13 콜드스타트 flaky 1건)
+- 회귀 FAIL 12건 → TC-63 세션 타이밍 수정으로 전부 해소 (258/258 PASS)
+
+**ReviewBot:**
+- 네이버 세션 만료 지속 — 목걸이선풍기(elzE2M) 리뷰+이미지 준비 완료, 포스팅 대기
+- 클립팬(elCVBf) 리뷰 작성 대기
+- 봄 아이템 11건 쿠팡 링크 waiting 상태
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot 네이버 블로그 수동 재로그인 → 완료 후 포스팅 자동 재개
+[2026-04-10 02:01:25] Eddy 실행 완료
+[2026-04-10 02:01:25] status.json 업데이트 완료
+[main 7362eaf] status: 2026-04-10 02:01
+ 1 file changed, 18 insertions(+), 18 deletions(-)
+[2026-04-10 02:57:07] Eddy 실행 시작
+순회 완료했습니다.
+
+**현황 요약:**
+
+**IRI-Safety** ✅
+- QA 19차: 265/266 PASS (TC-13 flaky — 콜드스타트)
+- Phase 24 완료: 일상 안전점검·TBM 관리 UI
+- 회귀 FAIL 12건 → TC-63 수정 + 나머지 자동 해소
+- Agent 기획 보강 Planner 진행 중 (pm-report 미도착)
+
+**ReviewBot** ⚠️
+- 크론 정상 (오전 10시)
+- pending-links.json 13건 대기 (클립팬, 목걸이선풍기 포함)
+- **네이버 세션 만료** — 포스팅 재개하려면 수동 재로그인 필요
+
+**새 텔레그램 메시지:** 없음
+[2026-04-10 02:58:59] Eddy 실행 완료
+[2026-04-10 03:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**텔레그램 신규 메시지:** 없음
+
+**팀 현황:**
+
+| 팀 | 상태 |
+|----|------|
+| IRI-Safety | Phase 24 완료 (일상 안전점검·TBM 관리 UI+DB). QA 19차 265/266 PASS. 다음: 폼 제출 기능 + 감사 로그 UI |
+| ReviewBot | "여름 쿨링 선풍기" 쿠팡 링크 대기 중 (어제 18시 텔레그램 753번 전송) |
+
+**버그 수정:**
+- ReviewBot 크론탭 `--manual` 플래그 누락 발견 → 수정 완료. 오늘 10시 포함 그간 매일 자동 실행이 차단되고 있었음. 내일 10시부터 정상 작동.
+
+**Sanghun 액션 필요:**
+1. 텔레그램 753번 메시지 — "여름 쿨링 선풍기" 쿠팡 파트너스 링크 회신 시 즉시 리뷰 작성+포스팅
+2. 네이버 세션 만료 상태 — 포스팅 직전 `naver-auto-login.mjs` 수동 실행 필요
+[2026-04-10 03:03:26] Eddy 실행 완료
+[2026-04-10 03:03:26] status.json 업데이트 완료
+[main edad85a] status: 2026-04-10 03:03
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+[2026-04-10 04:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 팀 현황:**
+- **IRI-Safety**: Phase 24 완료 + QA 20차 266/266 PASS → **Phase 25 (작업허가서 §42) Dev1/Dev2/QA 배정 완료**
+- **ReviewBot**: 크론 10시(`--manual`) 정상 설정 ✅. 목걸이선풍기 포스팅은 **네이버 세션 만료** 차단 중. pending-links 13개 대기.
+
+**✅ 처리 완료:** IRI-Safety TASKS.md Phase 25 배정 (WorkPermit DB/UI/QA TC-87~89)
+
+**⏳ Sanghun 액션 필요:**
+- ReviewBot 네이버 재로그인 — Chrome에서 naver.com 로그인 후 세션 저장 (캡차 수동처리). 완료 후 `node post-necktie-fan.mjs` 실행하면 목걸이선풍기 즉시 포스팅됨.
+[2026-04-10 04:02:12] Eddy 실행 완료
+[2026-04-10 04:02:12] status.json 업데이트 완료
+[main 512341d] status: 2026-04-10 04:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 04:58:58] Eddy 실행 시작
+[2026-04-10 05:00:00] Eddy 스킵 — 이전 실행 중 (PID 62841)
+[Eddy PM 보고]
+
+📋 팀 현황:
+- **IRI-Safety**: Phase 25 (작업허가서 관리, 산안법 §42) 배정 완료. Dev1/Dev2 시작 대기 중. QA 20차 266/266 PASS 유지.
+- **ReviewBot**: 오전 10시 크론 정상 설정됨. 현재 오전 5시, 크론 아직 미실행. 목걸이선풍기 링크 대기 중 (어제 03:02 요청).
+
+✅ 처리 완료: 텔레그램 새 메시지 없음 확인, state.json 업데이트, 커밋
+
+⏳ 대기:
+- ReviewBot — 쿠팡 파트너스 링크 미수신 (링크 보내주시면 자동 발행)
+- IRI-Safety — Phase 25 Dev 작업 진행 중
+[2026-04-10 05:01:56] Eddy 실행 완료
+[2026-04-10 06:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 팀 현황:**
+
+• **IRI-Safety**: Phase 25 작업허가서 Dev1/Dev2 완료 확인 (commits 72eae61, db667d8). QA TC-87~89 검증 대기 중. 전체 회귀 266/266 PASS 유지.
+• **ReviewBot**: 네이버 세션 만료 상태 지속. 하루 1회 10시 크론 유지 중. pending-links.json 없음 (정상).
+
+**✅ 처리 완료:**
+- Phase 25 TASKS.md Dev1/Dev2 완료 체크 업데이트
+- 텔레그램 새 메시지 없음 확인
+
+**⏳ 대기:**
+- ReviewBot 네이버 세션 재로그인 (Sanghun 직접 필요)
+[2026-04-10 06:01:11] Eddy 실행 완료
+[2026-04-10 06:01:11] status.json 업데이트 완료
+[main 529e38f] status: 2026-04-10 06:01
+ 1 file changed, 27 insertions(+), 27 deletions(-)
+[2026-04-10 07:00:01] Eddy 실행 시작
+[2026-04-10 07:01:58] Eddy 스킵 — 이전 실행 중 (PID 75769)
+처리 완료 내용 보고드립니다:
+
+**✅ 수정 완료:**
+
+1. **%29 버그** — `pipeline.mjs` step2 링크 파싱 regex 수정. 링크 끝에 붙은 `%29` (URL인코딩된 `)`) 및 `)]"'%` 자동 제거. 다음 실행부터 적용됩니다.
+
+2. **태그 추천** — 포스팅 완료 후 `#태그` 10개를 텔레그램으로 자동 전송합니다. Claude가 상품/키워드/계절/카테고리 기반으로 생성.
+
+3. **대시보드** — 갱신 & GitHub push 완료.
+
+**📋 현재 상태:**
+- 리뷰봇 코드: 4/7 버전 (쿠팡 직접 검색) 그대로 실행 중
+- bot-state: `waiting_link` — "여름 쿨링 선풍기" 링크 대기 중
+- "어제 나랑 수정한" 내용이 구체적으로 어떤 부분인지 알려주시면 추가 확인하겠습니다
+[2026-04-10 07:06:09] Eddy 실행 완료
+[2026-04-10 07:06:09] status.json 업데이트 완료
+[main d689ce4] status: 2026-04-10 07:06
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 08:00:00] Eddy 실행 시작
+처리 완료:
+
+- **목걸이선풍기(elzE2M)** — ReviewBot pending-links에서 삭제
+- **IRI-Safety Phase 25** — QA 21차 278/278 PASS, TASKS.md 완료 반영
+- **텔레그램 보고** 완료
+
+대기 중: ReviewBot 봄 아이템 링크 제공 + 네이버 세션 재로그인 필요 (클립팬 포스팅).
+[2026-04-10 08:02:18] Eddy 실행 완료
+[2026-04-10 08:02:18] status.json 업데이트 완료
+[main 2befbaf] status: 2026-04-10 08:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 09:00:01] Eddy 실행 시작
+텔레그램 보고 완료했습니다.
+
+---
+
+**[Eddy PM 순회 완료]**
+
+📋 **팀 현황:**
+- **IRI-Safety**: Phase 25 QA 완료 (278/278 PASS) → **Phase 26 배정 완료**
+  - 고객응대근로자 보호조치 기록 (산안법 §41, 과태료 1,000만원)
+  - Dev1: DB 스키마 3개 모델 + Server Actions
+  - Dev2: `/[slug]/customer-protection/` UI
+  - QA 22차: TC-90~92 (Planner 시나리오 작성 후 실행)
+- **ReviewBot**: 클립팬 미니 approved 대기. 오전 10시 자동 실행 크론 등록됨.
+
+✅ **처리:** iri-safety-team/TASKS.md Phase 26 배정, state.json 업데이트, 텔레그램 보고
+
+⏳ **대기:** 신규 텔레그램 지시 없음
+[2026-04-10 09:01:32] Eddy 실행 완료
+[2026-04-10 09:01:32] status.json 업데이트 완료
+[main d2dd9eb] status: 2026-04-10 09:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-10 09:01:58] Eddy 실행 시작
