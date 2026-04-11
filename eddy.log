@@ -6050,3 +6050,52 @@ Dev1이 지금 Next.js 초기화 + DB 스키마 작업 중입니다. Eddy 다음
 Dev2 Phase 2 채팅 UI는 그대로 진행 중입니다.
 [2026-04-11 13:42:46] Eddy 실행 완료
 [2026-04-11 14:00:00] Eddy 실행 시작
+[Eddy PM 보고 — 2026-04-11 14:00]
+
+**📋 팀 현황:**
+
+**AI-Secretary** (가장 활발):
+- ✅ Phase 2 Dev2 완료 (c394f85) — 채팅 UI + SSE 스트리밍 + 턴 제한 배너 + UpgradeModal
+- ✅ Phase 3 Dev1 완료 (e9c1839) — Stripe 결제 API 3종 (checkout/webhook/portal)
+- 🚨 Phase 3 Dev2 착수 지시 완료 — `/pricing` 페이지 (USD 기준) + 관리자 대시보드
+- 🚨 QA 지시 완료 — Phase 2 채팅 UI + Phase 3 Stripe 백엔드 검증
+
+**IRI-Safety**:
+- ✅ Phase 32 완료 (525e177, e7ab29a) — 산업재해 원인조사·재발방지계획 (산안법 §57)
+- 📝 Planner에 TC-108~110 시나리오 작성 지시 (Phase 31~32 TC 누적 중)
+
+**ReviewBot**: 정상 가동 (하루 1회 오전 10시)
+
+**⏳ Sanghun 액션 필요:**
+- AI-Secretary Stripe 연동: [stripe.com](https://stripe.com) 대시보드에서 Monthly/Annual Price ID 생성 + `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` 입력하면 결제 즉시 동작
+[2026-04-11 14:02:15] Eddy 실행 완료
+[2026-04-11 14:02:15] status.json 업데이트 완료
+[main 6047807] status: 2026-04-11 14:02
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+[2026-04-11 15:00:00] Eddy 실행 시작
+---
+
+**[Eddy PM 보고] 2026-04-11 15:00**
+
+**새 텔레그램 메시지**: 없음
+
+**📋 팀 현황:**
+
+🤖 **AI-Secretary** (Phase 3 완료):
+- Dev2 Phase 3 완료 확인 (e608ccd) — /pricing + /admin + 구독관리, 18개 라우트 PASS
+- BUG-005 수정 Dev1 지시: `next dev --webpack` 플래그 추가
+- Phase 4 i18n (next-intl) Dev1 착수 지시
+- QA Phase 3 전체 검증 착수 지시
+
+🏭 **IRI-Safety** (Phase 33 착수):
+- Phase 32 완료 확인 (Dev1 525e177 + Dev2 e7ab29a)
+- Phase 33 착수: 위험성평가 공지 기록 (산안법 §36④) Dev1+Dev2 지시
+- ⚠️ Planner TC 누적 미작성: Phase 28~32 TC 5세트 (TC-99~110) 아직 작성 안 됨
+
+**⏳ Sanghun 액션 필요:**
+- AI-Secretary Stripe 실제 키 (SECRET_KEY, WEBHOOK_SECRET, PRICE_ID) 설정 → 결제 플로우 테스트 가능
+[2026-04-11 15:02:10] Eddy 실행 완료
+[2026-04-11 15:02:11] status.json 업데이트 완료
+[main cf369f8] status: 2026-04-11 15:02
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-11 15:42:46] Eddy 실행 시작
