@@ -110,10 +110,9 @@ _Last updated: 2026-04-08 (4차)_
 - **법제처 Open API OC**: `combizapirequest` — IRI-Safety 법령 검색에 사용
 
 ## 토큰/키 관리
-- **바둑이토큰**: `sk-ant-oat01-lCeQ...` — 예비 (4/12 9pm 리셋)
-- **영희토큰**: `sk-ant-oat01-ZDWA...` — 현재 활성 (영희 계정으로 로그인 중, .claude.json)
-- **철수토큰**: `sk-ant-oat01-q4Rs...` — **현재 사용 중** (.eddy_env + 전체 에이전트, 2026-04-10 변경)
-- API 키: `sk-ant-api03-LAH...` — 크레딧 없음, 미사용
+- **OAuth 토큰 4개** (바둑이/영희/철수/상훈): `~/eddy-agent/eddy/tokens.md` 에만 보관
+- **현재 적용**: 상훈 토큰 (.eddy_env + 팀 에이전트 스크립트)
+- API 키: 크레딧 없음, 미사용
 
 ## 로컬 개발 환경
 - PostgreSQL@16 로컬 설치됨 (/usr/local/Cellar/postgresql@16/16.13/)
