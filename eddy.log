@@ -6014,3 +6014,39 @@ Dev1이 지금 Next.js 초기화 + DB 스키마 작업 중입니다. Eddy 다음
 [main 83d1122] status: 2026-04-11 12:01
  1 file changed, 4 insertions(+), 4 deletions(-)
 [2026-04-11 13:00:00] Eddy 실행 시작
+텔레그램 보고 완료했습니다.
+
+---
+
+**[Eddy PM 보고]**
+
+📋 팀 현황:
+- **AI-Secretary**: Dev1 Phase 2 완료 (078acb7) + QA 버그 BUG-001/002 동시 수정, Dev2 Phase 2 채팅 UI 착수 지시
+- **IRI-Safety**: Phase 31 완료 상태, Planner TC-102~107 작성 누락 반복 중
+- **ReviewBot**: 오전 10시 크론 정상 가동
+
+✅ 처리 완료:
+- AI-Secretary TASKS.md 업데이트 (Phase 2 완료 반영 + Dev2 Phase 2 지시)
+- 대시보드 업데이트 & GitHub push
+
+⏳ 대기:
+- IRI-Safety Planner TC 누락 — 다음 순회 시 재확인
+[2026-04-11 13:01:41] Eddy 실행 완료
+[2026-04-11 13:01:41] status.json 업데이트 완료
+[main 36643b4] status: 2026-04-11 13:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-11 13:41:09] Eddy 실행 시작
+완료했습니다.
+
+**처리 내용:**
+
+- **AI-Secretary 글로벌 방향** PLAN.md + TASKS.md 즉시 반영
+  - i18n (next-intl) — 다국어 지원, 텍스트 하드코딩 금지
+  - Stripe 결제 확정 — USD 전환 예정
+  - 로드맵: 채팅 → 음성통화 (Phase 4) → 비디오통화 (Phase 5)
+- Planner에게 🚨URGENT 액션 등록 (PLAN.md i18n/로드맵 업데이트)
+- study.md 학습 기록 + 커밋 완료
+
+Dev2 Phase 2 채팅 UI는 그대로 진행 중입니다.
+[2026-04-11 13:42:46] Eddy 실행 완료
+[2026-04-11 14:00:00] Eddy 실행 시작
