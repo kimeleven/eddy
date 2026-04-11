@@ -6099,3 +6099,120 @@ Dev2 Phase 2 채팅 UI는 그대로 진행 중입니다.
 [main cf369f8] status: 2026-04-11 15:02
  1 file changed, 4 insertions(+), 4 deletions(-)
 [2026-04-11 15:42:46] Eddy 실행 시작
+---
+
+**[Eddy PM 보고] 2026-04-11 16:00**
+
+**새 텔레그램 메시지:** 없음
+
+**팀 현황:**
+
+| 팀 | 상태 | 최신 |
+|---|---|---|
+| AI-Secretary | ✅ Phase 4 완료, Phase 5 착수 지시 | Dev1: BUG-005 수정 + i18n(ko/en/ja) 완료 (ecd10ed) |
+| IRI-Safety | 🟡 Phase 33 착수 대기 | Phase 32 완료, Planner TC-105~110 미제출 지속 |
+| ReviewBot | ✅ 정상 가동 | 크론 10시 운영 중 |
+
+**처리 내용:**
+- AI-Secretary TASKS.md: BUG-005+Phase4 완료 반영, **Phase 5 음성통화** (STT/TTS/WebRTC) Dev1+Dev2 태스크 신규 추가
+- QA에 Phase3+i18n 통합 검증 지시
+- 텔레그램 보고 완료
+
+**Sanghun 액션 필요:**
+- Stripe 실 키 미입력 (STRIPE_SECRET_KEY, PRICE_IDs) → AI-Secretary 결제 불가
+- Google OAuth 키 미입력 → 실제 로그인 불가
+[2026-04-11 15:44:56] Eddy 실행 완료
+[2026-04-11 16:00:00] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-11 17:00**
+
+**팀 현황:**
+
+**AI-Secretary**
+- Phase 3 + i18n QA PASS 완료 (e608ccd → ecd10ed)
+- Phase 4 음성통화: Dev2 UI 완료 (d5df385), Dev1 백엔드 아직 미착수
+- ⚠️ Sanghun 액션 필요: `OPENAI_API_KEY` (Whisper STT/TTS), Stripe 실 키
+
+**IRI-Safety**
+- Phase 32 완료 (Dev1: 525e177, Dev2: e7ab29a)
+- Phase 33 착수 지시 내려진 상태, 커밋 아직 없음 (다음 주기 기대)
+- Planner TC-105~110 미작성 (독촉 중)
+
+**ReviewBot**
+- 헬리녹스 포스팅 완료, 봄 신발 내일 10am 예약됨
+
+**처리 완료:**
+- 대시보드 상태 업데이트 + push (51ac346)
+- 텔레그램 보고 전송
+
+**Sanghun 액션 필요:**
+1. `OPENAI_API_KEY` — AI-Secretary 음성통화 백엔드용
+2. Stripe 실 키 (`STRIPE_SECRET_KEY` + Price IDs) — 결제 테스트용
+[2026-04-11 16:01:33] Eddy 실행 완료
+[2026-04-11 16:01:33] status.json 업데이트 완료
+[main 0a451d9] status: 2026-04-11 16:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-11 17:00:00] Eddy 실행 시작
+처리 완료:
+
+- **Sanghun 지시**: "AI비서 음성통화 이전까지만 해. 음성통화부터는 나중에하자"
+- Phase 5(비디오통화) URGENT → **HOLD** 전환 — 착수 중단
+- Phase 1~4(채팅+음성통화)가 현재 AI-Secretary 범위
+- study.md, state.json 업데이트, 텔레그램 보고 완료
+[2026-04-11 17:01:13] Eddy 실행 완료
+[2026-04-11 17:01:13] status.json 업데이트 완료
+[main 5c2f0bb] status: 2026-04-11 17:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-11 17:44:56] Eddy 실행 시작
+[Eddy PM 보고] 2026-04-11 19:00
+
+**IRI-Safety**
+- Phase 33 Dev1 완료 (fa85ad4) — RiskAssessmentNotice + Acknowledgment DB, Server Actions, prisma db push
+- Phase 33 Dev2 즉시 착수 지시 완료
+- Phase 32 Planner TC-108~110 아직 미완성 — 계속 독촉 중
+
+**AI-Secretary**
+- Phase 4 음성통화 MVP 완료 (Dev1: e2e9808, Dev2: d5df385)
+- BUG-006 수정 완료 (831ff10) — VoiceSession 세션 추적 정상화
+- Phase 5 보류 유지
+- QA 1건 대기 — Phase 3+i18n 통합 검증 미완료
+
+**텔레그램 신규 지시**: 없음
+[2026-04-11 17:46:17] Eddy 실행 완료
+[2026-04-11 18:00:01] Eddy 실행 시작
+완료했습니다.
+
+**현황 요약:**
+- 새 텔레그램 메시지: **0건**
+- **IRI-Safety**: Phase 33 Dev1 완료, Dev2 UI 착수 중
+- **AI-Secretary**: Phase 5 보류 확정, Phase 4까지 완료. 환경변수(OPENAI, Stripe, Google) Sanghun 설정 필요
+- **ReviewBot**: 헬리녹스 포스팅 완료, 봄 신발 내일 10시 예정
+[2026-04-11 18:01:01] Eddy 실행 완료
+[2026-04-11 18:01:01] status.json 업데이트 완료
+[main c8b0c37] status: 2026-04-11 18:01
+ 1 file changed, 10 insertions(+), 10 deletions(-)
+[2026-04-11 19:00:01] Eddy 실행 시작
+텔레그램 답변 완료했습니다.
+
+**IRI-Safety 에이전트 개발 현황:**
+- Safety Copilot (Claude Agent SDK) — Phase 6으로 기획됨, **완전 미구현**
+- 현재는 Phase 33 (위험성평가 공지 기록) 등 법적 필수 CRUD 기능 개발 중
+- Phase 5까지 마치면 Safety Copilot 착수 가능한 구조
+
+Phase 6 착수 지시 주시면 즉시 팀에 내려보내겠습니다.
+[2026-04-11 19:01:26] Eddy 실행 완료
+[2026-04-11 19:01:26] status.json 업데이트 완료
+[main 10ba013] status: 2026-04-11 19:01
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+[2026-04-11 19:46:17] Eddy 실행 시작
+처리 완료했습니다.
+
+**처리 내용:**
+- `아니야 보류해둬..` (19:15) → AI-Secretary 팀 전체 개발 보류 반영
+- LaunchAgent 4개 중단: Planner/Dev1/Dev2/QA
+- TASKS.md에 보류 상태 명시
+- CLAUDE.md 팀 구조에서 Active → Paused로 이동
+- 대시보드 업데이트 + push 완료
+
+현재 완료된 범위: Phase 1~4 (채팅+Stripe결제+i18n+음성통화) + 약관 페이지 → 코드 보존 상태. 재개 지시 시 즉시 가동 가능합니다.
+[2026-04-11 19:49:51] Eddy 실행 완료
+[2026-04-11 20:00:01] Eddy 실행 시작
