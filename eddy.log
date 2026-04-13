@@ -6895,3 +6895,105 @@ Marketing 팀 (`marketing-team/dev.sh`, `planner.sh`, `qa.sh`) 에 설정된 토
  1 file changed, 3 insertions(+), 3 deletions(-)
 [2026-04-13 14:00:00] Eddy 실행 시작
 [2026-04-13 14:00:43] Eddy 스킵 — 이전 실행 중 (PID 29519)
+완료했습니다.
+
+**[Eddy PM 보고]**
+
+📋 팀 현황:
+- **ReviewBot**: ✅ 정상 — 뮬 운동화 MX12 포스팅 04-12 완료. 봄 아이템 링크 9건 대기
+- **JENI**: ✅ 정상 가동 — Phase 12 완료, Phase 8 배포 크리덴셜 대기
+- **Marketing**: 🚨 중단 — 토큰 401 만료, 승인 대기
+
+⏳ **Sanghun 액션 필요:**
+1. **Marketing 토큰 교체 승인** — 현재 `sk-ant-oat01-q4Rs...` 만료
+2. **JENI Phase 8 크리덴셜** — Stripe Price ID 6개, ANTHROPIC_API_KEY, Google OAuth
+3. **ReviewBot 봄 아이템 쿠팡 링크 9건** 제공 시 즉시 발행
+
+변동 없으면 다음 실행에서 재점검합니다.
+[2026-04-13 14:01:06] Eddy 실행 완료
+[2026-04-13 14:01:06] status.json 업데이트 완료
+[main e6fb78d] status: 2026-04-13 14:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-13 15:00:00] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-13 16:00**
+
+📋 팀 현황:
+- **ReviewBot**: ✅ 정상 — 뮬 운동화 MX12 04-12 포스팅 완료. 봄 아이템 링크 9건 대기
+- **JENI**: ✅ 정상 가동 — Phase 12 완료, 코드 변경 없음. Phase 8 배포 크리덴셜 대기
+- **Marketing**: 🚨 전면 중단 — 토큰 401 만료 (10:22부터 Planner/Dev/QA 전체 실패)
+
+✅ 처리 완료: 전 팀 상태 점검, 텔레그램 신규 메시지 없음
+
+⏳ **Sanghun 액션 필요:**
+1. **🔑 Marketing 토큰 교체 승인** — `sk-ant-oat01-q4Rs...` 만료. 새 토큰 주시면 즉시 적용
+2. **JENI Phase 8** — Stripe Price ID 6개 + ANTHROPIC_API_KEY + Google OAuth
+3. **ReviewBot 봄 아이템** — 쿠팡 링크 9건 제공 시 즉시 발행
+[2026-04-13 15:01:02] Eddy 실행 완료
+[2026-04-13 15:01:02] status.json 업데이트 완료
+[main c1b4370] status: 2026-04-13 15:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-13 16:00:00] Eddy 실행 시작
+[2026-04-13 16:00:41] Eddy 스킵 — 이전 실행 중 (PID 40928)
+---
+
+**[Eddy PM 보고] 2026-04-13 17:00**
+
+📋 팀 현황:
+- **ReviewBot**: ✅ 정상 — 봄 아이템 링크 9건 대기
+- **JENI**: ✅ 정상 — Phase 12 완료, 코드 변경 없음, 배포 크리덴셜 대기
+- **Marketing**: 🔴 중단 — 토큰 401 만료 (10:22부터 전체 실패)
+
+⏳ Sanghun 액션 필요:
+1. **Marketing 토큰 교체 승인** — 새 OAuth 토큰 주시면 즉시 적용
+2. **JENI Phase 8** — Stripe Price ID 6개 + ANTHROPIC_API_KEY + Google OAuth
+3. **ReviewBot 봄 아이템** — 쿠팡 링크 9건 제공 시 즉시 발행
+[2026-04-13 16:01:08] Eddy 실행 완료
+[2026-04-13 16:01:08] status.json 업데이트 완료
+[main d412a93] status: 2026-04-13 16:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-13 17:00:01] Eddy 실행 시작
+[Eddy PM 보고]
+
+**📋 팀 현황:**
+- **ReviewBot**: 정상 — 캠핑 테이블 키워드 Step1 완료, 쿠팡 링크 대기 중 (Step2)
+- **AI-Secretary (JENI)**: 정상 가동 — Phase 8 배포 대기 (Stripe/API키/OAuth 필요)
+- **Marketing**: ⚠️ **전체 중단** — Planner/Dev/QA 401 인증 오류 (오늘 10시~16시 4회 연속 실패)
+
+**🔴 긴급:**
+Marketing 팀 `CLAUDE_CODE_OAUTH_TOKEN` 만료. 에이전트 전원 작동 불가. 텔레그램으로 보고 완료 (msg_id: 966).
+CLAUDE.md 원칙에 따라 Sanghun 승인 후 토큰 교체 예정.
+
+**⏳ Sanghun 액션 필요:**
+1. Marketing 팀 새 토큰 발급 및 전달
+2. ReviewBot 캠핑 테이블 쿠팡 링크 제공
+3. JENI Phase 8 배포 (Stripe Price ID × 6, Anthropic API Key, Google OAuth)
+[2026-04-13 17:01:35] Eddy 실행 완료
+[2026-04-13 17:01:36] status.json 업데이트 완료
+[main ac46666] status: 2026-04-13 17:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-13 18:00:00] Eddy 실행 시작
+[2026-04-13 18:00:44] Eddy 스킵 — 이전 실행 중 (PID 52323)
+[Eddy PM 보고]
+
+**⚠️ 긴급 이슈: Marketing Team 토큰 만료**
+
+- Dev/Planner/QA 전부 오늘 10:22부터 401 Invalid bearer token으로 4회 연속 실패
+- 현재 `marketing-team/dev.sh`에 있는 토큰이 `tokens.md`에 없는 미등록/만료 토큰
+- CLAUDE.md 원칙상 Sanghun 승인 없이 교체 불가 → 텔레그램으로 보고 완료
+
+**팀 현황 요약:**
+
+| 팀 | 상태 |
+|----|------|
+| Marketing | ❌ 전면 중단 (토큰 401) |
+| AI-Secretary (JENI) | ✅ 정상 가동, Phase 8 배포 대기 |
+| ReviewBot | 마지막 포스팅 04-12 뮬 운동화 MX12, 오늘 10시 실행 여부 미확인 |
+
+**대기 중 (Sanghun 액션 필요):**
+1. Marketing 토큰 교체 승인 (어느 토큰으로 할지 지시)
+2. JENI Phase 8: Stripe Price ID 6개 / ANTHROPIC_API_KEY / Google OAuth 키 입력
+[2026-04-13 18:02:01] Eddy 실행 완료
+[2026-04-13 18:02:01] status.json 업데이트 완료
+[main d5afbd2] status: 2026-04-13 18:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-13 19:00:00] Eddy 실행 시작
