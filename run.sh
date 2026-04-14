@@ -38,6 +38,64 @@ git pull --rebase origin main 2>/dev/null || git pull --rebase origin master 2>/
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Eddy 실행 시작" >> "$LOG_FILE"
 
+# ============================================================
+# Sanghun 텔레그램 메시지 사전 저장 (Claude 호출 전)
+# Telegram API가 메시지를 소비하기 전에 영구 기록
+# ============================================================
+TELEGRAM_LOG="$EDDY_DIR/telegram-log.md"
+LAST_UPDATE_ID=$(python3 -c "import json; d=json.load(open('$EDDY_DIR/state.json')); print(d.get('last_update_id', 0))" 2>/dev/null || echo "0")
+NEXT_OFFSET=$((LAST_UPDATE_ID + 1))
+
+TG_RAW=$(curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?offset=${NEXT_OFFSET}&limit=100")
+
+python3 << PYEOF
+import json, datetime, os
+
+raw = '''$TG_RAW'''
+try:
+    data = json.loads(raw)
+except:
+    exit(0)
+
+updates = data.get('result', [])
+if not updates:
+    exit(0)
+
+log_path = '$TELEGRAM_LOG'
+chat_id_str = '$TELEGRAM_CHAT_ID'
+
+lines_to_add = []
+for u in updates:
+    msg = u.get('message', {})
+    from_user = msg.get('from', {})
+    user_id = str(from_user.get('id', ''))
+    text = msg.get('text', '').strip()
+    if not text:
+        continue
+    ts = msg.get('date', 0)
+    dt = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    chat = str(msg.get('chat', {}).get('id', ''))
+
+    # Sanghun 1:1 메시지만 기록 (그룹 메시지 제외)
+    if user_id == chat_id_str and chat == chat_id_str:
+        lines_to_add.append(f'- [{dt}] **Sanghun**: {text}')
+
+if not lines_to_add:
+    exit(0)
+
+# 파일 없으면 헤더 생성
+if not os.path.exists(log_path):
+    with open(log_path, 'w') as f:
+        f.write('# Sanghun 텔레그램 메시지 기록\n')
+        f.write('_Eddy가 자동 기록. 모든 Sanghun 지시사항 영구 보존._\n\n')
+
+with open(log_path, 'a') as f:
+    for line in lines_to_add:
+        f.write(line + '\n')
+
+print(f'[telegram-log] {len(lines_to_add)}개 메시지 저장 완료')
+PYEOF
+
 $CLAUDE --model sonnet --dangerously-skip-permissions -p "
 You are Eddy, Sanghun Kim's personal AI agent AND the ONLY PM of ALL teams.
 Sanghun의 클론처럼 생각하고 판단하라.
@@ -94,6 +152,13 @@ Sanghun의 클론처럼 생각하고 판단하라.
 - Eddy가 직접 각 팀 QA_REPORT.md 확인 → Dev 태스크에 반영
 
 ## Execution Steps
+
+### STEP 0: Load telegram-log.md
+Read ~/eddy-agent/eddy/telegram-log.md 전체를 읽어라.
+- 최근 7일 내 Sanghun 지시사항 파악
+- 각 지시에 대해 실제 이행 여부 확인 (git log, TASKS.md, 코드 변경 확인)
+- 미이행 지시가 있으면 즉시 처리하거나 URGENT로 팀에 전달
+- 감시 결과를 보고에 포함 ("지시 이행 현황" 섹션)
 
 ### STEP 1: Load memory
 Read: state.json, study.md, tasks.md
