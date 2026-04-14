@@ -13,3 +13,6 @@
 [2026-04-13 12:00] 정상 프로세스: 18032 /usr/local/bin/claude --model sonnet --dangerously-skip-perm
 94282 node /Users/a1111/eddy-agent/ai-secretary/node_modules/.bin/
 [2026-04-13 12:00] 완료
+[2026-04-14 12:00] === 프로세스 점검 시작 ===
+[2026-04-14 12:00] 정상 프로세스: 94282 node /Users/a1111/eddy-agent/ai-secretary/node_modules/.bin/
+[2026-04-14 12:00] 완료
