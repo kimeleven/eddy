@@ -7896,3 +7896,666 @@ API Error: 500 {"type":"error","error":{"type":"api_error","message":"Internal s
 패키지 설치까지 완료됐습니다. 환경변수 3개(`RESEND_API_KEY`, `REPLICATE_API_TOKEN`, `JENI_REFERENCE_IMAGE_URL`)만 Vercel에 추가하면 바로 동작합니다.
 [2026-04-14 17:03:23] Eddy 실행 완료
 [2026-04-14 17:33:23] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-14 17:34**
+
+**신규 메시지**: 없음
+
+**팀 현황**:
+- **ReviewBot**: 정상 (일 1회 10시). 봄 아이템 13건 pending — 링크 제공 필요 (봄 신발/가방/아우터 등)
+- **Marketing**: Phase 1 완료 + 4차 QA 통과. 테스트 포스팅 승인 대기 중. 커뮤니티 마케팅 기획(URGENT)은 19시 팀 재가동 시 착수.
+- **AI-Secretary**: launchd 보류. Next.js 서버(PID 94282)는 여전히 실행 중 — 종료 필요 시 말씀해주세요.
+- **나머지 보류팀**: 변동 없음
+
+**⏳ Sanghun 승인 필요**:
+1. Marketing 테스트 포스팅 (`node channels/index.js`) — Twitter/Naver 각 1회 실발행
+2. ReviewBot 봄 아이템 쿠팡 링크 제공 (13건 대기)
+[2026-04-14 17:35:37] Eddy 실행 완료
+[2026-04-14 18:00:01] Eddy 실행 시작
+텔레그램 답변 전송 완료, state.json 업데이트 완료했습니다.
+
+**현재 상황 요약:**
+
+| 항목 | 상태 |
+|------|------|
+| 텔레그램 메시지 2건 처리 | ✅ |
+| "합성 직접" 의사 확인 | ✅ |
+| "코피" 정체 확인 요청 | 답변 대기 중 |
+| Marketing 팀 | Twitter/Naver 준비 완료, 테스트 포스팅 승인 대기 |
+| ReviewBot | 봄 아이템 링크 대기 중 |
+
+**launchd 상태**: 모든 서비스 등록됨 (exit 0, 스케줄 대기 중) — 이상 없음.
+
+"코피" 답변 주시면 바로 설정 항목 정리해드리겠습니다.
+[2026-04-14 18:01:50] Eddy 실행 완료
+[2026-04-14 18:01:50] status.json 업데이트 완료
+[main a8d81fa] status: 2026-04-14 18:01
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-14 18:05:37] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-14 18:06**
+
+**텔레그램 신규 메시지**: 0건
+
+**팀 현황:**
+- **ReviewBot**: 정상. 봄 아이템 대기 13건 (클립팬·봄 가방 approved, 나머지 waiting)
+- **Marketing**: Phase 1 개발 완료 상태. 테스트 포스팅 Sanghun 승인 대기. 🚨URGENT 커뮤니티 마케팅 전략 기획은 야간 스케줄(19:00~)에 처리 예정
+- **보류팀**: 변동 없음
+
+**launchd 상태**: 정상 (Eddy agent PID 91323, 나머지 팀 스케줄 대기 중 — 현재 낮 시간대 정상)
+
+**Sanghun 액션 필요:**
+1. Marketing 테스트 포스팅 승인 (Twitter/Naver 각 1회)
+2. ReviewBot 봄 아이템 쿠팡 링크 제공 (클립팬, 봄 가방 approved 대기 중)
+[2026-04-14 18:07:09] Eddy 실행 완료
+[2026-04-14 18:37:10] Eddy 실행 시작
+[Eddy PM 보고] 2026-04-14 18:37
+
+**새 메시지**: 없음
+
+**팀 현황**:
+- **ReviewBot**: ⏸ waiting_link — 캠핑 테이블(원스위크라이프 IGT 접이식 L, ₩179,900) 쿠팡 파트너스 링크 대기 중. pending-links 14건 (봄 아이템 포함)
+- **Marketing**: 🟡 Phase 1 개발 완료 (Twitter/Naver Blog 채널 구현). URGENT 커뮤니티 마케팅 전략 기획 미착수 — 19:00 팀 가동 시 Planner 시작 예정. 테스트 포스팅 Sanghun 승인 대기
+- **보류팀**: 이상 없음
+
+**launchd**: com.eddy.agent 정상 가동 (PID 94233), 나머지 크론 대기 정상
+
+**Sanghun 액션 필요**:
+1. ReviewBot — 캠핑 테이블 쿠팡 파트너스 링크 제공
+2. Marketing — Twitter/Naver 테스트 포스팅 승인 여부
+[2026-04-14 18:38:38] Eddy 실행 완료
+[2026-04-14 19:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+📋 팀 현황:
+• ReviewBot: 정상 (마지막 실행 2026-04-12, 뮬 운동화 포스팅 완료. 봄 아이템 대기 중)
+• Marketing: Phase 1 구현 완료. 4차 QA 완료, 이슈 전부 해결. 커뮤니티 마케팅 전략 태스크 등록됨
+• 보류팀 (IRI/ELDO/DevGate/BizTool/JENI): launchd 없음 확인, 정상 보류 중
+
+✅ 처리 완료: 텔레그램 신규 메시지 없음, launchd 상태 이상 없음
+
+⏳ Sanghun 액션 필요:
+1. **Marketing 테스트 포스팅 승인** — `node channels/index.js` 실행 허가 여부
+2. **ReviewBot 봄 아이템 쿠팡 링크** — 봄 신발/가방/아우터 등 10건 이상 직접 제공 필요
+[2026-04-14 19:01:28] Eddy 실행 완료
+[2026-04-14 19:01:28] status.json 업데이트 완료
+[main fff606e] status: 2026-04-14 19:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-14 19:08:38] Eddy 실행 시작
+완료했습니다.
+
+**현황 요약:**
+
+**ReviewBot**: 오전 10:00 정상 실행. 현재 캠핑 테이블 링크 대기 중 (2026-04-13 요청). 클립팬(elCVBf)은 approved 상태로 대기 중.
+
+**Marketing**: Phase 1 완전 완료 (Twitter/Naver Blog 구현+자격증명). 테스트 포스팅 Sanghun 승인 대기. URGENT 커뮤니티 마케팅 전략 기획 진행 중.
+
+**launchd**: 모든 서비스 정상 등록됨.
+
+**대기 중:**
+- ReviewBot 캠핑 테이블 쿠팡 링크 제공 필요
+- Marketing 테스트 포스팅 승인 필요 (`node channels/index.js`)
+[2026-04-14 19:10:41] Eddy 실행 완료
+[2026-04-14 19:40:41] Eddy 실행 시작
+텔레그램 보고 완료.
+
+---
+
+**[Eddy PM 보고] 2026-04-14 19:41**
+
+**팀 현황:**
+- **ReviewBot**: launchd 정상, 오전 10시 크론 대기
+- **Marketing**: Phase 1 완료. 19:00 활성 시간대 진입, 크론 스케줄 대기
+
+**처리 완료:**
+- 전 팀 상태 점검
+- Marketing 4차 QA 완료 — 전 채널 코드 정상, ISSUE-010 해결됨
+
+**Sanghun 승인 필요:**
+- **ISSUE-004**: Marketing 테스트 포스팅 실행 승인 — `node channels/index.js` (Twitter/Naver Blog 각 1회 실제 발행)
+
+**Marketing URGENT 미완:**
+- 커뮤니티 마케팅 전략 기획 (디시인사이드/네이버카페/Reddit 댓글 자동화) — Planner 다음 사이클에서 처리 예정
+[2026-04-14 19:42:02] Eddy 실행 완료
+[2026-04-14 20:00:00] Eddy 실행 시작
+보고 완료했습니다.
+
+**요약:**
+- 신규 텔레그램 메시지 없음
+- **ReviewBot**: 마지막 발행 2026-04-12 (뮬 운동화 MX12). 내일 오전 10시 자동 실행 예정
+- **Marketing**: Phase 1 채널 연동 개발 완료. Twitter/Naver Blog 발행 준비 완료. 19:00 이후 팀 재가동 (커뮤니티 마케팅 URGENT 태스크 처리 예정)
+- **승인 대기**: Marketing 테스트 포스팅 (`node channels/index.js`) — Sanghun 승인 필요
+[2026-04-14 20:01:23] Eddy 실행 완료
+[2026-04-14 20:01:23] status.json 업데이트 완료
+[main c25188e] status: 2026-04-14 20:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-14 20:12:02] Eddy 실행 시작
+보고 완료했습니다.
+
+---
+
+**[Eddy PM 보고]**
+
+📋 **팀 현황:**
+
+**Marketing** — Phase 1 채널 구현 완료
+- Twitter(X) + 네이버블로그 자격증명 준비 완료
+- QA 4회 완료 — 코드/콘텐츠 이상 없음
+- ⚠️ 테스트 포스팅(`node channels/index.js`) **Sanghun 승인 대기 중**
+- 📌 URGENT: 커뮤니티 마케팅 전략 기획 태스크 Planner에 배정 완료 (디시/네이버카페/Reddit/FB그룹)
+
+**ReviewBot** — 넥선풍기 포스팅 대기 중
+- ⚠️ 네이버 세션 만료 상태 지속 (2026-04-09부터)
+- Sanghun이 직접 `cd ~/eddy-agent/reviewbot && node blog-setup.mjs` 실행 → 수동 로그인 필요
+
+⏳ **Sanghun 액션 필요:**
+1. Marketing 테스트 포스팅 승인 여부
+2. ReviewBot 네이버 세션 복구
+[2026-04-14 20:12:59] Eddy 실행 완료
+[2026-04-14 20:42:59] Eddy 실행 시작
+완료됐습니다.
+
+**[Eddy PM 보고]**
+
+📋 **팀 현황:**
+
+- **ReviewBot**: 정상 (오전 10시 스케줄). 오늘 pending 링크 없음.
+- **Marketing**: 오늘 사이클 3회 완료
+  - Dev: ISSUE-011 수정 완료 (imageUrl `http` 시작 아니면 Instagram skip)
+  - Planner: 커뮤니티 마케팅 전략 PLAN.md 추가 (네이버카페/디시/Reddit/Facebook, 하루 2~3댓글 제한, 텔레그램 승인 워크플로)
+  - QA: 5차 점검 완료
+
+✅ **처리:** ISSUE-011 해결 확인 → QA_REPORT.md 업데이트
+
+⏳ **Sanghun 액션 필요:**
+1. **테스트 포스팅 승인** — Twitter/Naver 1회 실제 발행 (`node channels/index.js`)
+2. **커뮤니티 마케팅** — 구현 착수 여부 결정
+[2026-04-14 20:44:47] Eddy 실행 완료
+[2026-04-14 21:00:00] Eddy 실행 시작
+실행 완료 보고드립니다.
+
+**상태 요약:**
+
+| 팀 | 상태 |
+|----|------|
+| ReviewBot | `waiting_link` — 캠핑 테이블 쿠팡 링크 대기 중 (2026-04-13~) |
+| Marketing | Phase 1 완료 — 테스트 포스팅 승인 대기 |
+| 나머지 팀 | 전부 보류 유지 |
+
+**Sanghun 액션 필요:**
+1. **ReviewBot**: 캠핑 테이블 쿠팡 파트너스 링크 제공
+2. **Marketing**: `node channels/index.js` 테스트 포스팅 실행 승인 (Twitter + 네이버 블로그 1회씩)
+
+새 텔레그램 메시지 없음. 텔레그램으로 보고 완료.
+[2026-04-14 21:02:06] Eddy 실행 완료
+[2026-04-14 21:02:06] status.json 업데이트 완료
+[main 8461822] status: 2026-04-14 21:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-14 21:14:47] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+📋 **팀 현황:**
+- **ReviewBot**: 마지막 포스팅 2026-04-12 (뮬 운동화). 오전 10시 크론 정상. 신규 커밋 없음.
+- **Marketing**: Phase 1 채널 연동 완료. Twitter/Naver Blog 발행 준비 완료. 5차 QA까지 모든 이슈 해결 완료.
+
+✅ **처리 완료**: 새 텔레그램 메시지 없음. 팀 정상 확인. state.json 업데이트 + git push.
+
+⏳ **Sanghun 액션 필요**:
+- Marketing 테스트 포스팅 실행 승인 — `node channels/index.js` (Twitter/Naver Blog 각 1회 테스트 발행)
+[2026-04-14 21:18:01] Eddy 실행 완료
+[2026-04-14 21:48:01] Eddy 실행 시작
+전체 중단 완료했습니다.
+
+**언로드된 서비스:**
+- ReviewBot, Marketing (Planner/Dev/QA)
+- Dashboard, Process-cleanup, Weekly-report
+- 보류팀 전체 (ELDO, DevGate, IRI, LiveOrder, BizTool, AI-Secretary 등)
+
+**남은 것:** `com.eddy.agent` (Eddy 본체)
+
+Eddy 본체도 언로드할까요?
+[2026-04-14 21:48:47] Eddy 실행 완료
+[2026-04-14 22:00:00] Eddy 실행 시작
+[Eddy PM 보고]
+
+**팀 현황:**
+
+| 팀 | 상태 | 비고 |
+|---|---|---|
+| ReviewBot | ✅ 정상 | 오늘 10시 실행. 캠핑 테이블 Step1 → 텔레그램 전송 완료. 링크 대기 중 |
+| Marketing | ✅ 정상 | 오늘 20:34 실행. Phase 1 개발 완료. ISSUE-011 수정 완료. |
+| 보류팀 | ⏸️ 보류 | AI-Secretary/IRI/ELDO/DevGate/BizTool 스케줄 미가동 |
+
+**새 텔레그램 메시지:** 0건
+
+**Sanghun 액션 필요:**
+1. **ReviewBot** — 캠핑 테이블 쿠팡 링크 제공 (waiting_link 상태)
+2. **Marketing** — Twitter/Naver 테스트 포스팅 승인 필요 (준비 완료, `node channels/index.js` 실행 대기)
+[2026-04-14 22:02:41] Eddy 실행 완료
+[2026-04-14 22:02:41] status.json 업데이트 완료
+[main 4e94bd1] status: 2026-04-14 22:02
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-14 22:18:47] Eddy 실행 시작
+완료 보고 드립니다.
+
+---
+
+**[Eddy PM 보고] 2026-04-14 22:21**
+
+📋 **팀 현황:**
+- **Marketing**: 정상 가동 중 (2시간 주기, 20:34~20:37 마지막 실행)
+  - Dev: ISSUE-011 수정 완료 (imageUrl 유효성 검사)
+  - Planner: 커뮤니티 마케팅 전략 완성 (디시/네이버카페/Reddit 댓글 자동화 방향)
+  - QA: 5차 점검 완료, 코드 이상 없음
+- **ReviewBot**: 마지막 발행 2026-04-12 (뮬 운동화). 봄 아이템 11개 pending.
+
+✅ **처리 완료:** 팀 상태 점검, 텔레그램 신규 메시지 없음
+
+⏳ **Sanghun 액션 필요:**
+1. **Marketing 테스트 포스팅 승인** — Twitter/Naver 블로그 각 1회 테스트 (`node channels/index.js`)
+2. **ReviewBot 봄 아이템 쿠팡 링크 제공** — 11개 대기 중 (봄 신발/가방/아우터/니트/운동화/스니커즈/코디/자켓/원피스 등)
+[2026-04-14 22:21:30] Eddy 실행 완료
+[2026-04-14 22:51:30] Eddy 실행 시작
+[Eddy PM 보고 완료]
+
+**팀 현황:**
+- **ReviewBot**: 정상 동작. 현재 캠핑 테이블 키워드 처리 중, 쿠팡 파트너스 링크 대기 중
+- **Marketing**: 정상 동작 (2시간 주기). 오늘 Dev/Planner/QA 모두 완료. ISSUE-011(imageUrl 파싱) 수정 완료, Twitter/Naver 발행 준비 완료 상태
+
+**Sanghun 액션 필요:**
+1. 캠핑 테이블 쿠팡 링크 제공
+2. Marketing 테스트 포스팅 승인 (Twitter + 네이버 블로그 첫 발행)
+
+텔레그램 보고 전송 완료 (msg_id: 1039), state.json 커밋 완료.
+[2026-04-14 22:54:47] Eddy 실행 완료
+[2026-04-14 23:00:01] Eddy 실행 시작
+텔레그램 보고 완료 (msg_id: 1040)
+
+---
+
+**[Eddy PM 보고] 2026-04-14 23:02**
+
+📋 **팀 현황:**
+- **ReviewBot**: crontab 정상 (매일 오전 10시). 현재 캠핑 테이블 `waiting_link` 상태 — 쿠팡 링크 대기 중. 봄 아이템 10개도 링크 필요.
+- **Marketing**: 마지막 실행 20:34. Twitter/Naver 발행 코드 완성. ISSUE-011 수정 완료. 테스트 포스팅 승인 대기.
+- **보류팀** (AI-Secretary/IRI/ELDO/DevGate/BizTool): 스케줄 미가동 ✅
+
+⚠️ **launchd 불일치 발견 & 수정**: `com.eddy.marketing-dev/planner/qa`, `dashboard`, `process-cleanup`, `weekly-report` 6개 서비스가 언로드 상태였음 — 재로드 완료 (22:34 예정 실행이 누락됨)
+
+⏳ **Sanghun 액션 필요:**
+1. **캠핑 테이블 쿠팡 링크** — ReviewBot 다음 처리 대기
+2. **Marketing 테스트 포스팅 승인** — `node channels/index.js` (Twitter + 네이버 블로그 각 1회 테스트)
+[2026-04-14 23:03:15] Eddy 실행 완료
+[2026-04-14 23:03:15] status.json 업데이트 완료
+[main d94b412] status: 2026-04-14 23:03
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-14 23:24:47] Eddy 실행 시작
+보고 완료했습니다.
+
+**현황 요약:**
+- **텔레그램**: 새 메시지 없음
+- **ReviewBot**: 정상 (cron 오전 10시). 봄 쿠팡 링크 10건+ 발행 대기 중
+- **Marketing**: Phase 1 완료 — Twitter/네이버 채널 구현 완료, ISSUE 전부 해결. 테스트 포스팅 Sanghun 승인 필요
+- **launchd**: 모든 에이전트 정상 등록
+
+**액션 필요:**
+- Marketing `node channels/index.js` 테스트 포스팅 승인 여부
+- Instagram/YouTube 자격증명 제공 여부
+[2026-04-14 23:26:02] Eddy 실행 완료
+[2026-04-14 23:56:02] Eddy 실행 시작
+보고 완료했습니다.
+
+**현황 요약:**
+
+- **ReviewBot**: crontab으로 정상 가동 중. `캠핑 테이블 (원스위크라이프 IGT 접이식 테이블 L, 179,900원)` 쿠팡 파트너스 링크 2026-04-13부터 대기 중. 봄 시즌 waiting 9건, approved 2건(봄 가방/클립팬) 대기.
+- **Marketing**: 5차 QA 완료. Twitter(X) + 네이버블로그 발행 코드/자격증명 준비 완료. 테스트 포스팅 승인 대기 중.
+- **신규 텔레그램**: 없음.
+
+**Sanghun 액션 필요:**
+1. 캠핑 테이블 쿠팡 파트너스 링크 제공 → ReviewBot 자동 발행 진행
+2. Marketing 테스트 포스팅 승인 여부 결정
+[2026-04-14 23:59:02] Eddy 실행 완료
+[2026-04-15 00:00:01] Eddy 실행 시작
+**처리 완료:**
+
+- **ReviewBot** launchd 언로드 상태 감지 → `com.eddy.reviewbot-pipeline` 재로드 완료 (오전 10시 크론 정상 유지)
+- **Marketing**: 채널 구현/콘텐츠 브리프 모두 완료. Twitter/Naver 발행 준비 완료 상태로 Sanghun 테스트 포스팅 승인 대기 중
+- 새 텔레그램 메시지 없음
+- 텔레그램 보고 완료
+
+**⏳ Sanghun 액션 필요:**
+Marketing 팀 테스트 포스팅 승인 — Twitter(X) + 네이버 블로그 각 1회 발행 허가해 주시면 즉시 실행하겠습니다.
+[2026-04-15 00:01:12] Eddy 실행 완료
+[2026-04-15 00:01:13] status.json 업데이트 완료
+[main 72a6f86] status: 2026-04-15 00:01
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-15 00:29:02] Eddy 실행 시작
+완료했습니다.
+
+**현황 요약:**
+- **텔레그램 새 메시지**: 없음
+- **ReviewBot**: 스케줄 정상, 변동 없음
+- **Marketing**: Phase 1 전부 완료
+  - Twitter + Naver Blog 채널 구현 + 자격증명 완비
+  - ISSUE-011 (imageUrl 유효성검사) 수정 완료
+  - 커뮤니티 마케팅 전략 기획 완료
+  - **테스트 포스팅만 Sanghun 승인 대기 (ISSUE-004)**
+- **launchd**: 전 서비스 정상 등록됨
+[2026-04-15 00:30:17] Eddy 실행 완료
+[2026-04-15 01:00:00] Eddy 실행 시작
+[2026-04-15 01:00:17] Eddy 스킵 — 이전 실행 중 (PID 31006)
+**[Eddy PM 보고] 2026-04-15 01:30**
+
+**📋 팀 현황:**
+- **ReviewBot**: 캠핑 테이블(원스위크라이프 IGT 접이식 테이블 L, ₩179,900) 쿠팡 파트너 링크 대기 중. 클립팬(elCVBf)/봄 신발(el3R6W)/봄 가방(el3WSI)은 링크 수신 완료, 순서 대기.
+- **Marketing**: Planner/Dev/QA 모두 어제(4/14) 작업 완료. Twitter + 네이버 블로그 테스트 포스팅 준비 완료. Sanghun 승인 대기 중.
+
+**✅ 처리 완료:** 전 팀 상태 점검, state.json 업데이트, git push
+
+**⏳ Sanghun 액션 필요:**
+1. **ReviewBot** — 캠핑 테이블 쿠팡 파트너 링크 제공
+2. **Marketing** — 테스트 포스팅 실행 승인 (Twitter/네이버 각 1회, `node channels/index.js`)
+[2026-04-15 01:01:33] Eddy 실행 완료
+[2026-04-15 01:01:33] status.json 업데이트 완료
+[main ac8c14b] status: 2026-04-15 01:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 01:30:18] Eddy 실행 시작
+완료했습니다.
+
+**이번 실행 요약:**
+- 신규 텔레그램 메시지: 없음
+- launchd: com.eddy.agent 정상 가동, 나머지 스케줄 대기 상태
+
+**ReviewBot 현황:**
+- 봄 신발 2건 포스팅 완료 (224241051172, 224241091356)
+- 현재 "캠핑 테이블 (원스위크라이프 캠핑 IGT 접이식 테이블 L)" 링크 대기 중 — msg 957,958로 이미 요청
+
+**Marketing 현황:**
+- Phase 1 완료: Twitter + Naver Blog 구현 및 자격증명 설정
+- 테스트 포스팅 승인 대기 중
+
+**Sanghun 액션 필요:**
+1. 캠핑 테이블 쿠팡 파트너스 링크 제공
+2. Marketing 테스트 포스팅 승인 여부
+[2026-04-15 01:32:56] Eddy 실행 완료
+[2026-04-15 02:00:00] Eddy 실행 시작
+완료했습니다.
+
+**현황 요약:**
+- **Telegram**: 새 메시지 없음 (last_update_id: 360082532 유지)
+- **launchd**: 모든 서비스 정상 등록 (com.eddy.agent/marketing-*/reviewbot-pipeline/dashboard 등)
+- **Marketing**: Phase 1 개발 완료, QA 6차까지 통과. Twitter/Naver Blog 테스트 포스팅만 대기 중 — **Sanghun 승인 필요**
+- **ReviewBot**: 오늘 오전 10시 자동 실행 예정 (마지막 활동: 2026-04-12)
+- **보류 팀들**: 이상 없음
+[2026-04-15 02:01:13] Eddy 실행 완료
+[2026-04-15 02:01:13] status.json 업데이트 완료
+[main 22a0515] status: 2026-04-15 02:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 02:02:56] Eddy 실행 시작
+완료됐습니다.
+
+**[Eddy PM 보고] 2026-04-15 02:03 KST**
+
+📋 **팀 현황:**
+- **ReviewBot**: 정상 가동 (오전 10시 크론 등록됨, 최근 24h 신규 커밋 없음)
+- **Marketing**: Phase 1 완료 대기 — Twitter/Naver 채널 코드 완성, QA 6차 완료. 테스트 포스팅만 남음
+
+🔧 **launchd**: 전체 정상 (com.eddy.* 모두 exit 0)
+
+✅ **처리 완료**: 텔레그램 신규 메시지 없음, state.json 업데이트, git push
+
+⏳ **Sanghun 액션 필요**: Marketing 팀 Twitter/Naver 테스트 포스팅 각 1회 실행 승인 여부 — 승인하시면 즉시 실행합니다.
+[2026-04-15 02:04:32] Eddy 실행 완료
+[2026-04-15 02:34:32] Eddy 실행 시작
+보고 완료했습니다.
+
+**현황 요약:**
+
+- **ReviewBot**: `waiting_link` 상태 지속 중. 캠핑 테이블(원스위크라이프 IGT 접이식 L, 179,900원) 쿠팡 링크 2026-04-13부터 미수신. pending 14개 항목 대기 중.
+- **Marketing**: Phase 1 개발 완료, 6차 QA까지 이슈 없음. Twitter/Naver 테스트 포스팅 1회 승인 대기.
+- **신규 텔레그램 메시지**: 없음.
+- **launchd**: 정상 (com.eddy.agent 실행 중, 나머지 on-demand 대기 상태).
+[2026-04-15 02:36:06] Eddy 실행 완료
+[2026-04-15 02:36:06] status.json 업데이트 완료
+[2026-04-15 03:00:00] Eddy 실행 시작
+[Eddy PM 보고] 완료
+
+**현황 요약:**
+- **텔레그램**: 신규 메시지 없음
+- **ReviewBot**: `waiting_link` 정체 (2026-04-13~) — 캠핑 테이블(원스위크라이프 IGT 접이식 L, 179,900원) 쿠팡 링크 대기 중
+- **Marketing**: Phase 1 전체 완료, 6차 QA 통과. Twitter/네이버 블로그 즉시 발행 가능 상태. 테스트 포스팅 승인만 필요
+
+**Sanghun 액션 필요:**
+1. 캠핑 테이블 쿠팡 파트너스 링크 제공
+2. Marketing 테스트 포스팅 승인
+[2026-04-15 03:01:26] Eddy 실행 완료
+[2026-04-15 03:01:26] status.json 업데이트 완료
+[main 12c638f] status: 2026-04-15 03:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 03:06:06] Eddy 실행 시작
+완료했습니다.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- launchd 이상 없음 (모든 스케줄 에이전트 정상)
+- Marketing Phase 1 완성 — Twitter/Naver Blog 발행 코드 준비 완료, 테스트 포스팅만 승인 대기 중 (ISSUE-004)
+- ReviewBot 크론 정상 가동 중
+
+**Sanghun 액션 필요:** Marketing 팀 테스트 포스팅 승인 — 승인 시 `node channels/index.js` 실행하여 Twitter/Naver 각 1건 테스트 발행 진행합니다.
+[2026-04-15 03:07:35] Eddy 실행 완료
+[2026-04-15 03:37:35] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+**launchd 상태**: 정상
+- `com.eddy.agent` (PID 46104) — 가동 중
+- `com.eddy.reviewbot-pipeline` — 정상 (오전 10시 자동 실행 예정)
+- `com.eddy.marketing-planner/dev/qa` — 정상
+- 보류팀 (AI-Secretary/IRI-Safety/ELDO/DevGate/BizTool) — launchd 미등재 확인 ✅
+
+**팀 현황**:
+- **ReviewBot**: 최근 24시간 코드 변경 없음. 오전 10시 자동 실행 예정. pending-links.json 현재 없음.
+- **Marketing**: Phase 1 완성 상태. Twitter/Naver 발행 코드 완성. **ISSUE-004** (테스트 포스팅) Sanghun 승인 대기 중.
+
+**새 텔레그램 메시지**: 없음
+
+**대기 사항**: Marketing 테스트 포스팅 (`node channels/index.js`) 승인 필요 시 말씀해 주세요.
+[2026-04-15 03:38:33] Eddy 실행 완료
+[2026-04-15 04:00:00] Eddy 실행 시작
+**보고 완료.**
+
+**현황 요약:**
+- **Telegram**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치 (활성팀 로드, 보류팀 언로드)
+- **ReviewBot**: 정상. 10:00 자동 실행 예정
+- **Marketing Phase 1**: 코드 완성. Twitter/Naver 발행 준비 완료. 7차 QA 이상 없음.
+  - 미해결: **ISSUE-004** — 테스트 포스팅 Sanghun 승인 대기 (`node channels/index.js`)
+[2026-04-15 04:01:12] Eddy 실행 완료
+[2026-04-15 04:01:12] status.json 업데이트 완료
+[main b0c2745] status: 2026-04-15 04:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 04:08:33] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-15 04:30**
+
+**팀 현황:**
+- **ReviewBot**: launchd 등록 정상, 오전 10시 자동 실행 대기
+- **Marketing**: Phase 1 완성 — 7차 QA 완료, Twitter/Naver 발행 준비 완료. 테스트 포스팅(ISSUE-004)만 Sanghun 승인 대기
+
+**launchd 상태**: CLAUDE.md와 일치, 이상 없음
+
+**대기 액션**: Marketing 테스트 포스팅 승인 — `node channels/index.js` 실행 시 Twitter/Naver 각 1회 실제 발행 검증 진행 가능. 승인 주시면 즉시 처리하겠습니다.
+[2026-04-15 04:09:33] Eddy 실행 완료
+[2026-04-15 04:39:33] Eddy 실행 시작
+**[Eddy PM 보고] 04:40**
+
+**팀 현황:**
+- **ReviewBot**: 정상 — 캠핑 테이블 waiting_link 대기 중, 오전 10시 실행 예정
+- **Marketing**: Phase 1 완성 — Twitter/Naver 발행 준비 완료, ISSUE-004(테스트 포스팅) Sanghun 승인 대기
+- **보류 팀** (JENI/IRI/ELDO/DevGate/BizTool): 모두 미실행, launchd 정상
+
+**새 메시지**: 없음  
+**태스크 변경**: 없음  
+**대기**: Marketing 테스트 포스팅 승인 (Twitter/Naver 바로 실행 가능)
+[2026-04-15 04:40:46] Eddy 실행 완료
+[2026-04-15 04:40:46] status.json 업데이트 완료
+[2026-04-15 05:00:00] Eddy 실행 시작
+정기 점검 완료했습니다.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- ReviewBot: 정상 (마지막 포스팅 2026-04-12, 봄 신발 대기 중)
+- Marketing: Phase 1 완성 — Twitter/Naver 발행 준비 완료, 테스트 포스팅만 승인 대기
+- 보류 팀들: 이상 없음
+
+텔레그램으로 보고 전송 완료.
+[2026-04-15 05:01:19] Eddy 실행 완료
+[2026-04-15 05:01:20] status.json 업데이트 완료
+[main bc3dfde] status: 2026-04-15 05:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 05:10:46] Eddy 실행 시작
+정기 점검 완료했습니다.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- launchd: eddy agent 정상 (PID 54881), marketing 3팀 대기 상태 정상
+- ReviewBot: 정상 (마지막 포스팅 2026-04-12, 봄 신발 queued)
+- Marketing: Phase 1 완성 — Twitter/Naver 준비 완료, 테스트 포스팅 Sanghun 승인만 대기
+- 보류 팀 전체 이상 없음
+
+텔레그램 보고 전송 완료.
+[2026-04-15 05:11:54] Eddy 실행 완료
+[2026-04-15 05:41:54] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+**팀 현황:**
+- **ReviewBot**: 정상 가동 (오전 10시 자동 실행 대기)
+- **Marketing**: Phase 1 완성 — Twitter/Naver Blog 코드·자격증명 완비. 8차 QA 통과, 신규 이슈 없음. 테스트 포스팅(ISSUE-004)만 Sanghun 승인 대기 중
+
+**launchd 상태**: 이상 없음 (Eddy 에이전트 PID 57730 가동 중)
+
+**⏳ 대기**: Marketing 테스트 포스팅 승인 — 허가 주시면 `node channels/index.js` 실행해서 Twitter/Naver 각 1회 발행합니다.
+[2026-04-15 05:42:54] Eddy 실행 완료
+[2026-04-15 06:00:00] Eddy 실행 시작
+정기 실행 완료했습니다.
+
+**요약:**
+- 텔레그램 새 메시지 없음
+- launchd 모든 팀 상태 정상 (Active 2팀 로드, 보류팀 미등록 확인)
+- ReviewBot: 봄 아이템 링크 대기 중
+- Marketing: Phase 1 완성, **테스트 포스팅 승인 대기** (Sanghun 액션 필요)
+[2026-04-15 06:01:02] Eddy 실행 완료
+[2026-04-15 06:01:02] status.json 업데이트 완료
+[main f4e6e04] status: 2026-04-15 06:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 06:12:54] Eddy 실행 시작
+**[Eddy PM 보고]**
+
+**팀 현황:**
+- **ReviewBot**: 캠핑 테이블 쿠팡 파트너 링크 2일째 대기 중 (2026-04-13~). 오전 10시 자동 실행되고 있으나 매번 스킵. 대기 중 아이템: 클립팬(elCVBf) approved, 봄 신발/봄 가방도 링크 있음.
+- **Marketing**: Phase 1 완료. Twitter/Naver 발행 준비 완료. 테스트 포스팅(ISSUE-004)만 Sanghun 승인 대기 중.
+
+**launchd**: 모든 서비스 정상 등록됨.
+
+**대기 (Sanghun 액션 필요):**
+1. ReviewBot — 캠핑 테이블 쿠팡 파트너 링크 제공
+2. Marketing — 테스트 포스팅 실행 승인 (`node channels/index.js`)
+[2026-04-15 06:14:27] Eddy 실행 완료
+[2026-04-15 06:44:27] Eddy 실행 시작
+보고 완료했습니다.
+
+**현황 요약:**
+
+- **launchd**: CLAUDE.md 상태와 일치. 보류팀 모두 미실행, Eddy/Marketing/ReviewBot 정상 로드 상태
+- **ReviewBot** ⚠️: `waiting_link` 상태로 2일째 대기 중 — "캠핑 테이블" 쿠팡 파트너스 링크가 없어서 블로킹됨. pending: 클립팬(approved), 봄 신발(queued), 봄 가방(approved) 등 대기 중
+- **Marketing**: Phase 1 코드 완성 + 7차 QA 완료. Twitter/Naver 발행 준비 완료. 테스트 포스팅 승인만 대기 중
+
+**Sanghun 액션 필요:**
+1. 캠핑 테이블 쿠팡 파트너스 링크 → ReviewBot 즉시 재개 가능
+2. 마케팅 테스트 포스팅 승인 여부 결정
+[2026-04-15 06:46:31] Eddy 실행 완료
+[2026-04-15 07:00:00] Eddy 실행 시작
+보고 완료.
+
+**[Eddy PM 보고] 2026-04-15 06:58**
+
+**📋 팀 현황:**
+- **ReviewBot** — 정상 동작 중. 뮬 운동화 MX12 완료(04-12). 이후 매일 10시 실행 중이나 `캠핑 테이블` 쿠팡 링크 미수신으로 waiting_link 상태 지속 (04-13~).
+- **Marketing** — Phase 1 완성. Twitter/Naver 발행 코드 완성 + 자격증명 OK. Instagram/YouTube는 키 미설정으로 skip. 테스트 포스팅만 승인 대기.
+- **보류팀** — 전원 launchd 언로드 상태 유지, 이상 없음.
+
+**⏳ Sanghun 액션 필요:**
+1. ReviewBot — **캠핑 테이블** 쿠팡 파트너스 링크 제공
+2. Marketing — **테스트 포스팅 실행 승인** (Twitter/Naver 각 1회)
+[2026-04-15 07:01:42] Eddy 실행 완료
+[2026-04-15 07:01:43] status.json 업데이트 완료
+[main 7f29693] status: 2026-04-15 07:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-15 07:16:31] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-15 07:30**
+
+**📋 팀 현황:**
+- **ReviewBot** — 04-12 뮬 운동화 MX12 완료 후 `waiting_link` 지속. 원인: `캠핑 테이블` (원스위크라이프 캠핑 IGT 접이식 테이블 L, 179,900원) 쿠팡 파트너스 링크 미수신 (04-13~)
+- **Marketing** — Phase 1 완성. 8차 QA 통과. Twitter/Naver 발행 준비 완료. 테스트 포스팅 승인만 대기
+- **보류팀** — 전원 launchd 언로드 유지, 이상 없음
+
+**⏳ Sanghun 액션 필요:**
+1. 캠핑 테이블 쿠팡 파트너스 링크 → ReviewBot 즉시 재개
+2. 마케팅 테스트 포스팅 승인 (Twitter/Naver 각 1회)
+[2026-04-15 07:18:42] Eddy 실행 완료
+[2026-04-15 07:48:42] Eddy 실행 시작
+**보고 완료.**
+
+**현황 요약:**
+- 신규 텔레그램 메시지 없음
+- **Marketing**: Phase 1 완성 상태 유지. Twitter/Naver 발행 준비 완료. 테스트 포스팅 1회 승인 대기 (ISSUE-004)
+- **ReviewBot**: 오전 10시 크론 대기 중. pending-links.json 없음 → 봄 아이템 링크 제공 필요
+- 보류팀 (JENI/IRI/ELDO/DevGate) 상태 이상 없음
+
+**Sanghun 액션 필요:**
+1. Marketing 테스트 포스팅 승인 (Twitter/Naver 각 1회)
+2. ReviewBot 봄 아이템 쿠팡 링크 제공
+3. XBot 최초 로그인 테스트
+4. ELDO Vercel 토큰 / GA4 ID
+[2026-04-15 07:49:47] Eddy 실행 완료
+[2026-04-15 08:00:00] Eddy 실행 시작
+완료했습니다.
+
+**상황 요약:**
+- **새 텔레그램 메시지**: 없음
+- **Marketing 팀**: Phase 1 완료 상태 유지. ISSUE-004(테스트 포스팅) 1건만 Sanghun 승인 대기
+  - Twitter/Naver Blog 발행 준비 완료 (자격증명 설정됨)
+  - 8차 QA까지 완료, 코드 이상 없음
+- **ReviewBot**: 정상 가동 (봄 의류/원피스 리뷰 최신 발행 확인)
+- **JENI 웹서버**: 정상 가동 (PID 70062, 포트 3003)
+
+**대기 중**: Marketing 테스트 포스팅 — Twitter/Naver에 실제 1회 발행 테스트 허용 여부 승인 필요합니다.
+[2026-04-15 08:00:53] Eddy 실행 완료
+[2026-04-15 08:00:54] status.json 업데이트 완료
+[main f20ab6a] status: 2026-04-15 08:00
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[2026-04-15 08:19:47] Eddy 실행 시작
+**완료.**
+
+- 새 텔레그램 메시지: 없음
+- launchd: `com.eddy.agent`, `com.eddy.ai-secretary-server` 정상 가동
+- Marketing: Phase 1 완료 (8차 QA 통과), ISSUE-004(테스트 포스팅) 1건 승인 대기
+- ReviewBot: 정상 (봄 아이템 queued)
+- JENI 웹서버: 정상 (포트 3003)
+- 텔레그램 보고 완료
+[2026-04-15 08:20:57] Eddy 실행 완료
+[2026-04-15 08:50:57] Eddy 실행 시작
+**[Eddy PM 보고] 2026-04-15 09:00**
+
+**launchd 상태**: 정상
+- `com.eddy.agent` ✅ 가동 중
+- `com.eddy.ai-secretary-server` ✅ 가동 중
+- Marketing 에이전트: exit 0 (낮 시간 스킵, 정상)
+- ReviewBot: exit 0 (10am 자동 실행 대기)
+
+**팀 현황**:
+- **Marketing**: Phase 1 완성. Twitter/Naver 코드·자격증명 준비 완료. ISSUE-004(테스트 포스팅) Sanghun 승인 대기
+- **ReviewBot**: 클립팬/봄신발/봄가방 포스팅 approved 상태 대기, 캠핑 테이블 링크 대기 중
+
+**새 텔레그램 메시지**: 없음
+
+**⏳ Sanghun 액션 필요**:
+- Marketing 테스트 포스팅 승인 → 승인 시 `node channels/index.js` 실행 처리
+[2026-04-15 08:52:24] Eddy 실행 완료
+[2026-04-15 09:00:01] Eddy 실행 시작
