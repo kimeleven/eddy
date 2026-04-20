@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>LiveOrder 개발 보고서 — 2026-04-20</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .phase-label { display: inline-block; background: #2563eb; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-right: 6px; }
+  .phase-mvp { background: #dc2626; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 LiveOrder 개발 보고서</h1>
+<p class='meta'>보고일: 2026-04-20 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>LiveOrder — 셀러 링크 기반 송금 주문 플랫폼</td></tr>
+<tr><td><b>기술 스택</b></td><td>Next.js + Prisma + PostgreSQL + Express (스킬 서버)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-03-29</td></tr>
+<tr><td><b>전체 커밋</b></td><td>167건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>9건 (MVP 재설계)</td></tr>
+<tr><td><b>현재 상태</b></td><td>MVP 재설계 완료 — PortOne 제거, 송금 방식 + shopCode 링크 전환</td></tr>
+<tr><td><b>GitHub</b></td><td>kimeleven/liveorder</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 전체 변경 이력</h2>
+<p>2026-03-29부터 현재까지 Phase별 주요 마일스톤 요약:</p>
+
+<table>
+<tr><th>시기</th><th>Phase</th><th>주요 변경</th><th>커밋</th></tr>
+<tr>
+  <td>03-29 ~ 03-31</td>
+  <td><span class='phase-label'>Phase 1</span></td>
+  <td>초기 MVP 구축 — shadcn/ui, 셀러 대시보드, 구매자 채팅, 관리자 패널, PortOne 결제 SDK 연동</td>
+  <td>10건</td>
+</tr>
+<tr>
+  <td>04-01 ~ 04-02</td>
+  <td><span class='phase-label'>Phase 1 QA</span></td>
+  <td>미들웨어 HKDF salt 버그 수정, Vercel 배포 최적화 (번들 1MB, bcrypt 비용 감소, Neon HTTP 어댑터), DB 초기화 스크립트, 보안 버그 수정 (P0 크리티컬 4건, P1 3건)</td>
+  <td>25건</td>
+</tr>
+<tr>
+  <td>04-02 ~ 04-03</td>
+  <td><span class='phase-label'>Phase 2</span></td>
+  <td>관리자 주문/환불 UI, 셀러 대시보드 실데이터, 정산 상세 드릴다운, 상품 등록 시 코드 자동 발급, QR 코드 구현</td>
+  <td>18건</td>
+</tr>
+<tr>
+  <td>04-03</td>
+  <td><span class='phase-label'>Phase 3</span></td>
+  <td>API 페이지네이션, 이메일 알림 (Resend), 셀러 매출 차트, 배송 추적 링크, 이메일 인증, 개인정보 삭제, 청약확인/철회 (전자상거래법)</td>
+  <td>30건</td>
+</tr>
+<tr>
+  <td>04-04 ~ 04-09</td>
+  <td><span class='phase-label'>Phase 4</span></td>
+  <td>카카오톡 챗봇 스킬 서버, 오픈빌더 웹훅, 주문 소스 추적 (web/kakao), 운송장 일괄 CSV, 셀러/관리자 상세 페이지, 대시보드 개선, 상품/코드 관리</td>
+  <td>65건</td>
+</tr>
+<tr>
+  <td>04-09 ~ 04-18</td>
+  <td><span class='phase-label'>Phase 4+</span></td>
+  <td>코드 상세/편집/삭제, 상품 활성/비활성 토글, 필터/검색, QR 다운로드, 관리자 필터+페이지네이션+CSV, 이용약관 전자서명, 이상 거래 모니터링</td>
+  <td>10건</td>
+</tr>
+<tr>
+  <td>04-19 ~ 04-20</td>
+  <td><span class='phase-label phase-mvp'>MVP 재설계</span></td>
+  <td><b>PortOne 결제 전체 제거 → 송금 방식 전환, shopCode 셀러 링크 도입, 카카오 챗봇 코드 제거</b></td>
+  <td>9건</td>
+</tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<p>2026-04-19 ~ 04-20: MVP 재설계 — PortOne 제거 + 송금 방식 + shopCode 링크</p>
+
+<table>
+<tr><th width='80'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-19</td></tr>
+<tr>
+  <td>04-19</td>
+  <td class='commit-hash'>b9e2819</td>
+  <td><b>MVP-001</b> — DB 스키마 MVP 마이그레이션: Seller에 shopCode/kakaoPayId 추가, pgTid optional화, TRANSFER_PENDING 상태 추가, KakaoPaySession 모델 제거</td>
+</tr>
+<tr>
+  <td>04-19</td>
+  <td class='commit-hash'>dafe7e8</td>
+  <td><b>MVP-002</b> — shopCode 자동 생성 로직: 영소문자+숫자 6자리 랜덤, DB 중복 체크, 셀러 가입 시 자동 부여</td>
+</tr>
+<tr class='date-group'><td colspan='3'>2026-04-20</td></tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>e0952f3</td>
+  <td><b>MVP-003</b> — 셀러 설정 페이지에 shopCode 표시/수정 + kakaoPayId 입력 필드 추가</td>
+</tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>6456c0d</td>
+  <td><b>MVP-004</b> — /s/[shopCode] 셀러 링크 진입점: 셀러 공개 정보 API + shopCode로 채팅 리다이렉트</td>
+</tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>c471434</td>
+  <td><b>MVP-005</b> — 송금 방식 주문 생성 API: TRANSFER_PENDING 상태로 즉시 생성, PortOne 호출 제거</td>
+</tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>621c0d9</td>
+  <td><b>MVP-006</b> — 송금 유틸 + TransferOptions 컴포넌트: 토스 딥링크, 카카오페이 QR, 계좌번호 복사 폴백</td>
+</tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>b21a490</td>
+  <td><b>MVP-007</b> — 채팅 플로우 송금 방식 전환: buyer-store 상태 변경, PaymentSummary → TransferOptions 교체</td>
+</tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>7d0ea7f</td>
+  <td><b>MVP-008</b> — 주문 확인 API: TRANSFER_PENDING → CONFIRMED 상태 전환 + 셀러 이메일 알림</td>
+</tr>
+<tr>
+  <td>04-20</td>
+  <td class='commit-hash'>969810f</td>
+  <td><b>MVP-009</b> — PortOne / 카카오 챗봇 코드 전체 제거: 불필요 의존성 및 코드 클린업</td>
+</tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+  <li class='done'>✅ <b>Phase 1~3 완료</b> — 웹 주문 플랫폼 (셀러/구매자/관리자) 전체 구현</li>
+  <li class='done'>✅ <b>Phase 4 완료</b> — 카카오 챗봇 주문 시스템 (Task 34~64)</li>
+  <li class='done'>✅ <b>MVP 재설계 완료</b> — PortOne 제거, 송금 방식 전환, shopCode 링크 (MVP-001~009)</li>
+  <li><b>주요 기능:</b>
+    <ul>
+      <li>셀러: 상품 등록/관리, shopCode 링크, 주문 관리, 매출 차트, 운송장 일괄 업로드, 설정, 이메일 인증, 이용약관 전자서명</li>
+      <li>구매자: /s/[shopCode] 진입 → 채팅 주문 → 토스/카카오페이/계좌이체 송금 → 주문 확인</li>
+      <li>관리자: 셀러/주문/정산/상품 관리, 대시보드, CSV 내보내기, 이상 거래 모니터링</li>
+    </ul>
+  </li>
+  <li><b>기술:</b> Next.js + Prisma + PostgreSQL, 이메일 알림 (Resend), QR 코드, 청약확인/철회 (전자상거래법)</li>
+</ul>
+
+<h2>4. 아키텍처 요약</h2>
+<table>
+<tr><th>구성 요소</th><th>설명</th></tr>
+<tr><td>프론트엔드</td><td>Next.js App Router + shadcn/ui + Tailwind CSS</td></tr>
+<tr><td>백엔드</td><td>Next.js API Routes (서버리스)</td></tr>
+<tr><td>데이터베이스</td><td>PostgreSQL (Prisma ORM)</td></tr>
+<tr><td>인증</td><td>NextAuth v5 (셀러/관리자)</td></tr>
+<tr><td>결제</td><td>송금 방식 (토스 딥링크 + 카카오페이 QR + 계좌이체)</td></tr>
+<tr><td>이메일</td><td>Resend (가입/승인/주문/정산 알림)</td></tr>
+<tr><td>파일 업로드</td><td>Vercel Blob (사업자등록증, 상품 이미지)</td></tr>
+</table>
+
+<h2>5. 주문 플로우 (MVP)</h2>
+<table>
+<tr><th>#</th><th>단계</th><th>설명</th></tr>
+<tr><td>1</td><td>셀러 링크 진입</td><td>구매자가 /s/[shopCode] 접속</td></tr>
+<tr><td>2</td><td>상품 선택</td><td>채팅 인터페이스에서 상품 선택 + 수량 입력</td></tr>
+<tr><td>3</td><td>배송지 입력</td><td>이름, 연락처, 주소 입력</td></tr>
+<tr><td>4</td><td>송금 안내</td><td>토스 QR/딥링크, 카카오페이 QR, 계좌번호 복사 표시</td></tr>
+<tr><td>5</td><td>송금 확인</td><td>구매자 "송금 완료" 버튼 → TRANSFER_PENDING → CONFIRMED</td></tr>
+<tr><td>6</td><td>셀러 확인</td><td>셀러에게 이메일 알림, 주문 관리에서 처리</td></tr>
+</table>
+
+<h2>6. 커밋 통계</h2>
+<table>
+<tr><th>구분</th><th>커밋 수</th><th>비율</th></tr>
+<tr><td>feat (기능 구현)</td><td>85건</td><td>51%</td></tr>
+<tr><td>fix (버그 수정)</td><td>28건</td><td>17%</td></tr>
+<tr><td>planner (기획/스펙)</td><td>35건</td><td>21%</td></tr>
+<tr><td>pm/qa/chore/docs</td><td>19건</td><td>11%</td></tr>
+<tr><td><b>합계</b></td><td><b>167건</b></td><td><b>100%</b></td></tr>
+</table>
+
+<hr>
+<p style='color: #9ca3af; font-size: 12px; text-align: center;'>Eddy PM | LiveOrder 개발 보고서 | 2026-04-20</p>
+</body>
+</html>
