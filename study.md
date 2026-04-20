@@ -68,12 +68,10 @@ _Last updated: 2026-04-13 (5차)_
 ## LiveOrder 프로젝트
 - **v1**: 종료 (2026-04-03) — 기존 코드 유지
 - **v2**: DROP
-- **v3**: 카카오톡 챗봇 주문 시스템으로 재가동 (2026-04-09~)
+- **v3→MVP**: 송금 방식 주문 시스템으로 재설계 (2026-04-19~). PortOne 제거 + shopCode 링크 방식.
 - GitHub: kimeleven/liveorder
-- 스택: Next.js + Prisma + PostgreSQL + Express (스킬 서버) + Ollama/Gemma4
-- 카카오 오픈빌더 봇 이름: **liveorder**
-- 카카오 봇 ID: `69d6729b9fac321ddc6b5d64`
-- 토큰: 철수토큰
+- **자동 배포**: GitHub push 시 자동 배포 설정됨 (Sanghun 확인 2026-04-20)
+- 스택: Next.js + Prisma + PostgreSQL
 - 관리자 이메일: kimeleven@gmail.com
 
 ## ELDO 프로젝트
