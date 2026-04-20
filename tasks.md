@@ -1,6 +1,9 @@
 # Tasks
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
+## 진행 중
+- [x] **Wiki 지식백과 설치 및 운영** — Sanghun 지시 (2026-04-20). Karpathy LLM Wiki 개념 기반. ~/eddy-agent/wiki/ 에 Python 서버 구축 완료 (포트 3456). 프로젝트별 지식 페이지 초기 생성 완료. 추가 콘텐츠 구성 논의 필요.
+
 ## 대기 중
 - [x] **BizTool 팀 재가동 + 명함 제작 기능 착수** — Sanghun 승인 (2026-04-15 19:01). 보류 해제, 4시간 스케줄 적용, launchd 로드 완료. TASKS.md에 ✅승인됨 상태로 배정. Dev1/Planner 다음 실행 시 착수.
 - [x] **ReviewBot 하루 1회 크론 설정** — 오전 10시 `node pipeline.mjs --manual` 자동 실행. 정상 등록 완료. 클립팬 링크(elCVBf) pending-links.json 대기 중. 목걸이선풍기 Sanghun 지시로 대기 삭제 완료 (2026-04-10). ⚠️ 네이버 세션 만료 시 수동 재로그인 필요.
