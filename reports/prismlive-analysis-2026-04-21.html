@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>프리즘라이브 서비스 분석 및 개발 기획서</title>
+<style>
+  @page { size: A4; margin: 20mm; }
+  body { font-family: -apple-system, 'Apple SD Gothic Neo', sans-serif; line-height: 1.7; color: #1a1a1a; max-width: 800px; margin: 0 auto; padding: 20px; font-size: 13px; }
+  h1 { font-size: 24px; border-bottom: 3px solid #2563eb; padding-bottom: 10px; margin-top: 40px; }
+  h2 { font-size: 18px; color: #2563eb; margin-top: 35px; border-left: 4px solid #2563eb; padding-left: 12px; }
+  h3 { font-size: 15px; color: #1e40af; margin-top: 25px; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 12px; }
+  th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; }
+  th { background: #eff6ff; font-weight: 600; }
+  tr:nth-child(even) { background: #f9fafb; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge-free { background: #dcfce7; color: #166534; }
+  .badge-paid { background: #fef3c7; color: #92400e; }
+  .badge-warn { background: #fee2e2; color: #991b1b; }
+  .badge-rec { background: #dbeafe; color: #1e40af; }
+  .highlight { background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 15px; margin: 15px 0; }
+  .recommend { background: #eff6ff; border: 1px solid #3b82f6; border-radius: 8px; padding: 15px; margin: 15px 0; }
+  .cover { text-align: center; padding: 80px 0 60px; }
+  .cover h1 { border: none; font-size: 32px; color: #1e40af; }
+  .cover .subtitle { font-size: 16px; color: #6b7280; margin-top: 10px; }
+  .cover .date { font-size: 14px; color: #9ca3af; margin-top: 30px; }
+  .toc { background: #f8fafc; padding: 20px 30px; border-radius: 8px; margin: 30px 0; }
+  .toc li { margin: 6px 0; }
+  .section-divider { border: none; border-top: 2px solid #e5e7eb; margin: 40px 0; }
+  code { background: #f1f5f9; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+  .cost-summary { background: #fef3c7; border: 1px solid #f59e0b; border-radius: 8px; padding: 15px; margin: 20px 0; }
+  .phase { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 12px 15px; margin: 10px 0; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>프리즘라이브 서비스 분석 및<br>개발 기획서</h1>
+  <div class="subtitle">AR 필터 · 캐릭터 변환 · 라이브 스트리밍 통합 플랫폼</div>
+  <div class="date">2026년 4월 21일 | Eddy PM</div>
+</div>
+
+<div class="toc">
+<strong>목차</strong>
+<ol>
+  <li>프리즘라이브 서비스 분석</li>
+  <li>핵심 기능 상세 분석</li>
+  <li>경쟁 서비스 비교</li>
+  <li>AR 필터 / 뷰티 필터 — 오픈소스 & 상용 솔루션</li>
+  <li>캐릭터 / 아바타 변환 솔루션</li>
+  <li>실시간 영상 처리 / 스트리밍 기술</li>
+  <li>상용 솔루션 비용 비교</li>
+  <li>개발 기획 — 권장 아키텍처 & 로드맵</li>
+  <li>비용 시뮬레이션</li>
+</ol>
+</div>
+
+<hr class="section-divider">
+
+<h1>1. 프리즘라이브 서비스 분석</h1>
+
+<h2>1.1 서비스 개요</h2>
+<p><strong>프리즘 라이브 스튜디오(PRISM Live Studio)</strong>는 네이버(NAVER)가 2017년 출시한 라이브 스트리밍 소프트웨어입니다. OBS Studio 엔진 기반으로 PC(Windows/macOS)와 모바일(iOS/Android) 모두 지원합니다.</p>
+
+<table>
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>개발사</td><td>NAVER Corp.</td></tr>
+  <tr><td>출시</td><td>2017년 11월</td></tr>
+  <tr><td>코어 엔진</td><td>OBS Studio (GPL-2.0 오픈소스)</td></tr>
+  <tr><td>주요 언어</td><td>C++ (84%), C, Objective-C++, CMake</td></tr>
+  <tr><td>UI</td><td>Qt 6.3.1</td></tr>
+  <tr><td>플랫폼</td><td>Windows, macOS, iOS, Android</td></tr>
+  <tr><td>타겟</td><td>크리에이터, VTuber, 인플루언서, K-POP 아티스트, 라이브커머스</td></tr>
+  <tr><td>주요 시장</td><td>한국, 동남아시아 (베트남, 태국 등)</td></tr>
+  <tr><td>GitHub</td><td>github.com/naver/prism-live-studio</td></tr>
+</table>
+
+<h2>1.2 비즈니스 모델</h2>
+
+<h3>B2C (개인 사용자) — 2025년 7월 유료 전환</h3>
+<table>
+  <tr><th>플랜</th><th>가격</th><th>주요 기능</th></tr>
+  <tr><td>무료</td><td>$0</td><td>기본 스트리밍, 단일 채널, 기본 뷰티 필터</td></tr>
+  <tr><td>PRISM Plus 월간</td><td>$9.99/월 (₩11,900)</td><td>6채널 동시 송출, 3D VTuber, 프리미엄 필터, 워터마크 제거</td></tr>
+  <tr><td>PRISM Plus 연간</td><td>$79.99/년 (₩89,900)</td><td>동일 (33% 할인)</td></tr>
+</table>
+
+<h3>B2B (기업) — NAVER Cloud Platform</h3>
+<table>
+  <tr><th>MAC 구간</th><th>단가 (/MAC/월)</th></tr>
+  <tr><td>0~10 MAC</td><td>$29.00</td></tr>
+  <tr><td>11~50 MAC</td><td>$21.50</td></tr>
+  <tr><td>51~1,000 MAC</td><td>$14.50</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<h1>2. 핵심 기능 상세 분석</h1>
+
+<h2>2.1 AR 필터 / 뷰티 필터 (PRISM Lens)</h2>
+<p>PRISM Lens는 독립 앱 형태의 카메라 필터 모듈입니다.</p>
+
+<h3>뷰티 필터</h3>
+<ul>
+  <li><strong>5가지 보정 요소</strong>: Shape(얼굴형), Smooth(피부결), Eye(눈), Blush(피부톤), Lipstick(립)</li>
+  <li><strong>7가지 프리셋</strong>: K-pop, Glam, Soft, Bold, Natural, Cute, Sharp</li>
+  <li>실시간 스트리밍 중 적용 가능</li>
+</ul>
+
+<h3>AR / 마스크 이펙트</h3>
+<ul>
+  <li>얼굴 인식 AR 카메라 효과 (마스크, 파티클)</li>
+  <li>Face Mosaic: 최대 7명 동시 모자이크</li>
+  <li>Atmosphere Filters: 레트로~현대 분위기 필터</li>
+  <li>GIPHY 연동 스티커 (매주 업데이트)</li>
+  <li>Reaction Touch Filters</li>
+</ul>
+
+<h2>2.2 캐릭터 / 아바타 변환 (VTuber)</h2>
+<div class="highlight">
+  <strong>핵심 차별점:</strong> 모바일에서 3D VRM 형식을 최초 적용한 스트리밍 앱
+</div>
+
+<table>
+  <tr><th>아바타 유형</th><th>설명</th></tr>
+  <tr><td>PNG Tuber (2D)</td><td>2장+ 이미지/GIF로 2D 캐릭터 생성</td></tr>
+  <tr><td>3D VRM VTuber</td><td>VRM 형식 3D 모델, 실시간 표정 반영</td></tr>
+  <tr><td>VRoidHub 연동</td><td>VRM 배포 플랫폼에서 모델 임포트</td></tr>
+</table>
+
+<h3>페이스 트래킹</h3>
+<ul>
+  <li>전면 카메라로 실시간 표정 캡처 → 아바타 반영</li>
+  <li>iOS: TrueDepth Camera (Face ID) 필수</li>
+  <li>감정 이펙트: Joy, Happy, Angry, Sorrow, Fun</li>
+</ul>
+
+<h3>전신 모션 캡처 (Sony mocopi 연동)</h3>
+<ul>
+  <li>Sony mocopi 기기로 전신 모션 데이터 전송</li>
+  <li>페이스 트래킹 + 전신 모션 동시 결합</li>
+  <li>스마트폰 단독으로 풀바디 VTuber 방송</li>
+</ul>
+
+<h2>2.3 라이브 스트리밍</h2>
+<table>
+  <tr><th>기능</th><th>상세</th></tr>
+  <tr><td>프로토콜</td><td>RTMP, SRT, RIST</td></tr>
+  <tr><td>최대 해상도</td><td>4K / 60fps</td></tr>
+  <tr><td>동시 송출</td><td>최대 6채널 (유료)</td></tr>
+  <tr><td>지원 플랫폼</td><td>YouTube, Twitch, Facebook, SOOP, NAVER TV, 치지직, BAND, 쇼핑라이브</td></tr>
+  <tr><td>기타</td><td>스크린캐스트, 게임캐스팅, PC↔모바일 리모트, 씬 전환</td></tr>
+</table>
+
+<hr class="section-divider">
+
+<h1>3. 경쟁 서비스 비교</h1>
+
+<table>
+  <tr><th>항목</th><th>PRISM</th><th>OBS Studio</th><th>Streamlabs</th><th>StreamYard</th></tr>
+  <tr><td>가격</td><td>무료+$9.99/월</td><td>완전 무료</td><td>무료+구독</td><td>무료+구독</td></tr>
+  <tr><td>모바일</td><td><strong>매우 우수</strong></td><td>미지원</td><td>제한적</td><td>브라우저</td></tr>
+  <tr><td>멀티스트리밍</td><td>최대 6채널</td><td>플러그인</td><td>유료</td><td>유료</td></tr>
+  <tr><td>뷰티/AR</td><td><strong>내장</strong></td><td>미지원</td><td>제한적</td><td>미지원</td></tr>
+  <tr><td>VTuber</td><td><strong>내장 (2D+3D)</strong></td><td>외부 필요</td><td>미지원</td><td>미지원</td></tr>
+  <tr><td>모션캡처</td><td><strong>mocopi 연동</strong></td><td>미지원</td><td>미지원</td><td>미지원</td></tr>
+  <tr><td>라이브커머스</td><td><strong>쇼핑라이브</strong></td><td>미지원</td><td>미지원</td><td>미지원</td></tr>
+</table>
+
+<div class="highlight">
+  <strong>PRISM 핵심 경쟁 우위:</strong> 모바일 퍼스트 + AR 뷰티 + VTuber + 모션캡처 + 라이브커머스를 단일 앱에 통합. 동남아 시장 강세.
+</div>
+
+<hr class="section-divider">
+
+<h1>4. AR 필터 / 뷰티 필터 솔루션</h1>
+
+<h2>4.1 오픈소스</h2>
+
+<table>
+  <tr><th>솔루션</th><th>라이선스</th><th>비용</th><th>핵심 기능</th><th>장점</th><th>단점</th></tr>
+  <tr>
+    <td><strong>MediaPipe</strong><br>(Google)</td>
+    <td><span class="badge badge-free">Apache 2.0</span></td>
+    <td>무료</td>
+    <td>Face Mesh (468 랜드마크), Holistic (540+ 키포인트), Effect Renderer</td>
+    <td>모바일 최적화 최고, 전 플랫폼 지원, 상업 제약 없음</td>
+    <td>AR 에디터 없음, 뷰티 필터 직접 구현 필요</td>
+  </tr>
+  <tr>
+    <td><strong>OpenCV</strong></td>
+    <td><span class="badge badge-free">Apache 2.0</span></td>
+    <td>무료</td>
+    <td>이미지/영상 처리, DNN 모듈, GPU 가속</td>
+    <td>CV 작업 기반, 방대한 레퍼런스</td>
+    <td>단독 AR 필터 한계, MediaPipe와 조합 필수</td>
+  </tr>
+</table>
+
+<h2>4.2 상용 SDK</h2>
+
+<table>
+  <tr><th>솔루션</th><th>과금</th><th>가격</th><th>필터 수</th><th>특징</th><th>상태</th></tr>
+  <tr>
+    <td><strong>Banuba</strong></td>
+    <td>플랫폼 정액제</td>
+    <td>연 수천~수만$ (견적)</td>
+    <td><strong>1,000+</strong></td>
+    <td>뷰티, 배경교체, 제스처, Flutter/RN 지원</td>
+    <td><span class="badge badge-rec">추천</span></td>
+  </tr>
+  <tr>
+    <td><strong>DeepAR</strong></td>
+    <td>MAU 기반</td>
+    <td>$25~$1,000+/월</td>
+    <td>150+</td>
+    <td>감정 감지, AWS IVS 연동</td>
+    <td><span class="badge badge-warn">Zalando 인수 — 불확실</span></td>
+  </tr>
+  <tr>
+    <td><strong>Spark AR (Meta)</strong></td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td><span class="badge badge-warn">2025.01 완전 종료</span></td>
+  </tr>
+</table>
+
+<hr class="section-divider">
+
+<h1>5. 캐릭터 / 아바타 변환 솔루션</h1>
+
+<table>
+  <tr><th>솔루션</th><th>유형</th><th>라이선스</th><th>비용</th><th>실시간</th><th>비고</th></tr>
+  <tr>
+    <td><strong>Live2D Cubism</strong></td>
+    <td>2D 아바타</td>
+    <td>상용</td>
+    <td>Free(제한) / Pro $100/년 / SDK $630~$3,777</td>
+    <td>O</td>
+    <td>VTuber 업계 표준, 모델 제작 전문기술 필요</td>
+  </tr>
+  <tr>
+    <td><strong>VTube Studio</strong></td>
+    <td>Live2D 구동</td>
+    <td>무료+$14.99</td>
+    <td>거의 무료</td>
+    <td>O</td>
+    <td>Face ID 트래킹, OBS 연동. 앱이라 SDK 통합 어려움</td>
+  </tr>
+  <tr>
+    <td><strong>VSeeFace</strong></td>
+    <td>3D VRM 구동</td>
+    <td><span class="badge badge-free">무료 오픈소스</span></td>
+    <td>무료</td>
+    <td>O</td>
+    <td>Windows 전용, VMC 프로토콜</td>
+  </tr>
+  <tr>
+    <td><strong>MediaPipe → Unity</strong></td>
+    <td>자체 아바타</td>
+    <td><span class="badge badge-free">Apache 2.0</span></td>
+    <td>무료 (구현비용)</td>
+    <td>O</td>
+    <td>얼굴+포즈+손 트래킹 → 3D 아바타 매핑</td>
+  </tr>
+  <tr>
+    <td><strong>OpenFace 3.0</strong></td>
+    <td>얼굴 분석</td>
+    <td><span class="badge badge-warn">비상업</span></td>
+    <td>연구용 무료</td>
+    <td>O</td>
+    <td>AU 인식/시선 추정. 상업 시 별도 라이선스</td>
+  </tr>
+  <tr>
+    <td><strong>FOMM</strong></td>
+    <td>이미지 애니메이션</td>
+    <td><span class="badge badge-warn">CC BY-NC</span></td>
+    <td>비상업 무료</td>
+    <td>△ (GPU 필요)</td>
+    <td>사진 1장 → 아바타. 상업 불가</td>
+  </tr>
+</table>
+
+<div class="highlight">
+  <strong>실시간 얼굴 변환 오픈소스 (참고)</strong>
+  <table>
+    <tr><th>도구</th><th>특징</th><th>라이선스</th></tr>
+    <tr><td>DeepFaceLive</td><td>실시간 페이스스왑</td><td>MIT (윤리적 제약)</td></tr>
+    <tr><td>Deep-Live-Cam</td><td>사진 1장 → 실시간 스왑</td><td>MIT</td></tr>
+    <tr><td>GHOST</td><td>원샷 고품질 페이스스왑</td><td>Apache 2.0</td></tr>
+    <tr><td>InsightFace</td><td>얼굴 분석/인식</td><td>MIT (상업 별도)</td></tr>
+  </table>
+</div>
+
+<hr class="section-divider">
+
+<h1>6. 실시간 영상 처리 / 스트리밍 기술</h1>
+
+<table>
+  <tr><th>기술</th><th>라이선스</th><th>프로토콜</th><th>역할</th><th>비고</th></tr>
+  <tr>
+    <td><strong>FFmpeg</strong></td>
+    <td>LGPL/GPL</td>
+    <td>RTMP, HLS, SRT, WebRTC</td>
+    <td>인코딩/디코딩/트랜스코딩</td>
+    <td>업계 표준, GPU 가속 (NVENC, VideoToolbox)</td>
+  </tr>
+  <tr>
+    <td><strong>GStreamer</strong></td>
+    <td>LGPL 2.1</td>
+    <td>WebRTC, SRT, RTMP, HLS</td>
+    <td>파이프라인 기반 멀티미디어</td>
+    <td>ML 통합 용이, AR→인코딩→스트리밍 파이프라인 구성에 최적</td>
+  </tr>
+  <tr>
+    <td><strong>WebRTC</strong></td>
+    <td>BSD</td>
+    <td>P2P 실시간</td>
+    <td>초저지연 영상/음성</td>
+    <td>대규모 시 SFU 필요 (Janus 등)</td>
+  </tr>
+  <tr>
+    <td><strong>OBS (libobs)</strong></td>
+    <td>GPL 2.0</td>
+    <td>RTMP, SRT, HLS, WHIP</td>
+    <td>스트리밍/레코딩</td>
+    <td>PRISM 코어 엔진. GPL 법적 검토 필요</td>
+  </tr>
+  <tr>
+    <td><strong>Janus</strong></td>
+    <td>GPL 3.0</td>
+    <td>WebRTC SFU</td>
+    <td>미디어 서버</td>
+    <td>수십만 세션, 무료. 인프라 직접 운영</td>
+  </tr>
+</table>
+
+<hr class="section-divider">
+
+<h1>7. 상용 솔루션 비용 비교</h1>
+
+<h2>7.1 실시간 영상 통화 / 스트리밍 SDK</h2>
+
+<table>
+  <tr><th>솔루션</th><th>과금 방식</th><th>가격</th><th>무료 티어</th><th>AR 필터</th></tr>
+  <tr>
+    <td><strong>Agora.io</strong></td>
+    <td>분당 과금</td>
+    <td>$0.99/1,000분 (기본)<br>$3.99/1,000분 (HD)<br>$8.99/1,000분 (FHD)</td>
+    <td>월 10,000분</td>
+    <td>별도 SDK 필요</td>
+  </tr>
+  <tr>
+    <td><strong>Vonage (TokBox)</strong></td>
+    <td>참여자-분</td>
+    <td>$0.0041/참여자분 (기본)<br>RTMP: $0.00395/분<br>아카이브: $0.025~0.035/분</td>
+    <td>100,000분</td>
+    <td>별도 SDK 필요</td>
+  </tr>
+  <tr>
+    <td><strong>AWS IVS</strong></td>
+    <td>사용량</td>
+    <td>채널 타입별 시간당<br>해상도별 시간당</td>
+    <td>12개월: 인제스트 5h, 아웃풋 100h</td>
+    <td>DeepAR 파트너십</td>
+  </tr>
+</table>
+
+<h2>7.2 AR 필터 SDK</h2>
+
+<table>
+  <tr><th>솔루션</th><th>과금</th><th>가격대</th><th>장점</th></tr>
+  <tr>
+    <td><strong>Banuba</strong></td>
+    <td>플랫폼 정액</td>
+    <td>연 수천~수만$ (견적)</td>
+    <td>MAU 무관, 1,000+ 필터, 성장해도 비용 예측 가능</td>
+  </tr>
+  <tr>
+    <td><strong>DeepAR</strong></td>
+    <td>MAU 기반</td>
+    <td>$25/월 (1K MAU) ~ $1,000/월 (100K MAU)</td>
+    <td>저렴한 시작, AWS 연동. 단 Zalando 인수 리스크</td>
+  </tr>
+</table>
+
+<hr class="section-divider">
+
+<h1>8. 개발 기획 — 권장 아키텍처 & 로드맵</h1>
+
+<h2>8.1 권장 기술 스택</h2>
+
+<div class="recommend">
+<h3>MVP 단계 (저비용 — 월 $0~$100)</h3>
+<table>
+  <tr><th>영역</th><th>기술</th><th>비용</th></tr>
+  <tr><td>얼굴 트래킹</td><td>MediaPipe Face Mesh (468 랜드마크)</td><td>무료</td></tr>
+  <tr><td>영상 처리</td><td>OpenCV + 커스텀 뷰티 필터</td><td>무료</td></tr>
+  <tr><td>2D 아바타</td><td>Live2D SDK (인디)</td><td>~$100/년</td></tr>
+  <tr><td>3D 아바타</td><td>MediaPipe → Three.js/Unity VRM 렌더러</td><td>무료</td></tr>
+  <tr><td>인코딩</td><td>FFmpeg (GPU 가속)</td><td>무료</td></tr>
+  <tr><td>스트리밍</td><td>WebRTC + Janus SFU</td><td>무료 (서버 비용별도)</td></tr>
+</table>
+</div>
+
+<div class="recommend">
+<h3>프로덕션 단계 (월 $500~$3,000+)</h3>
+<table>
+  <tr><th>영역</th><th>기술</th><th>비용</th></tr>
+  <tr><td>AR 필터</td><td>Banuba Face AR SDK (1,000+ 필터)</td><td>연 견적 (정액)</td></tr>
+  <tr><td>아바타</td><td>Live2D + VRM 3D (MediaPipe 트래킹)</td><td>SDK $630~</td></tr>
+  <tr><td>파이프라인</td><td>GStreamer (AR→인코딩→스트리밍 통합)</td><td>무료</td></tr>
+  <tr><td>CDN/분배</td><td>AWS IVS 또는 Agora.io</td><td>사용량 기반</td></tr>
+  <tr><td>모바일</td><td>Flutter + Banuba Flutter SDK</td><td>포함</td></tr>
+</table>
+</div>
+
+<h2>8.2 시스템 아키텍처</h2>
+
+<pre style="background:#f1f5f9; padding:15px; border-radius:8px; font-size:12px; overflow-x:auto;">
+┌─────────────────────────────────────────────────────────┐
+│                    클라이언트 (모바일/PC)                    │
+│                                                         │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐              │
+│  │ 카메라    │→│ MediaPipe │→│ AR 필터   │              │
+│  │ 입력     │  │ Face Mesh │  │ 엔진     │              │
+│  └──────────┘  └──────────┘  └────┬─────┘              │
+│                                    │                     │
+│  ┌──────────┐  ┌──────────┐  ┌────▼─────┐              │
+│  │ VRM/L2D  │→│ 아바타    │→│ 합성     │              │
+│  │ 모델     │  │ 렌더러   │  │ 렌더러   │              │
+│  └──────────┘  └──────────┘  └────┬─────┘              │
+│                                    │                     │
+│  ┌──────────────────────────┐  ┌──▼───────┐            │
+│  │ 오디오 믹서 + 씬 관리    │→│ 인코더   │            │
+│  └──────────────────────────┘  │ (FFmpeg) │            │
+│                                 └────┬─────┘            │
+└──────────────────────────────────────┼──────────────────┘
+                                       │ RTMP/SRT/WebRTC
+                               ┌───────▼───────┐
+                               │  스트리밍 서버  │
+                               │ (Janus/AWS IVS)│
+                               └───────┬───────┘
+                                       │
+                    ┌──────────┬────────┼────────┬─────────┐
+                    ▼          ▼        ▼        ▼         ▼
+                YouTube    Twitch   Facebook  치지직   커스텀RTMP
+</pre>
+
+<h2>8.3 개발 로드맵</h2>
+
+<div class="phase">
+<strong>Phase 1: 핵심 엔진 (4~6주)</strong>
+<ul>
+  <li>MediaPipe Face Mesh 연동 — 실시간 얼굴 랜드마크 추출</li>
+  <li>기본 뷰티 필터 구현 (스킨 스무딩, 페이스 리쉐이핑)</li>
+  <li>카메라 입력 → AR 필터 적용 → 프리뷰 파이프라인</li>
+  <li>플랫폼: 모바일(Flutter) + PC(Electron/Qt)</li>
+</ul>
+</div>
+
+<div class="phase">
+<strong>Phase 2: 아바타 시스템 (4~6주)</strong>
+<ul>
+  <li>VRM 3D 모델 로딩 및 렌더링 (Three.js 또는 Unity)</li>
+  <li>MediaPipe 트래킹 데이터 → 아바타 파라미터 매핑</li>
+  <li>Live2D SDK 연동 (2D 아바타 옵션)</li>
+  <li>표정/감정 이펙트 시스템</li>
+</ul>
+</div>
+
+<div class="phase">
+<strong>Phase 3: 스트리밍 (3~4주)</strong>
+<ul>
+  <li>FFmpeg 기반 실시간 인코딩 (H.264, GPU 가속)</li>
+  <li>RTMP 출력 → YouTube/Twitch 동시 송출</li>
+  <li>씬 관리 + 소스 전환 UI</li>
+  <li>오디오 믹서</li>
+</ul>
+</div>
+
+<div class="phase">
+<strong>Phase 4: 고도화 (4~6주)</strong>
+<ul>
+  <li>Banuba SDK 전환 (프리미엄 AR 필터 1,000+)</li>
+  <li>멀티플랫폼 동시 송출 (최대 6채널)</li>
+  <li>PC ↔ 모바일 리모트 컨트롤</li>
+  <li>라이브커머스 연동 (상품 오버레이)</li>
+</ul>
+</div>
+
+<div class="phase">
+<strong>Phase 5: 모션캡처 + 확장 (4주+)</strong>
+<ul>
+  <li>MediaPipe Holistic → 상체 + 손 트래킹</li>
+  <li>외부 모션캡처 기기 연동 (mocopi 등)</li>
+  <li>커스텀 필터 에디터 (크리에이터용)</li>
+  <li>B2B SDK 패키징</li>
+</ul>
+</div>
+
+<hr class="section-divider">
+
+<h1>9. 비용 시뮬레이션</h1>
+
+<div class="cost-summary">
+<h3>MVP 단계 (출시까지)</h3>
+<table>
+  <tr><th>항목</th><th>월 비용</th><th>비고</th></tr>
+  <tr><td>MediaPipe + OpenCV</td><td>$0</td><td>오픈소스</td></tr>
+  <tr><td>Live2D Pro (인디)</td><td>~$8/월</td><td>$100/년</td></tr>
+  <tr><td>FFmpeg + Janus</td><td>$0</td><td>오픈소스</td></tr>
+  <tr><td>서버 (VPS)</td><td>$20~$50</td><td>스트리밍 서버 운영</td></tr>
+  <tr><td><strong>합계</strong></td><td><strong>$28~$58/월</strong></td><td></td></tr>
+</table>
+
+<h3>프로덕션 (MAU 10,000 기준)</h3>
+<table>
+  <tr><th>항목</th><th>월 비용</th><th>비고</th></tr>
+  <tr><td>Banuba SDK</td><td>~$500~$1,500</td><td>정액제 (견적 필요)</td></tr>
+  <tr><td>AWS IVS 또는 Agora</td><td>$200~$1,000</td><td>사용량 기반</td></tr>
+  <tr><td>서버 인프라</td><td>$100~$300</td><td>미디어 서버, API 서버</td></tr>
+  <tr><td>Live2D SDK (상용)</td><td>~$52/월</td><td>$630 일시불</td></tr>
+  <tr><td><strong>합계</strong></td><td><strong>$850~$2,850/월</strong></td><td></td></tr>
+</table>
+</div>
+
+<div class="recommend">
+<h3>핵심 결론</h3>
+<ol>
+  <li><strong>AR 필터</strong>: MVP는 MediaPipe(무료), 프로덕션은 Banuba(정액제, MAU 무관)</li>
+  <li><strong>캐릭터 변환</strong>: MediaPipe 트래킹 + VRM 3D 렌더러 조합이 최적 (무료+고품질)</li>
+  <li><strong>스트리밍</strong>: FFmpeg+Janus(무료)로 시작, 트래픽 증가 시 AWS IVS 전환</li>
+  <li><strong>DeepAR 비권장</strong>: Zalando 인수로 장기 지원 불확실</li>
+  <li><strong>Spark AR 사용 불가</strong>: 2025.01 완전 종료</li>
+  <li><strong>MVP 월 $30 미만으로 시작 가능</strong>, 프로덕션도 $1,000~$3,000 수준</li>
+</ol>
+</div>
+
+<hr class="section-divider">
+<p style="text-align:center; color:#9ca3af; font-size:11px; margin-top:40px;">
+  Eddy PM | 2026-04-21 | Confidential
+</p>
+
+</body>
+</html>
