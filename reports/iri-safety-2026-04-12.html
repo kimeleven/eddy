@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>IRI-Safety 주간 보고서 — 2026-04-12</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 IRI-Safety 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-12 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>산업안전보건법·중대재해처벌법 의무 이행 관리 SaaS (Next.js + Prisma + E2E)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-04</td></tr>
+<tr><td><b>전체 커밋</b></td><td>100건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>81건</td></tr>
+<tr><td><b>현재 상태</b></td><td>Phase 33 완료 — 법적 의무 기록 모듈 33개 구현 완료, 추가 Phase 34~35 기획 중</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<table>
+<tr><th>시기</th><th>주요 변경</th><th>커밋 수</th></tr>
+<tr><td>초기 기반<br/>2026-04-04~05</td><td>IRI 안전관리 SaaS 초기 구축, 법적 갭 분석, 토스트 알림/사용자 관리/감사 로그, 비밀번호 인증, 도급/협력업체 관리</td><td>19</td></tr>
+<tr><td>Phase 5~7<br/>2026-04-05~06</td><td>법령 검색 페이지(법제처 API), WORKER 접근 차단, E2E 38→103개 TC 확장</td><td>10</td></tr>
+<tr><td>Phase 8~13<br/>2026-04-06~08</td><td>건강진단, 협력업체 협의체/순회점검, 위험요인 신고, 안전보건관리규정, 작업환경측정, 경영방침 — DB+UI+E2E 세트로 구현</td><td>20</td></tr>
+<tr><td>Phase 14~16<br/>2026-04-08</td><td>MSDS 화학물질, 유해위험기계 안전검사, 중처법 §4 잔여 의무(예산/의견청취/대응매뉴얼), BUG-008~010 수정</td><td>12</td></tr>
+<tr><td>Phase 17~21<br/>2026-04-08~09</td><td>안전인증·자율안전확인, MSDS 교육 이수, 건강진단 사후관리, 산업안전보건위원회, 보호구 지급·관리 — E2E TC-66~77</td><td>12</td></tr>
+<tr><td>Phase 22~25<br/>2026-04-09~10</td><td>근골격계 유해요인 조사, 안전보건표지, 일상 안전점검·TBM, 작업허가서 — E2E TC-78~89</td><td>10</td></tr>
+<tr><td>Phase 26~30<br/>2026-04-10</td><td>고객응대근로자 보호조치, 근로자 작업중지권, 특수형태근로종사자 교육, 폭염·한파 작업관리, 관리감독자 직무교육</td><td>10</td></tr>
+<tr><td>Phase 31~33<br/>2026-04-11</td><td>직장 내 괴롭힘 예방·처리(근기법 §76조), 산업재해 원인조사·재발방지, 위험성평가 공지 기록</td><td>7</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-06</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>c1051d6</td><td>CSS import 타입 선언 + session 타입 캐스트 수정 — Vercel 빌드 에러 해결</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>b97c947</td><td>postinstall에 prisma generate 추가 — Vercel 빌드 자동 스키마 생성</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>0c91bb1</td><td>QA 5차 — E2E 테스트 38개 TC로 확장, BUG-004(WORKER 접근), BUG-005 발견</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>5cfaa3e</td><td>법령 검색 페이지 신규 구현 + BUG-004(WORKER 관리자 메뉴 접근) 차단 수정</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>e2afa3b</td><td>법령 검색 URL params 자동 검색 + 법제처 바로가기 링크 + API 프리셋 fallback 구현</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-07</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>cfbb338</td><td>법령 검색 프리셋 모드 UX 개선 — notice 배너 + 법제처 바로가기 (BUG-006)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>92bd5ca</td><td>근로자 건강진단 관리 DB 스키마 + Server Actions 구현 (산안법 §75~78)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>9ce9233</td><td>도급/협력업체 페이지에 협의체 회의록·순회점검 탭 추가 (산안법 §64~65)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>51864a9</td><td>근로자 위험요인 신고 DB + Server Actions (산안법 §36, 중처법 §4③)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>c78e6ff</td><td>근로자 위험요인 신고 UI 구현 (산안법 §36, 중처법 §4③)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>92a3643</td><td>안전보건관리규정 DB + Server Actions (산안법 §25~26)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>61fa4d8</td><td>안전보건관리규정 UI 구현 (산안법 §25~26)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>e75cf4a</td><td>작업환경측정 DB + Server Actions (산안법 §125)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>d000027</td><td>작업환경측정 UI 구현 (산안법 §125)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>7f1ebd3</td><td>경영방침 DB + Server Actions (중처법 시행령 §4①)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>7247333</td><td>경영방침 UI 구현 (중처법 시행령 §4①)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-08</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>9d36efa</td><td>MSDS 화학물질 DB + Server Actions (산안법 §108~115)</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>ffcfce1</td><td>MSDS 화학물질 UI — 목록/등록폼/교육 만료 경고/사이드바 구현</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>a277dfb</td><td>유해위험기계 안전검사 DB + Server Actions (산안법 §45~46)</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>3066549</td><td>유해위험기계 안전검사 UI — 불합격 경고, D-day 표시, 등록폼 구현 (산안법 §45~46)</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>eafb4ae</td><td>중처법 §4 잔여 의무 DB — 예산/의견청취/대응매뉴얼 Server Actions</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>358a407</td><td>중처법 §4 잔여 의무 UI — 예산·의견청취·대응매뉴얼 3개 페이지 + 사이드바</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>93994ed</td><td>korean-law-mcp 패키지 제거 — 법제처 오픈 API 직접 호출로 전환 (Sanghun 지시)</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>69200a2</td><td>건강진단 UI — 목록/등록폼/사후관리 배지/D-day/사이드바 구현 (산안법 §75~78)</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>a6f9463</td><td>안전인증·자율안전확인 DB + Server Actions (산안법 §84~89)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-09</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>f7efc67</td><td>MSDS 근로자별 교육 이수 기록 DB + Server Actions (산안법 §111)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>53f4fb2</td><td>안전인증 관리 UI — 목록/KPI/등록폼/사이드바 구현</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>586abc7</td><td>건강진단 사후관리 이행 기록 DB + Server Actions (산안법 §132)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>afbd07d</td><td>MSDS 근로자별 교육 이수 UI 구현 (산안법 §111)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>1794e61</td><td>산업안전보건위원회 DB + Server Actions (산안법 §72~73)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>b98df6c</td><td>건강진단 사후관리 UI + 산업안전보건위원회 UI 동시 구현</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>bca613e</td><td>보호구 지급·관리 DB + Server Actions (산안법 §38·§173)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>131f7b6</td><td>보호구 지급·관리 UI 구현 (산안법 §38·§173)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>cb4d217</td><td>QA 16차 — Phase 17~21 E2E 테스트 추가 (TC-66~77)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>0ee609f</td><td>calcExpiryDate export 제거 — 'use server' 비async export 빌드 에러 수정 (BUG-012)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>12d0a66</td><td>근골격계 유해요인 조사 DB + Server Actions (산안법 §156~157)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>5ed430d</td><td>근골격계 유해요인 조사 UI 구현 (산안법 §156~157)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>afdb00c</td><td>안전보건표지 관리 DB + Server Actions (산안법 §37)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>0c4098b</td><td>안전보건표지 관리 UI 구현 (산안법 §37)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-10</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>221a3f4</td><td>일상 안전점검·TBM 기록 DB + Server Actions (산안법 §36, §38)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>4fd65ec</td><td>일상 안전점검·TBM 관리 UI 구현 (산안법 §36·§38)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>b50662a</td><td>세션 타이밍 이슈 수정 — 대시보드 경유 후 예산 페이지 이동 (TC-63 버그)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>72eae61</td><td>작업허가서 DB + Server Actions (산안법 §42)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>db667d8</td><td>작업허가서 관리 UI 구현 (산안법 §42)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>9ea9146</td><td>고객응대근로자 보호조치 DB + Server Actions (산안법 §41)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>17450e3</td><td>고객응대근로자 보호조치 UI 구현 (산안법 §41)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>9b0b7cf</td><td>근로자 작업중지권 행사 기록 DB + Server Actions (산안법 §51~53)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>6673ccd</td><td>특수형태근로종사자 안전보건교육 DB + Server Actions (산안법 §77~78)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>adafd2b</td><td>작업중지권 + 특수형태근로종사자 교육 UI 동시 구현 (Phase 27·28)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>3f25dc1</td><td>관리감독자 직무교육 기록 DB + Server Actions (산안법 §16·§29)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>34a614c</td><td>관리감독자 직무교육 기록 UI 구현 (산안법 §16·§29④)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-11</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>b3f2226</td><td>폭염·한파 이상기온 작업관리 DB + Server Actions (산안법 §38)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>24f6dcb</td><td>폭염·한파 이상기온 작업관리 UI 구현 (산안법 §38)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>5dbc6f7</td><td>직장 내 괴롭힘 예방·처리 기록 DB + Server Actions (근기법 §76조의2~3)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>3adfa93</td><td>직장 내 괴롭힘 예방·처리 UI 구현 (근기법 §76조의2~3)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>525e177</td><td>산업재해 원인조사·재발방지계획 DB + Server Actions (산안법 §57, 중처법 §4⑧)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>e7ab29a</td><td>산업재해 원인조사·재발방지계획 UI 구현 (산안법 §57, 중처법 §4⑧)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>fa85ad4</td><td>위험성평가 공지 기록 DB + Server Actions (산안법 §36④)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>eb44f70</td><td>위험성평가 공지 기록 UI 구현 (산안법 §36④)</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ Phase 33개 완료 — 산안법·중처법·근기법 의무 기록 모듈 전수 구현</li>
+<li class='done'>✅ E2E TC 89개 이상 구성 (Phase별 3케이스 시나리오)</li>
+<li class='done'>✅ BUG-008~012 전부 수정 완료</li>
+<li class='done'>✅ 법령 검색 — 법제처 오픈 API 직접 연동 (MCP 제거)</li>
+<li class='progress'>🔄 Phase 34~35 신규 기획 중 (PLAN.md 8차 갱신 반영)</li>
+<li class='todo'>⏳ E2E 전체 회귀 테스트 최종 확인 필요</li>
+</ul>
+
+<h2>4. 남은 작업</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>Phase 34~35 상세 기획 및 구현</td><td>Dev1/Dev2</td><td>🟡 MEDIUM</td></tr>
+<tr><td>E2E 전체 회귀 테스트 실행 및 PASS 확인</td><td>QA</td><td>🟡 MEDIUM</td></tr>
+<tr><td>Vercel 배포 안정화 확인</td><td>Dev1</td><td>🟢 LOW</td></tr>
+</table>
+
+</body>
+</html>

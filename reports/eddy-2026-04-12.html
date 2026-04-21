@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>Eddy PM 주간 보고서 — 2026-04-12</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 Eddy PM 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-12 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>역할</b></td><td>전체 팀 PM — 텔레그램 모니터링, 팀 순회, 태스크 조율, state 관리</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-02</td></tr>
+<tr><td><b>전체 커밋</b></td><td>533건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>236건</td></tr>
+<tr><td><b>현재 상태</b></td><td>전 팀 정상 운영 중 — AI-Secretary 팀 신규 셋업 완료 (2026-04-11)</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<table>
+<tr><th>시기</th><th>주요 활동</th><th>커밋 수</th></tr>
+<tr><td>초기 셋업<br/>2026-04-02</td><td>Eddy PM 역할 정의, LaunchAgent 10분 주기 설정, ELDO 프로젝트 신규 등록 및 계획 수립</td><td>60</td></tr>
+<tr><td>팀 가동<br/>2026-04-03~05</td><td>전 팀 크레딧 부족 대기, ELDO/ReviewBot/DevGate/IRI-Safety 재개, 토큰 절약 모드 시행</td><td>100</td></tr>
+<tr><td>집중 운영<br/>2026-04-06</td><td>전 팀 검수 재개, ELDO BETA-34~37 진행 지시, DevGate E2E 금지 반영, IRI-Safety 법령 MCP→API 전환 처리</td><td>90</td></tr>
+<tr><td>PM 순회 심화<br/>2026-04-07~09</td><td>IRI-Safety Phase 8~23 연속 배정, DevGate 버그 수정 지시, ReviewBot 쿠팡 직접검색 직접 구현, 텔레그램 링크 수신 처리</td><td>60</td></tr>
+<tr><td>이번 주<br/>2026-04-10~12</td><td>IRI Phase 24~33 완료 확인, ReviewBot 헬리녹스·뮬 운동화 포스팅 처리, AI-Secretary 팀 셋업, 1시간 크론 state 업데이트 유지</td><td>80</td></tr>
+</table>
+
+<h2>2. 이번 주 주요 PM 활동 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>주요 활동</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-06 (주요 사건)</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>0438e43</td><td>DevGate E2E 전체 금지 반영 (Sanghun 직접 지시)</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>7bccdc9</td><td>DevGate launchd 재등록, ELDO/IRI 신규태스크 배정 확인</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-07 (주요 사건)</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>c73d5e3</td><td>ReviewBot 쿠팡 직접검색 Eddy가 직접 구현, ELDO/IRI 태스크 정리</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>ee02437</td><td>BUG-006 IRI 법령검색 직접 처리</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-08 (주요 사건)</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>d5b6869</td><td>IRI-Safety 법령정보 MCP→오픈API 전환 처리 + state 업데이트</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>f6e0934</td><td>과천사무실 지원 리마인더 크론 등록</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>243107b</td><td>존댓말 원칙 + 그룹 채팅 답변 원칙 학습 및 기록</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>a06778b</td><td>전 팀 점검, IRI BUG-008 prisma generate 직접 처리</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-09 (주요 사건)</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>f7137f9</td><td>ELDO/DevGate/BizTool 보류 처리 + IRI PLAN.md 전송</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>cdcea4e</td><td>BUG-011/012 직접 수정 + QA 17차 배정</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>31f3ddd</td><td>Agent 기획 IRI팀 전달 + 1시간 크론 등록</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>5801c49</td><td>ReviewBot 보류 처리 + state 업데이트</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-10 (주요 사건)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>e8b0089</td><td>ReviewBot 하루 1회 재가동 — 클립팬 링크 수신, 크론 10시 설정</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>7867bc6</td><td>텔레그램 링크 3건 수신 처리 (봄신발/가방 승인, 헬리녹스 내일 10am 처리)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>273f4ca</td><td>ReviewBot %29 버그+태그 수정, 대시보드 갱신</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-11 (주요 사건)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>d2bf5d6</td><td>ReviewBot step1 link_received 버그 수정</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>42beb6d</td><td>헬리녹스 포스팅 완료 확인 + 봄 신발 내일 포스팅 설정</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>bdc5337</td><td>AI-Secretary 팀 셋업 완료 — 1시간 스케줄, Planner/Dev1/Dev2/QA 등록</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>cbc6de5</td><td>AI-Secretary 글로벌 방향 반영 — i18n + Stripe USD + 음성·비디오 로드맵</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>2a76eb1</td><td>AI-Secretary Phase5 보류 반영 (Sanghun 지시 — 음성통화까지만)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>33dfa31</td><td>PM 순회 — AI-Secretary BUG-005+Phase4(i18n) 완료 반영</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-12 (주요 사건)</td></tr>
+<tr><td>04-12</td><td class='commit-hash'>92a4eca</td><td>state.json 정기 업데이트 (2026-04-12T20:33)</td></tr>
+<tr><td>04-12</td><td class='commit-hash'>191ff99</td><td>state.json 정기 업데이트 (2026-04-13T01:00)</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ 전 팀 1시간 크론 정상 운영 중</li>
+<li class='done'>✅ ReviewBot — 헬리녹스·뮬 운동화 포스팅 완료</li>
+<li class='done'>✅ IRI-Safety Phase 33까지 완료 배정</li>
+<li class='done'>✅ AI-Secretary 신규 팀 셋업 완료 (2026-04-11)</li>
+<li class='done'>✅ DevGate E2E 82/82 PASS 달성 확인</li>
+<li class='done'>✅ ELDO Bloomberg 스타일 + E2E 31/31 PASS 확인</li>
+<li class='progress'>🔄 AI-Secretary Phase 4 i18n 완료 확인 중</li>
+</ul>
+
+<h2>4. 이번 주 팀별 활동 요약</h2>
+<table>
+<tr><th>팀</th><th>이번 주 커밋</th><th>주요 성과</th></tr>
+<tr><td>ELDO</td><td>59건</td><td>Bloomberg 스타일 완성, E2E 31/31 PASS, BETA-50 완료</td></tr>
+<tr><td>ReviewBot</td><td>32건</td><td>헬리녹스·뮬 운동화 포스팅, 쿠팡 직접검색 전환</td></tr>
+<tr><td>DevGate</td><td>61건</td><td>E2E 82/82 PASS 달성, Step 27~29 추가</td></tr>
+<tr><td>IRI-Safety</td><td>81건</td><td>Phase 22~33 완료, 법적 의무 모듈 33개 전수 구현</td></tr>
+<tr><td>LiveOrder</td><td>70건</td><td>Task 36~64 완료 (카카오 챗봇, 관리자 전체, 이상거래 모니터링)</td></tr>
+<tr><td>Eddy</td><td>236건</td><td>전 팀 PM 순회, AI-Secretary 셋업, state 정기 업데이트</td></tr>
+<tr><td>XBot</td><td>0건</td><td>— (일시 중단)</td></tr>
+</table>
+
+</body>
+</html>

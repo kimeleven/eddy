@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset='UTF-8'>
+<title>ReviewBot 주간 보고서 — 2026-04-12</title>
+<style>
+  body { font-family: 'Apple SD Gothic Neo', -apple-system, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; line-height: 1.6; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: 10px; font-size: 24px; }
+  h2 { color: #2563eb; margin-top: 36px; border-left: 4px solid #2563eb; padding-left: 12px; font-size: 18px; }
+  h3 { color: #374151; margin-top: 20px; font-size: 15px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 24px; }
+  .summary { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  .summary td { font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 10px; text-align: left; }
+  th { background: #f3f4f6; font-weight: 600; }
+  .commit-hash { font-family: monospace; color: #6b7280; font-size: 12px; }
+  .date-group { background: #f9fafb; font-weight: 600; color: #374151; }
+  .done { color: #16a34a; }
+  .progress { color: #2563eb; }
+  .todo { color: #9ca3af; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 30px 0; }
+  @media print { body { padding: 15px; } h1 { font-size: 20px; } }
+</style>
+</head>
+<body>
+<h1>📊 ReviewBot 주간 보고서</h1>
+<p class='meta'>보고일: 2026-04-12 | 작성: Eddy PM</p>
+
+<div class='summary'>
+<table>
+<tr><td><b>프로젝트</b></td><td>네이버 블로그 자동 리뷰 포스팅 봇 (쿠팡 파트너스 제휴 수익화)</td></tr>
+<tr><td><b>시작일</b></td><td>2026-04-02</td></tr>
+<tr><td><b>전체 커밋</b></td><td>179건</td></tr>
+<tr><td><b>이번 주 커밋</b></td><td>32건</td></tr>
+<tr><td><b>현재 상태</b></td><td>실 운영 중 — 하루 1회 10시 크론 실행, 뮬 운동화 MX12 포스팅 완료 (2026-04-12)</td></tr>
+</table>
+</div>
+
+<h2>1. 프로젝트 시작~현재 전체 변경 이력</h2>
+<table>
+<tr><th>시기</th><th>주요 변경</th><th>커밋 수</th></tr>
+<tr><td>Phase 1~3<br/>2026-04-02</td><td>블로그 포스팅 모듈, 키워드 수집기, 상품 리서치, Gemini/Imagen4 유틸, 전체 파이프라인 통합</td><td>8</td></tr>
+<tr><td>Phase 4~6<br/>2026-04-02</td><td>텔레그램 승인, 이미지 생성, 실제 브라우저 셀렉터 검증, 쿠팡 파트너스 정확도 개선, 정보글 생성기</td><td>18</td></tr>
+<tr><td>Phase 7~10<br/>2026-04-02~03</td><td>SEO 내부 링크, 댓글 유도, Anthropic SDK→Claude CLI 전환, 이미지 경로 상대화, logNo URL 검증, 포스팅 이력 관리/중복 방지</td><td>25</td></tr>
+<tr><td>Phase 11~13<br/>2026-04-03~04</td><td>태그 입력, rank-tracker, 봄 시즌 키워드 10개, 네이버 서치어드바이저 RSS 자동화, 조회수 기반 키워드 피드백</td><td>20</td></tr>
+<tr><td>Phase 14~23<br/>2026-04-04</td><td>시리즈 글 자동화, 주간 성과 리포트, 일일 텔레그램 브리핑, 댓글 모니터링, 검색 순위 변화 감지, 자동 댓글 답글, 이웃 자동 추가, 전체 cron 통합</td><td>20</td></tr>
+<tr><td>Phase 25 운영전환<br/>2026-04-04~05</td><td>하루 2포스팅, OG카드 키보드 삭제, 이미지 자동 검색, 파트너스 링크 중복 방지, 쿠팡 직접 검색 전환(네이버 쇼핑 API 제거)</td><td>30</td></tr>
+<tr><td>안정화 모드<br/>2026-04-06~09</td><td>Dev1 순회 #6~22 상태 점검, pending-links 관리, 네이버 세션 만료 이슈 반복 확인</td><td>22</td></tr>
+<tr><td>운영 재개<br/>2026-04-09~12</td><td>pending-links 초기화, 넥선풍기→헬리녹스→뮬 운동화 순차 포스팅, %29 링크 버그 수정, 태그 추천 기능 추가</td><td>15</td></tr>
+</table>
+
+<h2>2. 이번 주 변경 이력 (상세)</h2>
+<table>
+<tr><th width='90'>날짜</th><th width='70'>커밋</th><th>변경 내용</th></tr>
+<tr class='date-group'><td colspan='3'>2026-04-06</td></tr>
+<tr><td>04-06</td><td class='commit-hash'>fb638e7</td><td>Dev1 순회 #6 — 전 태스크 완료, 안정화 모드 진입 확인</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-07~08</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>887117f</td><td>Dev1 순회 #9 — 안정화 모드 유지, pending-links 14개 대기 상태</td></tr>
+<tr><td>04-07</td><td class='commit-hash'>ca42c63</td><td>쿠팡 직접 검색으로 전환 — 네이버 쇼핑 API 완전 제거, Playwright로 coupang.com 스크래핑</td></tr>
+<tr><td>04-08</td><td class='commit-hash'>788f0eb</td><td>Dev1 순회 #13 — BUG-002 수정 확인, pending-links 14개 대기 지속</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-09</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>9008420</td><td>pending-links 전체 초기화 (Sanghun 지시) — 오래된 대기 항목 정리</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>506e32a</td><td>Dev1 순회 #20 — 넥선풍기 리뷰 이미지 경로 업데이트, TASKS 기록</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>86d835c</td><td>Dev1 순회 #21 — 넥선풍기 포스팅 시도, 네이버 세션 만료로 차단, 수동 재로그인 필요</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>ade9861</td><td>Planner — 다음 아이템 선정(헬리녹스 체어원, 봄 신발) + 파트너스 링크 요청 전송</td></tr>
+<tr><td>04-09</td><td class='commit-hash'>148881a</td><td>Dev1 순회 #22 — 목걸이선풍기 리뷰+이미지 준비 완료, 세션 만료로 포스팅 대기</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-10</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>8760ebd</td><td>클립팬 미니 파트너스 링크 수신 및 등록 (Sanghun 직접 제공)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>f093576</td><td>URL 인코딩(%29) 링크 파싱 버그 수정 + 포스팅 시 태그 추천 기능 추가</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>148e180</td><td>목걸이선풍기 대기 항목 삭제 (Sanghun 지시)</td></tr>
+<tr><td>04-10</td><td class='commit-hash'>44dd2b7</td><td>쿠팡 파트너스 링크 수신 반영 (Sanghun 직접 제공)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-11</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>903299d</td><td>헬리녹스 체어원 파트너스 링크 누락 수정 후 등록</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>c90c9e3</td><td>헬리녹스 bot-state를 link_received로 설정 — 10am step3 포스팅 준비 완료</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>68247f4</td><td>step1에서 link_received 상태 항목 스킵 처리 — 포스팅 덮어쓰기 방지 버그 수정</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>6c151e4</td><td>헬리녹스 체어원 포스팅 완료 — step3 수동 복원 실행 (2026-04-11 10:00)</td></tr>
+<tr><td>04-11</td><td class='commit-hash'>0e1034a</td><td>헬리녹스 완료 확인, 봄 신발(뮬 운동화) queued (2026-04-12 10am 예정)</td></tr>
+<tr class='date-group'><td colspan='3'>2026-04-12</td></tr>
+<tr><td>04-12</td><td class='commit-hash'>1799f52</td><td>뮬 운동화 통굽 MX12 파트너스 링크 수신 및 등록 (Sanghun 직접 제공)</td></tr>
+<tr><td>04-12</td><td class='commit-hash'>380d7fc</td><td>뮬 운동화 MX12 포스팅 완료 — HTML 텔레그램 전송 (2026-04-12)</td></tr>
+</table>
+
+<h2>3. 현재 상태</h2>
+<ul>
+<li class='done'>✅ 파이프라인 실 운영 중 (하루 1회 10시 크론 실행)</li>
+<li class='done'>✅ 헬리녹스 체어원 포스팅 완료 (2026-04-11)</li>
+<li class='done'>✅ 뮬 운동화 MX12 포스팅 완료 (2026-04-12)</li>
+<li class='done'>✅ 쿠팡 직접 스크래핑 방식으로 전환 (네이버 쇼핑 API 의존성 제거)</li>
+<li class='done'>✅ URL 인코딩 링크 버그 수정 + 태그 추천 기능 추가</li>
+<li class='progress'>🔄 봄 시즌 아이템 파트너스 링크 대기 중 (클립팬 포함)</li>
+<li class='todo'>⏳ 네이버 세션 만료 시 수동 재로그인 필요 (Sanghun 개입 필요)</li>
+</ul>
+
+<h2>4. 남은 작업</h2>
+<table>
+<tr><th>작업</th><th>담당</th><th>우선순위</th></tr>
+<tr><td>봄 시즌 아이템 파트너스 링크 수신 후 포스팅 진행</td><td>Dev1 자동</td><td>🔴 HIGH</td></tr>
+<tr><td>네이버 세션 만료 시 재로그인 (수동)</td><td>Sanghun</td><td>🔴 HIGH</td></tr>
+<tr><td>클립팬 미니 등 대기 아이템 포스팅</td><td>Dev1 자동</td><td>🟡 MEDIUM</td></tr>
+<tr><td>조회수 기반 키워드 피드백 결과 확인</td><td>Dev1</td><td>🟢 LOW</td></tr>
+</table>
+
+</body>
+</html>

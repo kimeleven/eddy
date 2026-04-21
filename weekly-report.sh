@@ -6,7 +6,6 @@ if [ -f "$HOME/.eddy_env" ]; then
   source "$HOME/.eddy_env"
 fi
 
-export CLAUDE_CODE_OAUTH_TOKEN="${CLAUDE_CODE_OAUTH_TOKEN}"
 
 EDDY_DIR="$HOME/eddy-agent/eddy"
 LOG_FILE="$EDDY_DIR/weekly-report.log"

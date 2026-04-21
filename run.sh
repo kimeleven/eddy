@@ -7,7 +7,6 @@ if [ -f "$HOME/.eddy_env" ]; then
   source "$HOME/.eddy_env"
 fi
 
-export CLAUDE_CODE_OAUTH_TOKEN="${CLAUDE_CODE_OAUTH_TOKEN}"
 
 EDDY_DIR="$HOME/eddy-agent/eddy"
 LOG_FILE="$EDDY_DIR/eddy.log"
@@ -124,27 +123,26 @@ Sanghun의 클론처럼 생각하고 판단하라.
 - Eddy비서 그룹 Chat ID: -1003651704963
 - Sanghun user ID: 5799051013 (그룹에서 누가 보냈는지 확인용)
 
-## 전체 팀 구조 (2026-04-05 기준)
+## 전체 팀 구조 (2026-04-19 기준)
 
 ### Active Teams
-| Team | Project Dir | Team Files | 에이전트 | 모델 |
-|------|-------------|------------|----------|------|
-| ReviewBot | ~/eddy-agent/reviewbot | ~/eddy-agent/reviewbot-team/ | Dev1(30분), Pipeline(1h) | Sonnet |
-| IRI-Safety | ~/eddy-agent/iri-safety | ~/eddy-agent/iri-safety-team/ | Planner(2h), Dev1(1h), Dev2(1h), QA(1h) | Sonnet |
+| Team | Project Dir | Team Files | Schedule |
+|------|-------------|------------|----------|
+| YTTrans | ~/eddy-agent/yttrans | ~/eddy-agent/yttrans-team/ | 2시간마다 (오늘 하루) — Phase 2: YouTube 영상 제목/설명 업데이트 기능 구현 |
+| InsaneSearch | ~/eddy-agent/insane-search | ~/eddy-agent/insane-search-team/ | 2시간마다 19:00~07:00 — SNS 우회 스킬 분석 + 마케팅팀 통합 설계 |
+| LiveOrder MVP | ~/eddy-agent/liveorder | ~/eddy-agent/liveorder-team/ | 2시간마다 19:00~07:00 — PortOne 제거 + 송금 방식 + shopCode 링크 |
 
 ### Paused Teams
 | Team | Status |
 |------|--------|
+| BizTool | 보류 — Sanghun 지시 (2026-04-16~) |
+| Marketing | 보류/삭제 — Sanghun 지시 (2026-04-16~) |
+| ReviewBot | 보류 — Sanghun 지시 (2026-04-15~) |
+| AI-Secretary (JENI) | 팀 에이전트 보류 (웹서버만 가동 중, 포트 3003) |
+| IRI-Safety | 보류 — Sanghun 지시 (2026-04-11~) |
 | ELDO | 보류 — Sanghun 지시 (2026-04-09~) |
 | DevGate | 보류 — Sanghun 지시 (2026-04-09~) |
-| BizTool | 보류 — Sanghun 지시 (2026-04-09~) |
 | XBot | 보류 — 봇 감지 차단 (2026-04-05~) |
-| LiveOrder | 개발 종료 (2026-04-03~) |
-
-### 각 팀 현재 방향
-- **ReviewBot**: 안정화 모드 (리뷰 자동화 봇, 하루 2포스팅)
-- **IRI-Safety**: 산업안전 컴플라이언스 SaaS (Phase 20 완료, Phase 21 보호구 지급 예정)
-- **ReviewBot 주의**: 자동 포스팅 중단됨. Sanghun이 상품 링크를 직접 주지 않으면 포스팅 금지. 스마트스토어/네이버 링크 요청 금지.
 
 ## PM은 Eddy만 — 팀 PM 없음
 - 각 팀에 별도 PM 에이전트 없음
