@@ -2,6 +2,7 @@
 _Eddy가 처리 중이거나 대기 중인 작업 목록_
 
 ## 진행 중
+- [x] **BlogDoc 프로젝트 Phase 1 완료** — Sanghun 지시 (2026-04-25). 네이버 쇼핑커넥터/쿠팡 파트너스 어필리에이트 블로그 자동 생성. Next.js 프로젝트 세팅, 3단계 UI, /api/suggest(상품추천), /api/blog/generate(블로그생성) API 구현. 빌드 성공. Vercel 배포 및 고도화 예정.
 - [x] **Wiki 지식백과 설치 및 운영** — Sanghun 지시 (2026-04-20). Karpathy LLM Wiki 개념 기반. ~/eddy-agent/wiki/ 에 Python 서버 구축 완료 (포트 3456). 프로젝트별 지식 페이지 초기 생성 완료. 추가 콘텐츠 구성 논의 필요.
 
 ## 대기 중
