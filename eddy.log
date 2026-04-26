@@ -14006,3 +14006,1308 @@ launchd 상태 확인 결과:
 [2026-04-24 20:00:00] Eddy 실행 시작
 [telegram-log] 1개 메시지 저장 완료
 [2026-04-24 20:00:28] Eddy 스킵 — 이전 실행 중 (PID 38917)
+CLAUDE.md는 eddy-agent 레벨에 있지만 별도 git repo가 아니므로, eddy repo 내에서는 관리 범위 밖입니다. CLAUDE.md 파일 자체는 이미 수정 완료되어 다음 실행부터 반영됩니다.
+
+처리 완료:
+
+- **LiveOrder MVP 중단** — Sanghun 지시 즉시 처리
+  - `com.eddy.liveorder-mvp-dev` launchd 언로드 완료
+  - CLAUDE.md: Active → Paused 이동
+  - 대시보드 업데이트 + push 완료
+  - state.json 업데이트 (last_update_id: 360082562)
+  - 텔레그램 보고 완료
+[2026-04-24 20:02:03] Eddy 실행 완료
+[2026-04-24 20:02:03] status.json 업데이트 완료
+[main 4b3625a] status: 2026-04-24 20:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-24 20:30:28] Eddy 실행 시작
+모든 작업 완료했습니다.
+
+**ShopGuide 팀 신규 생성 요약:**
+
+- **프로젝트**: `~/eddy-agent/shopguide` — Next.js 16 + Prisma 7 + SQLite + Tailwind
+- **팀 파일**: `~/eddy-agent/shopguide-team/` (TASKS.md, PLAN.md, dev.sh)
+- **GitHub**: `kimeleven/shopguide` (push 완료)
+- **launchd**: `com.eddy.shopguide-dev` — 2시간 간격, 19~07시 운영
+- **빌드**: 성공 (11 routes)
+
+**구현된 기능:**
+- 셀러: 상품 등록(선택사항 3개), 주문 관리, 엑셀 다운로드
+- 구매자: 채팅 플로우 (상품 비교 → 옵션 선택 → 배송지 → 결제방식 선택)
+- 결제: 카카오로보내기, 토스로보내기, 직접계좌이체
+- Auth: 카카오 OAuth 구조 완성 (REST API 키 발급 필요)
+
+**Sanghun 액션 필요:**
+1. 카카오 디벨로퍼에서 REST API 키 발급 (연락처/주소 동의항목 설정)
+2. Vercel에 shopguide 프로젝트 연결
+[2026-04-24 20:43:35] Eddy 실행 완료
+[2026-04-24 21:00:00] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **Active 팀 3개**: 최근 4시간 커밋 없음 (야간 시간대 정상)
+  - RHWP: Phase 1 대기 (스케줄 미설정)
+  - ShortsGen: Phase 2 블로킹 — Google OAuth 환경변수 대기
+  - ShopGuide: Phase 1 개발 중 — 카카오 REST API 키 대기
+- **보고**: 텔레그램 전송 완료
+- **커밋/푸시**: 완료
+[2026-04-24 21:01:48] Eddy 실행 완료
+[2026-04-24 21:01:48] status.json 업데이트 완료
+[main 6f5943e] status: 2026-04-24 21:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-24 21:13:35] Eddy 실행 시작
+[telegram-log] 1개 메시지 저장 완료
+실행 완료.
+
+**처리 내역:**
+- Sanghun 지시 "Db는 네온으로" → ShopGuide TASKS.md에 URGENT 반영 (SQLite → Neon PostgreSQL)
+- launchd 상태 정상 (CLAUDE.md와 일치)
+- state.json 업데이트 + git push 완료
+- 텔레그램 보고 전송 완료
+
+**팀 현황 요약:**
+| 팀 | 상태 | 블로커 |
+|---|---|---|
+| ShopGuide | 초기 세팅 완료, DB→Neon 지시 반영 | 카카오 REST API 키 |
+| ShortsGen | Phase 1 완료, Phase 2 블로킹 | Google OAuth 환경변수 |
+| RHWP | 진행 없음 | launchd 스케줄 미설정 |
+[2026-04-24 21:17:17] Eddy 실행 완료
+[2026-04-24 21:47:18] Eddy 실행 시작
+[telegram-log] 1개 메시지 저장 완료
+실행 완료.
+
+**처리 내역:**
+- Sanghun 메시지 1건 처리: "ShopGuide 채팅 에이전트 AI API 필요" → ShopGuide TASKS.md URGENT 반영
+- 텔레그램으로 AI API 옵션 3가지 (Anthropic/OpenAI/Gemini) 제시 + 팀 현황 보고
+- launchd 상태 정상 (CLAUDE.md와 일치)
+- 활성 팀 3개 (ShopGuide/ShortsGen/RHWP) 모두 외부 키/크레딧 대기 상태
+- state.json 업데이트 + git push 완료
+[2026-04-24 21:51:03] Eddy 실행 완료
+[2026-04-24 21:51:04] status.json 업데이트 완료
+[2026-04-24 22:00:00] Eddy 실행 시작
+[telegram-log] 1개 메시지 저장 완료
+완료. 
+
+**처리 내역:**
+- Sanghun 텔레그램 메시지 "제미나이 키를 사용하자 나중에 유료전환" 확인
+- ShopGuide TASKS.md에 Google Gemini API 사용 지시 반영
+- state.json 업데이트 (last_update_id: 360082567)
+- git push 완료
+- 텔레그램 보고 전송 완료
+
+**launchd 상태:** CLAUDE.md와 일치, 이상 없음. 보류 팀 프로세스 없음, 활성 팀(shopguide-dev, dashboard, ai-secretary-server) 정상.
+[2026-04-24 22:02:35] Eddy 실행 완료
+[2026-04-24 22:02:35] status.json 업데이트 완료
+[main 4dc7f6f] status: 2026-04-24 22:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-24 22:21:04] Eddy 실행 시작
+실행 완료. 요약:
+
+**처리 내역:**
+1. **환경변수 확인** — `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GEMINI_API_KEY` 모두 `.env.local`에 정상 설정 확인
+2. **블로그작성 기능 구현 완료** (ShortsGen)
+   - `components/Sidebar.tsx` — "블로그작성" 메뉴 추가
+   - `app/blog/page.tsx` — 블로그 생성 UI (YouTube URL 입력 → 티스토리/네이버 2가지 포맷)
+   - `app/api/blog/generate/route.ts` — YouTube oEmbed로 영상 정보 fetch → Gemini API로 블로그 콘텐츠 생성
+3. **빌드 성공**, GitHub push 완료 (`2cbf113`)
+4. **TASKS.md 업데이트**, state.json 갱신, 텔레그램 보고 완료
+
+**launchd 상태:** CLAUDE.md와 일치. 이상 없음.
+[2026-04-24 22:28:01] Eddy 실행 완료
+[2026-04-24 22:58:02] Eddy 실행 시작
+정기 점검 완료.
+
+- **새 텔레그램 메시지**: 없음
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **ShortsGen**: 블로그작성 기능 v1 커밋 완료, Phase 2 개발 대기
+- **ShopGuide**: Neon PostgreSQL 마이그레이션 완료, Gemini API 연동 대기
+- **RHWP**: Phase 1 미착수 (스케줄 미정)
+- state.json 업데이트 및 커밋/푸시 완료
+[2026-04-24 23:00:00] Eddy 실행 완료
+[2026-04-24 23:00:00] Eddy 실행 시작
+실행 완료.
+
+- **새 텔레그램 지시**: 없음
+- **launchd**: 정상 (CLAUDE.md와 일치)
+- **ShortsGen**: 블로그작성 기능 추가 커밋 확인
+- **ShopGuide**: Neon PostgreSQL 마이그레이션 완료, Sanghun에게 DB 연결 문자열 입력 요청 보고함
+- **RHWP**: Phase 1 미착수 상태 유지
+- **보고**: 텔레그램 전송 완료
+- **커밋**: state.json 업데이트 푸시 완료
+[2026-04-24 23:01:34] Eddy 실행 완료
+[2026-04-24 23:01:35] status.json 업데이트 완료
+[main 980b564] status: 2026-04-24 23:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-24 23:30:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- **ShortsGen**: 블로그작성 기능 v1 완료 (커밋 4건, Gemini/Claude/Google Translate 폴백)
+- **ShopGuide**: Neon PostgreSQL 마이그레이션 완료, 빌드 성공. Neon 연결 문자열 + 카카오 API 키 대기 중
+- **RHWP**: 대기 중 (스케줄 미정)
+- launchd 상태 정상, CLAUDE.md와 일치
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-24 23:31:19] Eddy 실행 완료
+[2026-04-25 00:00:01] Eddy 실행 시작
+[2026-04-25 00:01:19] Eddy 스킵 — 이전 실행 중 (PID 62901)
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- launchd 상태 CLAUDE.md와 일치 (이상 없음)
+- **ShortsGen**: 블로그작성 기능 v1 완료, 커밋 5건 활발
+- **ShopGuide**: Neon PostgreSQL 전환 완료, Gemini API 연동 대기
+- **RHWP**: Phase 1 미착수 (스케줄 미설정)
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 00:01:27] Eddy 실행 완료
+[2026-04-25 00:01:27] status.json 업데이트 완료
+[main aa5cb07] status: 2026-04-25 00:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 00:31:19] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd: CLAUDE.md와 일치, 이상 없음
+- **ShortsGen**: 블로그작성 기능 v1 완성 (커밋 5건), Gemini 폴백 체계 구축
+- **ShopGuide**: Neon PostgreSQL 전환 완료, Neon 연결 문자열 Sanghun 설정 대기
+- **RHWP**: Phase 1 미착수 (스케줄 미정)
+- 텔레그램 보고 완료, state.json 커밋/푸시 완료
+[2026-04-25 00:32:52] Eddy 실행 완료
+[2026-04-25 01:00:00] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 텔레그램 신규 메시지: 없음
+- **ShortsGen**: 블로그작성 기능 v1 완성 (커밋 5건) — YouTube 음악 URL → 블로그 자동 생성, 3단계 번역 폴백(Claude→Gemini→Google Translate) 구현
+- **ShopGuide**: Gemini API 채팅 에이전트 연동 + Neon PostgreSQL 마이그레이션 완료
+- **RHWP**: Phase 1 대기 중 (활동 없음)
+- 보류팀: launchd 전부 정상 해제 상태
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 01:01:45] Eddy 실행 완료
+[2026-04-25 01:01:45] status.json 업데이트 완료
+[main fe409a4] status: 2026-04-25 01:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 01:02:52] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShortsGen**: 블로그작성 기능 추가 + 번역 폴백 구현 (커밋 5건)
+- **ShopGuide**: Gemini 채팅 에이전트 + Neon PostgreSQL 전환 (커밋 2건)
+- **RHWP**: Phase 1 미착수, 스케줄 미설정
+- Sanghun에게 텔레그램 보고 완료, state.json 커밋/푸시 완료
+[2026-04-25 01:04:44] Eddy 실행 완료
+[2026-04-25 01:34:44] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: 정상 (CLAUDE.md와 일치)
+- **ShortsGen**: 블로그작성 기능 v1 완료 (5커밋), Phase 2 대기
+- **ShopGuide**: Gemini 채팅 에이전트 + Neon PostgreSQL 완료 (3커밋), .env 키 입력 대기
+- **RHWP**: 변동 없음
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-25 01:36:14] Eddy 실행 완료
+[2026-04-25 02:00:00] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShortsGen**: 블로그작성 기능 추가 + Gemini/Claude/Google Translate 3단계 폴백 구현 (커밋 5건)
+- **ShopGuide**: Gemini API 채팅 에이전트 연동 + Neon PostgreSQL 마이그레이션 완료 (커밋 2건)
+- **RHWP**: 스케줄 미설정, Phase 1 대기 중
+- state.json 업데이트 + 텔레그램 보고 + git push 완료
+[2026-04-25 02:01:37] Eddy 실행 완료
+[2026-04-25 02:01:37] status.json 업데이트 완료
+[main 30706c0] status: 2026-04-25 02:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 02:06:14] Eddy 실행 시작
+실행 완료.
+
+- **새 텔레그램 메시지**: 없음
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **ShortsGen**: 블로그작성 기능 추가 + Gemini/Google Translate 번역 폴백 구현 (커밋 5건)
+- **ShopGuide**: Gemini API 채팅 에이전트 연동 + Neon PostgreSQL 마이그레이션 완료 (커밋 2건). Sanghun이 `.env`에 `GEMINI_API_KEY` + `DATABASE_URL` 입력 필요
+- **RHWP**: Phase 1 미착수 (launchd 스케줄 미설정)
+- state.json 업데이트 및 push 완료, 텔레그램 보고 전송 완료
+[2026-04-25 02:08:14] Eddy 실행 완료
+[2026-04-25 02:38:14] Eddy 실행 시작
+실행 완료.
+
+- **ShortsGen**: 활발 (블로그 프롬프트 + Gemini/Claude/Google Translate 3단계 폴백 구현)
+- **ShopGuide**: 활발 (Gemini API 채팅 연동 + Neon PostgreSQL 전환 완료)
+- **RHWP**: Phase 1 대기 (스케줄 미설정)
+- **새 텔레그램 지시**: 없음
+- **launchd**: 정상 (CLAUDE.md와 일치)
+[2026-04-25 02:39:32] Eddy 실행 완료
+[2026-04-25 03:00:00] Eddy 실행 시작
+실행 완료.
+
+- **새 텔레그램 메시지**: 없음
+- **launchd 상태**: CLAUDE.md와 일치 (ShopGuide 가동 중, 보류 팀 모두 언로드 상태)
+- **ShopGuide**: Gemini 채팅 에이전트 연동 커밋 1건 (4시간 내)
+- **ShortsGen**: 블로그 프롬프트 개선 + Gemini/Google Translate 폴백 체계 커밋 4건
+- **RHWP**: 활동 없음
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 03:01:43] Eddy 실행 완료
+[2026-04-25 03:01:43] status.json 업데이트 완료
+[main 192dac3] status: 2026-04-25 03:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 03:09:32] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지 없음
+- launchd 상태 CLAUDE.md와 일치
+- ShortsGen 3커밋 (블로그 번역 폴백), ShopGuide 2커밋 (카카오+Gemini), RHWP 변동 없음
+- state.json 업데이트 및 보고 완료
+[2026-04-25 03:11:24] Eddy 실행 완료
+[2026-04-25 03:41:24] Eddy 실행 시작
+정기 실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- **ShortsGen**: 블로그작성 프롬프트 기능 커밋 1건. YTTrans Phase 2 OAuth 개발 진행 중.
+- **ShopGuide**: 카카오 로그인 통합 + Gemini 채팅 에이전트 연동 완료 (커밋 2건). .env 키 입력 대기.
+- **RHWP**: 4시간 내 커밋 없음, Phase 1 대기.
+- launchd 상태 정상, 보류팀 미로드 확인.
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료.
+[2026-04-25 03:43:08] Eddy 실행 완료
+[2026-04-25 04:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 카카오 로그인/Gemini 연동 코드 완료, .env 입력 대기 (Sanghun)
+- **ShortsGen**: 블로그 기능 추가됨, Phase 2 YouTube OAuth 미착수
+- **RHWP**: 6일째 Phase 1 미시작, 스케줄 미설정
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-25 04:02:01] Eddy 실행 완료
+[2026-04-25 04:02:01] status.json 업데이트 완료
+[main c930ff4] status: 2026-04-25 04:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 04:13:08] Eddy 실행 시작
+실행 완료.
+
+- **새 메시지**: 없음
+- **launchd**: CLAUDE.md와 일치 (이상 없음)
+- **ShopGuide**: 카카오 로그인 통합 + Gemini 채팅 연동 완료 (2커밋). .env 키 3건 Sanghun 입력 대기
+- **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 진행 중
+- **RHWP**: Phase 1 미착수 (스케줄 미설정)
+- **보류 팀**: 변동 없음
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 04:14:50] Eddy 실행 완료
+[2026-04-25 04:44:51] Eddy 실행 시작
+실행 완료.
+
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **텔레그램**: 새 메시지 없음
+- **ShopGuide**: 카카오 로그인 + Gemini 채팅 연동 완료 (최근 4시간 내 커밋 2건). Sanghun 환경변수 입력 대기 중
+- **ShortsGen**: 블로그작성 v1 완료, Phase 2 대기
+- **RHWP**: Phase 1 미착수
+- state.json 업데이트 + git push + 텔레그램 보고 완료
+[2026-04-25 04:46:24] Eddy 실행 완료
+[2026-04-25 05:00:00] Eddy 실행 시작
+실행 완료.
+
+- 텔레그램 새 메시지: 없음
+- launchd 상태: 정상 (CLAUDE.md와 일치)
+- 팀 현황 보고 완료 (ShopGuide 카카오 키 대기, ShortsGen 블로그 기능 개발 진행, RHWP 대기)
+- state.json 업데이트 + 커밋/푸시 완료
+[2026-04-25 05:01:40] Eddy 실행 완료
+[2026-04-25 05:01:40] status.json 업데이트 완료
+[main cfbe980] status: 2026-04-25 05:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 05:16:24] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램 메시지**: 신규 없음
+- **launchd 상태**: CLAUDE.md와 일치 (보류 팀 언로드 상태, 활성 팀 정상)
+- **ShopGuide**: 최근 4시간 커밋 2건 (셀러 대시보드 수정/삭제, 카카오 로그인 연락처 통합)
+- **ShortsGen/RHWP**: 변동 없음
+- **state.json**: 18:30으로 업데이트, 커밋/푸시 완료
+- **텔레그램 보고**: 전송 완료
+[2026-04-25 05:17:37] Eddy 실행 완료
+[2026-04-25 05:47:37] Eddy 실행 시작
+완료. 텔레그램 보고 전송, state.json 업데이트 및 push 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지 없음
+- launchd 상태 정상 (CLAUDE.md 일치)
+- **ShopGuide**: 활발 — 셀러 대시보드 + 카카오 로그인 2건 커밋
+- **ShortsGen/RHWP**: 커밋 없음, 각각 수동 개발 중 / 스케줄 미설정
+- 변동사항 없어 대시보드 업데이트 불필요
+[2026-04-25 05:49:18] Eddy 실행 완료
+[2026-04-25 06:00:01] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 지시 없음
+- **ShopGuide**: 최근 4시간 내 커밋 2건 — 카카오 로그인 통합 + 셀러 대시보드 기능 추가 완료
+- **RHWP / ShortsGen**: 커밋 없음, 대기 중
+- **launchd**: 모든 팀 CLAUDE.md 상태와 일치 확인
+- state.json 업데이트 + git push 완료
+- 대시보드 status.json 업데이트 + git push 완료
+- 텔레그램 보고 전송 완료
+[2026-04-25 06:02:29] Eddy 실행 완료
+[2026-04-25 06:02:30] status.json 업데이트 완료
+[main ff5537c] status: 2026-04-25 06:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 06:19:18] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 지시 없음
+- launchd 상태 정상 (CLAUDE.md와 일치)
+- ShopGuide 활발 개발 중 (셀러 대시보드 + 카카오 로그인 완료)
+- RHWP/ShortsGen 변동 없음
+- 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-25 06:20:35] Eddy 실행 완료
+[2026-04-25 06:50:35] Eddy 실행 시작
+실행 완료.
+
+- **새 텔레그램 메시지**: 없음
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 카카오 로그인 완성 + 셀러 대시보드 개선 커밋 2건 (오늘 새벽)
+- **ShortsGen/RHWP**: 변동 없음
+- **보류 팀**: 모두 정상 보류 상태
+- **보고**: 텔레그램 전송 완료
+[2026-04-25 06:53:18] Eddy 실행 완료
+[2026-04-25 07:00:00] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: 정상 (CLAUDE.md와 일치)
+- **ShopGuide**: 가장 활발 — 카카오 로그인 동의항목 완성 + 셀러 대시보드 수정/삭제 기능 커밋 2건
+- **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 대기 중
+- **RHWP**: Phase 1 미착수, 스케줄 미설정
+- 보류 팀: 변동 없음
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 전송 완료
+[2026-04-25 07:01:31] Eddy 실행 완료
+[2026-04-25 07:01:31] status.json 업데이트 완료
+[main 4c44ba7] status: 2026-04-25 07:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 07:23:19] Eddy 실행 시작
+실행 완료.
+
+- **새 텔레그램 메시지**: 없음
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 셀러 대시보드 개선 커밋 확인 (상품 수정/삭제, 주문 상태 변경). 카카오 로그인 통합 완성.
+- **ShortsGen / RHWP**: 변동 없음
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 07:25:13] Eddy 실행 완료
+[2026-04-25 07:55:13] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 텔레그램 새 지시 없음
+- launchd 상태 CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 셀러 대시보드 개선 + 카카오 로그인 완성 (커밋 1건). .env 키 입력 대기 중
+- **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 진행 중
+- **RHWP**: Phase 1 대기 (스케줄 미정)
+- 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-25 07:56:53] Eddy 실행 완료
+[2026-04-25 08:00:00] Eddy 실행 시작
+실행 완료.
+
+- **신규 텔레그램 지시**: 없음
+- **launchd**: 정상 (CLAUDE.md와 일치)
+- **ShortsGen**: 블로그작성 기능 v1 완료 (커밋 5건)
+- **ShopGuide**: 셀러 대시보드/카카오 로그인/Gemini 채팅/Neon DB 완료 (커밋 5건)
+- **RHWP**: Phase 1 미착수 (스케줄 미설정 상태)
+- 텔레그램 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-25 08:02:06] Eddy 실행 완료
+[2026-04-25 08:02:06] status.json 업데이트 완료
+[main 2369cb7] status: 2026-04-25 08:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 08:26:53] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 4시간 내 커밋 1건 (셀러 대시보드 기능 추가). Kakao/Gemini/Neon DB 전환 모두 완료. Sanghun의 .env 키 입력 대기 중
+- **ShortsGen**: 블로그 작성 기능 + 번역 폴백 체계 완성. YTTrans Phase 2 OAuth 설계 진행 중
+- **RHWP**: Phase 1 미착수 (스케줄 미설정)
+- state.json 업데이트 + git push 완료
+- 텔레그램 보고 전송 완료
+[2026-04-25 08:28:36] Eddy 실행 완료
+[2026-04-25 08:58:36] Eddy 실행 시작
+[2026-04-25 09:00:00] Eddy 스킵 — 이전 실행 중 (PID 13329)
+루틴 완료.
+
+- 텔레그램 보고 전송 완료
+- state.json 업데이트 + 커밋/푸시 완료
+- 새 지시 없음, 전체 팀 정상 가동 중
+[2026-04-25 09:00:13] Eddy 실행 완료
+[2026-04-25 09:30:13] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **활성 팀 현황**:
+  - **RHWP**: Phase 1 미착수 (스케줄 미설정)
+  - **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 진행 중 (수동 개발)
+  - **ShopGuide**: Gemini API/카카오 로그인/셀러 대시보드 완료. 구매자 채팅 UI·Vercel 배포 등 남음
+- **보고**: `[Eddy] 팀 정상 가동 중. 변동 없음.` 전송 완료
+- **커밋/푸시**: state.json 업데이트 완료
+[2026-04-25 09:31:44] Eddy 실행 완료
+[2026-04-25 10:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- **ShopGuide**: 활발 — 커밋 4건 (Neon DB, Gemini, 카카오 로그인, 셀러 대시보드 완료)
+- **ShortsGen**: 활발 — 커밋 5건 (블로그작성 기능, 번역 폴백 체인)
+- **RHWP**: 미착수 — 스케줄/launchd 미설정
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- state.json 업데이트 + 텔레그램 보고 + git push 완료
+[2026-04-25 10:01:33] Eddy 실행 완료
+[2026-04-25 10:01:33] status.json 업데이트 완료
+[main 7edebf2] status: 2026-04-25 10:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 10:01:44] Eddy 실행 시작
+완료. 정상 가동 중입니다.
+
+- **새 텔레그램 메시지**: 없음
+- **launchd**: CLAUDE.md와 일치 (보류팀 전부 언로드 확인)
+- **ShopGuide**: 12h 내 커밋 4건 — Neon DB, Gemini 채팅, 카카오 로그인, 셀러 대시보드 완료
+- **ShortsGen**: 12h 내 커밋 5건 — 블로그작성 기능 + 3단계 번역 폴백 완료
+- **RHWP**: Phase 1 미착수 (스케줄 미정)
+- state.json 업데이트 및 push 완료
+[2026-04-25 10:03:17] Eddy 실행 완료
+[2026-04-25 10:33:17] Eddy 실행 시작
+실행 완료. 새 텔레그램 메시지 없고, 모든 활성 팀 낮 시간대 스킵 중이라 변동 없습니다. state.json 업데이트 및 커밋/푸시, 텔레그램 보고 완료했습니다.
+[2026-04-25 10:34:32] Eddy 실행 완료
+[2026-04-25 11:00:00] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 신규 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **활성 팀**: RHWP/ShortsGen/ShopGuide 모두 최근 커밋 없음, 정상 대기 중
+- **보고**: 텔레그램 전송 완료
+- **커밋/푸시**: state.json 업데이트 완료
+[2026-04-25 11:01:18] Eddy 실행 완료
+[2026-04-25 11:01:18] status.json 업데이트 완료
+[main c401944] status: 2026-04-25 11:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 11:04:32] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **활성팀 (RHWP, ShortsGen, ShopGuide)**: 최근 4시간 커밋 없음, 태스크 진행 대기 중
+- **launchd**: 정상 (ai-secretary-server, eddy.agent, shopguide-dev, dashboard, insane-search-dev, process-cleanup, weekly-report 로드됨)
+- **state.json** 업데이트 + 커밋/푸시 완료
+- **텔레그램 보고** 전송 완료
+[2026-04-25 11:05:37] Eddy 실행 완료
+[2026-04-25 11:35:37] Eddy 실행 시작
+루틴 실행 완료.
+
+- 새 텔레그램 지시: 없음
+- launchd: CLAUDE.md와 일치, 정상
+- **ShortsGen**: 블로그작성 기능 v1 완료 (5커밋/24h) — Gemini→Claude→Google Translate 3단계 폴백
+- **ShopGuide**: 카카오 로그인 + 셀러 대시보드 완료. Sanghun .env 키 입력 대기 중
+- **RHWP**: 스케줄 미정, Phase 1 대기
+- state.json 업데이트 + 텔레그램 보고 + git push 완료
+[2026-04-25 11:37:23] Eddy 실행 완료
+[2026-04-25 12:00:01] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- **ShopGuide**: 활발 — 카카오 로그인, Gemini 채팅, 셀러 대시보드 개선 커밋 3건 (12h 내)
+- **ShortsGen**: 활발 — 블로그작성 기능 + 번역 폴백 구현 커밋 5건 (24h 내)  
+- **RHWP**: 대기 — 스케줄 미설정, Phase 1 미착수
+- launchd 상태 정상, CLAUDE.md와 일치
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 12:01:35] Eddy 실행 완료
+[2026-04-25 12:01:35] status.json 업데이트 완료
+[main 9c5541d] status: 2026-04-25 12:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 12:07:23] Eddy 실행 시작
+실행 완료.
+
+- 텔레그램 새 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치 (이상 없음)
+- **ShopGuide**: Gemini 채팅 연동, 카카오 로그인, 셀러 대시보드 기능 완료. Neon DB URL / 카카오 / Gemini API 키 `.env` 설정 대기 중
+- **RHWP**: Phase 1 태스크 배정 완료, 개발 미착수
+- **ShortsGen**: 블로그 자동생성 기능 완료, YTTrans Phase 2 Google OAuth 키 확인됨
+- state.json 업데이트 + 커밋/푸시 완료
+[2026-04-25 12:09:07] Eddy 실행 완료
+[2026-04-25 12:39:07] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- 활성 팀(ShopGuide, ShortsGen, RHWP): 최근 커밋 없음, 낮 시간(19~07시 외) 스케줄이라 정상
+- launchd 상태: CLAUDE.md와 일치
+- 텔레그램 보고: `[Eddy] 팀 정상 가동 중. 변동 없음.` 전송 완료
+- state.json 업데이트 및 git push 완료
+[2026-04-25 12:40:30] Eddy 실행 완료
+[2026-04-25 13:00:00] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 텔레그램 새 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 카카오 로그인 통합 + Gemini API 연동 + 셀러 대시보드 개선 완료. `.env` 환경변수 설정 대기 중 (Sanghun 직접)
+- **ShortsGen**: 블로그작성 기능 v1 완료, YTTrans Phase 2 OAuth 대기. 수동 개발 중
+- **RHWP**: Phase 1 미착수 (스케줄 미설정)
+- state.json 업데이트 + git push 완료
+- 텔레그램 보고 전송 완료
+[2026-04-25 13:01:37] Eddy 실행 완료
+[2026-04-25 13:01:37] status.json 업데이트 완료
+[main ee7a850] status: 2026-04-25 13:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 13:10:30] Eddy 실행 시작
+실행 완료.
+
+- 텔레그램 새 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치 (정상)
+- 활성 팀 3개 (RHWP/ShortsGen/ShopGuide): 최근 4시간 커밋 없음, 변동 없음
+- 텔레그램 보고 전송 완료
+- state.json 업데이트 + 커밋/푸시 완료
+[2026-04-25 13:11:40] Eddy 실행 완료
+[2026-04-25 13:41:41] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- 활성 팀 최근 커밋: 없음 (4시간 내)
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- 팀 현황: ShopGuide(환경변수 대기), RHWP(미착수), ShortsGen(Phase 2 진행 중)
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 전송 완료
+[2026-04-25 13:43:11] Eddy 실행 완료
+[2026-04-25 14:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 텔레그램 새 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치 (이상 없음)
+- 현재 14:00 KST — 낮 시간대 스킵 구간, 팀 활동 없음
+- ShopGuide: 셀러 대시보드 수정/삭제, Gemini 채팅 연동, 카카오 로그인 통합 완료 (이전 세션)
+- ShortsGen: 블로그작성 v1 완료 (이전 세션)
+- RHWP: Phase 1 대기 중
+- Sanghun에게 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-25 14:01:34] Eddy 실행 완료
+[2026-04-25 14:01:34] status.json 업데이트 완료
+[main 739c884] status: 2026-04-25 14:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 14:13:11] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShortsGen**: 블로그작성 기능 v1 완료 (커밋 5건)
+- **ShopGuide**: Neon DB, Gemini 채팅, 카카오 로그인, 셀러 대시보드 완료 (커밋 5건)
+- **RHWP**: 미착수 (스케줄 미설정)
+- state.json 업데이트 및 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-25 14:14:48] Eddy 실행 완료
+[2026-04-25 14:44:48] Eddy 실행 시작
+완료. 새 텔레그램 메시지 없음. 팀 현황 정상 보고 완료.
+
+- **ShortsGen**: 블로그작성 기능 v1 완료, Gemini→Google Translate 3단계 폴백 구현 (커밋 5건)
+- **ShopGuide**: 셀러 대시보드 상품 CRUD + 주문상태 변경, 카카오 로그인 통합, Gemini 채팅 연동 완료 (커밋 4건)
+- **RHWP**: Phase 1 미착수 (스케줄 미설정 상태)
+[2026-04-25 14:46:24] Eddy 실행 완료
+[2026-04-25 14:46:24] status.json 업데이트 완료
+[2026-04-25 15:00:00] Eddy 실행 시작
+실행 완료. 요약:
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md 팀 상태와 일치 (Active: agent, dashboard, shopguide-dev, insane-search-dev, process-cleanup, weekly-report, ai-secretary-server)
+- **Active 팀 3개 모두 최근 4시간 커밋 없음** (야간 스케줄 대기 중 — 현재 17:46, 19시부터 팀 가동)
+- **ShopGuide**: Gemini 연동, 카카오 로그인, 셀러 대시보드 기능 완료 상태. Vercel 배포/구매자 UI 남음
+- **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 OAuth 작업 중
+- **RHWP**: Phase 1 스케줄 미설정, 아직 착수 전
+- state.json 업데이트, 커밋/푸시 완료, 텔레그램 보고 완료
+[2026-04-25 15:02:19] Eddy 실행 완료
+[2026-04-25 15:02:19] status.json 업데이트 완료
+[main 3a5579a] status: 2026-04-25 15:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 15:16:24] Eddy 실행 시작
+실행 완료.
+
+- 텔레그램 새 지시: 없음
+- launchd: CLAUDE.md와 일치
+- 활성 팀 3개 모두 최근 4시간 커밋 없음 (낮 시간대 정상)
+- ShopGuide 19시부터 재가동 예정
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-25 15:18:28] Eddy 실행 완료
+[2026-04-25 15:48:28] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- 활성 팀 현황:
+  - **RHWP**: Phase 1 대기 중 (스케줄 미정, 커밋 활동 없음)
+  - **ShortsGen**: 블로그작성 기능 v1 완료, Gemini 폴백 체인 구축됨
+  - **ShopGuide**: Gemini 채팅·카카오 로그인·셀러 대시보드 완료. 구매자 채팅 UI·Vercel 배포 잔여
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-25 15:50:03] Eddy 실행 완료
+[2026-04-25 16:00:00] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **Active 팀**: 3팀 모두 최근 커밋 없음 (19시 가동 시간대 진입 시점)
+  - **RHWP**: Phase 1 전체 대기
+  - **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 OAuth 진행 중
+  - **ShopGuide**: Gemini/카카오 연동 완료, Sanghun의 .env 직접 입력 대기
+- **보고**: 텔레그램 전송 완료
+- **커밋**: state.json 업데이트 push 완료
+[2026-04-25 16:01:11] Eddy 실행 완료
+[2026-04-25 16:01:11] status.json 업데이트 완료
+[main 5436d2a] status: 2026-04-25 16:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 16:20:03] Eddy 실행 시작
+정상 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- 팀 커밋 (최근 4시간): RHWP / ShortsGen / ShopGuide 모두 없음
+- state.json 업데이트 및 커밋/푸시 완료
+[2026-04-25 16:21:23] Eddy 실행 완료
+[2026-04-25 16:51:23] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 텔레그램 신규 지시: 없음
+- **ShortsGen**: 블로그작성 기능 v1 완성 (커밋 5건)
+- **ShopGuide**: Neon DB 전환, Gemini 채팅, 카카오 로그인, 셀러 대시보드 완료 (커밋 5건)
+- **RHWP**: 스케줄 미설정으로 미착수 상태
+- launchd: 정상
+- state.json 업데이트 및 커밋/푸시 완료, 텔레그램 보고 완료
+[2026-04-25 16:53:03] Eddy 실행 완료
+[2026-04-25 17:00:00] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd: 정상 (활성팀 로드, 보류팀 미로드)
+- 팀 커밋: 3팀 모두 최근 4시간 커밋 없음
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-25 17:01:12] Eddy 실행 완료
+[2026-04-25 17:01:12] status.json 업데이트 완료
+[main d113d01] status: 2026-04-25 17:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 17:23:03] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램 새 메시지**: 없음
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **Active 팀 현황**: RHWP(Phase 1 대기), ShortsGen(블로그작성 v1 완료), ShopGuide(카카오/Gemini/Neon 완료)
+- **변동 사항**: 없음
+- **state.json**: 커밋/푸시 완료 (ba74e48)
+[2026-04-25 17:24:10] Eddy 실행 완료
+[2026-04-25 17:54:10] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- launchd 상태 정상 (CLAUDE.md와 일치)
+- **ShopGuide**: Gemini 채팅, 카카오 로그인, 셀러 대시보드 완료. 구매자 UI 개선 + Vercel 배포 대기
+- **ShortsGen**: 블로그작성 기능 + 번역 3단계 폴백 완료. YTTrans Phase 2 OAuth 대기
+- **RHWP**: Phase 1 대기 (스케줄 미정)
+- state.json 업데이트 + 커밋 + 푸시 + 텔레그램 보고 완료
+[2026-04-25 17:55:33] Eddy 실행 완료
+[2026-04-25 18:00:00] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **활성 팀 현황**:
+  - **RHWP**: Phase 1 미착수 상태 (스케줄 미설정, 수동 개발 대기)
+  - **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 진행 중 (수동 개발)
+  - **ShopGuide**: Neon DB 전환 + Gemini 채팅 + 카카오 로그인 + 셀러 대시보드 완료. 다음 스케줄 실행 시 구매자 UI 개선/Vercel 배포 진행 예정
+- **보고**: 텔레그램 전송 완료, git push 완료
+[2026-04-25 18:01:17] Eddy 실행 완료
+[2026-04-25 18:01:17] status.json 업데이트 완료
+[main 47bcab5] status: 2026-04-25 18:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 18:25:33] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- 활성 팀 최근 커밋: 없음 (ShopGuide, ShortsGen, RHWP 모두)
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- 텔레그램 보고 전송 완료
+- state.json 업데이트 및 커밋/푸시 완료
+[2026-04-25 18:27:02] Eddy 실행 완료
+[2026-04-25 18:57:03] Eddy 실행 시작
+실행 완료. 새 텔레그램 지시 없음. 모든 팀 정상 가동 중입니다.
+
+- **ShopGuide**: 셀러 대시보드 기능 추가 + 카카오 로그인 통합 완성 (카카오 키 설정 대기)
+- **ShortsGen**: 블로그 프롬프트/Gemini 폴백 기능 개발 진행
+- **RHWP**: 스케줄 미정, 대기 중
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+[2026-04-25 18:58:15] Eddy 실행 완료
+[2026-04-25 19:00:01] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **활성 팀**: RHWP/ShortsGen/ShopGuide 모두 최근 4시간 커밋 없음 (야간 시간대)
+- **보고**: 텔레그램 발송 완료
+- **state.json**: 23:46 업데이트, commit+push 완료
+[2026-04-25 19:01:54] Eddy 실행 완료
+[2026-04-25 19:01:54] status.json 업데이트 완료
+[main 25ffad7] status: 2026-04-25 19:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 19:28:15] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **ShopGuide**: 구매자 채팅 UI 개선 커밋 1건 확인
+- **ShortsGen/RHWP**: 추가 변동 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **state.json**: 업데이트 및 push 완료
+[2026-04-25 19:29:37] Eddy 실행 완료
+[2026-04-25 19:59:37] Eddy 실행 시작
+[2026-04-25 20:00:00] Eddy 스킵 — 이전 실행 중 (PID 74277)
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 정상
+- **ShopGuide**: 24h 커밋 5건 (채팅UI, 셀러대시보드, 카카오로그인, Gemini 연동). Sanghun 카카오키/Neon DB URL 입력 대기.
+- **ShortsGen**: 24h 커밋 5건 (블로그작성 v1, 3단계 폴백). Phase 2 대기.
+- **RHWP**: 미착수.
+- 보고 전송 완료, state.json 커밋/푸시 완료.
+[2026-04-25 20:01:07] Eddy 실행 완료
+[2026-04-25 20:31:07] Eddy 실행 시작
+실행 완료. 요약:
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 구매자 채팅 UI 개선 커밋 1건 (최근 4시간). 카카오 로그인/Gemini 연동 완료 상태. 남은 작업 — 모바일 반응형, Vercel 배포, 셀러 등록
+- **ShortsGen**: 블로그작성 v1 완료. YTTrans Phase 2 OAuth 구현 진행 중
+- **RHWP**: Phase 1 미착수, 스케줄 미정
+- **보류 팀**: 전부 launchd 미로드 상태 확인
+- state.json 업데이트 및 커밋/푸시 완료, 텔레그램 보고 발송 완료
+[2026-04-25 20:32:19] Eddy 실행 완료
+[2026-04-25 21:00:00] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- Active 팀 현황:
+  - **ShopGuide**: 구매자 채팅 UI 개선 커밋 1건 (최근 4시간). Dev1 반응형 모바일 최적화 남음.
+  - **RHWP**: Phase 1 미착수 상태
+  - **ShortsGen**: 블로그작성 v1 완료, YTTrans Phase 2 OAuth 대기
+- state.json 업데이트, 커밋/푸시, 텔레그램 보고 완료
+[2026-04-25 21:01:45] Eddy 실행 완료
+[2026-04-25 21:01:45] status.json 업데이트 완료
+[main 142e8c6] status: 2026-04-25 21:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 21:02:19] Eddy 실행 시작
+정기 점검 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: Phase 1 핵심 기능 대부분 완료 (채팅 UI, 카카오 로그인, 셀러 대시보드, Gemini, Neon DB). 남은 것: 반응형, Vercel 배포, 셀러 등록
+- **ShortsGen**: 블로그작성 v1 완료, Phase 2 미착수
+- **RHWP**: Phase 1 미착수, 스케줄 미정
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-25 21:03:55] Eddy 실행 완료
+[2026-04-25 21:33:55] Eddy 실행 시작
+실행 완료.
+
+- 텔레그램 새 메시지 없음
+- launchd 상태 정상 (CLAUDE.md 일치)
+- ShopGuide Dev1 전체 완료, Dev2 대기 중
+- ShortsGen/RHWP 변동 없음
+- 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-25 21:35:27] Eddy 실행 완료
+[2026-04-25 22:00:00] Eddy 실행 시작
+정기 점검 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치
+- ShopGuide: Dev1 프론트엔드 태스크 대부분 완료, Dev2 백엔드 미착수
+- RHWP/ShortsGen: 변동 없음
+- 텔레그램 보고 전송 완료
+- state.json 업데이트 및 push 완료
+[2026-04-25 22:01:50] Eddy 실행 완료
+[2026-04-25 22:01:50] status.json 업데이트 완료
+[main 2731d84] status: 2026-04-25 22:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 22:05:27] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 지시 없음
+- launchd 상태 CLAUDE.md와 일치
+- ShopGuide Dev1 활발히 개발 중 (커밋 3건, 빌드 정상)
+- RHWP/ShortsGen 변동 없음
+- 텔레그램 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-25 22:06:51] Eddy 실행 완료
+[2026-04-25 22:36:51] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 가장 활발 — 최근 12시간 커밋 5건 (카카오 OAuth 버그 수정, 모바일 반응형, 채팅 UI 개선). Sanghun 직접 입력 대기: Neon DB URL, 카카오 키, Gemini 키
+- **ShortsGen**: 블로그작성 v1 완료. Phase 2 YouTube 업데이트 개발 대기
+- **RHWP**: Phase 1 미착수, 스케줄 미설정
+- state.json 업데이트 및 커밋/푸시 완료, 텔레그램 보고 완료
+[2026-04-25 22:38:39] Eddy 실행 완료
+[2026-04-25 23:00:01] Eddy 실행 시작
+[2026-04-25 23:08:39] Eddy 스킵 — 이전 실행 중 (PID 91861)
+모든 루틴 완료. 요약:
+
+**처리 완료:**
+- Sanghun 텔레그램 지시 수신: "blogdoc프로젝트 시작하자"
+- **BlogDoc 프로젝트 Phase 1 구현 완료** (`~/eddy-agent/blogdoc`)
+  - Next.js + Tailwind 프로젝트 세팅
+  - 3단계 UI 플로우: 어필리에이트 플랫폼 선택 → AI 상품 추천/링크 입력 → 블로그 생성
+  - `/api/suggest` — 트렌드 상품 5개 AI 추천 (핫한 제품, 급상승 제품, 예상 인기 제품)
+  - `/api/blog/generate` — 네이버/티스토리 블로그 글 자동 생성 (인터넷 이미지 활용)
+  - AI 엔진: Claude CLI(1순위) / Gemini API(2순위)
+  - 빌드 성공 확인
+- CLAUDE.md Active Teams에 BlogDoc 등록
+- blogdoc-team TASKS.md, PLAN.md 생성
+- 대시보드 업데이트 + git push 완료
+- 텔레그램 보고 완료
+- state.json 업데이트 (last_update_id: 360082569)
+
+**launchd 상태:** CLAUDE.md와 일치, 이상 없음
+[2026-04-25 23:10:03] Eddy 실행 완료
+[2026-04-25 23:10:03] status.json 업데이트 완료
+[main e92f534] status: 2026-04-25 23:10
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-25 23:38:39] Eddy 실행 시작
+[telegram-log] 1개 메시지 저장 완료
+실행 완료입니다.
+
+**이번 실행 요약:**
+- **Sanghun 지시 처리**: "BlogDoc도 vercel에 배포해" → **blogdoc-tau.vercel.app** 배포 완료
+- **launchd 상태**: CLAUDE.md와 일치, 이상 없음
+- **팀 현황**: ShopGuide 활발 (14커밋), 나머지 팀 변동 없음
+- **대시보드/커밋/텔레그램 보고**: 모두 완료
+[2026-04-25 23:43:31] Eddy 실행 완료
+[2026-04-26 00:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- **ShopGuide** — 가장 활발. 커밋 14건 (카카오 로그인, 셀러 등록, 모바일 반응형, 채팅 UI 등). CRITICAL 2건 (셀러 API auth 교체 + Shop 자동 생성) Dev2 다음 실행 대기 중.
+- **BlogDoc** — Phase 1 완료, Vercel 배포 정상.
+- **ShortsGen / RHWP** — 변동 없음.
+- 텔레그램 새 지시 없음. launchd 상태 정상. state.json 업데이트 + 커밋/푸시 완료.
+[2026-04-26 00:01:32] Eddy 실행 완료
+[2026-04-26 00:01:32] status.json 업데이트 완료
+[main 051bb82] status: 2026-04-26 00:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 00:13:31] Eddy 실행 시작
+실행 완료.
+
+- **state.json** 업데이트 + git push 완료
+- **텔레그램 보고** 완료
+- 새 지시 없음, 팀 정상 가동 중
+- ShopGuide 팀이 가장 활발 — CRITICAL 이슈 2건은 다음 팀 실행 시 처리될 예정
+[2026-04-26 00:15:26] Eddy 실행 완료
+[2026-04-26 00:45:24] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 활발히 개발 중 (10커밋). seller API auth 불일치 블로커 있음 — Dev2 다음 실행에서 수정 예정
+- **BlogDoc**: Phase 1 완료 + Vercel 배포됨. QA 대기
+- **ShortsGen/RHWP**: 수동 개발 단계, 최근 활동 없음
+- **state.json** 업데이트 → 커밋 → 푸시 → 텔레그램 보고 완료
+[2026-04-26 00:47:43] Eddy 실행 완료
+[2026-04-26 01:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 가장 활발 (13커밋). 커스텀 JWT auth, 셀러 등록 플로우 완료. 하지만 **CRITICAL 미해결** — seller API 9개 라우트가 여전히 `auth()` 사용 → 상품등록/주문 불가. 팀 다음 실행 시 처리 예정.
+- **BlogDoc**: 어필리에이트 링크 분석 기능 추가. Vercel 정상.
+- **ShortsGen / RHWP**: 변동 없음
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-26 01:02:32] Eddy 실행 완료
+[2026-04-26 01:02:32] status.json 업데이트 완료
+[main b515b8a] status: 2026-04-26 01:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 01:17:45] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 신규 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: CRITICAL 2건 (셀러 API auth, Shop 자동 생성) Dev2 처리 대기
+- **BlogDoc**: Phase 1 완료, Vercel 배포 정상
+- **ShortsGen**: 블로그작성 v1 완료, Phase 2 구현 대기
+- **RHWP**: Phase 1 미착수
+- **보고 전송 완료**, state.json 커밋/푸시 완료
+[2026-04-26 01:19:33] Eddy 실행 완료
+[2026-04-26 01:49:33] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 지시 없음
+- launchd 상태 정상 (CLAUDE.md 일치)
+- **ShopGuide** 가장 활발 — 12시간 15커밋, 셀러 기능 대부분 완료. QA 대기.
+- **BlogDoc** Phase 1 완료 유지, 어필리에이트 분석 추가.
+- **RHWP/ShortsGen** 커밋 없음 (수동 개발/신규)
+- 텔레그램 보고 전송 완료, state.json 커밋/푸시 완료.
+[2026-04-26 01:51:01] Eddy 실행 완료
+[2026-04-26 02:00:00] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 텔레그램: 신규 메시지 없음
+- launchd: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: Dev2 CRITICAL 2건 완료 (auth 교체 + Shop 자동 생성). QA E2E 대기 중
+- **BlogDoc**: affiliate 링크 분석 기능 추가됨. Phase 1 완료
+- **RHWP/ShortsGen**: 커밋 없음, 대기 상태
+- state.json 업데이트 + push 완료, 텔레그램 보고 완료
+[2026-04-26 02:01:39] Eddy 실행 완료
+[2026-04-26 02:01:39] status.json 업데이트 완료
+[main 3fbb803] status: 2026-04-26 02:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 02:21:01] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: URGENT 2건 완료 (셀러 API auth 교체 + Shop 자동 생성), QA E2E 대기
+- **BlogDoc**: 어필리에이트 링크 분석 기능 추가됨
+- **ShortsGen/RHWP**: 개발 대기 상태
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-26 02:22:57] Eddy 실행 완료
+[2026-04-26 02:52:58] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 가장 활발 — CRITICAL 2건(셀러 API auth 교체, Shop 자동 생성) 완료. QA E2E 대기 중
+- **BlogDoc**: 어필리에이트 링크 기반 상품 분석 기능 추가 커밋 확인
+- **ShortsGen/RHWP**: 개발 대기 상태
+- state.json 업데이트 + commit/push 완료
+- 텔레그램 보고 완료
+[2026-04-26 02:54:51] Eddy 실행 완료
+[2026-04-26 03:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 텔레그램 새 메시지: 없음
+- launchd: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 가장 활발 — 셀러 API auth 교체/Shop 자동생성 등 URGENT 전부 완료. QA E2E 대기
+- **BlogDoc**: Phase 1 완료, 어필리에이트 링크 분석 기능 추가
+- **ShortsGen/RHWP**: 대기 상태
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 전송 완료
+[2026-04-26 03:02:00] Eddy 실행 완료
+[2026-04-26 03:02:00] status.json 업데이트 완료
+[main 42f41fb] status: 2026-04-26 03:02
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 03:24:51] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **launchd**: 정상 (CLAUDE.md와 일치)
+- **ShopGuide**: 셀러 API 인증 수정 + 라이트 테마 완료, QA E2E 대기
+- **BlogDoc**: 어필리에이트 링크 분석 + 로딩 UI 개선 커밋
+- **ShortsGen**: YTTrans Phase 2 거의 완료, 로컬 커밋 4건 미푸시
+- **RHWP**: Phase 1 세팅 대기 (커밋 없음)
+- **state.json** 업데이트 → 커밋/푸시 → 텔레그램 보고 완료
+[2026-04-26 03:27:37] Eddy 실행 완료
+[2026-04-26 03:57:37] Eddy 실행 시작
+실행 완료.
+
+**이번 실행 요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 15커밋, URGENT 개발 전체 완료. QA 대기
+- **BlogDoc**: Phase 1 완료 + Vercel 배포. QA 대기
+- **ShortsGen**: 블로그+폴백 기능 완료, 미푸시 커밋 4건
+- **RHWP**: 미착수 (스케줄 미설정)
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료
+[2026-04-26 03:59:22] Eddy 실행 완료
+[2026-04-26 04:00:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: 보안 버그 수정(미인증 상품 노출 차단) + Shop 자동 생성 완료. URGENT 전부 처리됨.
+- **BlogDoc**: 어필리에이트 링크 기반 상품 분석 기능 추가.
+- **RHWP/ShortsGen**: 변동 없음.
+- state.json 업데이트 → 커밋 → push 완료
+- 텔레그램 보고 전송 완료
+[2026-04-26 04:01:36] Eddy 실행 완료
+[2026-04-26 04:01:36] status.json 업데이트 완료
+[main 60c1f0c] status: 2026-04-26 04:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 04:29:22] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 텔레그램 신규 메시지: 없음
+- launchd 상태: 정상 (CLAUDE.md와 일치)
+- ShopGuide: 보안 수정 2건 커밋 확인 (셀러 API auth 교체 + 상품 데이터 격리)
+- RHWP/ShortsGen/BlogDoc: 최근 4시간 변동 없음
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 완료
+[2026-04-26 04:31:00] Eddy 실행 완료
+[2026-04-26 05:00:00] Eddy 실행 시작
+[2026-04-26 05:01:00] Eddy 스킵 — 이전 실행 중 (PID 27630)
+실행 완료. 신규 텔레그램 메시지 없음. 팀 상태 정상 — ShopGuide에서 보안 버그 수정 2건 커밋 확인, 나머지 팀 변동 없음. 보고 전송 및 state.json 커밋/푸시 완료.
+[2026-04-26 05:01:18] Eddy 실행 완료
+[2026-04-26 05:01:18] status.json 업데이트 완료
+[main b899d69] status: 2026-04-26 05:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 05:31:00] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치
+- **ShopGuide**: 보안 버그 수정 커밋 확인 (셀러 API 미인증 시 전체 상품 노출 차단). QA 대기.
+- **RHWP/ShortsGen/BlogDoc**: 최근 4시간 커밋 없음. 각각 대기/개발 중 상태.
+- state.json 업데이트 → 커밋 → 푸시 완료
+- 텔레그램 보고 완료
+[2026-04-26 05:32:42] Eddy 실행 완료
+[2026-04-26 06:00:00] Eddy 실행 시작
+실행 완료.
+
+- **launchd**: 정상 (활성 팀/서비스 모두 일치, 보류 팀 미로드 확인)
+- **텔레그램**: 새 메시지 없음
+- **ShopGuide**: 보안 버그 수정 + 쇼핑몰 링크 복사 기능 (커밋 2건)
+- **ShortsGen / BlogDoc / RHWP**: 변동 없음
+- **state.json**: 16:00 업데이트 + push 완료
+- **텔레그램 보고**: 발송 완료
+[2026-04-26 06:01:29] Eddy 실행 완료
+[2026-04-26 06:01:29] status.json 업데이트 완료
+[main 74c7c76] status: 2026-04-26 06:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 06:02:42] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지: 없음
+- launchd 상태: 정상 (CLAUDE.md와 일치)
+- 활성 팀 4개 모두 정상 가동 중
+  - **ShortsGen** — Google OAuth 환경변수 대기 중 (Phase 2 블로커)
+  - **ShopGuide** — 개발 완료, QA 진행 중
+  - **BlogDoc** — Phase 2 개발 진행 중
+  - **RHWP** — Phase 1 시작 단계
+- 텔레그램 보고 전송 완료, state.json 커밋/푸시 완료
+[2026-04-26 06:04:45] Eddy 실행 완료
+[2026-04-26 06:34:45] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램 새 메시지**: 없음
+- **launchd**: 정상 (CLAUDE.md와 일치)
+- **ShopGuide**: 보안 수정(셀러 데이터 격리) + 쇼핑몰 링크 복사 기능 추가 커밋 2건. QA 대기 중.
+- **RHWP/ShortsGen/BlogDoc**: 변동 없음
+- **보고**: 텔레그램 전송 완료
+- **커밋/푸시**: 완료 (a3c6bce)
+[2026-04-26 06:36:44] Eddy 실행 완료
+[2026-04-26 07:00:00] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램 새 메시지**: 없음
+- **ShopGuide**: 보안 버그 수정 + 쇼핑몰 링크 기능 추가 (커밋 2건, QA 대기)
+- **RHWP/ShortsGen/BlogDoc**: 변동 없음
+- **launchd**: 정상 (보류팀 미로드 확인)
+- **보고**: 텔레그램 전송 완료
+- **state.json**: 업데이트 + push 완료
+[2026-04-26 07:01:24] Eddy 실행 완료
+[2026-04-26 07:01:25] status.json 업데이트 완료
+[main bd25de4] status: 2026-04-26 07:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 07:06:45] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 텔레그램: 신규 지시 없음
+- launchd: CLAUDE.md 상태와 일치 (보류 팀 모두 언로드 상태)
+- **ShopGuide**: 셀러 쇼핑몰 링크 공유 + 보안 버그 수정 완료. QA E2E 대기 중.
+- **ShortsGen**: 블로그 프롬프트 + Gemini 폴백 구현. 수동 개발 계속.
+- **BlogDoc**: Phase 1 유지. affiliate 분석 추가됨.
+- **RHWP**: v0.7.3 회고 완료. 최근 활동 없음.
+- state.json 업데이트 + 커밋/푸시 + 텔레그램 보고 완료.
+[2026-04-26 07:07:56] Eddy 실행 완료
+[2026-04-26 07:37:56] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 새 메시지 없음
+- **팀 현황**: ShopGuide 보안 버그 수정 완료(QA 대기), BlogDoc/ShortsGen 개발 대기, RHWP 미착수
+- **launchd**: 정상
+- **보고**: 텔레그램 전송 완료
+- **대시보드**: 업데이트 + push 완료
+- **커밋**: state.json 업데이트 push 완료
+[2026-04-26 07:39:35] Eddy 실행 완료
+[2026-04-26 08:00:00] Eddy 실행 시작
+실행 완료.
+
+- 새 텔레그램 메시지: 없음
+- launchd 상태: CLAUDE.md와 일치, 이상 없음
+- ShopGuide: URGENT 전체 완료, 쇼핑몰 링크 복사 기능 신규 커밋 확인
+- BlogDoc/ShortsGen/RHWP: 금일 변동 없음
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 전송 완료
+[2026-04-26 08:01:23] Eddy 실행 완료
+[2026-04-26 08:01:23] status.json 업데이트 완료
+[main af88616] status: 2026-04-26 08:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 08:09:35] Eddy 실행 시작
+실행 완료.
+
+**요약:**
+- 새 텔레그램 메시지 없음
+- launchd 정상 (보류팀 모두 언로드 상태, 활성 서비스 정상)
+- ShopGuide 팀 활발 — 셀러 auth 전면 교체, 보안 버그 수정, 쇼핑몰 링크 기능 추가 완료. QA 대기 중.
+- 나머지 활성 팀(RHWP, ShortsGen, BlogDoc) 변동 없음
+- state.json 업데이트, 커밋/푸시 완료, 텔레그램 보고 완료
+[2026-04-26 08:10:54] Eddy 실행 완료
+[2026-04-26 08:40:54] Eddy 실행 시작
+실행 완료.
+
+- **텔레그램**: 신규 메시지 없음
+- **launchd**: CLAUDE.md와 일치, 이상 없음
+- **ShopGuide**: URGENT 전부 완료, Dev1 쇼핑몰 링크 기능 추가, QA E2E 대기
+- **RHWP/ShortsGen/BlogDoc**: 변동 없음
+- **state.json**: 20:00 업데이트 완료, 커밋/푸시 완료
+- **텔레그램 보고**: 발송 완료
+[2026-04-26 08:42:13] Eddy 실행 완료
+[2026-04-26 09:00:00] Eddy 실행 시작
+실행 완료.
+
+- 텔레그램 신규 메시지: 없음
+- launchd 상태: 정상 (CLAUDE.md와 일치)
+- 활성 팀 변동: ShopGuide만 최근 커밋 (셀러 상품관리 링크 복사 기능)
+- state.json 업데이트 + 커밋/푸시 완료
+- 텔레그램 보고 발송 완료
+[2026-04-26 09:01:18] Eddy 실행 완료
+[2026-04-26 09:01:18] status.json 업데이트 완료
+[main 8dc0679] status: 2026-04-26 09:01
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 09:12:14] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 0217771623381076097278e78ff109d0bf5de77146291ac532c20","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 09:12:18] Eddy 실행 완료
+[2026-04-26 09:42:18] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 02177716414094628c256f90ee836450e608b7d1b1192f3438d6a","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 09:42:21] Eddy 실행 완료
+[2026-04-26 10:00:00] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777165218534a0b324f8ecfaf9ce03201b1eca3b66d8fa7b3c","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 10:00:18] Eddy 실행 완료
+[2026-04-26 10:00:18] status.json 업데이트 완료
+[main 884c687] status: 2026-04-26 10:00
+ 2 files changed, 5 insertions(+), 3 deletions(-)
+ create mode 100644 .model
+[2026-04-26 10:12:21] Eddy 실행 시작
+
+[2026-04-26 10:12:29] Eddy 실행 완료
+[2026-04-26 10:42:29] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 0217771677522446362ddeee9049477b0b29b68d55a9ae93a7d83","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 10:42:32] Eddy 실행 완료
+[2026-04-26 11:00:00] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 0217771688025081386b9a8ed856c57501cfa946ce34c987e8469","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 11:00:03] Eddy 실행 완료
+[2026-04-26 11:00:03] status.json 업데이트 완료
+[main e6d6c50] status: 2026-04-26 11:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 11:12:32] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 02177716955503075b38901b7d222b45cd0632cd2ab0171dd880d","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 11:12:35] Eddy 실행 완료
+[2026-04-26 11:42:33] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 02177717135794145ed1e5750293ff098e8b34eca79d24af643dd","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 11:42:36] Eddy 실행 완료
+[2026-04-26 12:00:01] Eddy 실행 시작
+
+[2026-04-26 12:00:14] Eddy 실행 완료
+[2026-04-26 12:00:14] status.json 업데이트 완료
+[main 00d133f] status: 2026-04-26 12:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 12:12:36] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777173160607085ce2a5b85bafc715e5d42a46d045512a6ab3","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 12:12:39] Eddy 실행 완료
+[2026-04-26 12:42:41] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 0217771749635103a96cb89bb0639877068f7507e34a86a2b89c5","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 12:42:44] Eddy 실행 완료
+[2026-04-26 13:00:00] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777176002903276a11b7c1fd19a88cefa8362a9a9ca666d91c","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 13:00:03] Eddy 실행 완료
+[2026-04-26 13:00:03] status.json 업데이트 완료
+[main e27ef1c] status: 2026-04-26 13:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 13:12:44] Eddy 실행 시작
+
+[2026-04-26 13:12:53] Eddy 실행 완료
+[2026-04-26 13:42:53] Eddy 실행 시작
+
+[2026-04-26 13:43:01] Eddy 실행 완료
+[2026-04-26 13:43:01] status.json 업데이트 완료
+[2026-04-26 14:00:00] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777179602920b1e926b94f741badb049b6681cf829b8a94ff1","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 14:00:03] Eddy 실행 완료
+[2026-04-26 14:00:03] status.json 업데이트 완료
+[main f1146dd] status: 2026-04-26 14:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 14:13:01] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777180383843e04d4405dfa8354a322f6f89cfd0177173273d","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 14:13:04] Eddy 실행 완료
+[2026-04-26 14:43:04] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777182186812b70b2a74477c2b606f823ac231da8329272dbd","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 14:43:07] Eddy 실행 완료
+[2026-04-26 15:00:00] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 0217771832025648792bd17575462d883d5a21b523815c5f66ff9","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 15:00:03] Eddy 실행 완료
+[2026-04-26 15:00:03] status.json 업데이트 완료
+[main 7115988] status: 2026-04-26 15:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 15:13:07] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 0217771839898535a6306d9ef2a41abbcf88b752e033a9d760784","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 15:13:10] Eddy 실행 완료
+[2026-04-26 15:43:10] Eddy 실행 시작
+
+[2026-04-26 15:43:19] Eddy 실행 완료
+[2026-04-26 16:00:00] Eddy 실행 시작
+
+[2026-04-26 16:00:09] Eddy 실행 완료
+[2026-04-26 16:00:09] status.json 업데이트 완료
+[main 019f2ff] status: 2026-04-26 16:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 16:13:19] Eddy 실행 시작
+
+[2026-04-26 16:13:28] Eddy 실행 완료
+[2026-04-26 16:22:08] Eddy 실행 시작
+API Error: 400 {"error":{"code":"InvalidParameter","message":"The parameter `max_tokens` specified in the request is not valid: integer above maximum value, expected a value <= 32768, but got 64000 instead. Request id: 021777188131809337dd80e214c02e2e5c4590cd6b9313c9d4df2","param":"max_tokens","type":"BadRequest"}}
+[2026-04-26 16:22:12] Eddy 실행 완료
+[2026-04-26 16:29:07] Eddy 실행 시작
+[2026-04-26 16:30:11] Eddy 실행 시작
+error: unknown option '--max-tokens'
+[2026-04-26 16:30:13] Eddy 실행 완료
+[2026-04-26 16:30:47] Eddy 실행 시작
+error: unknown option '--max-tokens'
+[2026-04-26 16:30:48] Eddy 실행 완료
+[2026-04-26 17:00:01] Eddy 실행 시작
+error: unknown option '--max-tokens'
+[2026-04-26 17:00:02] Eddy 실행 완료
+[2026-04-26 17:00:02] status.json 업데이트 완료
+[main 8d12eb1] status: 2026-04-26 17:00
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[2026-04-26 17:00:48] Eddy 실행 시작
+error: unknown option '--max-tokens'
+[2026-04-26 17:00:49] Eddy 실행 완료
+[2026-04-26 17:07:47] Eddy 실행 시작
+[2026-04-26 17:08:18] Eddy 스킵 — 이전 실행 중 (PID 95656)
+[2026-04-26 17:08:54] Eddy 실행 시작
+[2026-04-26 17:09:09] Eddy 스킵 — 이전 실행 중 (PID 95817)

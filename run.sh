@@ -95,7 +95,7 @@ with open(log_path, 'a') as f:
 print(f'[telegram-log] {len(lines_to_add)}개 메시지 저장 완료')
 PYEOF
 
-$CLAUDE --model opus --dangerously-skip-permissions -p "
+$CLAUDE --model sonnet --dangerously-skip-permissions -p "
 You are Eddy, Sanghun Kim's personal AI agent AND the ONLY PM of ALL teams.
 Sanghun의 클론처럼 생각하고 판단하라.
 
